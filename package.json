@@ -4,7 +4,28 @@
   "main": "index.js",
   "author": "John Nolan <john.nolan@digital.justice.gov.uk>",
   "license": "MIT",
+  "scripts": {
+    "jshint": "jshint src/",
+    "lint:check": "eslint --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ignore-path .gitignore .",
+    "sass": "sass --style=compressed src/scss/styles.scss src/_includes/css/styles.css",
+    "build": "npm run sass && eleventy",
+    "start": "npm run sass && eleventy --serve"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.2",
+    "@babel/core": "^7.14.6",
+    "@babel/eslint-parser": "^7.14.7",
+    "@babel/preset-env": "^7.14.7",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "govuk-frontend": "^3.12.0",
+    "jshint": "^2.13.0",
+    "markdown-it": "^12.0.6",
+    "prettier": "^2.3.1",
+    "sass": "^1.35.1",
+    "terser": "^5.7.0"
   }
 }

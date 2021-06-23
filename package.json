@@ -1,0 +1,10 @@
+{
+  "name": "opg-modernising-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "John Nolan <john.nolan@digital.justice.gov.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}

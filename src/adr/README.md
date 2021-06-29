@@ -1,6 +1,6 @@
 # ADRs
 
-This section is for decisions made while building and maintaing the service.
+This section is for decisions made while building and maintaining the service.
 
 The format of the ADRs can be found in the existing ADRs in this repo.
 

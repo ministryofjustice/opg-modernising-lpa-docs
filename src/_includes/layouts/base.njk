@@ -16,21 +16,26 @@
     <meta property="og:image" content="{{ '/assets/images/moj-opengraph-image.png' | url }}">
 
     <!--[if gt IE 8]><!--><link href="{{ '/assets/styles.css' | url }}" rel="stylesheet"><!--<![endif]-->
-    <title>{{ title }} - OPG Modernising Lasting Power of Attorney</title>
+    <title>{{ title }} - Modernising Lasting Power of Attorney Documentation</title>
 
     <script type="text/javascript" src="{{ '/assets/javascript/jquery.js' | url }}"></script>
     <script type="text/javascript" src="{{ '/assets/javascript/all.js' | url }}"></script>
   </head>
   <body class="govuk-template__body">
+    {%- from "../../../node_modules/govuk-frontend/govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {%- from "../../../node_modules/govuk-frontend/govuk/components/header/macro.njk" import govukHeader %}
+    {%- from "../../../node_modules/govuk-frontend/govuk/components/skip-link/macro.njk" import govukSkipLink %}
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-
+    {{ govukSkipLink({
+      text: "Skip to main content",
+      href: "#content"
+    }) }}
     {% block body %}
       <div>
-      {%- from "../../../node_modules/govuk-frontend/govuk/components/header/macro.njk" import govukHeader %}
 
         {{ govukHeader({
             homepageUrl: "/",
-            serviceName: "Modernising Lasting Power of Attorney",
+            serviceName: "Modernising Lasting Power of Attorney Documentation",
             serviceUrl: "/",
             navigation: [
               {
@@ -48,9 +53,17 @@
             ]
           })
         }}
+
+        
         
         {% block content %}
         <div class="govuk-width-container">
+          {{ govukPhaseBanner({
+            tag: {
+              text: "alpha"
+            },
+            html: 'This is a new documentation site'
+          }) }}
           <main class="govuk-main-wrapper" role="main">
 
             {{ content | safe }}

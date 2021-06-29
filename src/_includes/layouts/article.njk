@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+<p class="govuk-body"><strong>Date</strong>: {{date_view}}</p>
+
+{{ content | safe }}
+
+<p class="govuk-body"><strong>Contributors</strong></p>
+<ul class="govuk-list">
+  {%- for item in contributors -%}
+    <li>{{ item }}</li>
+  {%- endfor -%}
+</ul>

@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: Research & Development
+---
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Research & Development</h1>
+        <p class="govuk-body">Index of all Research &amp; Development articles</p>
+        <ol class="govuk-list">
+            {%- for article in collections.research_development -%}
+            <li class="govuk-list-item">
+                <a href="{{ article.url }}" class="govuk-link">
+                    {{ article.data.title }}
+                </a>
+            </li>
+            {%- endfor -%}
+        </ol>
+    </div>
+</div>

@@ -57,7 +57,7 @@ Language within the ADRs will contain technical language so may not be accessibl
 ### Think big and imagine what the impact of your work can be
 Decisions can be read and commented on inside and outside of government. Encouraging conversation with others exploring these technologies will enable better communities and feed back into our own decisions.
 
-This will allow us to get a wider range of oppions on our decisions which we could not have got before.
+This will allow us to get a wider range of opinions on our decisions which we could not have got before.
 
 ### Interrogate your data decisions
 N/A

@@ -1,0 +1,15 @@
+---
+layout: layouts/fullwidth.njk
+title: "Meet the Service Standard"
+weight: 1
+date: 2021-06-30
+date_view: "2021-06-30"
+review_in: 12 months
+tags: 
+    - assessment_index
+contributors: 
+    - "John Nolan"
+---
+
+{%- from "../../_includes/partials/indexlist.njk" import indexList %}
+{{ indexList(title, '<p class="govuk-body">If you’re building a service as part of your technology project or programme you will also need to meet the Service Standard.</p>', collections.meet_service_standard) }}

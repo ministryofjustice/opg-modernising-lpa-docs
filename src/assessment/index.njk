@@ -1,19 +1,7 @@
 ---
-layout: layouts/base.njk
+layout: layouts/fullwidth.njk
 title: GDS Assessment
 ---
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl">GDS Assessment</h1>
-        <p class="govuk-body">Index of all GDS Assessment articles</p>
-        <ol class="govuk-list">
-            {%- for article in collections.gds_assessment -%}
-            <li class="govuk-list-item">
-                <a href="{{ article.url }}" class="govuk-link">
-                    {{ article.data.title }}
-                </a>
-            </li>
-            {%- endfor -%}
-        </ol>
-    </div>
-</div>
+
+{%- from "../_includes/partials/indexlist.njk" import indexList %}
+{{ indexList(title, '<p class="govuk-body">Index of all GDS Assessment articles</p>', collections.assessment_index) }}

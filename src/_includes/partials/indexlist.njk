@@ -1,0 +1,13 @@
+{% macro indexList(title, content, collection) %}
+<h1 class="govuk-heading-xl">{{title}}</h1>
+{{ content | safe }}
+<ol class="govuk-list">
+    {%- for article in collection -%}
+    <li class="govuk-list-item">
+        <a href="{{ article.url }}" class="govuk-link">
+            {{ article.data.title }}
+        </a>
+    </li>
+    {%- endfor -%}
+</ol>
+{% endmacro %}

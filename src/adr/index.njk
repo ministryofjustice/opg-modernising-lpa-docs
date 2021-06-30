@@ -1,19 +1,7 @@
 ---
-layout: layouts/base.njk
+layout: layouts/fullwidth.njk
 title: Architectural Decision Records
 ---
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl">Architectural Decision Records (ADRs)</h1>
-        <p class="govuk-body">Index of all recorded ADRs</p>
-        <ol class="govuk-list">
-            {%- for adr in collections.adr -%}
-            <li class="govuk-list-item">
-                <a href="{{ adr.url }}" class="govuk-link">
-                    {{ adr.data.title }}
-                </a>
-            </li>
-            {%- endfor -%}
-        </ol>
-    </div>
-</div>
+
+{%- from "../_includes/partials/indexlist.njk" import indexList %}
+{{ indexList(title, '<p class="govuk-body">Index of all recorded ADRs</p>', collections.adr) }}

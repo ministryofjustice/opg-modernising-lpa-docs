@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/fullwidth.njk
 title: "1. Record architecture decisions"
 weight: 1
 date: 2021-06-28

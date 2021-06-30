@@ -1,0 +1,15 @@
+---
+layout: layouts/fullwidth.njk
+title: "Make use of open standards"
+weight: 1
+date: 2021-06-30
+date_view: "2021-06-30"
+review_in: 12 months
+tags: 
+    - assessment_index
+contributors: 
+    - "John Nolan"
+---
+
+{%- from "../../_includes/partials/indexlist.njk" import indexList %}
+{{ indexList(title, '<p class="govuk-body">Build technology that uses open standards to ensure your technology works and communicates with other technology, and can easily be upgraded and expanded.</p>', collections.open_standards) }}

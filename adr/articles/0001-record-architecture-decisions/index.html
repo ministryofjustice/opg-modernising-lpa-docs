@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="theme-color" content="#0b0c0c">
+    
+    <link rel="preload" href="/assets/fonts/light-94a07e06a1-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/bold-b542beb274-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/styles.css" rel="stylesheet" as="style">
 
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-180x180.png" sizes="180x180">
@@ -15,14 +19,10 @@
     <meta name="description" content="Design your service using MOJ styles, components and patterns">
     <meta property="og:image" content="/assets/images/moj-opengraph-image.png">
 
-    <!--[if gt IE 8]><!--><link href="/assets/styles.css" rel="stylesheet"><!--<![endif]-->
+    <link href="/assets/styles.css" rel="stylesheet">
     <title>1. Record architecture decisions - Modernising Lasting Power of Attorney Documentation</title>
-
-    <script type="text/javascript" src="/assets/javascript/jquery.js"></script>
-    <script type="text/javascript" src="/assets/javascript/all.js"></script>
   </head>
   <body class="govuk-template__body">
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
     <a href="#content" class="govuk-skip-link">Skip to main content</a>
 
     
@@ -116,17 +116,6 @@
         
         
         <div class="govuk-width-container">
-          <div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new documentation site
-    </span>
-  </p>
-</div>
-
           <main class="govuk-main-wrapper" role="main">
 
             <h1 class="govuk-heading-l">1. Record architecture decisions</h1>
@@ -237,8 +226,6 @@ Developers are aware of ADRs, but their experience of doing them brings this sco
 
 
       </div>
-    
-
     
   </body>
 </html>

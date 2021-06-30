@@ -1,11 +1,12 @@
-const Terser = require('terser');
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const markdownItGds = require("./markdown-it-gds");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/*.js': 'assets' })
+    eleventyConfig.addPassthroughCopy({ 'node_modules/@ministryofjustice/frontend/assets': 'assets' })
+    eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/*.js': 'assets/javascript' })
     eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'src/_includes/css': 'assets' })
+    eleventyConfig.addPassthroughCopy({ 'src/_includes/assets': 'assets' })
 
     eleventyConfig.addPlugin(inclusiveLangPlugin);
 

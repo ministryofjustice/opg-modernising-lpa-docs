@@ -20,6 +20,15 @@ This is to encourage us to work in the open and allowing conversation and contri
 
 We will utilise Github features to allow conversations for feedback and managing our content and history.
 
+## Setup
+
+To run the site locally follow these instructions
+
+1. Checkout the repository
+2. Run `yarn install`
+3. Run `yarn run start` to launch a local version with hot reloading
+4. Run `yarn run build` to build a local copy of the site into the folder `_site`
+
 ## Tools and language
 
 When writing articles consider using strong prose in your writing. This keeps things clear and concise. Consider the following plugins to help with your writing.
@@ -57,5 +66,16 @@ Publisher: Yu Zhang
 ```
 
 **VS Marketplace Link**: [https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+
+**Name**: markdownlint
+
+```text
+Id: davidanson.vscode-markdownlint
+Description: Markdown linting and style checking for Visual Studio Code
+Version: 0.42.1
+Publisher: David Anson
+```
+
+**VS Marketplace Link**: [https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 OPG Modernising LPA Docs: Managed by opg-org-infra &amp; Terraform

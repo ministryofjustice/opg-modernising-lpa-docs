@@ -17,7 +17,7 @@ contributors:
 ## Mitigate against being tech deterministic
 
 ### Ask…
-
+asd
 What problem are we solving with this technology?
 
 What value is created by solving this problem?

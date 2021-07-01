@@ -29,3 +29,6 @@ jobs:
 
       - name: Run Spell Checking
         run: yarn run lint:spell
+
+      - name: Run lint markdown
+        run: yarn run lint:markdown

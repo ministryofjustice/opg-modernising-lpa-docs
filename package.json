@@ -10,6 +10,7 @@
     "lint:fix": "eslint --fix --ignore-path .gitignore .",
     "lint:prose": "proselint ./src README.md",
     "lint:spell": "cspell 'src/**/*.*'",
+    "lint:markdown": "markdownlint 'src/**/*.md' --ignore node_modules",
     "sass": "sass --style=compressed src/scss/styles.scss src/_includes/css/styles.css",
     "build": "npm run sass && eleventy",
     "start": "npm run sass && eleventy --serve"

@@ -1,5 +1,8 @@
 # OPG Modernising Lasting Power of Attorney Documents
 
+![docs-workflow](https://github.com/ministryofjustice/opg-modernising-lpa-docs/actions/workflows/docs.yml/badge.svg)
+![docs-workflow](https://img.shields.io/github/license/ministryofjustice/opg-modernising-lpa-docs.svg)
+
 Site URL: [https://docs.modernising.opg.service.justice.gov.uk](https://docs.modernising.opg.service.justice.gov.uk)
 
 The Ministry of Justice and the Office of the Public Guardian (OPG) are working on a project to modernise lasting powers of attorney (MLPA).

@@ -52,6 +52,8 @@ We would need the Verifiable Credential to be able to store the appropriate requ
 
 The Verifiable Credentials data model is a [W3C Open Standard](https://www.w3.org/TR/vc-data-model/). As long as the standards are adhered to, interopability will be high.
 
+The standards don't supply a definitive way of handling Proofs (Signatures). This raises concerns on the interopability of verification and authenticity at this stage and should be taken into account when deciding whether to use this solution. More information can be found here [https://www.w3.org/TR/vc-data-model/#proofs-signatures](https://www.w3.org/TR/vc-data-model/#proofs-signatures)
+
 The signing of a Verifiable Credential should also be standards driven and supported by the wider industry.
 
 ### Developer Knowledge - How well known is this in our current skill sets
@@ -68,6 +70,11 @@ If signing was done via a certificate provider setting, such is done for SSL Cer
 The Verifiable Credentials data model is a [W3C Open Standard](https://www.w3.org/TR/vc-data-model/).
 
 The implementation of verifying and signing Verifiable Credentials is covered in the standard. This is in early stages of research and development with various companies such as [RSA Labs and Project Mercury](https://mercury.rsalabs.com/).
+
+The specifications it is built on are in a draft state and can be found at the following links. This should be considered and monitored. We should aim to listen and contribute if possible to these areas to gain confidence in our choice moving forward.
+
+1. [https://w3c-ccg.github.io/ld-proofs/](https://w3c-ccg.github.io/ld-proofs/)
+2. [https://json-ld.github.io/rdf-dataset-canonicalization/spec/](https://json-ld.github.io/rdf-dataset-canonicalization/spec/)
 
 ### Scalability
 
@@ -104,6 +111,10 @@ We should continue to consult other parties to ensure we work to the open standa
 Depending on further research this will vary.
 
 Using the method of RSA Labs Project Mercury would mean us setting up the Office of the Public Guardian or the Ministry of Justice as an issuer.
+
+We also have the choice of building our own implementation to confidently sign and manage credentials. We should follow the same standards and guidelines to maintain ownership of the code and interopability.
+
+This would require us knowing the agreed upon proofing method that would be accepted by the wider industry.
 
 This would introduce issues with
 

@@ -86,19 +86,36 @@ Once created and digitally signed, it is handed over to the Citizen and only req
 
 ### Mitigate against being tech deterministic
 
-TBD
+We know we need to find a way to give the option of a digital version of an LPA. We will likely also need to provide a physical version still.
+
+Therefore we should consider this as an option to enable easier use of an LPA but also confidence in the validity of the holder using the credential.
 
 ### Ensure you conduct inclusive research
 
-TBD
+We need to do user testing around this technology before being confident in its use.
+
+Areas of interest would be
+
+1. Technical literacy
+2. Technology privilege
+3. Understanding of the technology used
+4. Trust in the technology
+5. Metrics on the groups/communities that would be able to use this
 
 ### Think big and imagine what the impact of your work can be
 
-TBD
+If successful the following benefits to society would become evident.
+
+1. Use this credential as a mechanism for proving your identity to other services in this eco system
+2. Complete citizen ownership of their LPA, stored wherever they like
+3. Available and shareable in emergency situations
+4. Be an example to other departments and industries to push this new technology
 
 ### Interrogate your data decisions
 
-TBD
+The data that is stored in the credential is owned by the citizen meaning they have full control of how they use it.
+
+We would require only a minimal amount of data to be held to initially verify the individual to an account. We also would legally be required to store a minimal amount of data for the LPA register.
 
 ### Decision
 

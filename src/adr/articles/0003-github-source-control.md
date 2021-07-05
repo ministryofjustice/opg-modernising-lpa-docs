@@ -6,7 +6,7 @@ date: 2021-07-05
 date_view: "2021-07-05"
 review_in: 12 months
 tags: adr
-areas_of_coverage: "Github for source control"
+areas_of_coverage: "Digital Service"
 status: accepted
 contributors: "John Nolan"
 adr_number: "0003"

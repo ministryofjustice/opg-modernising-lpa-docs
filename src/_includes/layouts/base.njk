@@ -23,7 +23,8 @@
     <title>{{ title }} - Modernising Lasting Power of Attorney Documentation</title>
   </head>
   <body class="govuk-template__body">
-    {%- from "../../../node_modules/govuk-frontend/govuk/components/header/macro.njk" import govukHeader %}
+    {%- from "../partials/header.njk" import govukHeader %}
+    {%- from "../partials/footer.njk" import govukFooter %}
     {%- from "../../../node_modules/govuk-frontend/govuk/components/skip-link/macro.njk" import govukSkipLink %}
     {{ govukSkipLink({
       text: "Skip to main content",
@@ -60,8 +61,6 @@
           </main>
         </div>
         {% endblock %}
-
-        {% from "../../../node_modules/govuk-frontend/govuk/components/footer/macro.njk" import govukFooter %}
 
         {{ govukFooter({
             meta: {

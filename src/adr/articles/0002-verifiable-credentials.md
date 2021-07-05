@@ -9,6 +9,7 @@ tags: adr
 areas_of_coverage: "Verifiable Credentials"
 status: proposed
 contributors: "John Nolan"
+adr_number: "0002"
 ---
 # {{title}}
 

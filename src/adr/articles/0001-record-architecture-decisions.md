@@ -9,6 +9,7 @@ tags: adr
 areas_of_coverage: "Digital Service"
 status: accepted
 contributors: "John Nolan"
+adr_number: "0001"
 ---
 # {{title}}
 

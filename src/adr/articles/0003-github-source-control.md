@@ -10,6 +10,7 @@ areas_of_coverage: "Github for source control"
 status: accepted
 contributors: 
     - "John Nolan"
+adr_number: "0003"
 ---
 # {{title}}
 
@@ -60,7 +61,7 @@ Should we need to move for any reason, we are using Git which enables us to move
 
 ### Mitigate against being tech deterministic
 
-There are other providers we could use, however doing so would not bring any great benefit over our already established best practices for existing services and level of support we have with the Enterprise version.
+There are other providers we could use, but doing so would not bring any great benefit over our already established best practices for existing services and level of support we have with the Enterprise version.
 
 ### Ensure you conduct inclusive research
 

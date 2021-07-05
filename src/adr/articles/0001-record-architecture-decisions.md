@@ -1,6 +1,6 @@
 ---
 layout: layouts/fullwidth.njk
-title: "1. Record architecture decisions"
+title: "Record architecture decisions"
 weight: 1
 date: 2021-06-28
 date_view: "2021-06-28"
@@ -11,7 +11,7 @@ status: accepted
 contributors: "John Nolan"
 adr_number: "0001"
 ---
-# {{title}}
+# {{adr_number}} - {{title}}
 
 ## Overview
 
@@ -19,7 +19,7 @@ adr_number: "0001"
 
 ### Status
 
-<strong class="govuk-tag">{{status}}</strong>
+<strong class="govuk-tag govuk-tag--green">{{status}}</strong>
 
 ### Contributors
 

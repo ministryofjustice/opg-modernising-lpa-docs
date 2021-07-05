@@ -1,6 +1,6 @@
 ---
 layout: layouts/fullwidth.njk
-title: "2. Verifiable Credentials"
+title: "Verifiable Credentials"
 weight: 1
 date: 2021-07-02
 date_view: "2021-07-02"

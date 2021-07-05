@@ -1,6 +1,6 @@
 ---
 layout: layouts/fullwidth.njk
-title: "3. Github for source control"
+title: "Github for source control"
 weight: 1
 date: 2021-07-05
 date_view: "2021-07-05"
@@ -8,8 +8,7 @@ review_in: 12 months
 tags: adr
 areas_of_coverage: "Github for source control"
 status: accepted
-contributors: 
-    - "John Nolan"
+contributors: "John Nolan"
 adr_number: "0003"
 ---
 # {{title}}
@@ -20,7 +19,7 @@ adr_number: "0003"
 
 ### Status
 
-<strong class="govuk-tag">{{status}}</strong>
+<strong class="govuk-tag govuk-tag--green">{{status}}</strong>
 
 ### Contributors
 

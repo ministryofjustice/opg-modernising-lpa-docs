@@ -3,5 +3,49 @@ layout: layouts/fullwidth.njk
 title: Architectural Decision Records
 ---
 
-{%- from "../_includes/partials/indexlist.njk" import indexList %}
-{{ indexList(title, '<p class="govuk-body">Index of all recorded ADRs</p>', collections.adr) }}
+{%- from "../../node_modules/govuk-frontend/govuk/components/table/macro.njk" import govukTable %}
+{%- from "../../node_modules/govuk-frontend/govuk/components/tag/macro.njk" import govukTag -%}
+
+{% set adrList = [] %}
+{% for adr in collections.adr %}
+    {% set tagClass = "" %}
+    {% switch adr.data.status %}
+    {% case "rejected" %}
+        {% set tagClass = "govuk-tag--red" %}
+    {% case "accepted" %}
+        {% set tagClass = "govuk-tag--green" %}
+    {% default %}
+        {% set tagClass = "" %}
+    {% endswitch %}
+
+    {% set adrList = (adrList.push([{html:
+            govukTag({
+                text: adr.data.status,
+                classes: tagClass
+            })
+        },
+        {text: adr.data.adr_number},
+        {html: 
+            '<a href="' + (adr.url) + '" class="govuk-link">' + (adr.data.title) + '</a>'
+        }]),
+    adrList) %}
+{% endfor %}
+
+{{ govukTable({
+  caption: "Architectural Decision Records",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Status"
+    },
+    {
+      text: "ADR no."
+    },
+    {
+      text: "Title"
+    }
+  ],
+  rows: adrList
+  
+}) }}

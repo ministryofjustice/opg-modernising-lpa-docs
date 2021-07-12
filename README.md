@@ -40,16 +40,6 @@ When writing articles consider using strong prose in your writing. This keeps th
 
 ([https://github.com/11ty/eleventy-plugin-inclusive-language](https://github.com/11ty/eleventy-plugin-inclusive-language)) installed to help with identifying non inclusive language.
 
-**Name**: proselint
-
-```text
-Id: patrykpeszko.vscode-proselint
-Description: Proselint support for Visual Studio Code
-Publisher: PatrykPeszko
-```
-
-**VS Marketplace Link**: [https://marketplace.visualstudio.com/items?itemName=PatrykPeszko.vscode-proselint](https://marketplace.visualstudio.com/items?itemName=PatrykPeszko.vscode-proselint)
-
 **Name**: Code Spell Checker
 
 ```text

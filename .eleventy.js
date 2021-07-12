@@ -1,5 +1,6 @@
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const markdownItGds = require("./markdown-it-gds");
+const dateFilter = require('./src/filters/date-filter.js');
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'node_modules/@ministryofjustice/frontend/assets': 'assets' })
@@ -8,6 +9,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/_includes/assets': 'assets' })
 
     eleventyConfig.addPlugin(inclusiveLangPlugin);
+
+    eleventyConfig.addFilter('dateFilter', dateFilter);
 
     eleventyConfig.setLibrary("md", markdownItGds());
 

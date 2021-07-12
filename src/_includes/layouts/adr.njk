@@ -1,0 +1,30 @@
+---
+layout: layouts/fullwidth.njk
+---
+
+{%- from "../../_includes/partials/statusBadge.njk" import statusBadge -%}
+
+<h1 class="govuk-heading-l">{{adr_number}} - {{title}}</h1>
+
+<h2 class="govuk-heading-m">Overview</h2>
+
+<p class="govuk-body"><strong>Date</strong>: {{ date | dateFilter }}
+
+<h3 class="govuk-heading-s">Status</h3>
+<p class="govuk-body">{{statusBadge({status: status})}}</p>
+
+<h3 class="govuk-heading-s">Contributors</h3>
+<ul class="govuk-list">
+    {%- for item in contributors -%}
+        <li>{{ item }}</li>
+    {%- endfor -%}
+</ul>
+
+<h3 class="govuk-heading-s">Areas of coverage</h3>
+<ul class="govuk-list">
+    {%- for item in areas_of_coverage -%}
+        <li>{{ item }}</li>
+    {%- endfor -%}
+</ul>
+
+{{ content | safe }}

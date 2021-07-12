@@ -1,7 +1,10 @@
 ---
 layout: layouts/fullwidth.njk
 ---
-<p class="govuk-body"><strong>Date</strong>: {{date_view}}</p>
+
+<h1 class="govuk-heading-l">{{title}}</h1>
+
+<p class="govuk-body"><strong>Date</strong>: <time>{{ date | dateFilter }}</time></p>
 
 {{ content | safe }}
 

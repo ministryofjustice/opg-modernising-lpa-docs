@@ -4,26 +4,12 @@ title: Architectural Decision Records
 ---
 
 {%- from "../../node_modules/govuk-frontend/govuk/components/table/macro.njk" import govukTable %}
-{%- from "../../node_modules/govuk-frontend/govuk/components/tag/macro.njk" import govukTag -%}
+{%- from "../_includes/partials/statusBadge.njk" import statusBadge -%}
 
 {% set adrList = [] %}
 {% for adr in collections.adr %}
-    {% set tagClass = "" %}
-    {% switch adr.data.status %}
-    {% case "rejected" %}
-        {% set tagClass = "govuk-tag--red" %}
-    {% case "accepted" %}
-        {% set tagClass = "govuk-tag--green" %}
-    {% default %}
-        {% set tagClass = "" %}
-    {% endswitch %}
-
-    {% set adrList = (adrList.push([{html:
-            govukTag({
-                text: adr.data.status,
-                classes: tagClass
-            })
-        },
+    {% set adrList = (adrList.push([
+        {html: statusBadge({status: adr.data.status})},
         {text: adr.data.adr_number},
         {html: 
             '<a href="' + (adr.url) + '" class="govuk-link">' + (adr.data.title) + '</a>'

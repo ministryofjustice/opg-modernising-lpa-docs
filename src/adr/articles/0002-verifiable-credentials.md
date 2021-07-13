@@ -1,33 +1,15 @@
 ---
-layout: layouts/fullwidth.njk
+layout: layouts/adr.njk
 title: "Verifiable Credentials"
 weight: 1
 date: 2021-07-02
-date_view: "2021-07-02"
 review_in: 3 months
 tags: adr
-areas_of_coverage: "Verifiable Credentials"
-status: proposed
-contributors: "John Nolan"
+areas_of_coverage: ["Verifiable Credentials"]
+status: "proposed"
+contributors: ["John Nolan"]
 adr_number: "0002"
 ---
-# {{title}}
-
-## Overview
-
-**Date**: {{date_view}}
-
-### Status
-
-<strong class="govuk-tag">{{status}}</strong>
-
-### Contributors
-
-{{contributors}}
-
-### Areas of coverage
-
-{{areas_of_coverage}}
 
 ## Context
 

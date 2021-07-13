@@ -2,16 +2,11 @@
 layout: layouts/article.njk
 title: "Tech Ethics in our decision making reference"
 date: 2021-06-28
-date_view: "2021-06-28"
 tags: research_development
-areas_of_coverage: "Digital Service"
-status: accepted
-contributors: 
-    - "John Nolan"
-    - "Lisa Moretti"
+areas_of_coverage: ["Digital Service"]
+status: "accepted"
+contributors: ["Lisa Moretti"]
 ---
-
-# Tech Ethics in our decision making reference
 
 ## Mitigate against being tech deterministic
 

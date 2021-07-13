@@ -1,33 +1,15 @@
 ---
-layout: layouts/fullwidth.njk
+layout: layouts/adr.njk
 title: "Record architecture decisions"
 weight: 1
 date: 2021-06-28
-date_view: "2021-06-28"
 review_in: 12 months
 tags: adr
-areas_of_coverage: "Digital Service"
-status: accepted
-contributors: "John Nolan"
+areas_of_coverage: ["Digital Service"]
+status: "accepted"
+contributors: ["John Nolan"]
 adr_number: "0001"
 ---
-# {{adr_number}} - {{title}}
-
-## Overview
-
-**Date**: {{date_view}}
-
-### Status
-
-<strong class="govuk-tag govuk-tag--green">{{status}}</strong>
-
-### Contributors
-
-{{contributors}}
-
-### Areas of coverage
-
-{{areas_of_coverage}}
 
 ## Context
 

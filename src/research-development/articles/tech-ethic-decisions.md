@@ -4,7 +4,6 @@ title: "Tech Ethics in our decision making reference"
 date: 2021-06-28
 tags: research_development
 areas_of_coverage: ["Digital Service"]
-status: "accepted"
 contributors: ["Lisa Moretti"]
 ---
 
@@ -49,4 +48,4 @@ Is it clear to service users what data we are collecting from them, how this ben
 
 User needs versus user rights. Have we designed for the right to decline, the right to know more and the right to question and contest?
 
-Have we designed our data practices, design and research processes, and technical systems so that they can be easily audited? Who is responsible for maintaining these and who is ultimately accountable for them?
+Have we designed our data practices, design and research processes, and technical systems so that they can be audited? Who is responsible for maintaining these and who is ultimately accountable for them?

@@ -42,11 +42,11 @@ There will be custom patterns and components that we need to build, but because 
 
 #### SASS
 
-Allows us to only require styling resources we require. We can generate our styles dynamically and keep up to date easily with the latest styling changes and colours due to SASS variables.
+Allows us to only require styling resources we require. We can generate our styles dynamically and keep up to date with the latest styling changes and colours due to SASS variables.
 
 #### Javascript
 
-Contains all the testing code we need, imported as required and easily updatable for bug fixes or new features removing the need for custom Javascript to be written.
+Contains all the testing code we need, imported as required and updatable for bug fixes or new features removing the need for custom Javascript to be written.
 
 #### Assets
 
@@ -54,7 +54,7 @@ Contains all images and fonts required for running a Government service. We can 
 
 #### Nunjucks
 
-Depending on the technology we want to use, this could be very useful. Being able to use these templates we can ensure we will always have access to the latest components available and easily maintain our code base with a set of pre configured templates.
+Depending on the technology we want to use, this could be useful. Being able to use these templates we can ensure we will always have access to the latest components available and maintain our code base with a set of pre configured templates.
 
 The use of Nunjucks as the templating language should be discussed in another ADR.
 

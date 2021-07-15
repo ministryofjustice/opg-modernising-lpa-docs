@@ -38,12 +38,15 @@ module.exports = function () {
     let className;
     switch (token.tag) {
       case "h1":
-        className = "govuk-heading-l";
+        className = "govuk-heading-xl";
         break;
       case "h2":
-        className = "govuk-heading-m";
+        className = "govuk-heading-l";
         break;
       case "h3":
+        className = "govuk-heading-m";
+        break;
+      case "h4":
         className = "govuk-heading-s";
         break;
     }

@@ -20,7 +20,7 @@
     <meta property="og:image" content="/assets/images/moj-opengraph-image.png">
 
     <link href="/assets/styles.css" rel="stylesheet">
-    <title>Github for source control - Modernising Lasting Power of Attorney Documentation</title>
+    <title>GOV.UK Design System - Modernising Lasting Power of Attorney Documentation</title>
   </head>
   <body class="govuk-template__body">
     <a href="#content" class="govuk-skip-link">Skip to main content</a>
@@ -84,11 +84,11 @@
 
             <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-l">0003 - Github for source control</h1>
+        <h1 class="govuk-heading-l">0004 - GOV.UK Design System</h1>
 
 <h2 class="govuk-heading-m">Overview</h2>
 
-<p class="govuk-body"><strong>Date</strong>: 1 July 2021
+<p class="govuk-body"><strong>Date</strong>: 2 July 2021
 
 <h3 class="govuk-heading-s">Status</h3>
 <p class="govuk-body">
@@ -109,33 +109,48 @@
 <ul class="govuk-list"><li>Digital Service</li></ul>
 
 <h2 class="govuk-heading-l">Context</h2>
-<p class="govuk-body">We want to store our source code in a open source, cloud based git provider.</p>
+<p class="govuk-body">We need to follow strict government guidelines on design and accessibility. The design should be consistent across all pages and work for as many browsers as possible.</p>
 <h2 class="govuk-heading-l">Technical</h2>
 <h3 class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
-<p class="govuk-body">Github is accessible via built in APIS and allows us to open source our code for others to raise issues and ourselves, share details on releases and updates.</p>
+<p class="govuk-body"><a href="https://design-system.service.gov.uk/" class="govuk-link">GOV.UK Design System</a> is open source and used across all digital government services.</p>
+<p class="govuk-body">Any new patterns that we create can be contributed back with our research included.</p>
+<p class="govuk-body">We should take advantage of other services research and contributed design patterns and feedback ours.</p>
 <h3 class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
-<p class="govuk-body"><strong>Overall</strong>: 10/10<br>
-Developers work every day within Github for existing services.</p>
+<p class="govuk-body"><strong>Overall</strong>: 8/10<br>
+Developers have knowledge of the design system and work with it on a regular basis.</p>
+<p class="govuk-body">The use of tooling and testing around front end development is not as strong so will require more focus when implementing.</p>
 <h3 class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
-<p class="govuk-body">We have an Enterprise licence for Github giving us a channel for any support queries.</p>
-<p class="govuk-body">Github allows us to open source our code when we are ready.</p>
+<p class="govuk-body">The <a href="https://design-system.service.gov.uk/" class="govuk-link">GOV.UK Design System</a> is completely open source and is required for all public facing government services.</p>
+<p class="govuk-body">It has its own team as well as a large community of designers, user researchers, content and developers contributing to it.</p>
 <h3 class="govuk-heading-m">Scalability</h3>
-<p class="govuk-body">Github is cloud based and incredibly popular giving us a reliable solution for hosting our code.</p>
-<p class="govuk-body">Should we need to move for any reason, we are using Git which enables us to move to a new provider.</p>
+<p class="govuk-body">The <a href="https://design-system.service.gov.uk/" class="govuk-link">GOV.UK Design System</a> has 4 different types of assets to consume.</p>
+<p class="govuk-body">There will be custom patterns and components that we need to build, but because of the use of SASS and Javascript, we will be able to stick to the same standards as the design system and take advantage of the built in variables.</p>
+<h4 class="govuk-heading-s">SASS</h4>
+<p class="govuk-body">Allows us to only require styling resources needed.</p>
+<p class="govuk-body">We can generate our styles dynamically and keep up to date with the latest styling changes and colours due to SASS variables.</p>
+<h4 class="govuk-heading-s">Javascript</h4>
+<p class="govuk-body">Contains all the code we need to progressively enhance the user interface.</p>
+<p class="govuk-body">We only need to import modules that we required and all functionality can be updated for bug fixes or new features via npm.</p>
+<p class="govuk-body">This will remove the need for custom Javascript to be written in most cases.</p>
+<h4 class="govuk-heading-s">Assets</h4>
+<p class="govuk-body">Contains all images and fonts required for running a Government service. We can keep up to date by always ensuring we import at build time the latest assets available.</p>
+<h4 class="govuk-heading-s">Nunjucks</h4>
+<p class="govuk-body">Depending on the technology we want to use, this could be useful. Being able to use these templates, we can ensure we will always have access to the latest components available and maintain our code base with a set of pre configured templates.</p>
+<p class="govuk-body">The use of Nunjucks as the templating language should be discussed in another ADR.</p>
 <h2 class="govuk-heading-l">Ethics</h2>
 <h3 class="govuk-heading-m">Mitigate against being tech deterministic</h3>
-<p class="govuk-body">There are other providers we could use, but doing so would not bring any great benefit over our already established best practices for existing services and level of support we have with the Enterprise version.</p>
+<p class="govuk-body">Due to GDS standards, we are required to choose this design system.</p>
 <h3 class="govuk-heading-m">Ensure you conduct inclusive research</h3>
-<p class="govuk-body">N/A</p>
+<p class="govuk-body">All the components and patterns are centrally managed and community driven to include user research in each to a high level. This gives us the advantage of having a high degree of confidence that we are using the right tool for our development.</p>
 <h3 class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
-<p class="govuk-body">Allowing the access of our code via the platform will encourage others to be able to help contribute and reuse our services built.</p>
-<p class="govuk-body">The more we can share with others, the stronger our solutions will be.</p>
+<p class="govuk-body">As we use the design system, we will find ourselves using custom patterns and components. We should make sure we contribute back as much information as possible to help other services take advantage of our research.</p>
 <h3 class="govuk-heading-m">Interrogate your data decisions</h3>
-<p class="govuk-body">We should ensure that our repositories are marked as Open Source as soon as we feel comfortable.</p>
+<p class="govuk-body">Where possible we should stick to the standards defined by the <a href="https://design-system.service.gov.uk/" class="govuk-link">GOV.UK Design System</a>.</p>
+<p class="govuk-body">If we do decide to move away from the standard, it should be done with the correct research to back the decision and fed back to the <a href="https://design-system.service.gov.uk/" class="govuk-link">GOV.UK Design System</a> team.</p>
 <h3 class="govuk-heading-m">Decision</h3>
-<p class="govuk-body">We should continue to use our Ministry of Justice Github Enterprise account for our source code.</p>
+<p class="govuk-body">We should and have to use the <a href="https://design-system.service.gov.uk/" class="govuk-link">GOV.UK Design System</a>.</p>
 <h3 class="govuk-heading-m">Consequences</h3>
-<p class="govuk-body">We will be able to use our existing management infrastructure for user management and deployments without the need for additional cost or resources.</p>
+<p class="govuk-body">We will be able to work at a high cadence and understanding as the <a href="https://design-system.service.gov.uk/" class="govuk-link">GOV.UK Design System</a> is used throughout all our services on a day to day basis.</p>
 
 
     </div>

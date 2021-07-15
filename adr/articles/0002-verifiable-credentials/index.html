@@ -108,7 +108,7 @@
 <h3 class="govuk-heading-s">Areas of coverage</h3>
 <ul class="govuk-list"><li>Verifiable Credentials</li></ul>
 
-<h2 class="govuk-heading-m">Context</h2>
+<h2 class="govuk-heading-l">Context</h2>
 <p class="govuk-body">We want to give the Citizen a way of using a verifiable digital representation of a LPA. This will enable them to use this to prove they are who they say they are.</p>
 <p class="govuk-body">If an LPA is no longer a paper deed, then this is one solution to what a digital version could be.</p>
 <p class="govuk-body">This could be an optional addition to the existing Use a LPA service to allow for a wider demographic of users.</p>
@@ -120,17 +120,17 @@
 </ol>
 <p class="govuk-body">We would need to be able to reliably sign the credential for others to validate the authenticity.</p>
 <p class="govuk-body">We would need the Verifiable Credential to be able to store the appropriate required information for the consumer to understand its responsibilities.</p>
-<h2 class="govuk-heading-m">Technical</h2>
-<h3 class="govuk-heading-s">Interoperability - How does this enable the exchange of information</h3>
+<h2 class="govuk-heading-l">Technical</h2>
+<h3 class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
 <p class="govuk-body">The Verifiable Credentials data model is a <a href="https://www.w3.org/TR/vc-data-model/" class="govuk-link">W3C Open Standard</a>. As long as the standards are adhered to, interopability will be high.</p>
 <p class="govuk-body">The standards don't supply a definitive way of handling Proofs (Signatures). This raises concerns on the interopability of verification and authenticity at this stage and should be taken into account when deciding whether to use this solution. More information can be found here <a href="https://www.w3.org/TR/vc-data-model/#proofs-signatures" class="govuk-link">https://www.w3.org/TR/vc-data-model/#proofs-signatures</a></p>
 <p class="govuk-body">The signing of a Verifiable Credential should also be standards driven and supported by the wider industry.</p>
-<h3 class="govuk-heading-s">Developer Knowledge - How well known is this in our current skill sets</h3>
+<h3 class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
 <p class="govuk-body"><strong>Overall</strong>: 2/10<br>
 The data model is well defined and an understood pattern for representing data.</p>
 <p class="govuk-body">The validity and authenticity aspect of the specification are early in discovery.</p>
 <p class="govuk-body">If signing was done via a certificate provider setting, such is done for SSL Certification, then the understanding will be higher. It will come with extra challenges on management of the signing keys and the key life cycle.</p>
-<h3 class="govuk-heading-s">Support/Open Source - Is it well supported</h3>
+<h3 class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
 <p class="govuk-body">The Verifiable Credentials data model is a <a href="https://www.w3.org/TR/vc-data-model/" class="govuk-link">W3C Open Standard</a>.</p>
 <p class="govuk-body">The implementation of verifying and signing Verifiable Credentials is covered in the standard. This is in early stages of research and development with various companies such as <a href="https://mercury.rsalabs.com/" class="govuk-link">RSA Labs and Project Mercury</a>.</p>
 <p class="govuk-body">The specifications it is built on are in a draft state and can be found at the following links. This should be considered and monitored. We should aim to listen and contribute if possible to these areas to gain confidence in our choice moving forward.</p>
@@ -138,14 +138,14 @@ The data model is well defined and an understood pattern for representing data.<
 <li><a href="https://w3c-ccg.github.io/ld-proofs/" class="govuk-link">https://w3c-ccg.github.io/ld-proofs/</a></li>
 <li><a href="https://json-ld.github.io/rdf-dataset-canonicalization/spec/" class="govuk-link">https://json-ld.github.io/rdf-dataset-canonicalization/spec/</a></li>
 </ol>
-<h3 class="govuk-heading-s">Scalability</h3>
+<h3 class="govuk-heading-m">Scalability</h3>
 <p class="govuk-body">The credential is a small file that can be stored anywhere. Either as a file on a storage platform such as Cloud Object Storage, database, Personal Data Store or a users device.</p>
 <p class="govuk-body">Once created and digitally signed, it is handed over to the Citizen and only requires checks on its validity from us as its issuer.</p>
-<h2 class="govuk-heading-m">Ethics</h2>
-<h3 class="govuk-heading-s">Mitigate against being tech deterministic</h3>
+<h2 class="govuk-heading-l">Ethics</h2>
+<h3 class="govuk-heading-m">Mitigate against being tech deterministic</h3>
 <p class="govuk-body">We know we need to find a way to give the option of a digital version of an LPA. We will likely also need to provide a physical version still.</p>
 <p class="govuk-body">Therefore we should consider this as an option to enable easier use of an LPA but also confidence in the validity of the holder using the credential.</p>
-<h3 class="govuk-heading-s">Ensure you conduct inclusive research</h3>
+<h3 class="govuk-heading-m">Ensure you conduct inclusive research</h3>
 <p class="govuk-body">We need to do user testing around this technology before being confident in its use.</p>
 <p class="govuk-body">Areas of interest would be</p>
 <ol class="govuk-list">
@@ -155,7 +155,7 @@ The data model is well defined and an understood pattern for representing data.<
 <li>Trust in the technology</li>
 <li>Metrics on the groups/communities that would be able to use this</li>
 </ol>
-<h3 class="govuk-heading-s">Think big and imagine what the impact of your work can be</h3>
+<h3 class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
 <p class="govuk-body">If successful the following benefits to society would become evident.</p>
 <ol class="govuk-list">
 <li>Use this credential as a mechanism for proving your identity to other services in this eco system</li>
@@ -163,13 +163,13 @@ The data model is well defined and an understood pattern for representing data.<
 <li>Available and shareable in emergency situations</li>
 <li>Be an example to other departments and industries to push this new technology</li>
 </ol>
-<h3 class="govuk-heading-s">Interrogate your data decisions</h3>
+<h3 class="govuk-heading-m">Interrogate your data decisions</h3>
 <p class="govuk-body">The data that is stored in the credential is owned by the citizen meaning they have full control of how they use it.</p>
 <p class="govuk-body">We would require only a minimal amount of data to be held to initially verify the individual to an account. We also would legally be required to store a minimal amount of data for the LPA register.</p>
-<h3 class="govuk-heading-s">Decision</h3>
+<h3 class="govuk-heading-m">Decision</h3>
 <p class="govuk-body">We should continue to explore the idea.</p>
 <p class="govuk-body">We should continue to consult other parties to ensure we work to the open standards and maintain the ability to pivot in this direction as the industry integrates into this technology.</p>
-<h3 class="govuk-heading-s">Consequences</h3>
+<h3 class="govuk-heading-m">Consequences</h3>
 <p class="govuk-body">Depending on further research this will vary.</p>
 <p class="govuk-body">Using the method of RSA Labs Project Mercury would mean us setting up the Office of the Public Guardian or the Ministry of Justice as an issuer.</p>
 <p class="govuk-body">We also have the choice of building our own implementation to confidently sign and manage credentials. We should follow the same standards and guidelines to maintain ownership of the code and interopability.</p>

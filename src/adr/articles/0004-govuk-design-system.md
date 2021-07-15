@@ -19,20 +19,24 @@ We need to follow strict government guidelines on design and accessibility. The 
 
 ### Interoperability - How does this enable the exchange of information
 
-[GOV.UK Design System](https://design-system.service.gov.uk/) is fully open source and used across all digital government services.
+[GOV.UK Design System](https://design-system.service.gov.uk/) is open source and used across all digital government services.
 
-Any new patterns that we create can be contributed back with our research included as well as being able to take advantage of other services research and contributed design patterns.
+Any new patterns that we create can be contributed back with our research included.
+
+We should take advantage of other services research and contributed design patterns and feedback ours.
 
 ### Developer Knowledge - How well known is this in our current skill sets
 
 **Overall**: 8/10
-Developers have knowledge of the design system and most work with it on a regular basis.
+Developers have knowledge of the design system and work with it on a regular basis.
+
+The use of tooling and testing around front end development is not as strong so will require more focus when implementing.
 
 ### Support/Open Source - Is it well supported
 
 The [GOV.UK Design System](https://design-system.service.gov.uk/) is completely open source and is required for all public facing government services.
 
-It has its own team as well as a large community of designers, content and developers contributing to it.
+It has its own team as well as a large community of designers, user researchers, content and developers contributing to it.
 
 ### Scalability
 
@@ -42,11 +46,17 @@ There will be custom patterns and components that we need to build, but because 
 
 #### SASS
 
-Allows us to only require styling resources we require. We can generate our styles dynamically and keep up to date with the latest styling changes and colours due to SASS variables.
+Allows us to only require styling resources needed.
+
+We can generate our styles dynamically and keep up to date with the latest styling changes and colours due to SASS variables.
 
 #### Javascript
 
-Contains all the testing code we need, imported as required and updatable for bug fixes or new features removing the need for custom Javascript to be written.
+Contains all the code we need to progressively enhance the user interface.
+
+We only need to import modules that we required and all functionality can be updated for bug fixes or new features via npm.
+
+This will remove the need for custom Javascript to be written in most cases.
 
 #### Assets
 
@@ -54,7 +64,7 @@ Contains all images and fonts required for running a Government service. We can 
 
 #### Nunjucks
 
-Depending on the technology we want to use, this could be useful. Being able to use these templates we can ensure we will always have access to the latest components available and maintain our code base with a set of pre configured templates.
+Depending on the technology we want to use, this could be useful. Being able to use these templates, we can ensure we will always have access to the latest components available and maintain our code base with a set of pre configured templates.
 
 The use of Nunjucks as the templating language should be discussed in another ADR.
 

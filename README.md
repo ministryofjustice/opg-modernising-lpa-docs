@@ -2,6 +2,8 @@
 
 ![docs-workflow](https://github.com/ministryofjustice/opg-modernising-lpa-docs/actions/workflows/docs.yml/badge.svg)
 ![docs-workflow](https://img.shields.io/github/license/ministryofjustice/opg-modernising-lpa-docs.svg)
+[![eleventy](https://img.shields.io/badge/staticgen-eleventy-%23707070.svg?style=flat-square)](https://11ty.io)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 Site URL: [https://docs.modernising.opg.service.justice.gov.uk](https://docs.modernising.opg.service.justice.gov.uk)
 

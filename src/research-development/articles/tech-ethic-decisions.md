@@ -4,8 +4,24 @@ title: "Tech Ethics in our decision making reference"
 date: 2021-06-28
 tags: research_development
 areas_of_coverage: ["Digital Service"]
-contributors: ["Lisa Moretti"]
+contributors: ["Lisa Talia Moretti"]
 ---
+
+## Introduction to Ethics in tech
+
+Technology is not a product, it's a system. What we mean by this is that technology is never only an app, a product or a service. Rather, **technology is weaved into social systems by facilitating how people transact with the world around them**.
+
+Social systems include, but are not limited to, the justice system, the information system, the healthcare system but also less tangible systems like power or race.
+
+**Data is a by-product** of these transactions.
+
+It is therefore crucial that **when we design digital products and services, we think about the impact we’re having on the systems in which people live their lives.**
+
+The below questions support ethical best practice by encouraging considerations of the wider social context in which designs/solutions will live.
+
+May you design with moral imagination and deploy with care.
+
+![Diagram showing a mobile phone in the middle with overlapping areas of services including justice system, social network systems, system of legal services, health and care systems and financial systems](/assets/images/research-development/tech-ethic-decisions-1.png "Diagram showing a mobile phone in the middle with overlapping areas of services including justice system, social network systems, system of legal services, health and care systems and financial systems")
 
 ## Mitigate against being tech deterministic
 
@@ -26,6 +42,7 @@ Can we identify a marginal group/community who is currently underserved or worse
 ## Think big and imagine what the impact of your work can be
 
 Locate this product/service in social and cultural systems. Now imagine we are wildly successful in our endeavours. What is the impact on the individual, communities or environment?
+
 Imagine suddenly everyone wants to follow our lead. Which option would leave the world better off?
 
 Which option would create the best outcome for communities, as opposed to only certain members?

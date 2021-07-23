@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0c0c">
+    
+    <link rel="preload" href="/assets/fonts/light-94a07e06a1-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/bold-b542beb274-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/styles.css" rel="stylesheet" as="style">
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-167x167.png" sizes="167x167">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon.png">
+
+    <meta name="description" content="Modernising Lasting Power of Attorney Documentation site for transparency and collaboration">
+    <meta property="og:image" content="/assets/images/moj-opengraph-image.png">
+
+    <link href="/assets/styles.css" rel="stylesheet">
+    <title>Terraform - Modernising Lasting Power of Attorney Documentation</title>
+  </head>
+  <body class="govuk-template__body">
+    <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+    
+      <div>
+
+        
+    <header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+        
+        <div class="govuk-header__content">
+        
+        <a href="/" class="govuk-header__link govuk-header__link--service-name">
+        Modernising Lasting Power of Attorney Documentation
+        </a>
+        
+        
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Navigation menu">
+            
+            
+                <li class="govuk-header__navigation-item">
+                
+                    <a class="govuk-header__link" href="/research-development">
+                
+                    Research &amp; Development
+                
+                    </a>
+                
+                </li>
+            
+            
+            
+                <li class="govuk-header__navigation-item">
+                
+                    <a class="govuk-header__link" href="/adr">
+                
+                    Architectural Decision Records
+                
+                    </a>
+                
+                </li>
+            
+            
+        </ul>
+        </nav>
+        
+        </div>
+        
+    </div>
+    </header>
+
+
+        
+        
+        
+        <div class="govuk-width-container">
+          <main class="govuk-main-wrapper" role="main">
+
+            <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">0005 - Terraform</h1>
+
+<h2 class="govuk-heading-m">Overview</h2>
+
+<p class="govuk-body"><strong>Date</strong>: 5 July 2021
+
+<h3 class="govuk-heading-s">Status</h3>
+<p class="govuk-body">
+    
+        
+    
+
+    <strong class="govuk-tag govuk-tag--green">
+  accepted
+</strong>
+
+</p>
+
+<h3 class="govuk-heading-s">Contributors</h3>
+<ul class="govuk-list"><li>John Nolan</li></ul>
+
+<h3 class="govuk-heading-s">Areas of coverage</h3>
+<ul class="govuk-list"><li>Digital Service</li></ul>
+
+<h2 class="govuk-heading-l">Context</h2>
+<p class="govuk-body">We need a way to manage our infrastructure as code (IaC) to support CI/CD and manage and provision our computing, storage and networking resources in the cloud.</p>
+<p class="govuk-body">We use Terraform extensively on all our existing services, as well as a central Terraform repository for managing all our services resources, permissions and security needs.</p>
+<h2 class="govuk-heading-l">Technical</h2>
+<h3 class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
+<p class="govuk-body">Terraform is fully open source and has the ability to do Multi-Cloud Deployment.</p>
+<p class="govuk-body">Even though there is no plan to split our resources across multiple clouds, having this ability available is advantageous.</p>
+<p class="govuk-body">A downside of this being community driven means that new features created by cloud providers can sometimes have a delay in being available for use within Terraform.</p>
+<h3 class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
+<p class="govuk-body"><strong>Overall</strong>: 7/10<br>
+We have dedicated Webops Engineers within our teams who have expert knowledge on using Terraform. They encourage others to learn and pair on the work they do.</p>
+<p class="govuk-body">Different teams have various levels of confidence in its use, but the ability to have a resource within each team with this knowledge makes up for any lack thereof.</p>
+<h3 class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
+<p class="govuk-body">Terraform is Open Source and regularly accepts and releases community based Pull Requests.</p>
+<p class="govuk-body">Some of our Webops Engineers are also contributors to the project.</p>
+<h3 class="govuk-heading-m">Scalability</h3>
+<p class="govuk-body">Terraform by its nature is incredibly scalable. Enabling IaC, being maintained via Github and controlled via our CI/CD pipelines means it can be versioned, rolled back, monitored and maintained.</p>
+<h2 class="govuk-heading-l">Ethics</h2>
+<h3 class="govuk-heading-m">Mitigate against being tech deterministic</h3>
+<p class="govuk-body">N/A - there is no other non-tech solution that could give us the ability to manage our infrastructure.</p>
+<h3 class="govuk-heading-m">Ensure you conduct inclusive research</h3>
+<p class="govuk-body">N/A - the use of this technology does not have an effect on marginalised groups directly.</p>
+<h3 class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
+<p class="govuk-body">Building our infrastructure in Terraform will allow us to take learnings and contribute back to wider society. If we develop new modules, add additional functionality to Terraform or raise issues that are found, we can help others who use this technology.</p>
+<p class="govuk-body">If we decide to Open Source our infrastructure code, we can also take advantage of contributions from other areas outside of our department.</p>
+<p class="govuk-body">Others will also be able to use our modules or infrastructure, should they wish, in their own implementations.</p>
+<p class="govuk-body">Working in the open will drive trust in Citizens and open ourselves up to honest debate and critique in our choices.</p>
+<h3 class="govuk-heading-m">Interrogate your data decisions</h3>
+<p class="govuk-body">N/A - there is no place for personal data to be stored within Terraform.</p>
+<p class="govuk-body">It does enable the use of technologies that can and this analysis should be recorded against their own ADRs.</p>
+<h3 class="govuk-heading-m">Decision</h3>
+<p class="govuk-body">We should continue to use Terraform taking advantage of our existing lessons learnt and best practices.</p>
+<h3 class="govuk-heading-m">Consequences</h3>
+<p class="govuk-body">We will be able to take advantage of our existing best practices and knowledge to quickly setup any new infrastructure.</p>
+
+
+    </div>
+</div>
+
+            
+          </main>
+        </div>
+        
+
+        
+    <footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+        
+        <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+            
+            <h2 class="govuk-visually-hidden">Support links</h2>
+            
+                <ul class="govuk-footer__inline-list">
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/research-development/articles/tech-ethic-decisions/">
+                        Tech Ethics in our decision making reference
+                    </a>
+                    </li>
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="https://sites.google.com/digital.justice.gov.uk/opgmlpa">
+                        Modernising lasting powers of attorney blog
+                    </a>
+                    </li>
+                
+                </ul>
+            
+            
+            
+            
+        </div>
+        </div>
+    </div>
+    </footer>
+
+
+
+      </div>
+    
+  </body>
+</html>

@@ -21,6 +21,9 @@ module.exports = function () {
   };
   md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
     tokens[idx].attrPush(["class", "govuk-link"]);
+    if (tokens[idx].attrGet("href").indexOf("http") === 0) {
+      tokens[idx].attrPush(["target", "_blank"]);
+    }
     return defaultRender(tokens, idx, options, env, self);
   };
   md.renderer.rules.ordered_list_open = function (
@@ -53,6 +56,16 @@ module.exports = function () {
     if (className) {
       tokens[idx].attrPush(["class", className]);
     }
+    return defaultRender(tokens, idx, options, env, self);
+  };
+  md.renderer.rules.blockquote_open = function (
+    tokens,
+    idx,
+    options,
+    env,
+    self
+  ) {
+    tokens[idx].attrPush(["class", "govuk-inset-text"]);
     return defaultRender(tokens, idx, options, env, self);
   };
 

@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "JSON-LD ZKP with BBS+ Signatures - Verifiable Credentials"
-date: 2021-08-12
+date: 2021-08-26
 tags: research_development
 areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan"]
@@ -9,10 +9,10 @@ contributors: ["John Nolan"]
 
 ## Acronyms
 
-1. Self Sovereign Identity - SSI
-2. Verifiable Credentials - VC
-3. Decentralised Identity - DID
-4. [Zero-knowledge Proofs (opens in a new tab)](https://en.wikipedia.org/wiki/Zero-knowledge_proof) - ZKP
+1. SSI - Self Sovereign Identity
+2. VC - Verifiable Credentials
+3. DID - Decentralised Identity
+4. ZKP - [Zero-knowledge Proofs (opens in a new tab)](https://en.wikipedia.org/wiki/Zero-knowledge_proof)
 5. BBS+ - (named after the original authors Boneh, Boyen, and Shacham)
 6. LD - Linked Data
 7. JSON-LD - JSON formatted version of Linked Data

@@ -34,6 +34,7 @@ A digital wallet is a way of securely storing your VCs and using them. The use o
 At a certain point these digital wallets will become a part of devices such as a phone’s operating system. There is a risk the wallets that store these credentials may face a fragmented market with a race to the most successful standard risking interoperability issues.
 
 We should ensure that before we decide on the use of a particular standard or implementation, that it is the right thing to do and that we reduce any potential risk of damage to society and the citizens we serve.
+
 ## What is Decentralised Identity (DID)?
 
 Decentralised identity, also sometimes referred to as self-sovereign identity, is a concept that aims to give back control of identity data to consumers through the use of an identity wallet or personal data store. In this way, data can be verified by a trusted source (such as the government) and then issued to an individual to store in a location of their choice.
@@ -46,7 +47,7 @@ Source: [https://www.gsma.com/identity/decentralised-identity](https://www.gsma.
 
 BBS+ is a pairing-based cryptographic signature used for signing one or more messages.
 
-Pairing-based cryptography has been used to construct identity-based encryption (IBE), which allows a sender to encrypt a message without needing a receiver’s public key to have been certified and distributed in advance. 
+Pairing-based cryptography has been used to construct identity-based encryption (IBE), which allows a sender to encrypt a message without needing a receiver’s public key to have been certified and distributed in advance.
 
 JSON-LD is a linked data proof that consists of information about the proof, parameters required to verify it, and the proof of value itself.
 
@@ -88,7 +89,7 @@ You are going on holiday and you are required to present at various checkpoints 
 
 1. A valid passport
 2. A yellow fever vaccine pass
-3. Boarding pass 
+3. Boarding pass
 
 Compound proofs allow you to combine all these passes into one queryable VC and use selective disclosure to verify only the required attributes at different stages.
 
@@ -134,12 +135,11 @@ This is important for the privacy of the user. Using cookies in browsers to trac
 
 Verifiable credentials have a key place in the future. Many governments and organizations around the world are already implementing their own versions and schemas of verifiable credentials. A list of a few examples are below
 
-1. Scottish Government via Okta UK (https://blogs.gov.scot/digital/2020/05/13/digital-identity-scotland-prototype-draws-to-a-close/)
-2. Post Office (https://www.postoffice.co.uk/identity)
-3. Evernym (https://www.evernym.com/)
-4. Microsoft (https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/decentralized-identifier-overview)
-5. RSA (https://www.rsa.com/en-us/blog/2021-07/verifiable-credentials-the-key-to-trust-on-the-next-web)
-
+1. Scottish Government via Okta UK ([https://blogs.gov.scot/digital/2020/05/13/digital-identity-scotland-prototype-draws-to-a-close/](https://blogs.gov.scot/digital/2020/05/13/digital-identity-scotland-prototype-draws-to-a-close/))
+2. Post Office ([https://www.postoffice.co.uk/identity](https://www.postoffice.co.uk/identity))
+3. Evernym ([https://www.evernym.com/](https://www.evernym.com/))
+4. Microsoft ([https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/decentralized-identifier-overview](https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/decentralized-identifier-overview))
+5. RSA ([https://www.rsa.com/en-us/blog/2021-07/verifiable-credentials-the-key-to-trust-on-the-next-web](https://www.rsa.com/en-us/blog/2021-07/verifiable-credentials-the-key-to-trust-on-the-next-web))
 
 This does not mean we should accept them in any form that does not hold to the highest standards of privacy and security.
 
@@ -159,6 +159,7 @@ We should move forward with verifiable credentials in the future and prepare wha
 4. BBS+ - (named after the original authors Boneh, Boyen, and Shacham)
 5. LD - Linked Data
 6. JSON-LD - JSON formatted version of Linked Data
+
 ## References
 
 - [What BBS+ Means For Verifiable Credentials - (YouTube)](https://www.youtube.com/watch?v=dXlRIrrb9f4)

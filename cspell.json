@@ -1,7 +1,13 @@
 {
   "version": "0.1",
   "language": "en_gb",
-  "dictionaries": ["bash", "companies", "html", "misc", "softwareTerms"],
+  "dictionaries": [
+    "bash",
+    "companies",
+    "html",
+    "misc",
+    "softwareTerms"
+  ],
   "ignorePaths": [
     "_site/",
     ".vscode/",
@@ -13,17 +19,22 @@
   ],
   "allowCompoundWords": true,
   "words": [
+    "Boneh",
+    "Boyen",
+    "eleventy",
+    "Evernym",
     "govuk",
-    "Talia",
+    "MLPA",
+    "modernisinglpa",
     "Moretti",
     "Nygard",
     "Nygard's",
-    "MLPA",
-    "eleventy",
-    "patrykpeszko",
     "Patryk",
+    "patrykpeszko",
     "Peszko",
+    "Shacham",
+    "Talia",
     "yzhang",
-    "modernisinglpa"
+    "Zundel"
   ]
 }

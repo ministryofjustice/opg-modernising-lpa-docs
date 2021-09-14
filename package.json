@@ -13,7 +13,8 @@
     "lint:all": "yarn run lint:check && yarn run lint:spell && yarn run lint:markdown",
     "sass": "sass --style=compressed src/scss/styles.scss src/_includes/css/styles.css",
     "build": "npm run sass && eleventy",
-    "start": "npm run sass && eleventy --serve"
+    "start": "npm run sass && eleventy --serve",
+    "eleventy": "eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",

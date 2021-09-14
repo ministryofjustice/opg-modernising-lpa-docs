@@ -7,8 +7,6 @@ areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan"]
 ---
 
-# Verifiable Credentials - JSON-LD ZKP with BBS+ Signatures
-
 ## Introduction
 
 With the increased rise in requirements to move to a digital version of paper based credentials due to Covid, the idea of Verifiable Credentials as a solution has drastically increased.

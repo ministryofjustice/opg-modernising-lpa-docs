@@ -3,7 +3,7 @@ on: [pull_request]
 
 jobs:
   linux:
-    name: Linux build on node 14.x
+    name: Linux build on node
     runs-on: ubuntu-latest
 
     steps:

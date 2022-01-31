@@ -26,6 +26,16 @@ module.exports = function () {
     }
     return defaultRender(tokens, idx, options, env, self);
   };
+  md.renderer.rules.bullet_list_open = function (
+    tokens,
+    idx,
+    options,
+    env,
+    self
+  ) {
+    tokens[idx].attrPush(["class", "govuk-list govuk-list--bullet"]);
+    return defaultRender(tokens, idx, options, env, self);
+  };
   md.renderer.rules.ordered_list_open = function (
     tokens,
     idx,
@@ -33,7 +43,7 @@ module.exports = function () {
     env,
     self
   ) {
-    tokens[idx].attrPush(["class", "govuk-list"]);
+    tokens[idx].attrPush(["class", "govuk-list govuk-list--number"]);
     return defaultRender(tokens, idx, options, env, self);
   };
   md.renderer.rules.heading_open = function (tokens, idx, options, env, self) {

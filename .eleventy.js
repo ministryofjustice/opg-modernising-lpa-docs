@@ -3,7 +3,6 @@ const markdownItGds = require("./markdown-it-gds");
 const dateFilter = require('./src/filters/date-filter.js');
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy({ 'node_modules/@ministryofjustice/frontend/assets': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'src/_includes/css': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'src/_includes/assets': 'assets' })

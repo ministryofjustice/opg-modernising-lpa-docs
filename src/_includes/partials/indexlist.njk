@@ -1,9 +1,9 @@
 {% macro indexList(title, content, collection) %}
 <h1 class="govuk-heading-xl">{{title}}</h1>
 {{ content | safe }}
-<ol class="govuk-list">
+<ol class="govuk-list govuk-list--bullet">
     {%- for article in collection -%}
-    <li class="govuk-list-item">
+    <li>
         <a href="{{ article.url }}" class="govuk-link">
             {{ article.data.title }}
         </a>

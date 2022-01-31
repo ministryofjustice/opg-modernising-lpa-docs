@@ -1,5 +1,5 @@
 var dayjs = require("dayjs");
 
 module.exports = (date) => {
-  return `${dayjs(date).format("d MMMM YYYY")}`;
+  return `${dayjs(date, "YYYY-MM-DD").format("D MMMM YYYY")}`;
 };

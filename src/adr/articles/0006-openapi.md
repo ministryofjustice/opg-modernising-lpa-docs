@@ -66,4 +66,4 @@ We should use OpenAPI Specifications for all internal and external APIs.
 
 ### Consequences
 
-We will be able to maintain an up to date, testable and descriptive resources of all our available intergrations across multiple services.
+We will be able to maintain an up to date, testable and descriptive resources of all our available integrations across multiple services.

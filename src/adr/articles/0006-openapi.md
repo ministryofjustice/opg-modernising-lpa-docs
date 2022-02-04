@@ -21,11 +21,21 @@ Any changes to the schema of our API should be testable via this specification.
 
 ### Interoperability - How does this enable the exchange of information
 
-OpenAPI is a very common format used across a wide range of services.
+OpenAPI is a common format used across a wide range of services.
 
-There is great support for it through services and tool that we can take advantage of.
+There is great support for OpenAPI through third party services and tools that we can take advantage of. A great example of tools available can be found on [OpenAPI.Tools](https://openapi.tools/).
+
+A few examples are
+
+- Automatic Documentation Generators
+- Mock Servers
+- Testing
+- Data Validators
+- CI Automation checks
 
 You can use JSON or YAML format for the structure and both are well known standards.
+
+GOV.UK have excellent [guidance on how you should document your APIs](https://www.gov.uk/guidance/how-to-document-apis) in there [API Design Guidance](https://www.gov.uk/government/collections/api-design-guidance) page.
 
 ### Developer Knowledge - How well known is this in our current skill sets
 

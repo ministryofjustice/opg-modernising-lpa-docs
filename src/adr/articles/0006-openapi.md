@@ -48,13 +48,19 @@ OpenAPI is a open source collaboration project.
 
 ### Scalability
 
-N/A
+If we have many services with many OpenAPI specifications, there could be issues of maintaining them all.
+
+If we do not have a well defined domain to work from, we run the risk of duplication of schemas and being out of sync with style, definitions, parameters and responses. This can result in poorly implemented code to get around inconsistencies or badly written specifications without style validators in place.
+
+We should look into practices that help define a centrally accepted domain and styles that can be pulled from and validated against for all services and implementations.
+
+There is a risk of development slowing down and bugs entering code should we not pay attention to best practices from the start. We should investigate these options with the teams as soon as possible.
 
 ## Ethics
 
 ### Mitigate against being tech deterministic
 
-N/A - Uses a very popular and accessible pattern and language
+N/A - Uses a popular and accessible pattern and language
 
 ### Ensure you conduct inclusive research
 

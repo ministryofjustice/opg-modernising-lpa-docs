@@ -9,6 +9,36 @@ module.exports = function () {
     return self.renderToken(tokens, idx, options);
   };
 
+  md.renderer.rules.table_open = function (tokens, idx, options, env, self) {
+    tokens[idx].attrPush(["class", "govuk-table"]);
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
+  md.renderer.rules.thead_open = function (tokens, idx, options, env, self) {
+    tokens[idx].attrPush(["class", "govuk-table__head"]);
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
+  md.renderer.rules.tbody_open = function (tokens, idx, options, env, self) {
+    tokens[idx].attrPush(["class", "govuk-table__body"]);
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
+  md.renderer.rules.th_open = function (tokens, idx, options, env, self) {
+    tokens[idx].attrPush(["class", "govuk-table__header"]);
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
+  md.renderer.rules.tr_open = function (tokens, idx, options, env, self) {
+    tokens[idx].attrPush(["class", "govuk-table__row"]);
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
+  md.renderer.rules.td_open = function (tokens, idx, options, env, self) {
+    tokens[idx].attrPush(["class", "govuk-table__cell"]);
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
   md.renderer.rules.paragraph_open = function (
     tokens,
     idx,

@@ -35,7 +35,7 @@ A few examples are
 
 You can use JSON or YAML format for the structure and both are well known standards.
 
-GOV.UK have excellent [guidance on how you should document your APIs](https://www.gov.uk/guidance/how-to-document-apis) in there [API Design Guidance](https://www.gov.uk/government/collections/api-design-guidance) page.
+GOV.UK have excellent [guidance on how you should document your APIs](https://www.gov.uk/guidance/how-to-document-apis) in their [API Design Guidance](https://www.gov.uk/government/collections/api-design-guidance) page.
 
 ### Developer Knowledge - How well known is this in our current skill sets
 

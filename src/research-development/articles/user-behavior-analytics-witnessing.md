@@ -39,7 +39,7 @@ Each rule can be weighted accordingly and adjusted over time. As we discover new
 
 As we discover more areas and patterns within our flow we can also add or remove some. We can also take this information and build on it over time through interactions with our call centers to find patterns in how people act after completing a LPA.
 
-If we use the confidence score after a user journey, we can potentially use this in place of the Witness and also raise awareness with case workers which could potentially preempt any future fraud.
+If we use the confidence score after a user journey, we can potentially use this in place of the Witness and also raise awareness with case workers which could potentially pre-empt any future fraud.
 
 This process could potentially solve 3 specific areas of concern.
 

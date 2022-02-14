@@ -23,6 +23,8 @@ Any changes to the schema of our API should be testable via this specification.
 
 OpenAPI is a common format used across a wide range of services.
 
+As a result of its popularity, our main languages, Golang, Python and PHP all support the OpenAPI Standard.
+
 There is great support for OpenAPI through third party services and tools that we can take advantage of. A great example of tools available can be found on [OpenAPI.Tools](https://openapi.tools/).
 
 A few examples are

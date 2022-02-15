@@ -72,8 +72,26 @@ Below is an example of how this may be structured
 | [GOV.UK Notify](https://www.notifications.service.gov.uk/) | Sending of emails, texts and letters |
 | [GOV.UK Pay](https://www.payments.service.gov.uk/) | For the handling of payments through the process |
 
+## Example API Endpoints
+
+Below are a list of potential endpoints we could implement within OPG as a Service.
+
+### Example API Flow 1
 
 
+![Diagram showing a simplified version of submitting an LPA](/assets/images/research-development/opg-as-a-service/simple-api-example.jpg "Diagram showing a simplified version of submitting an LPA")
+
+### Example API Flow 2
+
+![Diagram showing an overview of all components of a potential future self service API.](/assets/images/research-development/opg-as-a-service/full-api-example.jpg "Diagram showing an overview of all components of a potential future self service API.")
+
+### Using the API Flow
+
+![Diagram showing how you would use the API to manage Actors and LPA creation](/assets/images/research-development/opg-as-a-service/using-api-flow.jpg "Diagram showing how you would use the API to manage Actors and LPA creation")
+
+### View an LPA
+
+![Diagram showing the View an LPA website as an API](/assets/images/research-development/opg-as-a-service/view-an-lpa-api.jpg "Diagram showing the View an LPA website as an API")
 ## Conclusion
 
 

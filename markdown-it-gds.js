@@ -1,5 +1,4 @@
 module.exports = function () {
-
   const linkExternalStack = [];
   const options = {
     html: true,

@@ -1,4 +1,6 @@
 module.exports = function () {
+
+  const linkExternalStack = [];
   const options = {
     html: true,
     breaks: true,
@@ -49,13 +51,28 @@ module.exports = function () {
     tokens[idx].attrPush(["class", "govuk-body"]);
     return defaultRender(tokens, idx, options, env, self);
   };
+
   md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+    let externalLink = false;
     tokens[idx].attrPush(["class", "govuk-link"]);
     if (tokens[idx].attrGet("href").indexOf("http") === 0) {
+      externalLink = true;
       tokens[idx].attrPush(["target", "_blank"]);
+      tokens[idx].attrPush(["rel", "noreferrer noopener"]);
+
+      linkExternalStack.push(externalLink);
     }
     return defaultRender(tokens, idx, options, env, self);
   };
+
+  md.renderer.rules.link_close = function (tokens, idx, ...args) {
+    const externalLink = linkExternalStack.pop();
+    if (externalLink) {
+      return " (opens in new tab)</a>";
+    }
+    return result;
+  };
+
   md.renderer.rules.bullet_list_open = function (
     tokens,
     idx,

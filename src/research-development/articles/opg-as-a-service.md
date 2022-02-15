@@ -29,15 +29,50 @@ Working with the LSSA and those outside of them will be key to unlocking the ful
 
 ## OPG as a Service
 
+> An API is not "just" an API
+
+There is more to building an API than providing consumers with an endpoint to connect to.
+
+To accomplish providing an integration for the users of our service, we need to build something that does the following:
+
+- Allow the user to Self Service
+- Quality support expected of a service that is widely used
+- A testing environment for new and existing integrations
+- Information on the service status
+- Well documented schema and versioning strategy
+- Allows the consumer to easily integrate into their existing software platforms
+- Communicate data flows and business logic for an LPA lifecycle
+
+We should take the learnings from the existing [GOV.UK Notify](https://www.notifications.service.gov.uk/) and [GOV.UK Pay](https://www.payments.service.gov.uk/) services which provide a centralised API for any government service to integrate with.
+
+We should follow the patterns they use, including their url structure, design and features.
+
+Below is an example of how this may be structured
+
 ![Diagram showing an overview of all components of a potential future self service API.](/assets/images/research-development/opg-as-a-service/opg-as-a-service.jpg "Diagram showing an overview of all components of a potential future self service API.")
 
 | Component | Description |
 |---|---|
-| Documentation | How to use the service |
-| Account Management | Manage your account resources in a self service way |
-|   |   |
-|   |   |
-|   |   |
+| **Documentation** | Details on how to use the service from sign up to implementation |
+| **Account Management** | Manage your account resources in a self service way |
+| Organisation Details | Solicitor, Charity, Company or third party details management |
+| User Details | Individual user details associated with the organisation. This allows for better auditing with interactions within the API |
+| API Keys | Each Organisation has a unique API Key that is required for any API calls |
+| API Throttling Limits | Throttling rules shown to understand your allowed usage of the service |
+| Audit Trails | Anonymised logs to allow you to Audit activity within your organisation |
+| **Support** | Provide technical support to users of the service |
+| Uptime and Issues Dashboard | Dashboard with current and past service uptime, alerting hooks for integrations into 3rd party tooling such as Slack and scheduled maintenance times |
+| Sandbox | A testing environment for new integrations or testing out code against newer versions of APIs |
+| **API** | Endpoints for external parties to integrate with |
+| Security | IP Range, API Key (Organisation) and UserID (User Details ID) all set for requests to the API |
+| Responses | JSON and potentially FHIR+JSON for the NHS |
+| OpenAPI Specifications | Defined OpenAPI specifications allowing mocks and integration checks. There is a potential for Contract Testing here too |
+| API Design Styles | REST or GraphQL. Our Domain supports REST more than GraphQL so REST is probably the way we will go |
+| **Internal Government Services** |  |
+| [GOV.UK Notify](https://www.notifications.service.gov.uk/) | Sending of emails, texts and letters |
+| [GOV.UK Pay](https://www.payments.service.gov.uk/) | For the handling of payments through the process |
+
+
 
 ## Conclusion
 
@@ -46,3 +81,5 @@ Working with the LSSA and those outside of them will be key to unlocking the ful
 ## References
 
 - [Lasting Power of Attorney Statistics](https://www.lastingpowerofattorney.service.gov.uk/stats)
+- [GOV.UK Notify](https://www.notifications.service.gov.uk/)
+- [GOV.UK Pay](https://www.payments.service.gov.uk/)

@@ -78,6 +78,11 @@ Below are a list of potential endpoints we could implement within OPG as a Servi
 
 ### Example API Flow 1
 
+```mermaid
+  graph TD;
+      /lpa-->Payment;
+      /lpa-->Response;
+```
 
 ![Diagram showing a simplified version of submitting an LPA](/assets/images/research-development/opg-as-a-service/simple-api-example.jpg "Diagram showing a simplified version of submitting an LPA")
 
@@ -92,6 +97,7 @@ Below are a list of potential endpoints we could implement within OPG as a Servi
 ### View an LPA
 
 ![Diagram showing the View an LPA website as an API](/assets/images/research-development/opg-as-a-service/view-an-lpa-api.jpg "Diagram showing the View an LPA website as an API")
+
 ## Conclusion
 
 

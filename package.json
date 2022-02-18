@@ -22,7 +22,6 @@
     "@babel/core": "^7.16.12",
     "@babel/eslint-parser": "^7.16.5",
     "@babel/preset-env": "^7.16.11",
-    "@kevingimbel/eleventy-plugin-mermaid": "^1.1.0",
     "cspell": "^5.18.0",
     "dayjs": "^1.10.7",
     "eslint": "^8.8.0",

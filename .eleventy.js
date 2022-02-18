@@ -8,7 +8,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/_includes/css': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'src/_includes/assets': 'assets' })
 
-    eleventyConfig.addPlugin(pluginMermaid);
     eleventyConfig.addPlugin(inclusiveLangPlugin);
 
     eleventyConfig.addFilter('dateFilter', dateFilter);

@@ -53,28 +53,57 @@ Below is an example of how this may be structured
 
 ![Diagram showing an overview of all components of a potential future self service API.](/assets/images/research-development/opg-as-a-service/opg-as-a-service.jpg "Diagram showing an overview of all components of a potential future self service API.")
 
-**TODO: Better pattern to display this?**
+### Documentation
 
-| Component | Description |
-|---|---|
-| **Documentation** | Details on how to use the service from sign up to implementation |
-| **Account Management** | Manage your account resources in a self service way |
-| Organisation Details | Solicitor, Charity, Company or third party details management |
-| User Details | Individual user details associated with the organisation. This allows for better auditing with interactions within the API |
-| API Keys | Each Organisation has a unique API Key that is required for any API calls |
-| API Throttling Limits | Throttling rules shown to understand your allowed usage of the service |
-| Audit Trails | Anonymised logs to allow you to Audit activity within your organisation |
-| **Support** | Provide technical support to users of the service |
-| Uptime and Issues Dashboard | Dashboard with current and past service uptime, alerting hooks for integrations into 3rd party tooling such as Slack and scheduled maintenance times |
-| Sandbox | A testing environment for new integrations or testing out code against newer versions of APIs |
-| **API** | Endpoints for external parties to integrate with |
-| Security | IP Range, API Key (Organisation) and UserID (User Details ID) all set for requests to the API |
-| Responses | JSON and potentially FHIR+JSON for the NHS |
-| OpenAPI Specifications | Defined OpenAPI specifications allowing mocks and integration checks. There is a potential for Contract Testing here too |
-| API Design Styles | REST or GraphQL. Our Domain supports REST more than GraphQL so REST is probably the way we will go |
-| **Internal Government Services** |  |
-| [GOV.UK Notify](https://www.notifications.service.gov.uk/) | Sending of emails, texts and letters |
-| [GOV.UK Pay](https://www.payments.service.gov.uk/) | For the handling of payments through the process |
+Details on how to use the service from sign up to implementation
+
+### Account Management
+
+Manage your account resources in a self service way
+
+- Organisation Details
+  - Solicitor
+  - Charity
+  - Company
+  - third party details management
+- User Details
+  - Individual user details associated with the organisation. This allows for better auditing with interactions within the API
+- API Keys
+  - Each Organisation has a unique API Key that is required for any API calls
+- API Throttling Limits
+  - Throttling rules shown to understand your allowed usage of the service
+- Audit Trails
+  - Anonymised logs to allow you to Audit activity within your organisation
+
+### Support
+
+Provide technical support to users of the service
+
+- Uptime and Issues Dashboard
+  - Dashboard with current and past service uptime, alerting hooks for integrations into 3rd party tooling such as Slack and scheduled maintenance times
+- Sandbox
+  - A testing environment for new integrations or testing out code against newer versions of APIs
+
+### API
+
+Endpoints for external parties to integrate with
+
+- Security
+  - IP Range, API Key (Organisation) and UserID (User Details ID) all set for requests to the API
+- Responses
+  - `JSON` and potentially `FHIR+JSON` for the NHS
+- OpenAPI Specifications
+  - Defined OpenAPI specifications allowing mocks and integration checks. There is a potential for Contract Testing here too
+- API Design Styles
+  - REST
+  - GraphQL
+  - Our Domain supports REST more than GraphQL so REST is probably the way we will go
+
+### Internal Government Services
+
+[Sending of emails, texts and letters via GOV.UK Notify](https://www.notifications.service.gov.uk/)
+
+[For the handling of payments through the process via GOV.UK Pay](https://www.payments.service.gov.uk/)
 
 ## Example API Endpoints
 
@@ -96,7 +125,7 @@ Negatives are that we will find ourselves in a position where we will have dupli
 
 ![Diagram showing an overview of all components of a potential future self service API.](/assets/images/research-development/opg-as-a-service/full-api-example.jpg "Diagram showing an overview of all components of a potential future self service API.")
 
-This diagram offers a more complete API for greater control and management of LPA data.
+This diagram offers a more complex API for greater control and management of LPA data.
 
 #### Actor
 
@@ -120,19 +149,19 @@ Where possible we should be using transactional processes that return us a confi
 
 Unlike the Make a LPA endpoint, this splits the process into 4 stages to correctly manage an LPA.
 
-You can register a new empty LPA by a POST to the create endpoint with a internal reference number. At this point we have created a blank record with a reference to the third parties internal reference number.
+You can register a new empty LPA by a `POST` to the create endpoint with a internal reference number. At this point we have created a blank record with a reference to the third parties internal reference number.
 
-After this you can PUT as often as you wish, a `OPGLPADataModel` object with data that will be stored and saved on the OPG system.
+After this you can `PUT` as often as you wish, a `OPGLPADataModel` object with data that will be stored and saved on the OPG system.
 
 The `OPGLPADataModel` will be well documented and have all validation rules defined to work against.
 
-Sending an LPAID as a GET you will be able to get the status of the LPA.
+Sending an `LPAID` as a `GET` you will be able to get the status of the LPA.
 
-Sending a DELETE with the LPAID will delete the LPA from the OPG system.
+Sending a `DELETE` with the `LPAID` will delete the LPA from the OPG system.
 
 #### LPA Complete
 
-Once you have completed the LPA Create flow with the correct OPG status being returned, you will be ready to complete the lpa. Doing a GET to this endpoint will tell OPG this is ready to be processed and will lock any amends to the LPA moving forward.
+Once you have completed the LPA Create flow with the correct OPG status being returned, you will be ready to complete the lpa. Doing a `GET` to this endpoint will tell OPG this is ready to be processed and will lock any amends to the LPA moving forward.
 
 You will be returned the final `OPGLPADataModel` data and any other corresponding data to confirm this action.
 
@@ -153,7 +182,7 @@ Send a request to `/lpa/create` with
   - Pay via OPG
   - Sign via OPG
   - Verify via OPG
-- Returns a LPAID to store against the internal LPA record
+- Returns a `LPAID` to store against the internal LPA record
 
 #### Create Actors
 

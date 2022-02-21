@@ -106,6 +106,7 @@ module.exports = function () {
         className = "govuk-heading-m";
         break;
       case "h4":
+      case "h5":
         className = "govuk-heading-s";
         break;
     }

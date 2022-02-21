@@ -1,7 +1,6 @@
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const markdownItGds = require("./markdown-it-gds");
 const dateFilter = require('./src/filters/date-filter.js');
-const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })

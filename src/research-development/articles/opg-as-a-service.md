@@ -225,7 +225,7 @@ Once you have a `LPAID`, a LPA returning a status indicating all data is complet
 
 ![Diagram showing the View an LPA website as an API](/assets/images/research-development/opg-as-a-service/view-an-lpa-api.jpg)
 
-This example shows how we could offer the View a LPA service as a API Endpoint.
+This example shows how we could offer the [View a LPA](https://view-lasting-power-of-attorney.service.gov.uk/home) service as a API Endpoint.
 
 With the ability to monitor third parties by their credentials, we can ensure high levels of trust and prevent bad actors from attacking.
 
@@ -245,5 +245,6 @@ This will require the business to look at Modernising not only in the form of a 
 
 - [Lasting Power of Attorney Statistics](https://www.lastingpowerofattorney.service.gov.uk/stats)
 - [Make a LPA](https://www.lastingpowerofattorney.service.gov.uk/home)
+- [View a LPA](https://view-lasting-power-of-attorney.service.gov.uk/home)
 - [GOV.UK Notify](https://www.notifications.service.gov.uk/)
 - [GOV.UK Pay](https://www.payments.service.gov.uk/)

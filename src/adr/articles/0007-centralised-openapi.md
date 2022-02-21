@@ -71,7 +71,7 @@ N/A - there is no place for personal data to be stored within OpenAPI Specificat
 
 ### Decision
 
-We should investigate the use of a centralised OpenAPI Specification. However within that research we should ensure we are not over engineering the solution and that the benefits would outway the cost of maintenance.
+We should investigate the use of a centralised OpenAPI Specification. Within that research we should ensure we are not over engineering the solution and that the benefits would outway the cost of maintenance.
 
 ### Consequences
 

@@ -51,7 +51,7 @@ We should follow the patterns they use, including their url structure, design an
 
 Below is an example of how this may be structured
 
-![Diagram showing an overview of all components of a potential future self service API.](/assets/images/research-development/opg-as-a-service/opg-as-a-service.jpg "Diagram showing an overview of all components of a potential future self service API.")
+![Diagram showing an overview of all components of a potential future self service API.](/assets/images/research-development/opg-as-a-service/opg-as-a-service.jpg)
 
 ### Documentation
 
@@ -111,7 +111,7 @@ Below are a list of potential endpoints and flows we could implement within OPG 
 
 ### Example API Flow 1
 
-![Diagram showing a simplified version of submitting an LPA](/assets/images/research-development/opg-as-a-service/simple-api-example.jpg "Diagram showing a simplified version of submitting an LPA")
+![A simplified version of submitting an LPA](/assets/images/research-development/opg-as-a-service/simple-api-example.jpg)
 
 We are able to replicate the entire [Make a LPA](https://www.lastingpowerofattorney.service.gov.uk/home) journey via this endpoint.
 
@@ -123,7 +123,7 @@ Negatives are that we will find ourselves in a position where we will have dupli
 
 ### Example API Flow 2
 
-![Diagram showing an overview of all components of a potential future self service API.](/assets/images/research-development/opg-as-a-service/full-api-example.jpg "Diagram showing an overview of all components of a potential future self service API.")
+![An overview of all components of a potential future self service API.](/assets/images/research-development/opg-as-a-service/full-api-example.jpg)
 
 This diagram offers a more complex API for greater control and management of LPA data.
 
@@ -141,7 +141,7 @@ Having the ability to properly manage a actor will mean better audit trails and 
 
 Giving the ability for third parties to submit documents such as identification material, signatures or photos is a nice to have and may not be required.
 
-It is here to show that it is possible to do so, however we would rather not be in a position where we are managing copies of users private documents.
+It is here to show that it is possible to do so. We would rather not be in a position where we are managing copies of users private documents.
 
 Where possible we should be using transactional processes that return us a confidence score to act upon and not storing copies of user data.
 
@@ -167,7 +167,7 @@ You will be returned the final `OPGLPADataModel` data and any other correspondin
 
 ### Using the API Flow
 
-![Diagram showing how you would use the API to manage actors and LPA creation](/assets/images/research-development/opg-as-a-service/using-api-flow.jpg "Diagram showing how you would use the API to manage actors and LPA creation")
+![How you would use the API to manage actors and LPA creation](/assets/images/research-development/opg-as-a-service/using-api-flow.jpg)
 
 This example will take you through a potential flow of integrating with an API.
 
@@ -223,7 +223,7 @@ Once you have a `LPAID`, a LPA returning a status indicating all data is complet
 
 ### View an LPA
 
-![Diagram showing the View an LPA website as an API](/assets/images/research-development/opg-as-a-service/view-an-lpa-api.jpg "Diagram showing the View an LPA website as an API")
+![Diagram showing the View an LPA website as an API](/assets/images/research-development/opg-as-a-service/view-an-lpa-api.jpg)
 
 This example shows how we could offer the View a LPA service as a API Endpoint.
 

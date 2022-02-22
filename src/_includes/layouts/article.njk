@@ -6,6 +6,7 @@ layout: layouts/fullwidth.njk
 
 <p class="govuk-body"><strong>Date</strong>: <time>{{ date | dateFilter }}</time></p>
 
-{{ content | safe }}
-
 {%- include "../partials/contributors.njk" -%}
+{%- include "../partials/githubHistory.njk" -%}
+
+{{ content | safe }}

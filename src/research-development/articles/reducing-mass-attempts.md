@@ -46,9 +46,17 @@ This feature allows us to take advantage of existing and well known traffic patt
 
 > AWS WAF Bot Control is a managed rule group that gives you visibility and control over common and pervasive bot traffic that can consume excess resources, skew metrics, cause downtime, or perform other undesired activities.
 
+Being able to capture bots that abuse our service will help with any third parties trying to use our service bypassing any APIs.
+
+It will also prevent attackers trying to drive costs up by repeating certain journies that cost us to validate details with third parties or internal storage costs.
+
 #### Account takeover fraud prevention
 
 > Account Takeover Prevention is a managed rule group that monitors your application’s login page for unauthorized access to user accounts using compromised credentials. You can use the rule group to help protect against credential stuffing attacks, brute force login attempts, and other anomalous login activities.
+
+While not preventing attacks for mass attempts, this does help with reducing the risk of an attack via a compromised account.
+
+If a OPG trusted account has been comprised and is therefore trusted to make more calls for verification or LPA creation, then this helps reduce this attack area.
 
 ### User Behaviour Analytics (UBA) or Transaction Monitoring with Amazon Fraud Detector
 

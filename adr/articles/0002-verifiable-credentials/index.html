@@ -79,7 +79,7 @@
         
         
         
-        <div class="govuk-width-container">
+        <div id="content" class="govuk-width-container">
           <main class="govuk-main-wrapper" role="main">
 
             <div class="govuk-grid-row">
@@ -122,8 +122,8 @@
 <p class="govuk-body">We would need the Verifiable Credential to be able to store the appropriate required information for the consumer to understand its responsibilities.</p>
 <h2 class="govuk-heading-l">Technical</h2>
 <h3 class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
-<p class="govuk-body">The Verifiable Credentials data model is a <a href="https://www.w3.org/TR/vc-data-model/" class="govuk-link" target="_blank">W3C Open Standard</a>. As long as the standards are adhered to, interopability will be high.</p>
-<p class="govuk-body">The standards don't supply a definitive way of handling Proofs (Signatures). This raises concerns on the interopability of verification and authenticity at this stage and should be taken into account when deciding whether to use this solution. More information can be found here <a href="https://www.w3.org/TR/vc-data-model/#proofs-signatures" class="govuk-link" target="_blank">https://www.w3.org/TR/vc-data-model/#proofs-signatures</a></p>
+<p class="govuk-body">The Verifiable Credentials data model is a <a href="https://www.w3.org/TR/vc-data-model/" class="govuk-link" target="_blank" rel="noreferrer noopener">W3C Open Standard (opens in new tab)</a>. As long as the standards are adhered to, interopability will be high.</p>
+<p class="govuk-body">The standards don't supply a definitive way of handling Proofs (Signatures). This raises concerns on the interopability of verification and authenticity at this stage and should be taken into account when deciding whether to use this solution. More information can be found here <a href="https://www.w3.org/TR/vc-data-model/#proofs-signatures" class="govuk-link" target="_blank" rel="noreferrer noopener">https://www.w3.org/TR/vc-data-model/#proofs-signatures (opens in new tab)</a></p>
 <p class="govuk-body">The signing of a Verifiable Credential should also be standards driven and supported by the wider industry.</p>
 <h3 class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
 <p class="govuk-body"><strong>Overall</strong>: 2/10<br>
@@ -131,12 +131,12 @@ The data model is well defined and an understood pattern for representing data.<
 <p class="govuk-body">The validity and authenticity aspect of the specification are early in discovery.</p>
 <p class="govuk-body">If signing was done via a certificate provider setting, such is done for SSL Certification, then the understanding will be higher. It will come with extra challenges on management of the signing keys and the key life cycle.</p>
 <h3 class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
-<p class="govuk-body">The Verifiable Credentials data model is a <a href="https://www.w3.org/TR/vc-data-model/" class="govuk-link" target="_blank">W3C Open Standard</a>.</p>
-<p class="govuk-body">The implementation of verifying and signing Verifiable Credentials is covered in the standard. This is in early stages of research and development with various companies such as <a href="https://mercury.rsalabs.com/" class="govuk-link" target="_blank">RSA Labs and Project Mercury</a>.</p>
+<p class="govuk-body">The Verifiable Credentials data model is a <a href="https://www.w3.org/TR/vc-data-model/" class="govuk-link" target="_blank" rel="noreferrer noopener">W3C Open Standard (opens in new tab)</a>.</p>
+<p class="govuk-body">The implementation of verifying and signing Verifiable Credentials is covered in the standard. This is in early stages of research and development with various companies such as <a href="https://mercury.rsalabs.com/" class="govuk-link" target="_blank" rel="noreferrer noopener">RSA Labs and Project Mercury (opens in new tab)</a>.</p>
 <p class="govuk-body">The specifications it is built on are in a draft state and can be found at the following links. This should be considered and monitored. We should aim to listen and contribute if possible to these areas to gain confidence in our choice moving forward.</p>
 <ol class="govuk-list govuk-list--number">
-<li><a href="https://w3c-ccg.github.io/ld-proofs/" class="govuk-link" target="_blank">https://w3c-ccg.github.io/ld-proofs/</a></li>
-<li><a href="https://json-ld.github.io/rdf-dataset-canonicalization/spec/" class="govuk-link" target="_blank">https://json-ld.github.io/rdf-dataset-canonicalization/spec/</a></li>
+<li><a href="https://w3c-ccg.github.io/ld-proofs/" class="govuk-link" target="_blank" rel="noreferrer noopener">https://w3c-ccg.github.io/ld-proofs/ (opens in new tab)</a></li>
+<li><a href="https://json-ld.github.io/rdf-dataset-canonicalization/spec/" class="govuk-link" target="_blank" rel="noreferrer noopener">https://json-ld.github.io/rdf-dataset-canonicalization/spec/ (opens in new tab)</a></li>
 </ol>
 <h3 class="govuk-heading-m">Scalability</h3>
 <p class="govuk-body">The credential is a small file that can be stored anywhere. Either as a file on a storage platform such as Cloud Object Storage, database, Personal Data Store or a users device.</p>

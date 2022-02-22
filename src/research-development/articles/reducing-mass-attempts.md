@@ -74,9 +74,19 @@ The data from this tool can also be used to help prevent fraudulant use before i
 
 > Reduce online payment fraud by flagging suspicious online payment transactions before processing payments and fulfilling orders.
 
+At the payment stage we can mitigate financial fraud before a transaction occurs.
+
+We can use this in our designs to help make a better user journey for the significant majority of good actors that use our service while prevent bad actors.
+
+This is important as we should make the service as easy to use for those who want to use it while preventing fraudulant activity or increased admin and service costs.
+
 #### Detect new account fraud
 
 > Accurately distinguish between legitimate and high-risk account registrations so you can selectively introduce additional checks, such as phone or email verification.
+
+We could use this service to ensure that the data collected on registration and the verification process is passed into this.
+
+Having extra safe guards around these already secure processes will help mitigate high-risk accounts being created and subsequently abused.
 
 ## Conclusion
 

@@ -21,8 +21,16 @@ Below is a list of options we can investigate to try and mitigate this problem.
 
 ### Authentication
 
+There are ways to prevent creation of accounts and verification flows on the service.
+
+By setting up our registration flow in the correct way, we can put manual steps in place to prevent automation attempts and slow people down without causing a bad experience to the end user.
+
+Some of these are
+
 - Limit the number of LPAs being created in an account at a time
-- 
+- One email address allowed per account
+- Verify account via email and SMS before user verification or LPA process
+- Require two factor authentication
 
 ### AWS WAF - Web Application Firewall
 

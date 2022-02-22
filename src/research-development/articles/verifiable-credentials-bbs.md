@@ -13,7 +13,7 @@ With the increased rise in requirements to move to a digital version of paper ba
 
 Reduced ability to process paper documents due to health guidelines in offices and access postal services, has driven a move to more online services.
 
-However previous services that were reliant on paper now face a challenge of how to move to a new way of working.
+Previous services that were reliant on paper now face a challenge of how to move to a new way of working.
 
 With any new technology or standard that undergoes a rapid rise in popularity, there is a danger of the fundamental ethical, privacy and interoperability standards being forgotten.
 

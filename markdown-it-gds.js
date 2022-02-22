@@ -64,12 +64,12 @@ module.exports = function () {
     return defaultRender(tokens, idx, options, env, self);
   };
 
-  md.renderer.rules.link_close = function (tokens, idx, ...args) {
+  md.renderer.rules.link_close = function (tokens, idx, options, env, self) {
     const externalLink = linkExternalStack.pop();
     if (externalLink) {
       return " (opens in new tab)</a>";
     }
-    return result;
+    return defaultRender(tokens, idx, options, env, self);
   };
 
   md.renderer.rules.bullet_list_open = function (

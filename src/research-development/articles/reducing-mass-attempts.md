@@ -4,7 +4,7 @@ title: "Using Technology to reduce mass LPA attempts"
 date: 2022-02-21
 tags: research_development
 areas_of_coverage: ["Digital Service"]
-contributors: ["John Nolan"]
+contributors: ["John Nolan", "Andrew Pearce"]
 ---
 
 ## Introduction
@@ -15,11 +15,13 @@ We know a lot of LPAs remain unused, 90% from 'Use' stats. Registered and unused
 
 Regardless of the solution we come to, we need to identify ways in which we can mitigate abuse of bad actors generating LPAs and costing the business, and in turn our end users, money.
 
+We should also try to protect the highest cost endpoints ensuring as much of the user journey is unaffected by any negative experiences.
+
 ## Solutions
 
 Below is a list of options we can investigate to try and mitigate this problem.
 
-### Authentication
+### Account Creation Flow
 
 There are ways to prevent creation of accounts and use of verification flows on the service.
 
@@ -27,37 +29,40 @@ By setting up our registration flow in the correct way, we can put manual steps 
 
 Some of these are
 
-- Limit the number of LPAs being created in an account at any one time
-- One email address allowed per account
+- Limit the number of LPAs allowed to be created over time. A rate limit to prevent bad behaviour
+- One account per email address
+- Email alias prevention or instances of alias check
+- Allow registration of new accounts via third party account providers
 - Verify account via email and SMS before user verification or LPA process
 - Require two factor authentication
-- Require payment up front for new LPAs
 
-### AWS WAF - Web Application Firewall
+### Web Application Firewall
 
 Sources
 
 - [AWS WAF - Web Application Firewall](https://aws.amazon.com/waf/)
 
-We already have experience of using AWS WAF internally.
+We already have experience of using Web Application Firewalls internally.
 
-AWS WAF gives us a suite of useful security tools to help against not only attack, but mitigating suspicious behaviour.
+Web Application Firewalls give us a suite of useful security tools to help against not only attack, but mitigating suspicious behaviour.
 
-For a full list of features, see [AWS WAF Features](https://aws.amazon.com/waf/features/)
+A benefit of using a Web Application Firewall is it does not impact legitamite use, it only targets negative types of behaviour.
 
 #### Web traffic filtering
 
-> AWS WAF lets you create rules to filter web traffic based on conditions that include IP addresses, HTTP headers and body, or custom URIs.
+> Web Application Firewalls let you create rules to filter web traffic based on conditions that include IP addresses, HTTP headers and body, or custom URIs.
 
 This feature allows us to take advantage of existing and well known traffic patterns that could potentially be used to setup attacks to drive up our costs.
 
-#### AWS WAF Bot Control
+#### Bot Control
 
-> AWS WAF Bot Control is a managed rule group that gives you visibility and control over common and pervasive bot traffic that can consume excess resources, skew metrics, cause downtime, or perform other undesired activities.
+> Bot Control is a managed rule group that gives you visibility and control over common and pervasive bot traffic that can consume excess resources, skew metrics, cause downtime, or perform other undesired activities.
 
 Being able to capture bots that abuse our service will help with any third parties trying to use our service bypassing any available APIs.
 
 It will also prevent attackers trying to drive costs up by repeating certain journeys that cost us to validate details with third parties or internal storage costs.
+
+Rate limiting can also be enabled, allowing us to block access to the site when abuse is detected. We should investigate strategies to blocking access such as captcha (showing a captcha image to check for bots), perminant (blocking access to the site completely) or incremental time blocking (blocking for timed increments such as 2 minutes, 5 minutes, 10 minutes, etc).
 
 #### Account takeover fraud prevention
 
@@ -67,7 +72,7 @@ While not preventing attacks for mass attempts, this does help with reducing the
 
 If an OPG trusted account has been comprised and is therefore trusted to make more calls for verification or LPA creation, then this helps reduce this attack area.
 
-### User Behaviour Analytics (UBA) or Transaction Monitoring with Amazon Fraud Detector
+### User Behaviour Analytics (UBA) or Transaction Monitoring
 
 Sources
 
@@ -81,13 +86,15 @@ The data from this tool can also be used to help prevent fraudulent use before a
 
 #### Identify suspicious online payments
 
-> Reduce online payment fraud by flagging suspicious online payment transactions before processing payments and fulfilling orders.
+Sources
 
-At the payment stage we can mitigate financial fraud before a transaction occurs.
+- [GOV.UK Pay](https://www.payments.service.gov.uk/)
 
-We can use this in our designs to help make a better user journey for the significant majority of good actors that use our service while prevent bad actors.
+For any payments through our service, we will be using the [GOV.UK Pay](https://www.payments.service.gov.uk/) service.
 
-This is important as we should make the service as easy to use for those who want to use it while preventing fraudulent activity or increased administration and service costs.
+Built into this service are fraud prevention methods and risk scores that will help with any fraudulent payments.
+
+Using a trusted SAAS payment service, that has the resources and expertise in the financial services area is a preferred way of outsourcing this issue.
 
 #### Detect new account fraud
 
@@ -96,6 +103,12 @@ This is important as we should make the service as easy to use for those who wan
 We could use this service to ensure that the data collected on registration and the verification process is not fraudulent.
 
 Having extra safe guards around these already secure processes will help mitigate high-risk accounts being created and subsequently abused.
+
+## Preventing Bias
+
+All of these suggestions use some form of Machine Learning and with this we know your model is only as good as your data.
+
+We should use tools that allow us to analyse our use of these services and identify any negative biases that could occur and hold ourselves accountable to the highest standards.
 
 ## Conclusion
 

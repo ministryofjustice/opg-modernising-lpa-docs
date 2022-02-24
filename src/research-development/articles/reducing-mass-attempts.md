@@ -11,7 +11,9 @@ contributors: ["John Nolan", "Andrew Pearce"]
 
 OPG needs to cover costs. ID lookups will cost money, as do other elements of maintaining the service.
 
-We know a lot of LPAs remain unused, 90% from 'Use' stats. Registered and unused LPAs cover costs of a small number of expensive investigations/safeguard work.
+We know a lot of LPAs remain unused, 90% from the Use an LPA statistics.
+
+Registered and unused LPAs cover costs of a small number of expensive investigations/safeguard work.
 
 Regardless of the solution we come to, we need to identify ways in which we can mitigate abuse of bad actors generating LPAs and costing the business, and in turn our end users, money.
 

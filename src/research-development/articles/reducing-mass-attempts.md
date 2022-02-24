@@ -30,7 +30,7 @@ By setting up our registration flow in the correct way, we can put manual steps 
 Some of these are
 
 - Limit the number of LPAs allowed to be created over time. A rate limit to prevent bad behaviour
-- One account per email address
+- Permit only one account per email address
 - Email alias prevention or instances of alias check
 - Allow registration of new accounts via third party account providers
 - Verify account via email and SMS before user verification or LPA process

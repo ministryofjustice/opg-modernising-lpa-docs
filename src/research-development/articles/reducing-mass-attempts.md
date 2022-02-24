@@ -9,13 +9,9 @@ contributors: ["John Nolan", "Andrew Pearce"]
 
 ## Introduction
 
-OPG needs to cover costs. ID lookups will cost money, as do other elements of maintaining the service.
+OPG need to identify ways in which we can mitigate abuse of bad actors abusing our service and costing the business, and in turn our end users, money with an increase in the cost of registering an LPA.
 
-Registered and unused LPAs cover costs of a small number of expensive investigations/safeguard work.
-
-Regardless of the solution we come to, we need to identify ways in which we can mitigate abuse of bad actors abusing a service and costing the business, and in turn our end users, money.
-
-We should also try to protect the highest cost endpoints ensuring as much of the user journey is unaffected by any negative experiences.
+We should try to protect the highest cost endpoints while ensuring the user journey is unaffected by any negative experiences.
 
 ## Solutions
 

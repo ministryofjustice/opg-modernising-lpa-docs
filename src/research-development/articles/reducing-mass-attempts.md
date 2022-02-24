@@ -62,9 +62,15 @@ Being able to capture bots that abuse our service will help with any third parti
 
 It will also prevent attackers trying to drive costs up by repeating certain journeys that cost us to validate details with third parties or internal storage costs.
 
-Rate limiting can also be enabled, allowing us to block access to the site when abuse is detected. We should investigate strategies to blocking access such as captcha (showing a captcha image to check for bots), perminant (blocking access to the site completely) or incremental time blocking (blocking for timed increments such as 2 minutes, 5 minutes, 10 minutes, etc).
+### Rate limiting
 
-#### Account takeover fraud prevention
+Rate limiting can also be enabled, allowing us to block access to the site when abuse is detected.
+
+We should investigate strategies to blocking access such as captcha (showing a captcha image to check for bots), perminant (blocking access to the site completely) or incremental time blocking (blocking for timed increments such as 2 minutes, 5 minutes, 10 minutes, etc).
+
+We can also have different types of rate limiting based on users behaviour patterns. For example, having different implementations for fast but successful journeys or brute forcing attempts.
+
+#### Account takeover prevention
 
 > Account Takeover Prevention is a managed rule group that monitors your application’s login page for unauthorized access to user accounts using compromised credentials. You can use the rule group to help protect against credential stuffing attacks, brute force login attempts, and other anomalous login activities.
 
@@ -80,9 +86,9 @@ Sources
 - [Using User Behaviour Analytics in place of Witnessing](/research-development/articles/user-behaviour-analytics-witnessing/)
 - [Amazon Fraud Detector](https://aws.amazon.com/fraud-detector/)
 
-We have talked extensively about UBA and how we could use it to detect fraudulent cases while giving us assurance scores for LPAs created.
+We have talked extensively about UBA and how we could use it within our service. This technology can be a data point we can work with to aid in our confidence of a LPA.
 
-The data from this tool can also be used to help prevent fraudulent use before an attacker gets too far.
+Flagging legitamite and suspicious activity through this technology will aid in our confidence for giving account holders the ability to access more expensive operations such as verification and signing.
 
 #### Identify suspicious online payments
 
@@ -106,7 +112,7 @@ Having extra safe guards around these already secure processes will help mitigat
 
 ## Preventing Bias
 
-All of these suggestions use some form of Machine Learning and with this we know your model is only as good as your data.
+Some of these suggestions use some form of Machine Learning and with this we know your model is only as good as your data.
 
 We should use tools that allow us to analyse our use of these services and identify any negative biases that could occur and hold ourselves accountable to the highest standards.
 
@@ -114,7 +120,7 @@ We should use tools that allow us to analyse our use of these services and ident
 
 We have options that we should investigate in Beta to learn more about how they can help solve the problem.
 
-We already have experience of AWS WAF, so we will have real world data to look at. We should take the opportunity with the existing implementations to trial any exploration.
+We already have experience of using Web Application Firewall, so we will have real world data to look at. We should take the opportunity with the existing implementations to trial any exploration.
 
 ## References
 

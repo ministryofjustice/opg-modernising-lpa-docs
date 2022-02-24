@@ -23,7 +23,7 @@ Below is a list of options we can investigate to try and mitigate this problem.
 
 ### Account Creation Flow
 
-There are ways to prevent creation of accounts and use of verification flows on the service.
+There are ways to prevent malicious creation of accounts and use of verification flows on the service.
 
 By setting up our registration flow in the correct way, we can put manual steps in place to prevent automation attempts without causing a bad experience to the end user.
 

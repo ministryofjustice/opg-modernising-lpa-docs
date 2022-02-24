@@ -13,7 +13,7 @@ OPG needs to cover costs. ID lookups will cost money, as do other elements of ma
 
 Registered and unused LPAs cover costs of a small number of expensive investigations/safeguard work.
 
-Regardless of the solution we come to, we need to identify ways in which we can mitigate abuse of bad actors generating LPAs and costing the business, and in turn our end users, money.
+Regardless of the solution we come to, we need to identify ways in which we can mitigate abuse of bad actors abusing a service and costing the business, and in turn our end users, money.
 
 We should also try to protect the highest cost endpoints ensuring as much of the user journey is unaffected by any negative experiences.
 

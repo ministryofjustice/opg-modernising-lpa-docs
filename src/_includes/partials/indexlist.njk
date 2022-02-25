@@ -1,13 +1,15 @@
+{%- from "./contentMetaData.njk" import contentMetaData %}
 {% macro indexList(title, content, collection) %}
 <h1 class="govuk-heading-xl">{{title}}</h1>
 {{ content | safe }}
-<ol class="govuk-list govuk-list--bullet">
-    {%- for article in collection -%}
-    <li>
-        <a href="{{ article.url }}" class="govuk-link">
-            {{ article.data.title }}
-        </a>
-    </li>
-    {%- endfor -%}
-</ol>
+{%- for article in collection | reverse -%}
+    <article>
+        <h2 class="govuk-heading-m">
+            <a href="{{ article.url }}" class="govuk-link">
+                {{ article.data.title }}
+            </a>
+        </h2>
+        {{ contentMetaData(article.data.date, article.data.contributors) }}
+    </article>
+{%- endfor -%}
 {% endmacro %}

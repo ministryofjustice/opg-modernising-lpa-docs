@@ -2,18 +2,18 @@
 layout: layouts/fullwidth.njk
 ---
 
+{%- from "../../_includes/partials/contentMetaData.njk" import contentMetaData %}
 {%- from "../../_includes/partials/statusBadge.njk" import statusBadge -%}
 
 <h1 class="govuk-heading-xl">{{adr_number}} - {{title}}</h1>
 
 <h2 class="govuk-heading-m">Overview</h2>
 
-<p class="govuk-body"><strong>Date</strong>: {{ date | dateFilter }}
+{{ contentMetaData(date, contributors) }}
 
 <h3 class="govuk-heading-s">Status</h3>
 <p class="govuk-body">{{statusBadge({status: status})}}</p>
 
-{%- include "../partials/contributors.njk" -%}
 
 <h3 class="govuk-heading-s">Areas of coverage</h3>
 <ul class="govuk-list">

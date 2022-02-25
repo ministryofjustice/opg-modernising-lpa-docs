@@ -4,9 +4,8 @@ layout: layouts/fullwidth.njk
 
 <h1 class="govuk-heading-xl">{{title}}</h1>
 
-<p class="govuk-body"><strong>Date</strong>: <time>{{ date | dateFilter }}</time></p>
-
-{%- include "../partials/contributors.njk" -%}
+{%- from "../../_includes/partials/contentMetaData.njk" import contentMetaData %}
+{{ contentMetaData(date, contributors) }}
 {%- include "../partials/githubHistory.njk" -%}
 
 {{ content | safe }}

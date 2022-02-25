@@ -1,3 +1,4 @@
+{%- from "./contentMetaData.njk" import contentMetaData %}
 {% macro indexList(title, content, collection) %}
 <h1 class="govuk-heading-xl">{{title}}</h1>
 {{ content | safe }}
@@ -8,12 +9,7 @@
             {{ article.data.title }}
         </a>
 
-        <p class="govuk-body">
-            <strong>Date</strong>: <time>{{ article.data.date | dateFilter }}</time>
-            <br />
-            <strong>Authors: </strong>
-            {{ article.data.contributors | join(", ") }}
-        </p>
+        {{ contentMetaData(article.data.date, article.data.contributors) }}
     </li>
     {%- endfor -%}
 </ol>

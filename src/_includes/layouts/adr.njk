@@ -13,12 +13,7 @@ layout: layouts/fullwidth.njk
 <h3 class="govuk-heading-s">Status</h3>
 <p class="govuk-body">{{statusBadge({status: status})}}</p>
 
-<h3 class="govuk-heading-s">Contributors</h3>
-<ul class="govuk-list">
-    {%- for item in contributors -%}
-        <li>{{ item }}</li>
-    {%- endfor -%}
-</ul>
+{%- include "../partials/contributors.njk" -%}
 
 <h3 class="govuk-heading-s">Areas of coverage</h3>
 <ul class="govuk-list">
@@ -26,5 +21,7 @@ layout: layouts/fullwidth.njk
         <li>{{ item }}</li>
     {%- endfor -%}
 </ul>
+
+{%- include "../partials/githubHistory.njk" -%}
 
 {{ content | safe }}

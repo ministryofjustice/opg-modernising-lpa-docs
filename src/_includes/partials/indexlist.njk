@@ -2,15 +2,14 @@
 {% macro indexList(title, content, collection) %}
 <h1 class="govuk-heading-xl">{{title}}</h1>
 {{ content | safe }}
-<ol class="govuk-list">
-    {%- for article in collection | reverse -%}
-    <li>
-        <a href="{{ article.url }}" class="govuk-link">
-            {{ article.data.title }}
-        </a>
-
+{%- for article in collection | reverse -%}
+    <article>
+        <h1 class="govuk-heading-m">
+            <a href="{{ article.url }}" class="govuk-link">
+                {{ article.data.title }}
+            </a>
+        </h1>
         {{ contentMetaData(article.data.date, article.data.contributors) }}
-    </li>
-    {%- endfor -%}
-</ol>
+    </article>
+{%- endfor -%}
 {% endmacro %}

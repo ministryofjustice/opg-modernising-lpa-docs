@@ -1,5 +1,5 @@
 {% macro contentMetaData(date, contributors) %}
-<p class="govuk-body"><strong>Date</strong>: <time>{{ date | dateFilter }}</time>
+<p class="govuk-body"><strong>Date</strong>: <time datetime="{{ date | date24HourFilter }}">{{ date | dateFilter }}</time>
 <br />
 <strong>Authors: </strong>
 {{ contributors | join(", ") }}

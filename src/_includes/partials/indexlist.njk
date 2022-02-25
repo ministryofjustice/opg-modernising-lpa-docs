@@ -4,11 +4,11 @@
 {{ content | safe }}
 {%- for article in collection | reverse -%}
     <article>
-        <h1 class="govuk-heading-m">
+        <h2 class="govuk-heading-m">
             <a href="{{ article.url }}" class="govuk-link">
                 {{ article.data.title }}
             </a>
-        </h1>
+        </h2>
         {{ contentMetaData(article.data.date, article.data.contributors) }}
     </article>
 {%- endfor -%}

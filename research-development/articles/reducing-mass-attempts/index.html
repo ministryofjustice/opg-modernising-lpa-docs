@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0c0c">
+    
+    <link rel="preload" href="/assets/fonts/light-94a07e06a1-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/bold-b542beb274-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/styles.css" rel="stylesheet" as="style">
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-167x167.png" sizes="167x167">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon.png">
+
+    <meta name="description" content="Modernising Lasting Power of Attorney Documentation site for transparency and collaboration">
+    <meta property="og:image" content="/assets/images/moj-opengraph-image.png">
+
+    <link href="/assets/styles.css" rel="stylesheet">
+    <title>Using Technology to reduce mass LPA attempts - Modernising Lasting Power of Attorney Documentation</title>
+  </head>
+  <body class="govuk-template__body">
+    <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    
+      <div>
+
+        
+    <header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+        
+        <div class="govuk-header__content">
+        
+        <a href="/" class="govuk-header__link govuk-header__link--service-name">
+        Modernising Lasting Power of Attorney Documentation
+        </a>
+        
+        
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Navigation menu">
+            
+            
+                <li class="govuk-header__navigation-item">
+                
+                    <a class="govuk-header__link" href="/research-development">
+                
+                    Research &amp; Development
+                
+                    </a>
+                
+                </li>
+            
+            
+            
+                <li class="govuk-header__navigation-item">
+                
+                    <a class="govuk-header__link" href="/adr">
+                
+                    Architectural Decision Records
+                
+                    </a>
+                
+                </li>
+            
+            
+        </ul>
+        </nav>
+        
+        </div>
+        
+    </div>
+    </header>
+
+
+        
+        
+        
+        <div id="content" class="govuk-width-container">
+          <main class="govuk-main-wrapper" role="main">
+
+            <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+<h1 class="govuk-heading-xl">Using Technology to reduce mass LPA attempts</h1>
+
+<p class="govuk-body"><strong>Date</strong>: <time>21 February 2022</time></p><p class="govuk-body"><strong>Contributors</strong></p>
+<ul class="govuk-list"><li>John Nolan</li><li>Andrew Pearce</li></ul>
+<ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/reducing-mass-attempts.md">View history of this page on GitHub</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/reducing-mass-attempts.md">Feedback or raise issue with this page on GitHub</a>
+    </li>
+</ul>
+<h2 class="govuk-heading-l">Introduction</h2>
+<p class="govuk-body">OPG need to identify ways in which we can mitigate abuse of bad actors abusing our service and costing the business, and in turn our end users, money with an increase in the cost of registering an LPA.</p>
+<p class="govuk-body">We should try to protect the highest cost endpoints while ensuring the user journey is unaffected by any negative experiences.</p>
+<h2 class="govuk-heading-l">Solutions</h2>
+<p class="govuk-body">Below is a list of options we can investigate to try and mitigate this problem.</p>
+<h3 class="govuk-heading-m">Account Creation Flow</h3>
+<p class="govuk-body">There are ways to prevent malicious creation of accounts and use of verification flows on the service.</p>
+<p class="govuk-body">By setting up our registration flow in the correct way, we can put manual steps in place to prevent automation attempts without causing a bad experience to the end user.</p>
+<p class="govuk-body">Some of these are</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Limit the number of LPAs allowed to be created over time. A rate limit to prevent bad behaviour</li>
+<li>Permit only one account per email address</li>
+<li>Check for or prevent the use of email aliasing</li>
+<li>Allow registration of new accounts via third party account providers</li>
+<li>Verify account via email and SMS before user verification or LPA process</li>
+<li>Require two factor authentication</li>
+</ul>
+<h3 class="govuk-heading-m">Web Application Firewall</h3>
+<p class="govuk-body">Sources</p>
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://aws.amazon.com/waf/" class="govuk-link" target="_blank" rel="noreferrer noopener">AWS WAF - Web Application Firewall (opens in new tab)</a></li>
+</ul>
+<p class="govuk-body">We already have experience of using Web Application Firewalls internally.</p>
+<p class="govuk-body">Web Application Firewalls give us a suite of useful security tools to help against not only attack, but mitigating suspicious behaviour.</p>
+<p class="govuk-body">A benefit of using a Web Application Firewall is it does not impact legitamite use, it only targets negative types of behaviour.</p>
+<h4 class="govuk-heading-s">Web traffic filtering</h4>
+<blockquote class="govuk-inset-text">
+<p class="govuk-body">Web Application Firewalls let you create rules to filter web traffic based on conditions that include IP addresses, HTTP headers and body, or custom URIs.</p>
+</blockquote>
+<p class="govuk-body">This feature allows us to take advantage of existing and well known traffic patterns that could potentially be used to setup attacks to drive up our costs.</p>
+<h4 class="govuk-heading-s">Bot Control</h4>
+<blockquote class="govuk-inset-text">
+<p class="govuk-body">Bot Control is a managed rule group that gives you visibility and control over common and pervasive bot traffic that can consume excess resources, skew metrics, cause downtime, or perform other undesired activities.</p>
+</blockquote>
+<p class="govuk-body">Being able to capture bots that abuse our service will help with any third parties trying to use our service bypassing any available APIs.</p>
+<p class="govuk-body">It will also prevent attackers trying to drive costs up by repeating certain journeys that cost us to validate details with third parties or internal storage costs.</p>
+<h3 class="govuk-heading-m">Rate limiting</h3>
+<p class="govuk-body">Rate limiting can also be enabled, allowing us to block access to the site when abuse is detected.</p>
+<p class="govuk-body">We should investigate strategies to blocking access such as captcha (showing a captcha image to check for bots), perminant (blocking access to the site completely) or incremental time blocking (blocking for timed increments such as 2 minutes, 5 minutes, 10 minutes, etc).</p>
+<p class="govuk-body">We can also have different types of rate limiting based on users behaviour patterns. For example, having different implementations for fast but successful journeys or brute forcing attempts.</p>
+<h4 class="govuk-heading-s">Account takeover prevention</h4>
+<blockquote class="govuk-inset-text">
+<p class="govuk-body">Account Takeover Prevention is a managed rule group that monitors your application’s login page for unauthorized access to user accounts using compromised credentials. You can use the rule group to help protect against credential stuffing attacks, brute force login attempts, and other anomalous login activities.</p>
+</blockquote>
+<p class="govuk-body">While not preventing attacks for mass attempts, this does help with reducing the risk of an attack via a compromised account.</p>
+<p class="govuk-body">If an OPG trusted account has been comprised and is therefore trusted to make more calls for verification or LPA creation, then this helps reduce this attack area.</p>
+<h3 class="govuk-heading-m">User Behaviour Analytics (UBA) or Transaction Monitoring</h3>
+<p class="govuk-body">Sources</p>
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://www.ncsc.gov.uk/collection/10-steps/logging-and-monitoring" class="govuk-link" target="_blank" rel="noreferrer noopener">NCSC 10 Steps to Cyber Security - Logging and Security (opens in new tab)</a></li>
+<li><a href="/research-development/articles/user-behaviour-analytics-witnessing/" class="govuk-link">Using User Behaviour Analytics in place of Witnessing</a></li>
+<li><a href="https://aws.amazon.com/fraud-detector/" class="govuk-link" target="_blank" rel="noreferrer noopener">Amazon Fraud Detector (opens in new tab)</a></li>
+</ul>
+<p class="govuk-body">We have talked extensively about UBA and how we could use it within our service. This technology can be a data point we can work with to aid in our confidence of a LPA.</p>
+<p class="govuk-body">Flagging legitamite and suspicious activity through this technology will aid in our confidence for giving account holders the ability to access more expensive operations such as verification and signing.</p>
+<h4 class="govuk-heading-s">Identify suspicious online payments</h4>
+<p class="govuk-body">Sources</p>
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Pay (opens in new tab)</a></li>
+</ul>
+<p class="govuk-body">For any payments through our service, we will be using the <a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Pay (opens in new tab)</a> service.</p>
+<p class="govuk-body">Built into this service are fraud prevention methods and risk scores that will help with any fraudulent payments.</p>
+<p class="govuk-body">Using a trusted SAAS payment service, that has the resources and expertise in the financial services area is a preferred way of outsourcing this issue.</p>
+<h4 class="govuk-heading-s">Detect new account fraud</h4>
+<blockquote class="govuk-inset-text">
+<p class="govuk-body">Accurately distinguish between legitimate and high-risk account registrations so you can selectively introduce additional checks, such as phone or email verification.</p>
+</blockquote>
+<p class="govuk-body">We could use this service to ensure that the data collected on registration and the verification process is not fraudulent.</p>
+<p class="govuk-body">Having extra safe guards around these already secure processes will help mitigate high-risk accounts being created and subsequently abused.</p>
+<h2 class="govuk-heading-l">Preventing Bias</h2>
+<p class="govuk-body">Some of these suggestions use some form of Machine Learning and with this we know your model is only as good as your data.</p>
+<p class="govuk-body">We should use tools that allow us to analyse our use of these services and identify any negative biases that could occur and hold ourselves accountable to the highest standards.</p>
+<h2 class="govuk-heading-l">Conclusion</h2>
+<p class="govuk-body">We have options that we should investigate in Beta to learn more about how they can help solve the problem.</p>
+<p class="govuk-body">We already have experience of using Web Application Firewall, so we will have real world data to look at. We should take the opportunity with the existing implementations to trial any exploration.</p>
+<h2 class="govuk-heading-l">References</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://aws.amazon.com/about-aws/whats-new/2022/02/aws-waf-fraud-control-login-credential-attacks/" class="govuk-link" target="_blank" rel="noreferrer noopener">AWS WAF introduces AWS WAF Fraud Control - Account Takeover Prevention for protecting your login page against credential stuffing attacks (opens in new tab)</a></li>
+<li><a href="https://aws.amazon.com/waf/" class="govuk-link" target="_blank" rel="noreferrer noopener">AWS WAF - Web Application Firewall (opens in new tab)</a></li>
+<li><a href="/research-development/articles/user-behaviour-analytics-witnessing/" class="govuk-link">Using User Behaviour Analytics in place of Witnessing</a></li>
+<li><a href="https://aws.amazon.com/fraud-detector/" class="govuk-link" target="_blank" rel="noreferrer noopener">Amazon Fraud Detector (opens in new tab)</a></li>
+<li><a href="https://www.ncsc.gov.uk/collection/10-steps/logging-and-monitoring" class="govuk-link" target="_blank" rel="noreferrer noopener">NCSC 10 Steps to Cyber Security - Logging and Security (opens in new tab)</a></li>
+</ul>
+
+
+    </div>
+</div>
+
+            
+          </main>
+        </div>
+        
+
+        
+    <footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+        
+        <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+            
+            <h2 class="govuk-visually-hidden">Support links</h2>
+            
+                <ul class="govuk-footer__inline-list">
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/research-development/articles/tech-ethic-decisions/">
+                        Tech Ethics in our decision making reference
+                    </a>
+                    </li>
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="https://sites.google.com/digital.justice.gov.uk/opgmlpa">
+                        Modernising lasting powers of attorney blog
+                    </a>
+                    </li>
+                
+                </ul>
+            
+            
+            
+            
+        </div>
+        </div>
+    </div>
+    </footer>
+
+
+
+      </div>
+    
+  </body>
+</html>

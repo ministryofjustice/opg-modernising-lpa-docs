@@ -13,16 +13,18 @@ function init() {
         if (e.target.value === "reject") {
           setCookie(analyticsCookieName, false);
           toggleCookieBanner(true);
-          toggleCookieBannerConfirm(false);
+          toggleCookieBannerReject(false);
         }
         if (e.target.value === "hide") {
           toggleCookieBannerConfirm(true);
+          toggleCookieBannerReject(true);
         }
       }
     });
   } else {
     toggleCookieBanner(true);
     toggleCookieBannerConfirm(true);
+    toggleCookieBannerReject(true);
     if (gaCookieValue == "true") {
       setupGoogleAnalytics("G-70EPL8ZB7Y");
     }
@@ -39,6 +41,13 @@ function toggleCookieBannerConfirm(isHidden) {
     "js-cookie-banner-confirm"
   )[0];
   cookieBannerConfirm.toggleAttribute("hidden", isHidden);
+}
+
+function toggleCookieBannerReject(isHidden) {
+  var cookieBannerReject = document.getElementsByClassName(
+    "js-cookie-banner-reject"
+  )[0];
+  cookieBannerReject.toggleAttribute("hidden", isHidden);
 }
 
 function setCookie(name, value) {

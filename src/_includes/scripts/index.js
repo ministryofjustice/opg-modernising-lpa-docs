@@ -1,32 +1,55 @@
 function init() {
-  var analyticsCookieName = "modernising_gaenabled";
+  var analyticsCookieName = "modernising_cookie_policy";
   var gaCookieValue = getCookie(analyticsCookieName);
+  var gaCookieSettings = document.querySelector(
+    'input[name="ga-preferences"]:checked'
+  );
   var isAnalyticsCookieSet = gaCookieValue !== null;
-  if (!isAnalyticsCookieSet) {
-    document.addEventListener("click", (e) => {
-      if (e.target.name === "cookies") {
-        if (e.target.value === "accept") {
-          setCookie(analyticsCookieName, true);
-          toggleCookieBanner(true);
-          toggleCookieBannerConfirm(false);
+  document.addEventListener("click", (e) => {
+    if (e.target.name === "cookies") {
+      if (e.target.value === "update") {
+        var newCookieSetting = document.querySelector(
+          'input[name="ga-preferences"]:checked'
+        );
+        if (newCookieSetting !== null && newCookieSetting.value !== null) {
+          setCookie(analyticsCookieName, newCookieSetting.value === "true");
         }
-        if (e.target.value === "reject") {
-          setCookie(analyticsCookieName, false);
-          toggleCookieBanner(true);
-          toggleCookieBannerReject(false);
-        }
-        if (e.target.value === "hide") {
-          toggleCookieBannerConfirm(true);
-          toggleCookieBannerReject(true);
-        }
+        document.location.href = "/";
       }
-    });
-  } else {
+      if (e.target.value === "accept") {
+        setCookie(analyticsCookieName, true);
+        toggleCookieBanner(true);
+        toggleCookieBannerConfirm(false);
+      }
+      if (e.target.value === "reject") {
+        setCookie(analyticsCookieName, false);
+        toggleCookieBanner(true);
+        toggleCookieBannerReject(false);
+      }
+      if (e.target.value === "hide") {
+        toggleCookieBannerConfirm(true);
+        toggleCookieBannerReject(true);
+      }
+    }
+  });
+  if (isAnalyticsCookieSet) {
     toggleCookieBanner(true);
     toggleCookieBannerConfirm(true);
     toggleCookieBannerReject(true);
     if (gaCookieValue == "true") {
       setupGoogleAnalytics("G-70EPL8ZB7Y");
+    }
+  }
+
+  if (location.pathname === "/view-cookies/") {
+    if (gaCookieSettings === null || gaCookieValue == "false") {
+      document.querySelector(
+        'input[name="ga-preferences"][value="false"]'
+      ).checked = true;
+    } else {
+      document.querySelector(
+        'input[name="ga-preferences"][value="true"]'
+      ).checked = true;
     }
   }
 }
@@ -52,7 +75,7 @@ function toggleCookieBannerReject(isHidden) {
 
 function setCookie(name, value) {
   document.cookie =
-    name + "=" + value + "; max-age=" + 30 * 24 * 60 * 60 + " path=/; secure";
+    name + "=" + value + "; max-age=" + 30 * 24 * 60 * 60 + "; path=/; secure";
 }
 
 function getCookie(name) {

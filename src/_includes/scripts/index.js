@@ -31,6 +31,20 @@ function init() {
         toggleCookieBannerReject(true);
       }
     }
+
+    if (isAnalyticsCookieSet) {
+      if (e.target) {
+        if (
+          e.target.getAttribute("href") &&
+          e.target.getAttribute("href").indexOf("http") === 0
+        ) {
+          window.gtag("event", "click", {
+            event_category: "outbound",
+            event_label: e.target.getAttribute("href"),
+          });
+        }
+      }
+    }
   });
   if (isAnalyticsCookieSet) {
     toggleCookieBanner(true);

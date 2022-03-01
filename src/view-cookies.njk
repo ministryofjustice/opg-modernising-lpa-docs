@@ -4,6 +4,8 @@ title: Change your cookie settings
 ---
 {%- from "../node_modules/govuk-frontend/govuk/components/radios/macro.njk" import govukRadios %}
 {%- from "../node_modules/govuk-frontend/govuk/components/button/macro.njk" import govukButton %}
+{%- from "../node_modules/govuk-frontend/govuk/components/table/macro.njk" import govukTable %}
+
 
 <h1 class="govuk-heading-xl">{{ title }}</h1>
 <p class="govuk-body">
@@ -19,6 +21,34 @@ title: Change your cookie settings
 <p class="govuk-body">
     Essential cookies keep your information secure while you use this service. We do not need to ask permission to use them.
 </p>
+
+{{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Name"
+    },
+    {
+      text: "Purpose"
+    },
+    {
+      text: "Expires"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "modernising_cookie_policy"
+      },
+      {
+        text: "Saves your cookie consent settings"
+      },
+      {
+        text: "1 year"
+      }
+    ]
+  ]
+}) }}
 
 <h2 class="govuk-heading-l">Analytics cookies (optional)</h2>
 

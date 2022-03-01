@@ -89,7 +89,12 @@ function toggleCookieBannerReject(isHidden) {
 
 function setCookie(name, value) {
   document.cookie =
-    name + "=" + value + "; max-age=" + 30 * 24 * 60 * 60 + "; path=/; secure";
+    name +
+    "=" +
+    value +
+    "; max-age=" +
+    365 * 24 * 60 * 60 * 1 +
+    "; path=/; secure";
 }
 
 function getCookie(name) {

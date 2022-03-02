@@ -17,9 +17,7 @@ function init() {
 
   if (location.pathname === "/view-cookies/") {
     if (!document.querySelector(PREFS_SELECTOR + ":checked") && gaCookieValue) {
-      document.querySelector(
-        PREFS_SELECTOR + '[value="' + gaCookieValue + '"]'
-      ).checked = true;
+      document.querySelector(PREFS_SELECTOR + '[value="' + gaCookieValue + '"]').checked = true;
     }
   }
 }
@@ -28,9 +26,7 @@ function setupClickEvent(isAnalyticsCookieSet) {
   document.addEventListener("click", (e) => {
     if (e.target && e.target.name === "cookies") {
       if (e.target.value === "update") {
-        var newCookieSetting = document.querySelector(
-          PREFS_SELECTOR + ":checked"
-        );
+        var newCookieSetting = document.querySelector(PREFS_SELECTOR + ":checked");
         if (newCookieSetting !== null && newCookieSetting.value !== null) {
           setCookie(COOKIE_NAME, newCookieSetting.value === "true");
         }
@@ -46,10 +42,7 @@ function setupClickEvent(isAnalyticsCookieSet) {
 }
 
 function trackExternalLink(target) {
-  if (
-    target.getAttribute("href") &&
-    target.getAttribute("href").indexOf("http") === 0
-  ) {
+  if (target.getAttribute("href") && target.getAttribute("href").indexOf("http") === 0) {
     window.gtag("event", "click", {
       event_category: "outbound",
       event_label: target.getAttribute("href"),
@@ -59,12 +52,8 @@ function trackExternalLink(target) {
 
 function toggleCookieBanner(type) {
   var cookieBanner = document.getElementsByClassName("js-cookie-banner")[0];
-  var cookieBannerConfirm = document.getElementsByClassName(
-    "js-cookie-banner-confirm"
-  )[0];
-  var cookieBannerReject = document.getElementsByClassName(
-    "js-cookie-banner-reject"
-  )[0];
+  var cookieBannerConfirm = document.getElementsByClassName("js-cookie-banner-confirm")[0];
+  var cookieBannerReject = document.getElementsByClassName("js-cookie-banner-reject")[0];
   switch (type) {
     case "accept":
       setCookie(COOKIE_NAME, true);
@@ -92,13 +81,8 @@ function toggleCookieBanner(type) {
 }
 
 function setCookie(name, value) {
-  document.cookie =
-    name +
-    "=" +
-    value +
-    "; max-age=" +
-    365 * 24 * 60 * 60 * 1 +
-    "; path=/; secure";
+  var maxAge = 365 * 24 * 60 * 60 * 1; // 1 year
+  document.cookie = name + "=" + value + "; max-age=" + maxAge + "; path=/; secure";
 }
 
 function getCookie(name) {

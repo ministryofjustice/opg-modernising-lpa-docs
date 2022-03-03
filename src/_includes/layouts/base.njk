@@ -20,6 +20,7 @@
     <meta property="og:image" content="{{ '/assets/images/moj-opengraph-image.png' | url }}">
 
     <link href="{{ '/assets/styles.css' | url }}" rel="stylesheet">
+    <script src="{{ '/assets/index.js' | url }}" defer></script>
     <title>{{ title }} - Modernising Lasting Power of Attorney Documentation</title>
   </head>
   <body class="govuk-template__body">
@@ -33,6 +34,86 @@
     }) }}
     {% block body %}
       <div>
+        {% from "../../../node_modules/govuk-frontend/govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+        {% set acceptHtml %}
+          <p class="govuk-body">You’ve accepted additional cookies. You can <a class="govuk-link" href="/view-cookies">change your cookie settings</a> at any time.</p>
+        {% endset %}
+
+        {% set rejectHtml %}
+          <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/view-cookies">change your cookie settings</a> at any time.</p>
+        {% endset %}
+
+        {% set html %}
+          <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+        {% endset %}
+
+        {{ govukCookieBanner({
+          ariaLabel: "Cookies on Modernising Lasting Power of Attorney Documentation",
+          classes: "js-cookie-banner-confirm",
+          hidden: true,
+          messages: [
+            {
+              html: acceptHtml,
+              actions: [
+              {
+                text: "Hide this message",
+                type: "button",
+                name: "cookies",
+                value: "hide"
+              }
+              ]
+            }
+          ]
+        }) }}
+
+        {{ govukCookieBanner({
+          ariaLabel: "Cookies on Modernising Lasting Power of Attorney Documentation",
+          classes: "js-cookie-banner-reject",
+          hidden: true,
+          messages: [
+            {
+              html: rejectHtml,
+              actions: [
+              {
+                text: "Hide this message",
+                type: "button",
+                name: "cookies",
+                value: "hide"
+              }
+              ]
+            }
+          ]
+        }) }}
+
+        {{ govukCookieBanner({
+          ariaLabel: "Cookies on Modernising Lasting Power of Attorney Documentation",
+          classes: "js-cookie-banner",
+          messages: [
+            {
+              headingText: "Cookies on Modernising Lasting Power of Attorney Documentation",
+              html: html,
+              actions: [
+                {
+                  text: "Accept analytics cookies",
+                  type: "button",
+                  name: "cookies",
+                  value: "accept"
+                },
+                {
+                  text: "Reject analytics cookies",
+                  type: "button",
+                  name: "cookies",
+                  value: "reject"
+                },
+                {
+                  text: "View cookies",
+                  href: "/view-cookies"
+                }
+              ]
+            }
+          ]
+        }) }}
 
         {{ govukHeader({
             homepageUrl: "/",
@@ -83,6 +164,10 @@
                 {
                   href: "https://sites.google.com/digital.justice.gov.uk/opgmlpa",
                   text: "Modernising lasting powers of attorney blog"
+                },
+                {
+                  href: "/view-cookies/",
+                  text: "Cookies"
                 }
               ]
             }

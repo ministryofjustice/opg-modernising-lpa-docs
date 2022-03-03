@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'src/_includes/css': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'src/_includes/assets': 'assets' })
+    eleventyConfig.addPassthroughCopy({ 'src/_includes/scripts': 'assets' });
 
     eleventyConfig.addPlugin(inclusiveLangPlugin);
 

@@ -51,6 +51,8 @@ Many companies use Fingerprinting technologies for both positive and negative re
 
 To help reduce fraud, many online banking services will use Fingerprinting as part of their sign in process.
 
+This aids in helping with their confidence levels of the user being who they say they are at time of log in while also giving a better user experience for users returning from a commonly used device.
+
 If a user for example logs on to their site via a VPN, they can detect a change in the network IP address from the previous log in and ensure the user has to re-enter their 2fa details or put captcha screens in front of the login to deter unwanted threats.
 
 ### Video On Demand Registered Devices
@@ -77,11 +79,11 @@ Examples of a few way in how the accuracy of using Browser Fingerprinting can dr
 
 * Users on a corporate network could all come from the same IP
 * Multiple users could work from the same device in a household
-* Use of a modern browser that prevents any detection of Fingerpritning technology such as Brave, Tor or Mozilla Firefox
+* Use of a modern browser that prevents any detection of Fingerprinting technology such as Brave Browser, Tor Project or Mozilla Firefox
 
 ## Browser changes
 
-Even though there is a case for Browser Fingerprinting in safeguarding people who use sites and detecting fraudulant behaviour, browser companies are working hard to remove the ability to reliably identify users by their hardware.
+Even though there is a case for Browser Fingerprinting in safeguarding people who use sites and detecting fraudulent behaviour, browser companies are working hard to remove the ability to reliably identify users by their hardware.
 
 [Chrome have announced they will be removing the User Agent from their Chrome browser in the latest version](https://www.xda-developers.com/chrome-100-beta/) and we should expect more and more personally identifiable attributes from browsers to be removed over time.
 
@@ -89,7 +91,7 @@ Even though there is a case for Browser Fingerprinting in safeguarding people wh
 
 ### What we should not do
 
-We may have to rule out using it as a way to give us confidence in knowing the user is who they say they are. The technology is changing too quickly and as our accuracy drops, we risk introducing unforseen consequences in how people use the site.
+We may have to rule out using it as a way to give us confidence in knowing the user is who they say they are. The technology is changing too quickly and as our accuracy drops, we risk introducing unforeseen consequences in how people use the site.
 
 If however during Beta we discover a need for this technology, then we should look to source the solution externally. Maintaining a system that can stay up to date with the latest changes in browsers and ensuring accuracy would be beyond internal resourcing.
 
@@ -97,13 +99,13 @@ If we do use Browser Fingerprinting, we should make it clear to our users that w
 
 ### What we should do
 
-For now I suggest what value a basic implementation would hold with a user able to see their basic device history and log in history. This gives value to a user to have ownership of their own security and raise with us any unsual behaviour.
+For now I suggest what value a basic implementation would hold with a user able to see their basic device history and log in history. This gives value to a user to have ownership of their own security and raise with us any unusual behaviour.
 
 Even with the removal of data from browsers, we should still investigate its use with users in Beta and see what value it could give them.
 
 ## References
 
-- [Avast - What is browser fingerprinting?](https://www.avast.com/c-what-is-browser-fingerprinting)
-- [Mozilla - Firefox blocks fingerprinting](https://www.mozilla.org/en-GB/firefox/features/block-fingerprinting/)
-- [Amazon Cognito - Creating a device fingerprint](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html)
-- [Browser Fingerprinting: The Good, Bad & Ugly](https://www.thesslstore.com/blog/browser-fingerprinting-the-good-bad-ugly/)
+* [Avast - What is browser fingerprinting?](https://www.avast.com/c-what-is-browser-fingerprinting)
+* [Mozilla - Firefox blocks fingerprinting](https://www.mozilla.org/en-GB/firefox/features/block-fingerprinting/)
+* [Amazon Cognito - Creating a device fingerprint](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html)
+* [Browser Fingerprinting: The Good, Bad & Ugly](https://www.thesslstore.com/blog/browser-fingerprinting-the-good-bad-ugly/)

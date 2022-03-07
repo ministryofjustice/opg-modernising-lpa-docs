@@ -17,13 +17,13 @@ We want to investigate the use of Browser Fingerprinting and its use in helping 
 
 ## What is Browser Fingerprinting?
 
-Browser Fingerprinting is the process of identifying a user and their browser when using you site.
+Browser Fingerprinting is the process of identifying a user via their browser and operating system when using a website.
 
 It uses a range of different methods and techniques to gather properties about the browser and if possible, the device and operating system it is running on.
 
 ### Techniques used
 
-There are a range of techniques that can be used to successfully identify and browser. Below is a range of examples that are commonly used.
+There are a range of techniques that can be used to successfully identify a browser. Below is a range of examples that are commonly used techniques and methods.
 
 * User agent including screen resolution
 * Browser details
@@ -32,7 +32,7 @@ There are a range of techniques that can be used to successfully identify and br
 * Does IP Address and DNS Server match
 * Is WebRTC enabled
 * Is Javascript enabled
-* Is incognito mode
+* Is the user in incognito mode
 * IP Location
 * Web API
   * Battery status
@@ -51,9 +51,9 @@ Many companies use Fingerprinting technologies for both positive and negative re
 
 To help reduce fraud, many online banking services will use Fingerprinting as part of their sign in process.
 
-This aids in helping with their confidence levels of the user being who they say they are at time of log in while also giving a better user experience for users returning from a commonly used device.
+This aids in helping with their confidence levels of the user being who they say they are at time of log in. It also gives a better user experience for users returning from a commonly used device.
 
-If a user for example logs on to their site via a VPN, they can detect a change in the network IP address from the previous log in and ensure the user has to re-enter their 2fa details or put captcha screens in front of the login to deter unwanted threats.
+For example, if a user logs on to their site via a VPN, they can detect a change in the network IP address from the previous log in and ensure the user has to re-enter their two factor authentication details or put captcha screens in front of the login to deter unwanted threats.
 
 ### Video On Demand Registered Devices
 
@@ -65,7 +65,7 @@ This gives them many benefits, the main one being that it helps ensure that a li
 
 ### Advanced User Tracking
 
-With the increase in awareness around cookie misuse, browsers and browser addons that disable tracking cookies, services are starting to rely instead on new ways to track users across websites.
+With the increased awareness around cookie misuse, browsers and browser addons that disable tracking cookies, services are starting to rely instead on new ways to track users across websites.
 
 Browser Fingerprinting has begun to replace cookie misuse.
 

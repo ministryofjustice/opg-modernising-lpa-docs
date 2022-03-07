@@ -81,7 +81,7 @@ Examples of a few way in how the accuracy of using Browser Fingerprinting can dr
 * Multiple users could work from the same device in a household
 * Use of a modern browser that prevents any detection of Fingerprinting technology such as Brave Browser, Tor Project or Mozilla Firefox
 
-Relying too heavily on this technology could alienate groups of users from being able to access our service if their behaviour is classed as untrusthworthy or uncommon.
+Relying too heavily on this technology could alienate groups of users from being able to access our service if their behaviour is classed as untrustworthy or uncommon.
 
 ## Browser changes
 

@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(inclusiveLangPlugin);
     eleventyConfig.addPlugin(pluginTOC, {
+        wrapper: 'span',
         wrapperClass: 'govuk-list govuk-list--bullet',
         ul: true
     });

@@ -63,9 +63,9 @@ This gives them many benefits, the main one being that it helps ensure that a li
 
 ### Advanced User Tracking
 
-With the increase in education around cookie misuse, browsers and browser addons that disable tracking cookies, services are starting to rely instead on new ways to track users across websites.
+With the increase in awareness around cookie misuse, browsers and browser addons that disable tracking cookies, services are starting to rely instead on new ways to track users across websites.
 
-This method has helped, silently replace cookie misuse with Browser Fingerprinting.
+Browser Fingerprinting has begun to replace cookie misuse.
 
 Because of this more browsers are now disabling common Browser Fingerprinting techniques and creating open source lists to help detect and classify known bad trackers.
 
@@ -87,22 +87,23 @@ Even though there is a case for Browser Fingerprinting in safeguarding people wh
 
 ## Conclusion
 
-Even with the removal of data from browsers, we should still investigate its use with users in Beta and see what value it could give them.
+### What we should not do
 
-We have to rule out using it as a way to give us confidence in knowing the user is who they say they are. The technology is changing too quickly and as our accuracy drops, we risk introducing unforseen consequences in how people use the site.
+We may have to rule out using it as a way to give us confidence in knowing the user is who they say they are. The technology is changing too quickly and as our accuracy drops, we risk introducing unforseen consequences in how people use the site.
 
 If however during Beta we discover a need for this technology, then we should look to source the solution externally. Maintaining a system that can stay up to date with the latest changes in browsers and ensuring accuracy would be beyond internal resourcing.
 
-For now I suggest what value a basic implementation would hold with a user able to see their basic device history and log in history.
+If we do use Browser Fingerprinting, we should make it clear to our users that we do, what we use it for and the ability to opt out should they wish to.
+
+### What we should do
+
+For now I suggest what value a basic implementation would hold with a user able to see their basic device history and log in history. This gives value to a user to have ownership of their own security and raise with us any unsual behaviour.
+
+Even with the removal of data from browsers, we should still investigate its use with users in Beta and see what value it could give them.
 
 ## References
 
 - [Avast - What is browser fingerprinting?](https://www.avast.com/c-what-is-browser-fingerprinting)
 - [Mozilla - Firefox blocks fingerprinting](https://www.mozilla.org/en-GB/firefox/features/block-fingerprinting/)
 - [Amazon Cognito - Creating a device fingerprint](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html)
-
-
-
-Notes
-- Block across organisation
-
+- [Browser Fingerprinting: The Good, Bad & Ugly](https://www.thesslstore.com/blog/browser-fingerprinting-the-good-bad-ugly/)

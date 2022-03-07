@@ -81,9 +81,11 @@ Examples of a few way in how the accuracy of using Browser Fingerprinting can dr
 * Multiple users could work from the same device in a household
 * Use of a modern browser that prevents any detection of Fingerprinting technology such as Brave Browser, Tor Project or Mozilla Firefox
 
+Relying too heavily on this technology could alienate groups of users from being able to access our service if their behaviour is classed as untrusthworthy or uncommon.
+
 ## Browser changes
 
-Even though there is a case for Browser Fingerprinting in safeguarding people who use sites and detecting fraudulent behaviour, browser companies are working hard to remove the ability to reliably identify users by their hardware.
+Even though there is a case for Browser Fingerprinting in safeguarding people who use sites and detecting fraudulent activity, browser companies are working hard to remove the ability to reliably identify users by their hardware.
 
 [Chrome have announced they will be removing the User Agent from their Chrome browser in the latest version](https://www.xda-developers.com/chrome-100-beta/) and we should expect more and more personally identifiable attributes from browsers to be removed over time.
 
@@ -95,13 +97,15 @@ We may have to rule out using it as a way to give us confidence in knowing the u
 
 If however during Beta we discover a need for this technology, then we should look to source the solution externally. Maintaining a system that can stay up to date with the latest changes in browsers and ensuring accuracy would be beyond internal resourcing.
 
-If we do use Browser Fingerprinting, we should make it clear to our users that we do, what we use it for and the ability to opt out should they wish to.
+If we do use Browser Fingerprinting, we should make it clear to our users that we use it, what we use it for, the ability to opt out should they wish to and not prevent them from using the service should they do this.
 
 ### What we should do
 
-For now I suggest what value a basic implementation would hold with a user able to see their basic device history and log in history. This gives value to a user to have ownership of their own security and raise with us any unusual behaviour.
+I suggest we research what value an implementation would hold where a user is able to see their basic device history and log in history.
 
-Even with the removal of data from browsers, we should still investigate its use with users in Beta and see what value it could give them.
+This gives value to a user to have ownership of their own security and raise with us any unusual behaviour they see on their account.
+
+Even with the removal of data from browsers, we should still investigate it's use. Tracking small amounts of attributes to show the users could be a great way increase confidence in our service.
 
 ## References
 

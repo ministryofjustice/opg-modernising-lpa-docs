@@ -1,3 +1,5 @@
+const markdownItAnchor = require("markdown-it-anchor");
+
 module.exports = function () {
   const linkExternalStack = [];
   const options = {
@@ -6,6 +8,11 @@ module.exports = function () {
     linkify: true,
   };
   var md = require("markdown-it")(options);
+  md.use(markdownItAnchor, {
+    permalinkClass: "direct-link",
+    permalinkSymbol: "",
+  });
+
   var defaultRender = function (tokens, idx, options, env, self) {
     return self.renderToken(tokens, idx, options);
   };

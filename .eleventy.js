@@ -2,6 +2,7 @@ const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const markdownItGds = require("./markdown-it-gds");
 const dateFilter = require('./src/filters/date-filter.js');
 const date24HourFilter = require('./src/filters/date24Hours-filter.js');
+const pluginTOC = require('eleventy-plugin-toc');
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
@@ -10,6 +11,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/_includes/scripts': 'assets' });
 
     eleventyConfig.addPlugin(inclusiveLangPlugin);
+    eleventyConfig.addPlugin(pluginTOC, {
+        wrapperClass: 'govuk-list govuk-list--bullet',
+        ul: true
+    });
 
     eleventyConfig.addFilter('dateFilter', dateFilter);
     eleventyConfig.addFilter('date24HourFilter', date24HourFilter);

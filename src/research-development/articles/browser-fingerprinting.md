@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Browser Fingerprinting and Registered Devices"
-date: 2022-03-03
+date: 2022-03-07
 tags: research_development
 areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan"]

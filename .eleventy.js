@@ -3,6 +3,7 @@ const markdownItGds = require("./markdown-it-gds");
 const dateFilter = require('./src/filters/date-filter.js');
 const date24HourFilter = require('./src/filters/date24Hours-filter.js');
 const pluginTOC = require('eleventy-plugin-toc');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
@@ -11,6 +12,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/_includes/scripts': 'assets' });
 
     eleventyConfig.addPlugin(inclusiveLangPlugin);
+    eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginTOC, {
         wrapper: 'div',
         wrapperClass: 'govuk-list govuk-list--bullet',

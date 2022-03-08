@@ -4,7 +4,8 @@ title: "GOV.UK Design System"
 weight: 1
 date: 2021-07-13
 review_in: 12 months
-tags: adr
+tags:  
+    - adr
 areas_of_coverage: ["Digital Service"]
 status: "accepted"
 contributors: ["John Nolan"]

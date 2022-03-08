@@ -2,7 +2,8 @@
 layout: layouts/article.njk
 title: "Tech Ethics in our decision making reference"
 date: 2021-06-28
-tags: research_development
+tags: 
+  - research_development
 areas_of_coverage: ["Digital Service"]
 contributors: ["Lisa Talia Moretti"]
 ---

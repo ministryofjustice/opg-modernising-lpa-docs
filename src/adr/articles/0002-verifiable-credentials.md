@@ -4,7 +4,8 @@ title: "Verifiable Credentials"
 weight: 1
 date: 2021-07-02
 review_in: 3 months
-tags: adr
+tags:  
+    - adr
 areas_of_coverage: ["Verifiable Credentials"]
 status: "proposed"
 contributors: ["John Nolan"]

@@ -2,7 +2,8 @@
 layout: layouts/article.njk
 title: "Using Technology to reduce mass LPA attempts"
 date: 2022-02-21
-tags: research_development
+tags: 
+  - research_development
 areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan", "Andrew Pearce"]
 ---

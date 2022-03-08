@@ -6,6 +6,10 @@ date: 2022-02-01
 review_in: 12 months
 tags:  
     - adr
+    - open_standards
+    - apis
+    - language
+    - integration
 areas_of_coverage: ["Digital Service"]
 status: "accepted"
 contributors: ["John Nolan"]

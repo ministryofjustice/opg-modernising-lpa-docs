@@ -6,6 +6,10 @@ date: 2021-07-23
 review_in: 12 months
 tags:  
     - adr
+    - tools
+    - language
+    - open_standards
+    - testing
 areas_of_coverage: ["Digital Service"]
 status: "accepted"
 contributors: ["John Nolan"]

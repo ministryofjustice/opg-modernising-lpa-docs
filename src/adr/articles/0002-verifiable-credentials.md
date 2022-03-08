@@ -6,6 +6,9 @@ date: 2021-07-02
 review_in: 3 months
 tags:  
     - adr
+    - open_standards
+    - data_privacy
+    - integration
 areas_of_coverage: ["Verifiable Credentials"]
 status: "proposed"
 contributors: ["John Nolan"]

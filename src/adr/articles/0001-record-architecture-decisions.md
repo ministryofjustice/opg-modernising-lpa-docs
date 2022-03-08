@@ -6,6 +6,8 @@ date: 2021-06-27
 review_in: 12 months
 tags: 
     - adr
+    - open_source
+    - open_data
 areas_of_coverage: ["Digital Service"]
 status: "accepted"
 contributors: ["John Nolan"]

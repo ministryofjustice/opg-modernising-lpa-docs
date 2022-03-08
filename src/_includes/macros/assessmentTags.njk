@@ -7,7 +7,8 @@
             {% if tag !== 'adr' %}
                 <li>
                     {{ govukTag({
-                            text: tag.replace('_', ' ')
+                            text: tag.replace('_', ' '),
+                            classes: "govuk-tag--green"
                         })
                     }}
                 </li>

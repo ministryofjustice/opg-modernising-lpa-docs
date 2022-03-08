@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>OPG Modernising Lasting Power of Attorney Documents</title>
+  <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
+  <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
+  <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
+  <updated>2022-03-08T11:58:23Z</updated>
+  <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
+  <author>
+    <name></name>
+    <email></email>
+  </author>
+  
+  <entry>
+    <title>Centralised OpenAPI Specification</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0007-centralised-openapi/"/>
+    <updated>2022-02-08T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0007-centralised-openapi/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need a way to centrally define our data model that would allow us to have a source of truth for our data.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Reducing human error and duplication of code, we should reference our core data model wherever possible to maintain a centrally approved schema.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This could include&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Domain model&lt;/li&gt;
+&lt;li&gt;Validation requirements&lt;/li&gt;
+&lt;li&gt;Response messaging&lt;/li&gt;
+&lt;li&gt;Object definitions (such as LPA ID or Post Code)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;OpenAPI would allow us to use &lt;code&gt;$ref&lt;/code&gt; to point to a centralised and publicly available schema for common domain objects.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using standard HTTP protocols for making these links and a commonly accepted standard for the structure of the schema will enable great interopability.&lt;/p&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 6/10&lt;br /&gt;
+Many of our teams have implemented OpenAPI specs in their services. Those that haven&#39;t do have knowledge of RESTful APIs and JSON or YAML to be able to work with it.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;To the extent of managing a central specification and maintaining the changes in it, this is new ground and would need an investigation around best practices and automation techniques.&lt;/p&gt;
+&lt;h3 id=&quot;support%2Fopen-source---is-it-well-supported&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support/Open Source - Is it well supported&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;OpenAPI is a open source collaboration project.&lt;/p&gt;
+&lt;h3 id=&quot;scalability&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Scalability&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we don&#39;t have safety measures in place, such as versioning of core schemas, then there is a risk of down stream consequences causing issues in code bases and APIs that rely on it.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to research best practices of how we take advantage of the de-duplication and centralisation without increasing work load and error rates in our services.&lt;/p&gt;
+&lt;h2 id=&quot;ethics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ethics&lt;/h2&gt;
+&lt;h3 id=&quot;mitigate-against-being-tech-deterministic&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Mitigate against being tech deterministic&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A - Uses a popular and accessible pattern and language&lt;/p&gt;
+&lt;h3 id=&quot;ensure-you-conduct-inclusive-research&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Ensure you conduct inclusive research&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A - the use of this technology does not have an effect on marginalised groups directly.&lt;/p&gt;
+&lt;h3 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A publicly available data schema would allow anyone outside of OPG to develop solutions. This could lead to new applications on the market that solve problems in sectors we can&#39;t fund research into.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It increases the understanding of what the LPA is in wider society. Solicitors and charities for example would be able to align their practices more accurately. They will also be able to feed back into the model with real life experiences.&lt;/p&gt;
+&lt;h3 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interrogate your data decisions&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A - there is no place for personal data to be stored within OpenAPI Specifications.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should investigate the use of a centralised OpenAPI Specification. Within that research we should ensure we are not over engineering the solution and that the benefits would outway the cost of maintenance.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We will be able to maintain a single source of truth model in all our work.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Outside of the benefits of API design, using modern tooling we can ensure our classes within our code match our centralised model.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>OpenAPI Specifications</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0006-openapi/"/>
+    <updated>2022-02-01T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0006-openapi/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need a way to communicate our APIs intent to consumers. We should display all options available as well as required data and validation associated with integrating with our APIs.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Any changes to the schema of our API should be testable via this specification.&lt;/p&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;OpenAPI is a common format used across a wide range of services.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As a result of its popularity, our main languages, Golang, Python and PHP all support the OpenAPI Standard.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There is great support for OpenAPI through third party services and tools that we can take advantage of. A great example of tools available can be found on &lt;a href=&quot;https://openapi.tools/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;OpenAPI.Tools (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A few examples are&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Automatic Documentation Generators&lt;/li&gt;
+&lt;li&gt;Mock Servers&lt;/li&gt;
+&lt;li&gt;Testing&lt;/li&gt;
+&lt;li&gt;Data Validators&lt;/li&gt;
+&lt;li&gt;CI Automation checks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;You can use JSON or YAML format for the structure and both are well known standards.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;GOV.UK have excellent &lt;a href=&quot;https://www.gov.uk/guidance/how-to-document-apis&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;guidance on how you should document your APIs (opens in new tab)&lt;/a&gt; in their &lt;a href=&quot;https://www.gov.uk/government/collections/api-design-guidance&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;API Design Guidance (opens in new tab)&lt;/a&gt; page.&lt;/p&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 8/10&lt;br /&gt;
+Many of our teams have implemented OpenAPI specs in their services. Those that haven&#39;t do have knowledge of RESTful APIs and JSON or YAML to be able to work with it.&lt;/p&gt;
+&lt;h3 id=&quot;support%2Fopen-source---is-it-well-supported&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support/Open Source - Is it well supported&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;OpenAPI is a open source collaboration project.&lt;/p&gt;
+&lt;h3 id=&quot;scalability&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Scalability&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we have many services with many OpenAPI specifications, there could be issues of maintaining them all.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we do not have a well defined domain to work from, we run the risk of duplication of schemas and being out of sync with style, definitions, parameters and responses. This can result in poorly implemented code to get around inconsistencies or badly written specifications without style validators in place.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should look into practices that help define a centrally accepted domain and styles that can be pulled from and validated against for all services and implementations.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There is a risk of development slowing down and bugs entering code should we not pay attention to best practices from the start. We should investigate these options with the teams as soon as possible.&lt;/p&gt;
+&lt;h2 id=&quot;ethics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ethics&lt;/h2&gt;
+&lt;h3 id=&quot;mitigate-against-being-tech-deterministic&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Mitigate against being tech deterministic&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A - Uses a popular and accessible pattern and language&lt;/p&gt;
+&lt;h3 id=&quot;ensure-you-conduct-inclusive-research&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Ensure you conduct inclusive research&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A - the use of this technology does not have an effect on marginalised groups directly.&lt;/p&gt;
+&lt;h3 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using OpenAPI Specifications gives us a library of great resources of all our internal and external integration capabilities.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We could take a list of them and add them to a government API register to allow other 3rd parties and internal government services to find integrations we provide.&lt;/p&gt;
+&lt;h3 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interrogate your data decisions&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A - there is no place for personal data to be stored within OpenAPI Specifications.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should use OpenAPI Specifications for all internal and external APIs.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We will be able to maintain an up to date, testable and descriptive resources of all our available integrations across multiple services.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Terraform</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0005-terraform/"/>
+    <updated>2021-07-23T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0005-terraform/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need a way to manage our infrastructure as code (IaC) to support CI/CD and manage and provision our computing, storage and networking resources in the cloud.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We use Terraform extensively on all our existing services, as well as a central Terraform repository for managing all our services resources, permissions and security needs.&lt;/p&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Terraform is fully open source and has the ability to do Multi-Cloud Deployment.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Even though there is no plan to split our resources across multiple clouds, having this ability available is advantageous.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A downside of this being community driven means that new features created by cloud providers can sometimes have a delay in being available for use within Terraform.&lt;/p&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 7/10&lt;br /&gt;
+We have dedicated Webops Engineers within our teams who have expert knowledge on using Terraform. They encourage others to learn and pair on the work they do.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Different teams have various levels of confidence in its use, but the ability to have a resource within each team with this knowledge makes up for any lack thereof.&lt;/p&gt;
+&lt;h3 id=&quot;support%2Fopen-source---is-it-well-supported&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support/Open Source - Is it well supported&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Terraform is Open Source and regularly accepts and releases community based Pull Requests.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Some of our Webops Engineers are also contributors to the project.&lt;/p&gt;
+&lt;h3 id=&quot;scalability&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Scalability&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Terraform by its nature is incredibly scalable. Enabling IaC, being maintained via Github and controlled via our CI/CD pipelines means it can be versioned, rolled back, monitored and maintained.&lt;/p&gt;
+&lt;h2 id=&quot;ethics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ethics&lt;/h2&gt;
+&lt;h3 id=&quot;mitigate-against-being-tech-deterministic&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Mitigate against being tech deterministic&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A - there is no other non-tech solution that could give us the ability to manage our infrastructure.&lt;/p&gt;
+&lt;h3 id=&quot;ensure-you-conduct-inclusive-research&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Ensure you conduct inclusive research&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A - the use of this technology does not have an effect on marginalised groups directly.&lt;/p&gt;
+&lt;h3 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Building our infrastructure in Terraform will allow us to take learnings and contribute back to wider society. If we develop new modules, add additional functionality to Terraform or raise issues that are found, we can help others who use this technology.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we decide to Open Source our infrastructure code, we can also take advantage of contributions from other areas outside of our department.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Others will also be able to use our modules or infrastructure, should they wish, in their own implementations.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Working in the open will drive trust in Citizens and open ourselves up to honest debate and critique in our choices.&lt;/p&gt;
+&lt;h3 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interrogate your data decisions&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A - there is no place for personal data to be stored within Terraform.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It does enable the use of technologies that can and this analysis should be recorded against their own ADRs.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should continue to use Terraform taking advantage of our existing lessons learnt and best practices.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We will be able to take advantage of our existing best practices and knowledge to quickly setup any new infrastructure.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>GOV.UK Design System</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0004-govuk-design-system/"/>
+    <updated>2021-07-13T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0004-govuk-design-system/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to follow strict government guidelines on design and accessibility. The design should be consistent across all pages and work for as many browsers as possible.&lt;/p&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;https://design-system.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Design System (opens in new tab)&lt;/a&gt; is open source and used across all digital government services.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Any new patterns that we create can be contributed back with our research included.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should take advantage of other services research and contributed design patterns and feedback ours.&lt;/p&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 8/10&lt;br /&gt;
+Developers have knowledge of the design system and work with it on a regular basis.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The use of tooling and testing around front end development is not as strong so will require more focus when implementing.&lt;/p&gt;
+&lt;h3 id=&quot;support%2Fopen-source---is-it-well-supported&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support/Open Source - Is it well supported&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The &lt;a href=&quot;https://design-system.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Design System (opens in new tab)&lt;/a&gt; is completely open source and is required for all public facing government services.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It has its own team as well as a large community of designers, user researchers, content and developers contributing to it.&lt;/p&gt;
+&lt;h3 id=&quot;scalability&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Scalability&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The &lt;a href=&quot;https://design-system.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Design System (opens in new tab)&lt;/a&gt; has 4 different types of assets to consume.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There will be custom patterns and components that we need to build, but because of the use of SASS and Javascript, we will be able to stick to the same standards as the design system and take advantage of the built in variables.&lt;/p&gt;
+&lt;h4 id=&quot;sass&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;SASS&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Allows us to only require styling resources needed.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We can generate our styles dynamically and keep up to date with the latest styling changes and colours due to SASS variables.&lt;/p&gt;
+&lt;h4 id=&quot;javascript&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Javascript&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Contains all the code we need to progressively enhance the user interface.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We only need to import modules that we required and all functionality can be updated for bug fixes or new features via npm.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This will remove the need for custom Javascript to be written in most cases.&lt;/p&gt;
+&lt;h4 id=&quot;assets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Assets&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Contains all images and fonts required for running a Government service. We can keep up to date by always ensuring we import at build time the latest assets available.&lt;/p&gt;
+&lt;h4 id=&quot;nunjucks&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Nunjucks&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Depending on the technology we want to use, this could be useful. Being able to use these templates, we can ensure we will always have access to the latest components available and maintain our code base with a set of pre configured templates.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The use of Nunjucks as the templating language should be discussed in another ADR.&lt;/p&gt;
+&lt;h2 id=&quot;ethics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ethics&lt;/h2&gt;
+&lt;h3 id=&quot;mitigate-against-being-tech-deterministic&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Mitigate against being tech deterministic&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Due to GDS standards, we are required to choose this design system.&lt;/p&gt;
+&lt;h3 id=&quot;ensure-you-conduct-inclusive-research&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Ensure you conduct inclusive research&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;All the components and patterns are centrally managed and community driven to include user research in each to a high level. This gives us the advantage of having a high degree of confidence that we are using the right tool for our development.&lt;/p&gt;
+&lt;h3 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As we use the design system, we will find ourselves using custom patterns and components. We should make sure we contribute back as much information as possible to help other services take advantage of our research.&lt;/p&gt;
+&lt;h3 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interrogate your data decisions&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Where possible we should stick to the standards defined by the &lt;a href=&quot;https://design-system.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Design System (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we do decide to move away from the standard, it should be done with the correct research to back the decision and fed back to the &lt;a href=&quot;https://design-system.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Design System (opens in new tab)&lt;/a&gt; team.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should and have to use the &lt;a href=&quot;https://design-system.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Design System (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We will be able to work at a high cadence and understanding as the &lt;a href=&quot;https://design-system.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Design System (opens in new tab)&lt;/a&gt; is used throughout all our services on a day to day basis.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Github for source control</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0003-github-source-control/"/>
+    <updated>2021-07-05T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0003-github-source-control/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We want to store our source code in a open source, cloud based git provider.&lt;/p&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Github is accessible via built in APIS and allows us to open source our code for others to raise issues and ourselves, share details on releases and updates.&lt;/p&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 10/10&lt;br /&gt;
+Developers work every day within Github for existing services.&lt;/p&gt;
+&lt;h3 id=&quot;support%2Fopen-source---is-it-well-supported&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support/Open Source - Is it well supported&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We have an Enterprise licence for Github giving us a channel for any support queries.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Github allows us to open source our code when we are ready.&lt;/p&gt;
+&lt;h3 id=&quot;scalability&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Scalability&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Github is cloud based and incredibly popular giving us a reliable solution for hosting our code.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Should we need to move for any reason, we are using Git which enables us to move to a new provider.&lt;/p&gt;
+&lt;h2 id=&quot;ethics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ethics&lt;/h2&gt;
+&lt;h3 id=&quot;mitigate-against-being-tech-deterministic&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Mitigate against being tech deterministic&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There are other providers we could use, but doing so would not bring any great benefit over our already established best practices for existing services and level of support we have with the Enterprise version.&lt;/p&gt;
+&lt;h3 id=&quot;ensure-you-conduct-inclusive-research&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Ensure you conduct inclusive research&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A&lt;/p&gt;
+&lt;h3 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Allowing the access of our code via the platform will encourage others to be able to help contribute and reuse our services built.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The more we can share with others, the stronger our solutions will be.&lt;/p&gt;
+&lt;h3 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interrogate your data decisions&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should ensure that our repositories are marked as Open Source as soon as we feel comfortable.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should continue to use our Ministry of Justice Github Enterprise account for our source code.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We will be able to use our existing management infrastructure for user management and deployments without the need for additional cost or resources.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Verifiable Credentials</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0002-verifiable-credentials/"/>
+    <updated>2021-07-02T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0002-verifiable-credentials/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We want to give the Citizen a way of using a verifiable digital representation of a LPA. This will enable them to use this to prove they are who they say they are.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If an LPA is no longer a paper deed, then this is one solution to what a digital version could be.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This could be an optional addition to the existing Use a LPA service to allow for a wider demographic of users.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It needs to be fully interopable with&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Future technology such as mobile phone digital wallets&lt;/li&gt;
+&lt;li&gt;Industry standard validation and authenticity implementations&lt;/li&gt;
+&lt;li&gt;Potential for other agencies to use as a proof of identity&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We would need to be able to reliably sign the credential for others to validate the authenticity.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We would need the Verifiable Credential to be able to store the appropriate required information for the consumer to understand its responsibilities.&lt;/p&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The Verifiable Credentials data model is a &lt;a href=&quot;https://www.w3.org/TR/vc-data-model/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;W3C Open Standard (opens in new tab)&lt;/a&gt;. As long as the standards are adhered to, interopability will be high.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The standards don&#39;t supply a definitive way of handling Proofs (Signatures). This raises concerns on the interopability of verification and authenticity at this stage and should be taken into account when deciding whether to use this solution. More information can be found here &lt;a href=&quot;https://www.w3.org/TR/vc-data-model/#proofs-signatures&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://www.w3.org/TR/vc-data-model/#proofs-signatures (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The signing of a Verifiable Credential should also be standards driven and supported by the wider industry.&lt;/p&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 2/10&lt;br /&gt;
+The data model is well defined and an understood pattern for representing data.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The validity and authenticity aspect of the specification are early in discovery.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If signing was done via a certificate provider setting, such is done for SSL Certification, then the understanding will be higher. It will come with extra challenges on management of the signing keys and the key life cycle.&lt;/p&gt;
+&lt;h3 id=&quot;support%2Fopen-source---is-it-well-supported&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support/Open Source - Is it well supported&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The Verifiable Credentials data model is a &lt;a href=&quot;https://www.w3.org/TR/vc-data-model/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;W3C Open Standard (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The implementation of verifying and signing Verifiable Credentials is covered in the standard. This is in early stages of research and development with various companies such as &lt;a href=&quot;https://mercury.rsalabs.com/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;RSA Labs and Project Mercury (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The specifications it is built on are in a draft state and can be found at the following links. This should be considered and monitored. We should aim to listen and contribute if possible to these areas to gain confidence in our choice moving forward.&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://w3c-ccg.github.io/ld-proofs/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://w3c-ccg.github.io/ld-proofs/ (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://json-ld.github.io/rdf-dataset-canonicalization/spec/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://json-ld.github.io/rdf-dataset-canonicalization/spec/ (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;scalability&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Scalability&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The credential is a small file that can be stored anywhere. Either as a file on a storage platform such as Cloud Object Storage, database, Personal Data Store or a users device.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Once created and digitally signed, it is handed over to the Citizen and only requires checks on its validity from us as its issuer.&lt;/p&gt;
+&lt;h2 id=&quot;ethics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ethics&lt;/h2&gt;
+&lt;h3 id=&quot;mitigate-against-being-tech-deterministic&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Mitigate against being tech deterministic&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We know we need to find a way to give the option of a digital version of an LPA. We will likely also need to provide a physical version still.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Therefore we should consider this as an option to enable easier use of an LPA but also confidence in the validity of the holder using the credential.&lt;/p&gt;
+&lt;h3 id=&quot;ensure-you-conduct-inclusive-research&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Ensure you conduct inclusive research&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to do user testing around this technology before being confident in its use.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Areas of interest would be&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Technical literacy&lt;/li&gt;
+&lt;li&gt;Technology privilege&lt;/li&gt;
+&lt;li&gt;Understanding of the technology used&lt;/li&gt;
+&lt;li&gt;Trust in the technology&lt;/li&gt;
+&lt;li&gt;Metrics on the groups/communities that would be able to use this&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If successful the following benefits to society would become evident.&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Use this credential as a mechanism for proving your identity to other services in this eco system&lt;/li&gt;
+&lt;li&gt;Complete citizen ownership of their LPA, stored wherever they like&lt;/li&gt;
+&lt;li&gt;Available and shareable in emergency situations&lt;/li&gt;
+&lt;li&gt;Be an example to other departments and industries to push this new technology&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interrogate your data decisions&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The data that is stored in the credential is owned by the citizen meaning they have full control of how they use it.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We would require only a minimal amount of data to be held to initially verify the individual to an account. We also would legally be required to store a minimal amount of data for the LPA register.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should continue to explore the idea.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should continue to consult other parties to ensure we work to the open standards and maintain the ability to pivot in this direction as the industry integrates into this technology.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Depending on further research this will vary.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using the method of RSA Labs Project Mercury would mean us setting up the Office of the Public Guardian or the Ministry of Justice as an issuer.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We also have the choice of building our own implementation to confidently sign and manage credentials. We should follow the same standards and guidelines to maintain ownership of the code and interopability.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This would require us knowing the agreed upon proofing method that would be accepted by the wider industry.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This would introduce issues with&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Revoking credentials if the validity of an LPA is questioned&lt;/li&gt;
+&lt;li&gt;Credentials short life cycle and how this fits with policy and issuing&lt;/li&gt;
+&lt;li&gt;Limited industry understanding and use of the technology&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Record architecture decisions</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0001-record-architecture-decisions/"/>
+    <updated>2021-06-27T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0001-record-architecture-decisions/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to record the architectural decisions made on this project.&lt;/p&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Allows anyone to be able to follow and contribute to ongoing decisions made on the service.&lt;/p&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 8/10&lt;br /&gt;
+Developers are aware of ADRs, but their experience of doing them brings this score down a little.&lt;/p&gt;
+&lt;h3 id=&quot;support%2Fopen-source---is-it-well-supported&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support/Open Source - Is it well supported&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Fully Open Source.&lt;/p&gt;
+&lt;h3 id=&quot;scalability&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Scalability&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Uses Markdown and git to achieve scalability.&lt;/p&gt;
+&lt;h2 id=&quot;ethics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ethics&lt;/h2&gt;
+&lt;h3 id=&quot;mitigate-against-being-tech-deterministic&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Mitigate against being tech deterministic&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Giving visibility to our decisions and allowing contributions ensures Citizens and colleagues are able to have a voice and be aware of changes over time.&lt;/p&gt;
+&lt;h3 id=&quot;ensure-you-conduct-inclusive-research&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Ensure you conduct inclusive research&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The design of the pages ensures the site is accessible to the highest standard. This is achieved by using the GDS pattern library.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;In the future we should look at including a Welsh version to be more inclusive.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Language within the ADRs will contain technical language so may not be accessible to persons not familiar with the terminology.&lt;/p&gt;
+&lt;h3 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Decisions can be read and commented on inside and outside of government. Encouraging conversation with others exploring these technologies will enable better communities and feed back into our own decisions.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This will allow us to get a wider range of opinions on our decisions which we could not have got before.&lt;/p&gt;
+&lt;h3 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interrogate your data decisions&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We will use Architecture Decision Records, as &lt;a href=&quot;http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;described by Michael Nygard (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;See Michael Nygard&#39;s article, linked above.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;ADRs will be public for visibility and collaboration.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Pull requests and Github issues can be used to drive conversations.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>GOV.UK Pay for Solicitors and Organisations</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/govukpay-payments/"/>
+    <updated>2022-03-08T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/govukpay-payments/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We require a way to use GOV.UK Pay for solicitors and organisations who register LPAs on behalf of their clients.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This will require a different process from paying per LPA.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We want to give Solicitors a way to pay via invoice, batch payments or other methods to simplify their process with fee structures.&lt;/p&gt;
+&lt;h2 id=&quot;what-gov.uk-pay-does-and-does-not-do&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;What GOV.UK Pay does and does not do&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;GOV.UK Pay&#39;s responsibility is to take payment from a user, handle the payment and respond to whether payment was successful or not.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It is not responsible for managing accounts, invoicing or any other type of payment processing.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We can only use GOV.UK Pay for requesting payment and tracking the status of the payment.&lt;/p&gt;
+&lt;h2 id=&quot;solution&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Solution&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We cannot hand off an invoicing solution to GOV.UK Pay, however we can still use it for payment of invoices in our service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to build into our service the ability for organisations to be invoiced and pay via GOV.UK Pay.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;In Beta we need to look at the organisation feature of our service to include the following&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Monthly/Quarterly invoicing based on the number of LPAs registered&lt;/li&gt;
+&lt;li&gt;Optional payments by phone or post&lt;/li&gt;
+&lt;li&gt;Ensuring payments are tagged with an organisation reference and LPA ID&lt;/li&gt;
+&lt;li&gt;Dashboard for viewing daily usage&lt;/li&gt;
+&lt;li&gt;Audit trails for organisations payments&lt;/li&gt;
+&lt;li&gt;Automatic billing and reconciliation of LPAs registered via organisations&lt;/li&gt;
+&lt;li&gt;Any type of support needed for organisations should they have a query with their bill&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.payments.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Pay (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.payments.service.gov.uk/integrate_with_govuk_pay/#integrate-with-the-gov-uk-pay-api&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Integrate with the GOV.UK Pay API (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.payments.service.gov.uk/take-payments-by-phone-or-post/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Take payments by phone or post (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Browser Fingerprinting and Registered Devices</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/browser-fingerprinting/"/>
+    <updated>2022-03-07T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/browser-fingerprinting/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We would like to gain confidence that the user is who they say they are when using our site.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;During the process, it would be a help if we knew the device they use is the same or one of many devices they use on repeat journeys.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We want to investigate the use of Browser Fingerprinting and its use in helping give the user confidence that they have been the only one accessing the site via their login and give us confidence in the devices they are using.&lt;/p&gt;
+&lt;h2 id=&quot;what-is-browser-fingerprinting%3F&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;What is Browser Fingerprinting?&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Browser Fingerprinting is the process of identifying a user via their browser and operating system when using a website.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It uses a range of different methods and techniques to gather properties about the browser and if possible, the device and operating system it is running on.&lt;/p&gt;
+&lt;h3 id=&quot;techniques-used&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Techniques used&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There are a range of techniques that can be used to successfully identify a browser. Below is a range of examples that are commonly used techniques and methods.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;User agent including screen resolution&lt;/li&gt;
+&lt;li&gt;Browser details&lt;/li&gt;
+&lt;li&gt;Timezone&lt;/li&gt;
+&lt;li&gt;Cookies&lt;/li&gt;
+&lt;li&gt;Does IP Address and DNS Server match&lt;/li&gt;
+&lt;li&gt;Is WebRTC enabled&lt;/li&gt;
+&lt;li&gt;Is Javascript enabled&lt;/li&gt;
+&lt;li&gt;Is the user in incognito mode&lt;/li&gt;
+&lt;li&gt;IP Location&lt;/li&gt;
+&lt;li&gt;Web API
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Battery status&lt;/li&gt;
+&lt;li&gt;Canvas&lt;/li&gt;
+&lt;li&gt;WebGL&lt;/li&gt;
+&lt;li&gt;HTTP/2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Keystroke patterns&lt;/li&gt;
+&lt;li&gt;Accelerometer readings&lt;/li&gt;
+&lt;li&gt;And more&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;who-uses-fingerprinting&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Who uses Fingerprinting&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Many companies use Fingerprinting technologies for both positive and negative reasons. Below are a few examples.&lt;/p&gt;
+&lt;h3 id=&quot;online-banking&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Online Banking&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;To help reduce fraud, many online banking services will use Fingerprinting as part of their sign in process.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This aids in helping with their confidence levels of the user being who they say they are at time of log in. It also gives a better user experience for users returning from a commonly used device.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;For example, if a user logs on to their site via a VPN, they can detect a change in the network IP address from the previous log in and ensure the user has to re-enter their two factor authentication details or put captcha screens in front of the login to deter unwanted threats.&lt;/p&gt;
+&lt;h3 id=&quot;video-on-demand-registered-devices&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Video On Demand Registered Devices&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A lot of Video on Demand services require you to register your browser before being able to watch their services.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;They also limit the amount of devices you are allowed to register.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This gives them many benefits, the main one being that it helps ensure that a licence is not being shared between multiple households.&lt;/p&gt;
+&lt;h3 id=&quot;advanced-user-tracking&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Advanced User Tracking&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;With the increased awareness around cookie misuse, browsers and browser addons that disable tracking cookies, services are starting to rely instead on new ways to track users across websites.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Browser Fingerprinting has begun to replace cookie misuse.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Because of this more browsers are now disabling common Browser Fingerprinting techniques and creating open source lists to help detect and classify known bad trackers.&lt;/p&gt;
+&lt;h2 id=&quot;accuracy&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Accuracy&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Depending on how we would gather and use this data, we could damage our users experience on the site while gaining minimal security benefits.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Examples of a few way in how the accuracy of using Browser Fingerprinting can drop are as follows&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Users on a corporate network could all come from the same IP&lt;/li&gt;
+&lt;li&gt;Multiple users could work from the same device in a household&lt;/li&gt;
+&lt;li&gt;Use of a modern browser that prevents any detection of Fingerprinting technology such as Brave Browser, Tor Project or Mozilla Firefox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Relying too heavily on this technology could alienate groups of users from being able to access our service if their behaviour is classed as untrustworthy or uncommon.&lt;/p&gt;
+&lt;h2 id=&quot;browser-changes&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Browser changes&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Even though there is a case for Browser Fingerprinting in safeguarding people who use sites and detecting fraudulent activity, browser companies are working hard to remove the ability to reliably identify users by their hardware.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;https://www.xda-developers.com/chrome-100-beta/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Chrome have announced they will be removing the User Agent from their Chrome browser in the latest version (opens in new tab)&lt;/a&gt; and we should expect more and more personally identifiable attributes from browsers to be removed over time.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;h3 id=&quot;what-we-should-not-do&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;What we should not do&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We may have to rule out using it as a way to give us confidence in knowing the user is who they say they are. The technology is changing too quickly and as our accuracy drops, we risk introducing unforeseen consequences in how people use the site.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If however during Beta we discover a need for this technology, then we should look to source the solution externally. Maintaining a system that can stay up to date with the latest changes in browsers and ensuring accuracy would be beyond internal resourcing.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we do use Browser Fingerprinting, we should make it clear to our users that we use it, what we use it for, the ability to opt out should they wish to and not prevent them from using the service should they do this.&lt;/p&gt;
+&lt;h3 id=&quot;what-we-should-do&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;What we should do&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;I suggest we research what value an implementation would hold where a user is able to see their basic device history and log in history.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This gives value to a user to have ownership of their own security and raise with us any unusual behaviour they see on their account.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Even with the removal of data from browsers, we should still investigate it&#39;s use. Tracking small amounts of attributes to show the users could be a great way increase confidence in our service.&lt;/p&gt;
+&lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.avast.com/c-what-is-browser-fingerprinting&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Avast - What is browser fingerprinting? (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mozilla.org/en-GB/firefox/features/block-fingerprinting/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Mozilla - Firefox blocks fingerprinting (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Amazon Cognito - Creating a device fingerprint (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.thesslstore.com/blog/browser-fingerprinting-the-good-bad-ugly/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Browser Fingerprinting: The Good, Bad &amp;amp; Ugly (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Supported Journeys and Delegated Access Blog</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/supported-journeys-delegated-access/"/>
+    <updated>2022-02-28T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/supported-journeys-delegated-access/</id>
+    <content type="html">&lt;h2 id=&quot;designing-for-a-relationship%2C-not-a-user&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Designing for a relationship, not a user&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;When was the last time you helped someone do something online? A few personal examples from me: during a prototype testing session I talked a participant through how to share their screen with me, while on a whatsapp call with my mom I talked her through how to switch our voice call to a video call and last year while abroad for a conference, I sat next to a fellow speaker and helped him as he completed the online public health passenger locator form for entry back into the UK. For the purposes of this blog I&#39;m going to call this informal support.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Next question. Do you have any formal &#39;authority&#39; in place? Perhaps you&#39;re a parent or a guardian. Perhaps you have a lasting power of attorney in place for your mum or your dad or your granny? I have a power of attorney in place for my sister. The UK Gov Good Practice Guidelines (GPG) identifies three different types of authority:&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Delegated authority&lt;/strong&gt; is when someone nominates a representative to do things for them. Eg. Lasting Power of Attorney.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Asserted authority&lt;/strong&gt; is when a representative is able to declare/assert that they have the authority to act on behalf of someone else. Eg. A mother opening a bank account on behalf of her child does not need the child&#39;s agreement to do so.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Appointed authority&lt;/strong&gt; is when a third party has the legal power to appoint someone to act on behalf of a subject. Eg. A court-appointed company administrator.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;For the purposes of this blog, we&#39;ll refer to all these authoritative examples as &#39;formal support&#39;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;While working on &lt;a href=&quot;https://sites.google.com/digital.justice.gov.uk/opgmlpa&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;modernising lasting powers of attorney (opens in new tab)&lt;/a&gt;, I&#39;ve come across tens of stories and anecdotes, just like the ones I&#39;ve shared with you above, where participants talked through how they received help from or gave help to a friend, neighbour or family member while completing their forms. These stories are often accompanied by tales of woe; because once they had a &lt;a href=&quot;https://www.gov.uk/power-of-attorney&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;lasting power of attorney (opens in new tab)&lt;/a&gt; in place, they quickly discovered how difficult it was to start using this really important document.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As a result of this work, I&#39;ve started seeing the absence of informal support and formal delegation journeys everywhere and I cannot stop thinking to myself, why do we make it so difficult for people to get the help they need? The reason I&#39;m getting on my soapbox about this is because this isn&#39;t just a design flaw. In some instances, this absence becomes outright service failure.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;When you start adding up the numbers, you quickly start to see how important supported journeys are. There are nearly six million lasting powers of attorney and counting in the UK, with around one million being added each year… and that&#39;s just one kind of formal support. Supported journeys aren&#39;t a chance occurrence, they are a certainty.&lt;/p&gt;
+&lt;h2 id=&quot;why-is-it-important-for-us-to-design-&#39;in&#39;-support%3F&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Why is it important for us to design &#39;in&#39; support?&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The simplest answer to this question is because informal and formal support are a key feature of human life and as a result, our services should be flexible enough to cope with a supporter-in-tow on the other end of a screen, telephone or paper form. However, there are a number of other important reasons too.&lt;/p&gt;
+&lt;h2 id=&quot;reduce-fear-and-anxiety&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Reduce fear and anxiety&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;On more than one occasion, I&#39;ve heard how filling out government forms overwhelms people. There is a real fear and anxiety in getting it wrong or getting into trouble because they got it wrong. Very often, it&#39;s this fear and anxiety that drives people to seek support and reassurance from someone else but that, in turn, concerns people that by including someone else, they&#39;re doing the wrong thing. Designing &#39;in&#39; support and delegation makes it known to people that getting support is perfectly ok and normal.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;You could include an entry point for a supporter at the very start of the journey, like this.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;img src=&quot;https://docs.modernising.opg.service.justice.gov.uk/assets/images/research-development/supported-journeys-delegated-access/who-are-you-making-this-lpa-for.png&quot; alt=&quot;Screenshot of who are you making this LPA for page. Gives three options, for me, for someone else, for me and someone else.&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;reduce-errors&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Reduce errors&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Designing in support means that we&#39;re able to reduce errors when people are sharing information with us. When you&#39;re helping someone complete an online form, it&#39;s easy to default to &#39;your&#39; details when you see the word &#39;you&#39; or &#39;yours&#39;. Customising the journey with names reduces the cognitive load on the supporter and can help to reduce errors.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Avoid this: Do you have an account?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Rather this: Does Wendy have an account?&lt;/p&gt;
+&lt;h2 id=&quot;reduce-delays-in-access-to-public-services&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Reduce delays in access to public services&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This is especially important with regards to formal supporters like guardians, attorneys, appointees and others because the person we intended to speak to, our imagined &#39;user&#39;, isn&#39;t driving the car but is rather in the front seat, so to speak. For those with a formal support arrangement in place, they are relying on service providers to know what these arrangements are, how they work, and to have a process in place to verify the arrangement. Without this, a potentially vulnerable person and their supporter is left in significant distress.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Verifying the relationship between two people also ensures that should any queries arise or notifications need to be shared, that we contact the right person. Calling someone who has dementia and questioning them about, say, identity documents is not helpful&lt;/p&gt;
+&lt;h2 id=&quot;design-for-a-relationship-not-a-user&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Design for a relationship not a user&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Once you open this box, you realise there is a lot to think about. For starters, there&#39;s the fact that you&#39;re having to reframe the design challenge in front of you because you&#39;re now having to design for a relationship not a user. That&#39;s some real weirdness right there and it takes some getting used to.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Then there are other design challenges that crop up like capturing consent from the person getting the support, and adapting guidance so that those who are supporting have the language they need to explain what the service is requesting and what decisions need to be made clearly to someone else. Building in safeguards, to reduce the risk of undue pressure and coercion, takes time.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Consideration also needs to be given to how the kind of supported journeys that are described above should be designed differently to professional support services that solicitors, accountants, charities etc provide. However, this is a blog and not a thesis and there is only so much space that I&#39;m allocated.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If you&#39;d like to read more about this topic, I&#39;m starting to document my thinking in a framework that I&#39;m &lt;a href=&quot;https://docs.google.com/document/d/19_iph4Q3jJIDrxGDOfOPpGnMm8h9GEdZtPQnYKhiF94/edit&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;publishing on this Google Doc over here (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As more public services and national infrastructure, like single sign-on accounts and identity, move online, the design of informal and formal support journeys will need to move from nice-to-have into the territory of accessible and inclusive design practice.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;So the next time someone asks you, &amp;quot;Will it scale?&amp;quot; The answer is, &amp;quot;It has to.&amp;quot;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Using Technology to reduce mass LPA attempts</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/reducing-mass-attempts/"/>
+    <updated>2022-02-21T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/reducing-mass-attempts/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;OPG need to identify ways in which we can mitigate abuse of bad actors abusing our service and costing the business, and in turn our end users, money with an increase in the cost of registering an LPA.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should try to protect the highest cost endpoints while ensuring the user journey is unaffected by any negative experiences.&lt;/p&gt;
+&lt;h2 id=&quot;solutions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Solutions&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Below is a list of options we can investigate to try and mitigate this problem.&lt;/p&gt;
+&lt;h3 id=&quot;account-creation-flow&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Account Creation Flow&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There are ways to prevent malicious creation of accounts and use of verification flows on the service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;By setting up our registration flow in the correct way, we can put manual steps in place to prevent automation attempts without causing a bad experience to the end user.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Some of these are&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Limit the number of LPAs allowed to be created over time. A rate limit to prevent bad behaviour&lt;/li&gt;
+&lt;li&gt;Permit only one account per email address&lt;/li&gt;
+&lt;li&gt;Check for or prevent the use of email aliasing&lt;/li&gt;
+&lt;li&gt;Allow registration of new accounts via third party account providers&lt;/li&gt;
+&lt;li&gt;Verify account via email and SMS before user verification or LPA process&lt;/li&gt;
+&lt;li&gt;Require two factor authentication&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;web-application-firewall&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Web Application Firewall&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Sources&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/waf/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;AWS WAF - Web Application Firewall (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We already have experience of using Web Application Firewalls internally.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Web Application Firewalls give us a suite of useful security tools to help against not only attack, but mitigating suspicious behaviour.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A benefit of using a Web Application Firewall is it does not impact legitamite use, it only targets negative types of behaviour.&lt;/p&gt;
+&lt;h4 id=&quot;web-traffic-filtering&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Web traffic filtering&lt;/h4&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Web Application Firewalls let you create rules to filter web traffic based on conditions that include IP addresses, HTTP headers and body, or custom URIs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This feature allows us to take advantage of existing and well known traffic patterns that could potentially be used to setup attacks to drive up our costs.&lt;/p&gt;
+&lt;h4 id=&quot;bot-control&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Bot Control&lt;/h4&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Bot Control is a managed rule group that gives you visibility and control over common and pervasive bot traffic that can consume excess resources, skew metrics, cause downtime, or perform other undesired activities.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Being able to capture bots that abuse our service will help with any third parties trying to use our service bypassing any available APIs.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It will also prevent attackers trying to drive costs up by repeating certain journeys that cost us to validate details with third parties or internal storage costs.&lt;/p&gt;
+&lt;h3 id=&quot;rate-limiting&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Rate limiting&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Rate limiting can also be enabled, allowing us to block access to the site when abuse is detected.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should investigate strategies to blocking access such as captcha (showing a captcha image to check for bots), perminant (blocking access to the site completely) or incremental time blocking (blocking for timed increments such as 2 minutes, 5 minutes, 10 minutes, etc).&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We can also have different types of rate limiting based on users behaviour patterns. For example, having different implementations for fast but successful journeys or brute forcing attempts.&lt;/p&gt;
+&lt;h4 id=&quot;account-takeover-prevention&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Account takeover prevention&lt;/h4&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Account Takeover Prevention is a managed rule group that monitors your application’s login page for unauthorized access to user accounts using compromised credentials. You can use the rule group to help protect against credential stuffing attacks, brute force login attempts, and other anomalous login activities.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;While not preventing attacks for mass attempts, this does help with reducing the risk of an attack via a compromised account.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If an OPG trusted account has been comprised and is therefore trusted to make more calls for verification or LPA creation, then this helps reduce this attack area.&lt;/p&gt;
+&lt;h3 id=&quot;user-behaviour-analytics-(uba)-or-transaction-monitoring&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;User Behaviour Analytics (UBA) or Transaction Monitoring&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Sources&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ncsc.gov.uk/collection/10-steps/logging-and-monitoring&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;NCSC 10 Steps to Cyber Security - Logging and Security (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/user-behaviour-analytics-witnessing/&quot; class=&quot;govuk-link&quot;&gt;Using User Behaviour Analytics in place of Witnessing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/fraud-detector/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Amazon Fraud Detector (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We have talked extensively about UBA and how we could use it within our service. This technology can be a data point we can work with to aid in our confidence of a LPA.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Flagging legitamite and suspicious activity through this technology will aid in our confidence for giving account holders the ability to access more expensive operations such as verification and signing.&lt;/p&gt;
+&lt;h4 id=&quot;identify-suspicious-online-payments&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Identify suspicious online payments&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Sources&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.payments.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Pay (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;For any payments through our service, we will be using the &lt;a href=&quot;https://www.payments.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Pay (opens in new tab)&lt;/a&gt; service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Built into this service are fraud prevention methods and risk scores that will help with any fraudulent payments.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using a trusted SAAS payment service, that has the resources and expertise in the financial services area is a preferred way of outsourcing this issue.&lt;/p&gt;
+&lt;h4 id=&quot;detect-new-account-fraud&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Detect new account fraud&lt;/h4&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Accurately distinguish between legitimate and high-risk account registrations so you can selectively introduce additional checks, such as phone or email verification.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We could use this service to ensure that the data collected on registration and the verification process is not fraudulent.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Having extra safe guards around these already secure processes will help mitigate high-risk accounts being created and subsequently abused.&lt;/p&gt;
+&lt;h2 id=&quot;preventing-bias&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Preventing Bias&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Some of these suggestions use some form of Machine Learning and with this we know your model is only as good as your data.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should use tools that allow us to analyse our use of these services and identify any negative biases that could occur and hold ourselves accountable to the highest standards.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We have options that we should investigate in Beta to learn more about how they can help solve the problem.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We already have experience of using Web Application Firewall, so we will have real world data to look at. We should take the opportunity with the existing implementations to trial any exploration.&lt;/p&gt;
+&lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/about-aws/whats-new/2022/02/aws-waf-fraud-control-login-credential-attacks/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;AWS WAF introduces AWS WAF Fraud Control - Account Takeover Prevention for protecting your login page against credential stuffing attacks (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/waf/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;AWS WAF - Web Application Firewall (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/user-behaviour-analytics-witnessing/&quot; class=&quot;govuk-link&quot;&gt;Using User Behaviour Analytics in place of Witnessing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/fraud-detector/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Amazon Fraud Detector (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ncsc.gov.uk/collection/10-steps/logging-and-monitoring&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;NCSC 10 Steps to Cyber Security - Logging and Security (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>OPG as a Service</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/opg-as-a-service/"/>
+    <updated>2022-02-14T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/opg-as-a-service/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;70% of LPAs made are done by solicitors, charities or other third parties on behalf of the Donor.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Citation: &lt;a href=&quot;https://www.lastingpowerofattorney.service.gov.uk/stats&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Lasting Power of Attorney Statistics (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we are to encourage the uptake of our digital pathway, we need to explore a way of enabling this group of users to interact with their systems more efficiently.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Supplying our users with an option to integrate via an API will help move a significant amount of users over to our digital LPA service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We know that most solicitors firms use a small range of software providers and work with a group called the &lt;a href=&quot;https://www.lssa.co.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Legal Software Suppliers Association (opens in new tab)&lt;/a&gt; (LSSA).&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The companies behind this software have a keen interest in integrating with our service through code so that they can streamline their processes and automate work.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;They already integrate with other government services like the Land Registry.&lt;/p&gt;
+&lt;h3 id=&quot;legal-software-suppliers-association-(lssa)&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Legal Software Suppliers Association (LSSA)&lt;/h3&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The Legal Software Suppliers Association (LSSA) is the UK industry body for legal systems developers and vendors. Representing most of the leading UK suppliers, it aims to both set and maintain professional standards within the industry and manage areas of mutual interest between lawyers and software providers.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Working with the LSSA and those outside of them will be key to unlocking the full potential of any new service we create.&lt;/p&gt;
+&lt;h2 id=&quot;opg-as-a-service&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;OPG as a Service&lt;/h2&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;An API is not &amp;quot;just&amp;quot; an API&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There is more to building an API than providing consumers with an endpoint to connect to.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;To accomplish providing an integration for the users of our service, we need to build something that does the following:&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Allow the user to Self Service&lt;/li&gt;
+&lt;li&gt;Quality support expected of a service that is widely used&lt;/li&gt;
+&lt;li&gt;A testing environment for new and existing integrations&lt;/li&gt;
+&lt;li&gt;Information on the service status&lt;/li&gt;
+&lt;li&gt;Well documented schema and versioning strategy&lt;/li&gt;
+&lt;li&gt;Allows the consumer to integrate into their existing software platforms&lt;/li&gt;
+&lt;li&gt;Communicate data flows and business logic for an LPA lifecycle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should take the learnings from the existing &lt;a href=&quot;https://www.notifications.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Notify (opens in new tab)&lt;/a&gt; and &lt;a href=&quot;https://www.payments.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Pay (opens in new tab)&lt;/a&gt; services which provide a centralised API for any government service to integrate with.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should follow the patterns they use, including their url structure, design and features.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Below is an example of how this may be structured&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;img src=&quot;https://docs.modernising.opg.service.justice.gov.uk/assets/images/research-development/opg-as-a-service/opg-as-a-service.jpg&quot; alt=&quot;Diagram showing an overview of all components of a potential future self service API.&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;documentation&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Documentation&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Details on how to use the service from sign up to implementation&lt;/p&gt;
+&lt;h3 id=&quot;account-management&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Account Management&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Manage your account resources in a self service way&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Organisation Details
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Solicitor&lt;/li&gt;
+&lt;li&gt;Charity&lt;/li&gt;
+&lt;li&gt;Company&lt;/li&gt;
+&lt;li&gt;third party details management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;User Details
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Individual user details associated with the organisation. This allows for better auditing with interactions within the API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;API Keys
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Each Organisation has a unique API Key that is required for any API calls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;API Throttling Limits
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Throttling rules shown to understand your allowed usage of the service&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Audit Trails
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Anonymised logs to allow you to Audit activity within your organisation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;support&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Provide technical support to users of the service&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Uptime and Issues Dashboard
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Dashboard with current and past service uptime, alerting hooks for integrations into 3rd party tooling such as Slack and scheduled maintenance times&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sandbox
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;A testing environment for new integrations or testing out code against newer versions of APIs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;api&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;API&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Endpoints for external parties to integrate with&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Security
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;IP Range, API Key (Organisation) and UserID (User Details ID) all set for requests to the API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Responses
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;code&gt;JSON&lt;/code&gt; and potentially &lt;code&gt;FHIR+JSON&lt;/code&gt; for the NHS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OpenAPI Specifications
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Defined OpenAPI specifications allowing mocks and integration checks. There is a potential for Contract Testing here too&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;API Design Styles
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;REST&lt;/li&gt;
+&lt;li&gt;GraphQL&lt;/li&gt;
+&lt;li&gt;Our Domain supports REST more than GraphQL so REST is probably the way we will go&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;internal-government-services&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Internal Government Services&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;https://www.notifications.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Sending of emails, texts and letters via GOV.UK Notify (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;https://www.payments.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;For the handling of payments through the process via GOV.UK Pay (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;example-api-endpoints&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Example API Endpoints&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Below are a list of potential endpoints and flows we could implement within OPG as a Service.&lt;/p&gt;
+&lt;h3 id=&quot;example-api-flow-1&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Example API Flow 1&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;img src=&quot;https://docs.modernising.opg.service.justice.gov.uk/assets/images/research-development/opg-as-a-service/simple-api-example.jpg&quot; alt=&quot;A simplified version of submitting an LPA&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We are able to replicate the entire &lt;a href=&quot;https://www.lastingpowerofattorney.service.gov.uk/home&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Make a LPA (opens in new tab)&lt;/a&gt; journey via this endpoint.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Providing a Data Model for integrations, we can specify the structure of the data required and provide an endpoint that can be a one off transaction.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This would allow third parties to create LPAs and actors in a simplified way, but would end the journey there.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Negatives are that we will find ourselves in a position where we will have duplicate actors and no sure proof way of matching them against existing OPG actors.&lt;/p&gt;
+&lt;h3 id=&quot;example-api-flow-2&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Example API Flow 2&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;img src=&quot;https://docs.modernising.opg.service.justice.gov.uk/assets/images/research-development/opg-as-a-service/full-api-example.jpg&quot; alt=&quot;An overview of all components of a potential future self service API.&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This diagram offers a more complex API for greater control and management of LPA data.&lt;/p&gt;
+&lt;h4 id=&quot;actor&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Actor&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;An actor endpoint will allow systems to manage OPG users details from their own content management systems.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Creating an actor will then supply the third party with a OPG User ID that they can use in any future LPA management.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;They should also be able to claim the management of a OPG User if they already exist in the system. This needs to be thought about more on how the user would manage and consent to this through the website.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Having the ability to properly manage a actor will mean better audit trails and confidence in safe guarding rather than potential duplicate identities within the OPG service.&lt;/p&gt;
+&lt;h4 id=&quot;documents&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Documents&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Giving the ability for third parties to submit documents such as identification material, signatures or photos is a nice to have and may not be required.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It is here to show that it is possible to do so. We would rather not be in a position where we are managing copies of users private documents.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Where possible we should be using transactional processes that return us a confidence score to act upon and not storing copies of user data.&lt;/p&gt;
+&lt;h4 id=&quot;lpa-create&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;LPA Create&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Unlike the Make a LPA endpoint, this splits the process into 4 stages to correctly manage an LPA.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;You can register a new empty LPA by a &lt;code&gt;POST&lt;/code&gt; to the create endpoint with a internal reference number. At this point we have created a blank record with a reference to the third parties internal reference number.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;After this you can &lt;code&gt;PUT&lt;/code&gt; as often as you wish, a &lt;code&gt;OPGLPADataModel&lt;/code&gt; object with data that will be stored and saved on the OPG system.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The &lt;code&gt;OPGLPADataModel&lt;/code&gt; will be well documented and have all validation rules defined to work against.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Sending an &lt;code&gt;LPAID&lt;/code&gt; as a &lt;code&gt;GET&lt;/code&gt; you will be able to get the status of the LPA.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Sending a &lt;code&gt;DELETE&lt;/code&gt; with the &lt;code&gt;LPAID&lt;/code&gt; will delete the LPA from the OPG system.&lt;/p&gt;
+&lt;h4 id=&quot;lpa-complete&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;LPA Complete&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Once you have completed the LPA Create flow with the correct OPG status being returned, you will be ready to complete the lpa. Doing a &lt;code&gt;GET&lt;/code&gt; to this endpoint will tell OPG this is ready to be processed and will lock any amends to the LPA moving forward.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;You will be returned the final &lt;code&gt;OPGLPADataModel&lt;/code&gt; data and any other corresponding data to confirm this action.&lt;/p&gt;
+&lt;h3 id=&quot;using-the-api-flow&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Using the API Flow&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;img src=&quot;https://docs.modernising.opg.service.justice.gov.uk/assets/images/research-development/opg-as-a-service/using-api-flow.jpg&quot; alt=&quot;How you would use the API to manage actors and LPA creation&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This example will take you through a potential flow of integrating with an API.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We have included a path for users to sign in and do actions on our site. This is a way to help prevent duplicate and orphan records from appearing in the OPG system.&lt;/p&gt;
+&lt;h4 id=&quot;create-lpa&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Create LPA&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Send a request to &lt;code&gt;/lpa/create&lt;/code&gt; with&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;The integrations internal reference number&lt;/li&gt;
+&lt;li&gt;LPA Configuration data which optionally tells OPG what they need to do when a user first registers
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Pay via OPG&lt;/li&gt;
+&lt;li&gt;Sign via OPG&lt;/li&gt;
+&lt;li&gt;Verify via OPG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Returns a &lt;code&gt;LPAID&lt;/code&gt; to store against the internal LPA record&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;create-actors&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Create Actors&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Send a request to &lt;code&gt;/actor&lt;/code&gt; with&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;code&gt;LPAID&lt;/code&gt; that is stored from the Create LPA Endpoint call&lt;/li&gt;
+&lt;li&gt;List of &lt;code&gt;OPGActor&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;(optional) &lt;code&gt;EmailActors&lt;/code&gt; setting to &lt;code&gt;true&lt;/code&gt; will optionally send emails via Notify&lt;/li&gt;
+&lt;li&gt;(optional) &lt;code&gt;WebhookUrl&lt;/code&gt; setting to tell OPG where to send confirmation for each actor completing their sign up. &lt;strong&gt;Note&lt;/strong&gt;: This could be set at a higher level in the Organisation settings&lt;/li&gt;
+&lt;li&gt;Returns a list of unique, time based urls for each actor if &lt;code&gt;EmailActors&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;actors-log-in&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Actors Log In&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Each Actor follows the links and does one of the following&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Signs in to an existing account&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Confirms that this LPA should sit within their account&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Registers a new account&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If any LPA Configuration is set, do these activities&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;LPA gets added to their account&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;webhook-or-poll&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Webhook or Poll&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Once all actors have completed their sign up, the third party are able to carry on with completing and submitting the LPA.&lt;/p&gt;
+&lt;h5 id=&quot;webhook&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Webhook&lt;/h5&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If a &lt;code&gt;WebhookUrl&lt;/code&gt; was specified in the create actors step, OPG will send a message to a specific endpoint as set by the third party.&lt;/p&gt;
+&lt;h5 id=&quot;polling-endpoint&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Polling Endpoint&lt;/h5&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If a &lt;code&gt;WebhookUrl&lt;/code&gt; was not specified in the create actors step, the third party can check an endpoint on a regular basis to check for those actors being verified or not.&lt;/p&gt;
+&lt;h4 id=&quot;submit-lpa&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Submit LPA&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Once you have a &lt;code&gt;LPAID&lt;/code&gt;, a LPA returning a status indicating all data is complete and all actors are verified, you can submit the LPA to OPG and lock it for processing.&lt;/p&gt;
+&lt;h3 id=&quot;view-an-lpa&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;View an LPA&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;img src=&quot;https://docs.modernising.opg.service.justice.gov.uk/assets/images/research-development/opg-as-a-service/view-an-lpa-api.jpg&quot; alt=&quot;Diagram showing the View an LPA website as an API&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This example shows how we could offer the &lt;a href=&quot;https://view-lasting-power-of-attorney.service.gov.uk/home&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;View a LPA (opens in new tab)&lt;/a&gt; service as a API Endpoint.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;With the ability to monitor third parties by their credentials, we can ensure high levels of trust and prevent bad actors from attacking.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This will aid those in need of adding the service to their back end systems for better automation rather than the current manual process of using a web form.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Due to the size of the market who use our site via an intermediary, we should enable third parties to integrate into our service in a programmatic way.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Feedback from research done with these third parties suggests the more complicated route would be better so that they can have more fine grained control within their systems.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As well as the user journey on the website, we should dedicate the same amount of effort to our integration service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This will require the business to look at Modernising not only in the form of a website feeding into a database, but as a more accessible service with multiple routes to interact with LPAs in the wider ecosystem.&lt;/p&gt;
+&lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lastingpowerofattorney.service.gov.uk/stats&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Lasting Power of Attorney Statistics (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lastingpowerofattorney.service.gov.uk/home&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Make a LPA (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://view-lasting-power-of-attorney.service.gov.uk/home&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;View a LPA (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.notifications.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Notify (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.payments.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Pay (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Using User Behaviour Analytics in place of Witnessing</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/user-behaviour-analytics-witnessing/"/>
+    <updated>2022-01-31T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/user-behaviour-analytics-witnessing/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&amp;quot;A signature is only useful as evidence if it provides a reliable link between the authorised signatory and the agreed terms. The stronger the evidence of that link, the more robust the signature. If the authenticity of a signature later comes to be contested (for example, in legal proceedings) it may be necessary to prove that the document in question was signed by the parties to it (or, where appropriate, their authorised signatory).&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We require an option to investigate replacing physical witnessing with a technology approach. There are many demographic factors that will affect our approach such as age, complexity and cost.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This document outlines the most unobtrusive option that also gives us confidence and potential to grow in that confidence over time.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Throughout the process we must ensure that any data collected is anonymous, secure and discarded as soon as it has exceeded its use.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;In a safeguarding issue during the LPA Process, we know the investigations team would use the Certificate Provider as the main contact to pursue. They use data from the LPA and elements from our case management system to track changes and find patterns of behaviour for safeguarding issues.&lt;/p&gt;
+&lt;h2 id=&quot;user-behaviour-analytics-and-aws-fraud-detector&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;User Behaviour Analytics and AWS Fraud Detector&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;AWS Fraud Detector (FD) allows us to feed our data into a Machine Learning (ML) service to look for common patterns in fraudulent behaviour and assess our confidence that the person who is interacting with our service is who they say they are.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We can put anonymised data from our existing Case Management service into it, such as our timeline events, but also data from users using the Modernising service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We can capture all behavioural data from all parties making an LPA and assess key data points.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A few examples of this could be:&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Are all logins from a user coming from the same IP Address&lt;/li&gt;
+&lt;li&gt;Is the IP Address within the country they have provided on sign up&lt;/li&gt;
+&lt;li&gt;Does the user change their address or other fields more than once&lt;/li&gt;
+&lt;li&gt;Is there an appropriate time gap between each stage of form filling&lt;/li&gt;
+&lt;li&gt;Are there any negative patterns to users logging back in e.g. x number of failed attempts&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Each rule can be weighted accordingly and adjusted over time. As we discover new patterns of fraud and misuse, while working closely with the Investigations team, we can amend the rules to be more accurate using real life examples.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As we discover more areas and patterns within our flow we can also add or remove some. We can also take this information and build on it over time through interactions with our call centers to find patterns in how people act after completing a LPA.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we use the confidence score after a user journey, we can potentially use this in place of the Witness and also raise awareness with case workers which could potentially pre-empt any future fraud.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This process could potentially solve 3 specific areas of concern.&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Replace witnessing&lt;/li&gt;
+&lt;li&gt;Detect Fraud pre and post LPA creation&lt;/li&gt;
+&lt;li&gt;Reduce mass attempts for making LPAs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;User Behaviour Analytics is a great tool, but it should be used with other human processes and technology, not be solely relied upon. This process is only as good as the data you provide it and your understanding of your users.&lt;/p&gt;
+&lt;h2 id=&quot;digital-signature&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Digital Signature&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Given the definition of a signature, we should ensure that not only have we collected the data of the person filling in the form at that time, but also indicate using technology that they are who they say they are.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We can create a digital signature that contains entered information and validation processes that have taken place. But as a final step, we should ensure, based on a confidence score of all parties involved in the process that we are confident they are authentic.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should therefore ensure before creating the signature that we run the data through a model to assign a confidence score and either create the signature then or hold off for investigation.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we do this, it will be an asynchronous process and will have to be dealt with appropriately within the user flow.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;To conclude, I believe that we should investigate using User Behaviour Analytics scores alongside strong authentication techniques to see whether we can replace a physical witness with a technology based solution.&lt;/p&gt;
+&lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;AWS Fraud Detector (&lt;a href=&quot;https://aws.amazon.com/fraud-detector/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://aws.amazon.com/fraud-detector/ (opens in new tab)&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Verifiable Credentials - JSON-LD ZKP with BBS+ Signatures</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/verifiable-credentials-bbs/"/>
+    <updated>2021-08-12T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/verifiable-credentials-bbs/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;With the increased rise in requirements to move to a digital version of paper based credentials due to Covid, the idea of Verifiable Credentials as a solution has drastically increased.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Reduced ability to process paper documents due to health guidelines in offices and access postal services, has driven a move to more online services.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Previous services that were reliant on paper now face a challenge of how to move to a new way of working.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;With any new technology or standard that undergoes a rapid rise in popularity, there is a danger of the fundamental ethical, privacy and interoperability standards being forgotten.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;With Verifiable Credentials, this is especially important due to the information they hold and the potential for misuse.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There are multiple companies who have taken the &lt;a href=&quot;https://www.w3.org/TR/vc-data-model/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Verifiable Credentials Data Model (opens in new tab)&lt;/a&gt; and created their own wallets to store these credentials. Companies include&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://tykn.tech/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://tykn.tech/ (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.evernym.com/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://www.evernym.com (opens in new tab)&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.postoffice.co.uk/identity/easyid&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://www.postoffice.co.uk/identity/easyid (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/decentralized-identifier-overview&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/decentralized-identifier-overview (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/verifiable-credentials-with-auth0-and-mattr/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://auth0.com/blog/verifiable-credentials-with-auth0-and-mattr/ (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A digital wallet is a way of securely storing your VCs and using them. The use of these would mirror the way NFC works when storing your credit card details on your phone.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;At a certain point these digital wallets will become a part of devices such as a phone’s operating system. There is a risk the wallets that store these credentials may face a fragmented market with a race to the most successful standard risking interoperability issues.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should ensure that before we decide on the use of a particular standard or implementation, that it is the right thing to do and that we reduce any potential risk of damage to society and the citizens we serve.&lt;/p&gt;
+&lt;h2 id=&quot;what-is-decentralised-identity-(did)%3F&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;What is Decentralised Identity (DID)?&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Decentralised identity, also sometimes referred to as self-sovereign identity, is a concept that aims to give back control of identity data to consumers through the use of an identity wallet or personal data store. In this way, data can be verified by a trusted source (such as the government) and then issued to an individual to store in a location of their choice.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;By controlling what information is shared from the wallet to requesting 3rd parties (e.g., when registering for a new online service), the user is able to better manage their identity online and privacy – for example, only presenting proof that they’re over 18 without needing to reveal their date of birth.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Source: &lt;a href=&quot;https://www.gsma.com/identity/decentralised-identity&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://www.gsma.com/identity/decentralised-identity (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;what-is-json-ld-zkp-with-bbs%2B-signatures%3F&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;What is JSON-LD ZKP with BBS+ Signatures?&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;BBS+ is a pairing-based cryptographic signature used for signing one or more messages.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Pairing-based cryptography has been used to construct identity-based encryption (IBE), which allows a sender to encrypt a message without needing a receiver’s public key to have been certified and distributed in advance.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;JSON-LD is a linked data proof that consists of information about the proof, parameters required to verify it, and the proof of value itself.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Combined together, these give a verified credential the following benefits:&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Anonymous in its use&lt;/li&gt;
+&lt;li&gt;Revocable&lt;/li&gt;
+&lt;li&gt;Selective disclosure&lt;/li&gt;
+&lt;li&gt;Compound proofs&lt;/li&gt;
+&lt;li&gt;Zero-knowledge proofs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;These areas are briefly explained below. For a deeper dive into the technical side of BBS+, JSON-LD and all other technology mentioned, references are given at the bottom of this document for further reading.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;All information in this document has been referenced from these sources.&lt;/p&gt;
+&lt;h3 id=&quot;selective-disclosure&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Selective Disclosure&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Within VCs you are able to take selective attributes and only reveal those instead of all the attributes.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;For example, presenting a driving licence to prove your age should not require you to disclose all other information on this credential to prove it. All you should need is a boolean response to the query you are asking.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;When you present your VC, you could be prompted to answer, “Are you over 21?”&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The VC then should be able to present the answer without disclosing all other information to the system requesting it.&lt;/p&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Imagine going to a bar, but instead of showing your ID, which reveals everything, you only prove that you are old enough to get in - without even needing to reveal your birth date!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This is a key advantage of physical documents where you have to hand over your entire ID, to confirm a specific personal attribute.&lt;/p&gt;
+&lt;h3 id=&quot;compound-proofs&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Compound Proofs&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Compound proofs is a way of combining multiple VCs into one queryable VC without generating a new VC.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This allows you to combine multiple attributes from different identities all without disclosing any other data about yourself, only sharing the minimum data.&lt;/p&gt;
+&lt;h4 id=&quot;scenario&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Scenario&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;You are going on holiday and you are required to present at various checkpoints before boarding a plane, the following documents:&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;A valid passport&lt;/li&gt;
+&lt;li&gt;A yellow fever vaccine pass&lt;/li&gt;
+&lt;li&gt;Boarding pass&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Compound proofs allow you to combine all these passes into one queryable VC and use selective disclosure to verify only the required attributes at different stages.&lt;/p&gt;
+&lt;h4 id=&quot;example&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Example&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;You are buying a couple of bottles of wine from Duty Free. Currently, you need to present your boarding pass and passport to confirm you are eligible to purchase that item and the amount.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Instead of handing over both of these documents, the checkout operator can scan your VC querying with a question.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&amp;quot;Are you able to purchase these items?&amp;quot;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This can have a combined check for the following&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Are you over 18?&lt;/li&gt;
+&lt;li&gt;Does the destination you are travelling to allow this item?&lt;/li&gt;
+&lt;li&gt;Does the destination you are travelling to allow the quantity of this item?&lt;/li&gt;
+&lt;li&gt;Is this a valid boarding pass?&lt;/li&gt;
+&lt;li&gt;Is this a valid passport?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;All these are then confirmed as being true or false, rather than the system pulling this information, storing it and doing the query internally.&lt;/p&gt;
+&lt;h3 id=&quot;correlating-signatures-and-zero-knowledge-proof-signatures&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Correlating signatures and zero-knowledge proof signatures&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;On previous versions of VCs, when you are issued one by an issuer, it will uniquely sign your credential so that it can be verified.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The downside of this means, everywhere you use your credential, you can be tracked and monitored using this unique identifier through the verification systems in place.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A VC ends up being the equivalent of a global super cookie across your digital and physical life. You should not be in a position to be tracked while using a VC.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;BBS+ removes this and replaces it with a unique proof of the issuer&#39;s signature without sharing the signature itself.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This means every time you use a VC as a proof, you never share the unique identifier in the handshake. This results in:&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;The Issuer is unable to see how you are using your VCs&lt;/li&gt;
+&lt;li&gt;The Verifier you are interacting with has no way to correlate you&lt;/li&gt;
+&lt;li&gt;Multiple companies consuming parts of your data cannot collaborate to build a profile on your shared data&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using zero-knowledge proofs, you only show exactly what the verifier needs without exposing any other information.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This is important for the privacy of the user. Using cookies in browsers to track a user&#39;s habits then selling and sharing this data is a current issue we face. Without zero-knowledge proofs in place, we enable this same level of tracking in the physical world too.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Verifiable credentials have a key place in the future. Many governments and organizations around the world are already implementing their own versions and schemas of verifiable credentials. A list of a few examples are below&lt;/p&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Scottish Government via Okta UK (&lt;a href=&quot;https://blogs.gov.scot/digital/2020/05/13/digital-identity-scotland-prototype-draws-to-a-close/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://blogs.gov.scot/digital/2020/05/13/digital-identity-scotland-prototype-draws-to-a-close/ (opens in new tab)&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Post Office (&lt;a href=&quot;https://www.postoffice.co.uk/identity&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://www.postoffice.co.uk/identity (opens in new tab)&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Evernym (&lt;a href=&quot;https://www.evernym.com/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://www.evernym.com/ (opens in new tab)&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Microsoft (&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/decentralized-identifier-overview&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/decentralized-identifier-overview (opens in new tab)&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;RSA (&lt;a href=&quot;https://www.rsa.com/en-us/blog/2021-07/verifiable-credentials-the-key-to-trust-on-the-next-web&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://www.rsa.com/en-us/blog/2021-07/verifiable-credentials-the-key-to-trust-on-the-next-web (opens in new tab)&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This does not mean we should accept them in any form that does not hold to the highest standards of privacy and security.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;JSON-LD ZKP with BBS+ signatures at a minimum will provide us with assurance while maintaining privacy throughout the user journey.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A mindset change from modern ways of handling data in services across the internet will be required for this technology to be adopted. We are so used to collecting more information than we need and storing it, forgetting that we only require little to give citizens the services they require.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There will be legitimate concerns around fraud protection, auditing and national security threats, but with the right thinking, these issues can be overcome and should not be used as excuses.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should move forward with verifiable credentials in the future and prepare whatever solution we come up with, with the intent of being able to use them.&lt;/p&gt;
+&lt;h2 id=&quot;acronyms&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Acronyms&lt;/h2&gt;
+&lt;ol class=&quot;govuk-list govuk-list--number&quot;&gt;
+&lt;li&gt;Verifiable Credentials - VC&lt;/li&gt;
+&lt;li&gt;Decentralised Identity - DID&lt;/li&gt;
+&lt;li&gt;Zero-knowledge Proofs - ZKP &lt;a href=&quot;https://en.wikipedia.org/wiki/Zero-knowledge_proof&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://en.wikipedia.org/wiki/Zero-knowledge_proof (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;BBS+ - (named after the original authors Boneh, Boyen, and Shacham)&lt;/li&gt;
+&lt;li&gt;LD - Linked Data&lt;/li&gt;
+&lt;li&gt;JSON-LD - JSON formatted version of Linked Data&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dXlRIrrb9f4&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;What BBS+ Means For Verifiable Credentials - (YouTube) (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.evernym.com/blog/bbs-verifiable-credentials/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Why the Verifiable Credentials Community Should Converge on BBS+ - Brent Zundel (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lfph.io/wp-content/uploads/2021/02/Verifiable-Credentials-Flavors-Explained.pdf&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Verifiable Credentials Flavors Explained (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://w3c-ccg.github.io/ld-proofs/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://w3c-ccg.github.io/ld-proofs/ (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mattrglobal/jsonld-signatures-bbs&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://github.com/mattrglobal/jsonld-signatures-bbs (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mattrglobal/bbs-signatures-spec&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://github.com/mattrglobal/bbs-signatures-spec (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://json-ld.org/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;JSON for Linked Data (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://doubleoctopus.com/security-wiki/encryption-and-cryptography/pairing-based-cryptography/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Pairing Based Cryptography (PBC) (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Tech Ethics in our decision making reference</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/tech-ethic-decisions/"/>
+    <updated>2021-06-28T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/tech-ethic-decisions/</id>
+    <content type="html">&lt;h2 id=&quot;introduction-to-ethics-in-tech&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction to Ethics in tech&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Technology is not a product, it&#39;s a system. What we mean by this is that technology is never only an app, a product or a service. Rather, &lt;strong&gt;technology is weaved into social systems by facilitating how people transact with the world around them&lt;/strong&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Social systems include, but are not limited to, the justice system, the information system, the healthcare system but also less tangible systems like power or race.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Data is a by-product&lt;/strong&gt; of these transactions.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It is therefore crucial that &lt;strong&gt;when we design digital products and services, we think about the impact we’re having on the systems in which people live their lives.&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The below questions support ethical best practice by encouraging considerations of the wider social context in which designs/solutions will live.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;May you design with moral imagination and deploy with care.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;img src=&quot;https://docs.modernising.opg.service.justice.gov.uk/assets/images/research-development/tech-ethic-decisions-1.png&quot; alt=&quot;Diagram showing a mobile phone in the middle with overlapping areas of services including justice system, social network systems, system of legal services, health and care systems and financial systems&quot; title=&quot;Diagram showing a mobile phone in the middle with overlapping areas of services including justice system, social network systems, system of legal services, health and care systems and financial systems&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;mitigate-against-being-tech-deterministic&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Mitigate against being tech deterministic&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;What problem are we solving with this technology?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;What value is created by solving this problem?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Have we already decided to solve this problem using technology?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Does this problem really benefit from a technological fix or have we not exercised our imaginations enough?&lt;/p&gt;
+&lt;h2 id=&quot;ensure-you-conduct-inclusive-research&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ensure you conduct inclusive research&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;How can we use participatory and inclusive research methods that enable us to learn from a range of individuals and communities across society?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Can we identify a marginal group/community who is currently underserved or worse, ignored, in this area? What are their specific needs and what are the specific barriers and pain points they face? Have we designed with them in mind?&lt;/p&gt;
+&lt;h2 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Locate this product/service in social and cultural systems. Now imagine we are wildly successful in our endeavours. What is the impact on the individual, communities or environment?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Imagine suddenly everyone wants to follow our lead. Which option would leave the world better off?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Which option would create the best outcome for communities, as opposed to only certain members?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Which option would create the greatest good, for the greatest number of people? (remember to define what good is for your project)&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Which option would create the most happiness and the least displeasure for most people? (remember to define what happiness is for your project)&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Which option would make you and the team feel most proud if it became a headline in the national news?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Which option treats all people equally rather than favours one group over others?&lt;/p&gt;
+&lt;h2 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Interrogate your data decisions&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;What data are we collecting when someone uses this service?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Does every piece of data either add value to the service user and/or uphold the integrity of the service?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Is it clear to service users what data we are collecting from them, how this benefits them and how it will be kept safe?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;User needs versus user rights. Have we designed for the right to decline, the right to know more and the right to question and contest?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Have we designed our data practices, design and research processes, and technical systems so that they can be audited? Who is responsible for maintaining these and who is ultimately accountable for them?&lt;/p&gt;
+</content>
+  </entry>
+</feed>

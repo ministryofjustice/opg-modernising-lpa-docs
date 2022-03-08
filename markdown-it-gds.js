@@ -5,7 +5,7 @@ module.exports = function () {
   const options = {
     html: true,
     breaks: true,
-    linkify: true,
+    linkify: false,
   };
   var md = require("markdown-it")(options);
   md.use(markdownItAnchor, {

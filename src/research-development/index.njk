@@ -3,5 +3,5 @@ layout: layouts/fullwidth.njk
 title: Research & Development
 ---
 
-{%- from "../_includes/partials/indexlist.njk" import indexList %}
+{%- from "../_includes/macros/indexlist.njk" import indexList %}
 {{ indexList(title, '', collections.research_development) }}

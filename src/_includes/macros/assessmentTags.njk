@@ -6,10 +6,10 @@
         {% if tag !== 'research_development' %}
             {% if tag !== 'adr' %}
                 <li>
-                    <a href="/tags/{{ tag }}/" title="View all documents labelled {{tag.replace('_', ' ')}}">
+                    <a class="govuk-link" href="/tags/{{ tag }}/" title="View all documents labelled {{tag.replace('_', ' ')}}">
                         {{ govukTag({
                                 text: tag.replace('_', ' '),
-                                classes: "govuk-tag--green"
+                                classes: "govuk-tag--blue"
                             })
                         }}
                     </a>

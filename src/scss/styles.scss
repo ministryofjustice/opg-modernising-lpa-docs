@@ -12,3 +12,11 @@ img {
     }
   }
 }
+
+.govuk-link {
+  .govuk-tag {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

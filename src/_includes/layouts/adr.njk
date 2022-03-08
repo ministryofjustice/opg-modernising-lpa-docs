@@ -5,12 +5,14 @@ backLink: "/adr/"
 
 {%- from "../../_includes/macros/contentMetaData.njk" import contentMetaData %}
 {%- from "../../_includes/macros/statusBadge.njk" import statusBadge -%}
+{%- from "../../_includes/macros/assessmentTags.njk" import assessmentTags %}
 
 <h1 class="govuk-heading-xl">{{adr_number}} - {{title}}</h1>
 
 <h2 class="govuk-heading-m">Overview</h2>
 
 {{ contentMetaData(date, contributors) }}
+{{ assessmentTags(tags) }}
 
 <h3 class="govuk-heading-s">Status</h3>
 <p class="govuk-body">{{statusBadge({status: status})}}</p>
@@ -23,6 +25,6 @@ backLink: "/adr/"
     {%- endfor -%}
 </ul>
 
-{%- include "../partials/githubHistory.njk" -%}
-
 {{ content | safe }}
+
+{%- include "../partials/githubHistory.njk" -%}

@@ -223,15 +223,16 @@
 <strong>Authors: </strong>
 John Nolan
 </p>
-<ul class="govuk-list">
-    <li>
-        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/opg-as-a-service.md">View history of this page on GitHub</a>
-    </li>
-    <li>
-        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/opg-as-a-service.md">Feedback or raise issue with this page on GitHub</a>
-    </li>
-</ul>
-<h2 class="govuk-heading-l">Introduction</h2>
+
+
+<nav aria-label="Contents" role="navigation">
+<h2 class="govuk-heading-s">Contents</h2>
+<span class="govuk-list govuk-list--bullet" >
+        <ul><li><a href="#introduction">Introduction</a><ul><li><a href="#legal-software-suppliers-association-(lssa)">Legal Software Suppliers Association (LSSA)</a></li></ul></li><li><a href="#opg-as-a-service">OPG as a Service</a><ul><li><a href="#documentation">Documentation</a></li><li><a href="#account-management">Account Management</a></li><li><a href="#support">Support</a></li><li><a href="#api">API</a></li><li><a href="#internal-government-services">Internal Government Services</a></li></ul></li><li><a href="#example-api-endpoints">Example API Endpoints</a><ul><li><a href="#example-api-flow-1">Example API Flow 1</a></li><li><a href="#example-api-flow-2">Example API Flow 2</a><ul><li><a href="#actor">Actor</a></li><li><a href="#documents">Documents</a></li><li><a href="#lpa-create">LPA Create</a></li><li><a href="#lpa-complete">LPA Complete</a></li></ul></li><li><a href="#using-the-api-flow">Using the API Flow</a><ul><li><a href="#create-lpa">Create LPA</a></li><li><a href="#create-actors">Create Actors</a></li><li><a href="#actors-log-in">Actors Log In</a></li><li><a href="#webhook-or-poll">Webhook or Poll</a></li><li><a href="#submit-lpa">Submit LPA</a></li></ul></li><li><a href="#view-an-lpa">View an LPA</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
+      </span>
+</nav>
+
+<h2 id="introduction" tabindex="-1" class="govuk-heading-l">Introduction</h2>
 <p class="govuk-body">70% of LPAs made are done by solicitors, charities or other third parties on behalf of the Donor.</p>
 <p class="govuk-body">Citation: <a href="https://www.lastingpowerofattorney.service.gov.uk/stats" class="govuk-link" target="_blank" rel="noreferrer noopener">Lasting Power of Attorney Statistics (opens in new tab)</a></p>
 <p class="govuk-body">If we are to encourage the uptake of our digital pathway, we need to explore a way of enabling this group of users to interact with their systems more efficiently.</p>
@@ -239,12 +240,12 @@ John Nolan
 <p class="govuk-body">We know that most solicitors firms use a small range of software providers and work with a group called the <a href="https://www.lssa.co.uk" class="govuk-link" target="_blank" rel="noreferrer noopener">Legal Software Suppliers Association (opens in new tab)</a> (LSSA).</p>
 <p class="govuk-body">The companies behind this software have a keen interest in integrating with our service through code so that they can streamline their processes and automate work.</p>
 <p class="govuk-body">They already integrate with other government services like the Land Registry.</p>
-<h3 class="govuk-heading-m">Legal Software Suppliers Association (LSSA)</h3>
+<h3 id="legal-software-suppliers-association-(lssa)" tabindex="-1" class="govuk-heading-m">Legal Software Suppliers Association (LSSA)</h3>
 <blockquote class="govuk-inset-text">
 <p class="govuk-body">The Legal Software Suppliers Association (LSSA) is the UK industry body for legal systems developers and vendors. Representing most of the leading UK suppliers, it aims to both set and maintain professional standards within the industry and manage areas of mutual interest between lawyers and software providers.</p>
 </blockquote>
 <p class="govuk-body">Working with the LSSA and those outside of them will be key to unlocking the full potential of any new service we create.</p>
-<h2 class="govuk-heading-l">OPG as a Service</h2>
+<h2 id="opg-as-a-service" tabindex="-1" class="govuk-heading-l">OPG as a Service</h2>
 <blockquote class="govuk-inset-text">
 <p class="govuk-body">An API is not &quot;just&quot; an API</p>
 </blockquote>
@@ -263,9 +264,9 @@ John Nolan
 <p class="govuk-body">We should follow the patterns they use, including their url structure, design and features.</p>
 <p class="govuk-body">Below is an example of how this may be structured</p>
 <p class="govuk-body"><img src="/assets/images/research-development/opg-as-a-service/opg-as-a-service.jpg" alt="Diagram showing an overview of all components of a potential future self service API."></p>
-<h3 class="govuk-heading-m">Documentation</h3>
+<h3 id="documentation" tabindex="-1" class="govuk-heading-m">Documentation</h3>
 <p class="govuk-body">Details on how to use the service from sign up to implementation</p>
-<h3 class="govuk-heading-m">Account Management</h3>
+<h3 id="account-management" tabindex="-1" class="govuk-heading-m">Account Management</h3>
 <p class="govuk-body">Manage your account resources in a self service way</p>
 <ul class="govuk-list govuk-list--bullet">
 <li>Organisation Details
@@ -297,7 +298,7 @@ John Nolan
 </ul>
 </li>
 </ul>
-<h3 class="govuk-heading-m">Support</h3>
+<h3 id="support" tabindex="-1" class="govuk-heading-m">Support</h3>
 <p class="govuk-body">Provide technical support to users of the service</p>
 <ul class="govuk-list govuk-list--bullet">
 <li>Uptime and Issues Dashboard
@@ -311,7 +312,7 @@ John Nolan
 </ul>
 </li>
 </ul>
-<h3 class="govuk-heading-m">API</h3>
+<h3 id="api" tabindex="-1" class="govuk-heading-m">API</h3>
 <p class="govuk-body">Endpoints for external parties to integrate with</p>
 <ul class="govuk-list govuk-list--bullet">
 <li>Security
@@ -337,44 +338,44 @@ John Nolan
 </ul>
 </li>
 </ul>
-<h3 class="govuk-heading-m">Internal Government Services</h3>
+<h3 id="internal-government-services" tabindex="-1" class="govuk-heading-m">Internal Government Services</h3>
 <p class="govuk-body"><a href="https://www.notifications.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">Sending of emails, texts and letters via GOV.UK Notify (opens in new tab)</a></p>
 <p class="govuk-body"><a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">For the handling of payments through the process via GOV.UK Pay (opens in new tab)</a></p>
-<h2 class="govuk-heading-l">Example API Endpoints</h2>
+<h2 id="example-api-endpoints" tabindex="-1" class="govuk-heading-l">Example API Endpoints</h2>
 <p class="govuk-body">Below are a list of potential endpoints and flows we could implement within OPG as a Service.</p>
-<h3 class="govuk-heading-m">Example API Flow 1</h3>
+<h3 id="example-api-flow-1" tabindex="-1" class="govuk-heading-m">Example API Flow 1</h3>
 <p class="govuk-body"><img src="/assets/images/research-development/opg-as-a-service/simple-api-example.jpg" alt="A simplified version of submitting an LPA"></p>
 <p class="govuk-body">We are able to replicate the entire <a href="https://www.lastingpowerofattorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">Make a LPA (opens in new tab)</a> journey via this endpoint.</p>
 <p class="govuk-body">Providing a Data Model for integrations, we can specify the structure of the data required and provide an endpoint that can be a one off transaction.</p>
 <p class="govuk-body">This would allow third parties to create LPAs and actors in a simplified way, but would end the journey there.</p>
 <p class="govuk-body">Negatives are that we will find ourselves in a position where we will have duplicate actors and no sure proof way of matching them against existing OPG actors.</p>
-<h3 class="govuk-heading-m">Example API Flow 2</h3>
+<h3 id="example-api-flow-2" tabindex="-1" class="govuk-heading-m">Example API Flow 2</h3>
 <p class="govuk-body"><img src="/assets/images/research-development/opg-as-a-service/full-api-example.jpg" alt="An overview of all components of a potential future self service API."></p>
 <p class="govuk-body">This diagram offers a more complex API for greater control and management of LPA data.</p>
-<h4 class="govuk-heading-s">Actor</h4>
+<h4 id="actor" tabindex="-1" class="govuk-heading-s">Actor</h4>
 <p class="govuk-body">An actor endpoint will allow systems to manage OPG users details from their own content management systems.</p>
 <p class="govuk-body">Creating an actor will then supply the third party with a OPG User ID that they can use in any future LPA management.</p>
 <p class="govuk-body">They should also be able to claim the management of a OPG User if they already exist in the system. This needs to be thought about more on how the user would manage and consent to this through the website.</p>
 <p class="govuk-body">Having the ability to properly manage a actor will mean better audit trails and confidence in safe guarding rather than potential duplicate identities within the OPG service.</p>
-<h4 class="govuk-heading-s">Documents</h4>
+<h4 id="documents" tabindex="-1" class="govuk-heading-s">Documents</h4>
 <p class="govuk-body">Giving the ability for third parties to submit documents such as identification material, signatures or photos is a nice to have and may not be required.</p>
 <p class="govuk-body">It is here to show that it is possible to do so. We would rather not be in a position where we are managing copies of users private documents.</p>
 <p class="govuk-body">Where possible we should be using transactional processes that return us a confidence score to act upon and not storing copies of user data.</p>
-<h4 class="govuk-heading-s">LPA Create</h4>
+<h4 id="lpa-create" tabindex="-1" class="govuk-heading-s">LPA Create</h4>
 <p class="govuk-body">Unlike the Make a LPA endpoint, this splits the process into 4 stages to correctly manage an LPA.</p>
 <p class="govuk-body">You can register a new empty LPA by a <code>POST</code> to the create endpoint with a internal reference number. At this point we have created a blank record with a reference to the third parties internal reference number.</p>
 <p class="govuk-body">After this you can <code>PUT</code> as often as you wish, a <code>OPGLPADataModel</code> object with data that will be stored and saved on the OPG system.</p>
 <p class="govuk-body">The <code>OPGLPADataModel</code> will be well documented and have all validation rules defined to work against.</p>
 <p class="govuk-body">Sending an <code>LPAID</code> as a <code>GET</code> you will be able to get the status of the LPA.</p>
 <p class="govuk-body">Sending a <code>DELETE</code> with the <code>LPAID</code> will delete the LPA from the OPG system.</p>
-<h4 class="govuk-heading-s">LPA Complete</h4>
+<h4 id="lpa-complete" tabindex="-1" class="govuk-heading-s">LPA Complete</h4>
 <p class="govuk-body">Once you have completed the LPA Create flow with the correct OPG status being returned, you will be ready to complete the lpa. Doing a <code>GET</code> to this endpoint will tell OPG this is ready to be processed and will lock any amends to the LPA moving forward.</p>
 <p class="govuk-body">You will be returned the final <code>OPGLPADataModel</code> data and any other corresponding data to confirm this action.</p>
-<h3 class="govuk-heading-m">Using the API Flow</h3>
+<h3 id="using-the-api-flow" tabindex="-1" class="govuk-heading-m">Using the API Flow</h3>
 <p class="govuk-body"><img src="/assets/images/research-development/opg-as-a-service/using-api-flow.jpg" alt="How you would use the API to manage actors and LPA creation"></p>
 <p class="govuk-body">This example will take you through a potential flow of integrating with an API.</p>
 <p class="govuk-body">We have included a path for users to sign in and do actions on our site. This is a way to help prevent duplicate and orphan records from appearing in the OPG system.</p>
-<h4 class="govuk-heading-s">Create LPA</h4>
+<h4 id="create-lpa" tabindex="-1" class="govuk-heading-s">Create LPA</h4>
 <p class="govuk-body">Send a request to <code>/lpa/create</code> with</p>
 <ul class="govuk-list govuk-list--bullet">
 <li>The integrations internal reference number</li>
@@ -387,7 +388,7 @@ John Nolan
 </li>
 <li>Returns a <code>LPAID</code> to store against the internal LPA record</li>
 </ul>
-<h4 class="govuk-heading-s">Create Actors</h4>
+<h4 id="create-actors" tabindex="-1" class="govuk-heading-s">Create Actors</h4>
 <p class="govuk-body">Send a request to <code>/actor</code> with</p>
 <ul class="govuk-list govuk-list--bullet">
 <li><code>LPAID</code> that is stored from the Create LPA Endpoint call</li>
@@ -396,7 +397,7 @@ John Nolan
 <li>(optional) <code>WebhookUrl</code> setting to tell OPG where to send confirmation for each actor completing their sign up. <strong>Note</strong>: This could be set at a higher level in the Organisation settings</li>
 <li>Returns a list of unique, time based urls for each actor if <code>EmailActors</code> is <code>false</code></li>
 </ul>
-<h4 class="govuk-heading-s">Actors Log In</h4>
+<h4 id="actors-log-in" tabindex="-1" class="govuk-heading-s">Actors Log In</h4>
 <p class="govuk-body">Each Actor follows the links and does one of the following</p>
 <ul class="govuk-list govuk-list--bullet">
 <li>
@@ -415,25 +416,25 @@ John Nolan
 <p class="govuk-body">LPA gets added to their account</p>
 </li>
 </ul>
-<h4 class="govuk-heading-s">Webhook or Poll</h4>
+<h4 id="webhook-or-poll" tabindex="-1" class="govuk-heading-s">Webhook or Poll</h4>
 <p class="govuk-body">Once all actors have completed their sign up, the third party are able to carry on with completing and submitting the LPA.</p>
-<h5 class="govuk-heading-s">Webhook</h5>
+<h5 id="webhook" tabindex="-1" class="govuk-heading-s">Webhook</h5>
 <p class="govuk-body">If a <code>WebhookUrl</code> was specified in the create actors step, OPG will send a message to a specific endpoint as set by the third party.</p>
-<h5 class="govuk-heading-s">Polling Endpoint</h5>
+<h5 id="polling-endpoint" tabindex="-1" class="govuk-heading-s">Polling Endpoint</h5>
 <p class="govuk-body">If a <code>WebhookUrl</code> was not specified in the create actors step, the third party can check an endpoint on a regular basis to check for those actors being verified or not.</p>
-<h4 class="govuk-heading-s">Submit LPA</h4>
+<h4 id="submit-lpa" tabindex="-1" class="govuk-heading-s">Submit LPA</h4>
 <p class="govuk-body">Once you have a <code>LPAID</code>, a LPA returning a status indicating all data is complete and all actors are verified, you can submit the LPA to OPG and lock it for processing.</p>
-<h3 class="govuk-heading-m">View an LPA</h3>
+<h3 id="view-an-lpa" tabindex="-1" class="govuk-heading-m">View an LPA</h3>
 <p class="govuk-body"><img src="/assets/images/research-development/opg-as-a-service/view-an-lpa-api.jpg" alt="Diagram showing the View an LPA website as an API"></p>
 <p class="govuk-body">This example shows how we could offer the <a href="https://view-lasting-power-of-attorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">View a LPA (opens in new tab)</a> service as a API Endpoint.</p>
 <p class="govuk-body">With the ability to monitor third parties by their credentials, we can ensure high levels of trust and prevent bad actors from attacking.</p>
 <p class="govuk-body">This will aid those in need of adding the service to their back end systems for better automation rather than the current manual process of using a web form.</p>
-<h2 class="govuk-heading-l">Conclusion</h2>
+<h2 id="conclusion" tabindex="-1" class="govuk-heading-l">Conclusion</h2>
 <p class="govuk-body">Due to the size of the market who use our site via an intermediary, we should enable third parties to integrate into our service in a programmatic way.</p>
 <p class="govuk-body">Feedback from research done with these third parties suggests the more complicated route would be better so that they can have more fine grained control within their systems.</p>
 <p class="govuk-body">As well as the user journey on the website, we should dedicate the same amount of effort to our integration service.</p>
 <p class="govuk-body">This will require the business to look at Modernising not only in the form of a website feeding into a database, but as a more accessible service with multiple routes to interact with LPAs in the wider ecosystem.</p>
-<h2 class="govuk-heading-l">References</h2>
+<h2 id="references" tabindex="-1" class="govuk-heading-l">References</h2>
 <ul class="govuk-list govuk-list--bullet">
 <li><a href="https://www.lastingpowerofattorney.service.gov.uk/stats" class="govuk-link" target="_blank" rel="noreferrer noopener">Lasting Power of Attorney Statistics (opens in new tab)</a></li>
 <li><a href="https://www.lastingpowerofattorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">Make a LPA (opens in new tab)</a></li>
@@ -441,7 +442,14 @@ John Nolan
 <li><a href="https://www.notifications.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Notify (opens in new tab)</a></li>
 <li><a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Pay (opens in new tab)</a></li>
 </ul>
-
+<ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/opg-as-a-service.md">View history of this page on GitHub</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/opg-as-a-service.md">Feedback or raise issue with this page on GitHub</a>
+    </li>
+</ul>
 
     </div>
 </div>

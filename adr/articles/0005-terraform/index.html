@@ -249,39 +249,39 @@ John Nolan
         <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/adr/articles/0005-terraform.md">Feedback or raise issue with this page on GitHub</a>
     </li>
 </ul>
-<h2 class="govuk-heading-l">Context</h2>
+<h2 id="context" tabindex="-1" class="govuk-heading-l">Context</h2>
 <p class="govuk-body">We need a way to manage our infrastructure as code (IaC) to support CI/CD and manage and provision our computing, storage and networking resources in the cloud.</p>
 <p class="govuk-body">We use Terraform extensively on all our existing services, as well as a central Terraform repository for managing all our services resources, permissions and security needs.</p>
-<h2 class="govuk-heading-l">Technical</h2>
-<h3 class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
+<h2 id="technical" tabindex="-1" class="govuk-heading-l">Technical</h2>
+<h3 id="interoperability---how-does-this-enable-the-exchange-of-information" tabindex="-1" class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
 <p class="govuk-body">Terraform is fully open source and has the ability to do Multi-Cloud Deployment.</p>
 <p class="govuk-body">Even though there is no plan to split our resources across multiple clouds, having this ability available is advantageous.</p>
 <p class="govuk-body">A downside of this being community driven means that new features created by cloud providers can sometimes have a delay in being available for use within Terraform.</p>
-<h3 class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
+<h3 id="developer-knowledge---how-well-known-is-this-in-our-current-skill-sets" tabindex="-1" class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
 <p class="govuk-body"><strong>Overall</strong>: 7/10<br>
 We have dedicated Webops Engineers within our teams who have expert knowledge on using Terraform. They encourage others to learn and pair on the work they do.</p>
 <p class="govuk-body">Different teams have various levels of confidence in its use, but the ability to have a resource within each team with this knowledge makes up for any lack thereof.</p>
-<h3 class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
+<h3 id="support%2Fopen-source---is-it-well-supported" tabindex="-1" class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
 <p class="govuk-body">Terraform is Open Source and regularly accepts and releases community based Pull Requests.</p>
 <p class="govuk-body">Some of our Webops Engineers are also contributors to the project.</p>
-<h3 class="govuk-heading-m">Scalability</h3>
+<h3 id="scalability" tabindex="-1" class="govuk-heading-m">Scalability</h3>
 <p class="govuk-body">Terraform by its nature is incredibly scalable. Enabling IaC, being maintained via Github and controlled via our CI/CD pipelines means it can be versioned, rolled back, monitored and maintained.</p>
-<h2 class="govuk-heading-l">Ethics</h2>
-<h3 class="govuk-heading-m">Mitigate against being tech deterministic</h3>
+<h2 id="ethics" tabindex="-1" class="govuk-heading-l">Ethics</h2>
+<h3 id="mitigate-against-being-tech-deterministic" tabindex="-1" class="govuk-heading-m">Mitigate against being tech deterministic</h3>
 <p class="govuk-body">N/A - there is no other non-tech solution that could give us the ability to manage our infrastructure.</p>
-<h3 class="govuk-heading-m">Ensure you conduct inclusive research</h3>
+<h3 id="ensure-you-conduct-inclusive-research" tabindex="-1" class="govuk-heading-m">Ensure you conduct inclusive research</h3>
 <p class="govuk-body">N/A - the use of this technology does not have an effect on marginalised groups directly.</p>
-<h3 class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
+<h3 id="think-big-and-imagine-what-the-impact-of-your-work-can-be" tabindex="-1" class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
 <p class="govuk-body">Building our infrastructure in Terraform will allow us to take learnings and contribute back to wider society. If we develop new modules, add additional functionality to Terraform or raise issues that are found, we can help others who use this technology.</p>
 <p class="govuk-body">If we decide to Open Source our infrastructure code, we can also take advantage of contributions from other areas outside of our department.</p>
 <p class="govuk-body">Others will also be able to use our modules or infrastructure, should they wish, in their own implementations.</p>
 <p class="govuk-body">Working in the open will drive trust in Citizens and open ourselves up to honest debate and critique in our choices.</p>
-<h3 class="govuk-heading-m">Interrogate your data decisions</h3>
+<h3 id="interrogate-your-data-decisions" tabindex="-1" class="govuk-heading-m">Interrogate your data decisions</h3>
 <p class="govuk-body">N/A - there is no place for personal data to be stored within Terraform.</p>
 <p class="govuk-body">It does enable the use of technologies that can and this analysis should be recorded against their own ADRs.</p>
-<h3 class="govuk-heading-m">Decision</h3>
+<h3 id="decision" tabindex="-1" class="govuk-heading-m">Decision</h3>
 <p class="govuk-body">We should continue to use Terraform taking advantage of our existing lessons learnt and best practices.</p>
-<h3 class="govuk-heading-m">Consequences</h3>
+<h3 id="consequences" tabindex="-1" class="govuk-heading-m">Consequences</h3>
 <p class="govuk-body">We will be able to take advantage of our existing best practices and knowledge to quickly setup any new infrastructure.</p>
 
 

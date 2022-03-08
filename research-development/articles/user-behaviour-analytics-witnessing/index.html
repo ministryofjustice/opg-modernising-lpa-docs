@@ -223,15 +223,16 @@
 <strong>Authors: </strong>
 John Nolan
 </p>
-<ul class="govuk-list">
-    <li>
-        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/user-behaviour-analytics-witnessing.md">View history of this page on GitHub</a>
-    </li>
-    <li>
-        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/user-behaviour-analytics-witnessing.md">Feedback or raise issue with this page on GitHub</a>
-    </li>
-</ul>
-<h2 class="govuk-heading-l">Introduction</h2>
+
+
+<nav aria-label="Contents" role="navigation">
+<h2 class="govuk-heading-s">Contents</h2>
+<span class="govuk-list govuk-list--bullet" >
+        <ul><li><a href="#introduction">Introduction</a></li><li><a href="#user-behaviour-analytics-and-aws-fraud-detector">User Behaviour Analytics and AWS Fraud Detector</a></li><li><a href="#digital-signature">Digital Signature</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
+      </span>
+</nav>
+
+<h2 id="introduction" tabindex="-1" class="govuk-heading-l">Introduction</h2>
 <blockquote class="govuk-inset-text">
 <p class="govuk-body">&quot;A signature is only useful as evidence if it provides a reliable link between the authorised signatory and the agreed terms. The stronger the evidence of that link, the more robust the signature. If the authenticity of a signature later comes to be contested (for example, in legal proceedings) it may be necessary to prove that the document in question was signed by the parties to it (or, where appropriate, their authorised signatory).&quot;</p>
 </blockquote>
@@ -239,7 +240,7 @@ John Nolan
 <p class="govuk-body">This document outlines the most unobtrusive option that also gives us confidence and potential to grow in that confidence over time.</p>
 <p class="govuk-body">Throughout the process we must ensure that any data collected is anonymous, secure and discarded as soon as it has exceeded its use.</p>
 <p class="govuk-body">In a safeguarding issue during the LPA Process, we know the investigations team would use the Certificate Provider as the main contact to pursue. They use data from the LPA and elements from our case management system to track changes and find patterns of behaviour for safeguarding issues.</p>
-<h2 class="govuk-heading-l">User Behaviour Analytics and AWS Fraud Detector</h2>
+<h2 id="user-behaviour-analytics-and-aws-fraud-detector" tabindex="-1" class="govuk-heading-l">User Behaviour Analytics and AWS Fraud Detector</h2>
 <p class="govuk-body">AWS Fraud Detector (FD) allows us to feed our data into a Machine Learning (ML) service to look for common patterns in fraudulent behaviour and assess our confidence that the person who is interacting with our service is who they say they are.</p>
 <p class="govuk-body">We can put anonymised data from our existing Case Management service into it, such as our timeline events, but also data from users using the Modernising service.</p>
 <p class="govuk-body">We can capture all behavioural data from all parties making an LPA and assess key data points.</p>
@@ -261,18 +262,25 @@ John Nolan
 <li>Reduce mass attempts for making LPAs</li>
 </ol>
 <p class="govuk-body">User Behaviour Analytics is a great tool, but it should be used with other human processes and technology, not be solely relied upon. This process is only as good as the data you provide it and your understanding of your users.</p>
-<h2 class="govuk-heading-l">Digital Signature</h2>
+<h2 id="digital-signature" tabindex="-1" class="govuk-heading-l">Digital Signature</h2>
 <p class="govuk-body">Given the definition of a signature, we should ensure that not only have we collected the data of the person filling in the form at that time, but also indicate using technology that they are who they say they are.</p>
 <p class="govuk-body">We can create a digital signature that contains entered information and validation processes that have taken place. But as a final step, we should ensure, based on a confidence score of all parties involved in the process that we are confident they are authentic.</p>
 <p class="govuk-body">We should therefore ensure before creating the signature that we run the data through a model to assign a confidence score and either create the signature then or hold off for investigation.</p>
 <p class="govuk-body">If we do this, it will be an asynchronous process and will have to be dealt with appropriately within the user flow.</p>
-<h2 class="govuk-heading-l">Conclusion</h2>
+<h2 id="conclusion" tabindex="-1" class="govuk-heading-l">Conclusion</h2>
 <p class="govuk-body">To conclude, I believe that we should investigate using User Behaviour Analytics scores alongside strong authentication techniques to see whether we can replace a physical witness with a technology based solution.</p>
-<h2 class="govuk-heading-l">References</h2>
+<h2 id="references" tabindex="-1" class="govuk-heading-l">References</h2>
 <ul class="govuk-list govuk-list--bullet">
 <li>AWS Fraud Detector (<a href="https://aws.amazon.com/fraud-detector/" class="govuk-link" target="_blank" rel="noreferrer noopener">https://aws.amazon.com/fraud-detector/ (opens in new tab)</a>)</li>
 </ul>
-
+<ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/user-behaviour-analytics-witnessing.md">View history of this page on GitHub</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/user-behaviour-analytics-witnessing.md">Feedback or raise issue with this page on GitHub</a>
+    </li>
+</ul>
 
     </div>
 </div>

@@ -249,7 +249,7 @@ John Nolan
         <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/adr/articles/0007-centralised-openapi.md">Feedback or raise issue with this page on GitHub</a>
     </li>
 </ul>
-<h2 class="govuk-heading-l">Context</h2>
+<h2 id="context" tabindex="-1" class="govuk-heading-l">Context</h2>
 <p class="govuk-body">We need a way to centrally define our data model that would allow us to have a source of truth for our data.</p>
 <p class="govuk-body">Reducing human error and duplication of code, we should reference our core data model wherever possible to maintain a centrally approved schema.</p>
 <p class="govuk-body">This could include</p>
@@ -259,32 +259,32 @@ John Nolan
 <li>Response messaging</li>
 <li>Object definitions (such as LPA ID or Post Code)</li>
 </ul>
-<h2 class="govuk-heading-l">Technical</h2>
-<h3 class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
+<h2 id="technical" tabindex="-1" class="govuk-heading-l">Technical</h2>
+<h3 id="interoperability---how-does-this-enable-the-exchange-of-information" tabindex="-1" class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
 <p class="govuk-body">OpenAPI would allow us to use <code>$ref</code> to point to a centralised and publicly available schema for common domain objects.</p>
 <p class="govuk-body">Using standard HTTP protocols for making these links and a commonly accepted standard for the structure of the schema will enable great interopability.</p>
-<h3 class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
+<h3 id="developer-knowledge---how-well-known-is-this-in-our-current-skill-sets" tabindex="-1" class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
 <p class="govuk-body"><strong>Overall</strong>: 6/10<br>
 Many of our teams have implemented OpenAPI specs in their services. Those that haven't do have knowledge of RESTful APIs and JSON or YAML to be able to work with it.</p>
 <p class="govuk-body">To the extent of managing a central specification and maintaining the changes in it, this is new ground and would need an investigation around best practices and automation techniques.</p>
-<h3 class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
+<h3 id="support%2Fopen-source---is-it-well-supported" tabindex="-1" class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
 <p class="govuk-body">OpenAPI is a open source collaboration project.</p>
-<h3 class="govuk-heading-m">Scalability</h3>
+<h3 id="scalability" tabindex="-1" class="govuk-heading-m">Scalability</h3>
 <p class="govuk-body">If we don't have safety measures in place, such as versioning of core schemas, then there is a risk of down stream consequences causing issues in code bases and APIs that rely on it.</p>
 <p class="govuk-body">We need to research best practices of how we take advantage of the de-duplication and centralisation without increasing work load and error rates in our services.</p>
-<h2 class="govuk-heading-l">Ethics</h2>
-<h3 class="govuk-heading-m">Mitigate against being tech deterministic</h3>
+<h2 id="ethics" tabindex="-1" class="govuk-heading-l">Ethics</h2>
+<h3 id="mitigate-against-being-tech-deterministic" tabindex="-1" class="govuk-heading-m">Mitigate against being tech deterministic</h3>
 <p class="govuk-body">N/A - Uses a popular and accessible pattern and language</p>
-<h3 class="govuk-heading-m">Ensure you conduct inclusive research</h3>
+<h3 id="ensure-you-conduct-inclusive-research" tabindex="-1" class="govuk-heading-m">Ensure you conduct inclusive research</h3>
 <p class="govuk-body">N/A - the use of this technology does not have an effect on marginalised groups directly.</p>
-<h3 class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
+<h3 id="think-big-and-imagine-what-the-impact-of-your-work-can-be" tabindex="-1" class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
 <p class="govuk-body">A publicly available data schema would allow anyone outside of OPG to develop solutions. This could lead to new applications on the market that solve problems in sectors we can't fund research into.</p>
 <p class="govuk-body">It increases the understanding of what the LPA is in wider society. Solicitors and charities for example would be able to align their practices more accurately. They will also be able to feed back into the model with real life experiences.</p>
-<h3 class="govuk-heading-m">Interrogate your data decisions</h3>
+<h3 id="interrogate-your-data-decisions" tabindex="-1" class="govuk-heading-m">Interrogate your data decisions</h3>
 <p class="govuk-body">N/A - there is no place for personal data to be stored within OpenAPI Specifications.</p>
-<h3 class="govuk-heading-m">Decision</h3>
+<h3 id="decision" tabindex="-1" class="govuk-heading-m">Decision</h3>
 <p class="govuk-body">We should investigate the use of a centralised OpenAPI Specification. Within that research we should ensure we are not over engineering the solution and that the benefits would outway the cost of maintenance.</p>
-<h3 class="govuk-heading-m">Consequences</h3>
+<h3 id="consequences" tabindex="-1" class="govuk-heading-m">Consequences</h3>
 <p class="govuk-body">We will be able to maintain a single source of truth model in all our work.</p>
 <p class="govuk-body">Outside of the benefits of API design, using modern tooling we can ensure our classes within our code match our centralised model.</p>
 

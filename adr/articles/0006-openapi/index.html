@@ -249,11 +249,11 @@ John Nolan
         <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/adr/articles/0006-openapi.md">Feedback or raise issue with this page on GitHub</a>
     </li>
 </ul>
-<h2 class="govuk-heading-l">Context</h2>
+<h2 id="context" tabindex="-1" class="govuk-heading-l">Context</h2>
 <p class="govuk-body">We need a way to communicate our APIs intent to consumers. We should display all options available as well as required data and validation associated with integrating with our APIs.</p>
 <p class="govuk-body">Any changes to the schema of our API should be testable via this specification.</p>
-<h2 class="govuk-heading-l">Technical</h2>
-<h3 class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
+<h2 id="technical" tabindex="-1" class="govuk-heading-l">Technical</h2>
+<h3 id="interoperability---how-does-this-enable-the-exchange-of-information" tabindex="-1" class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
 <p class="govuk-body">OpenAPI is a common format used across a wide range of services.</p>
 <p class="govuk-body">As a result of its popularity, our main languages, Golang, Python and PHP all support the OpenAPI Standard.</p>
 <p class="govuk-body">There is great support for OpenAPI through third party services and tools that we can take advantage of. A great example of tools available can be found on <a href="https://openapi.tools/" class="govuk-link" target="_blank" rel="noreferrer noopener">OpenAPI.Tools (opens in new tab)</a>.</p>
@@ -267,29 +267,29 @@ John Nolan
 </ul>
 <p class="govuk-body">You can use JSON or YAML format for the structure and both are well known standards.</p>
 <p class="govuk-body"><a href="http://GOV.UK" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK (opens in new tab)</a> have excellent <a href="https://www.gov.uk/guidance/how-to-document-apis" class="govuk-link" target="_blank" rel="noreferrer noopener">guidance on how you should document your APIs (opens in new tab)</a> in their <a href="https://www.gov.uk/government/collections/api-design-guidance" class="govuk-link" target="_blank" rel="noreferrer noopener">API Design Guidance (opens in new tab)</a> page.</p>
-<h3 class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
+<h3 id="developer-knowledge---how-well-known-is-this-in-our-current-skill-sets" tabindex="-1" class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
 <p class="govuk-body"><strong>Overall</strong>: 8/10<br>
 Many of our teams have implemented OpenAPI specs in their services. Those that haven't do have knowledge of RESTful APIs and JSON or YAML to be able to work with it.</p>
-<h3 class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
+<h3 id="support%2Fopen-source---is-it-well-supported" tabindex="-1" class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
 <p class="govuk-body">OpenAPI is a open source collaboration project.</p>
-<h3 class="govuk-heading-m">Scalability</h3>
+<h3 id="scalability" tabindex="-1" class="govuk-heading-m">Scalability</h3>
 <p class="govuk-body">If we have many services with many OpenAPI specifications, there could be issues of maintaining them all.</p>
 <p class="govuk-body">If we do not have a well defined domain to work from, we run the risk of duplication of schemas and being out of sync with style, definitions, parameters and responses. This can result in poorly implemented code to get around inconsistencies or badly written specifications without style validators in place.</p>
 <p class="govuk-body">We should look into practices that help define a centrally accepted domain and styles that can be pulled from and validated against for all services and implementations.</p>
 <p class="govuk-body">There is a risk of development slowing down and bugs entering code should we not pay attention to best practices from the start. We should investigate these options with the teams as soon as possible.</p>
-<h2 class="govuk-heading-l">Ethics</h2>
-<h3 class="govuk-heading-m">Mitigate against being tech deterministic</h3>
+<h2 id="ethics" tabindex="-1" class="govuk-heading-l">Ethics</h2>
+<h3 id="mitigate-against-being-tech-deterministic" tabindex="-1" class="govuk-heading-m">Mitigate against being tech deterministic</h3>
 <p class="govuk-body">N/A - Uses a popular and accessible pattern and language</p>
-<h3 class="govuk-heading-m">Ensure you conduct inclusive research</h3>
+<h3 id="ensure-you-conduct-inclusive-research" tabindex="-1" class="govuk-heading-m">Ensure you conduct inclusive research</h3>
 <p class="govuk-body">N/A - the use of this technology does not have an effect on marginalised groups directly.</p>
-<h3 class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
+<h3 id="think-big-and-imagine-what-the-impact-of-your-work-can-be" tabindex="-1" class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
 <p class="govuk-body">Using OpenAPI Specifications gives us a library of great resources of all our internal and external integration capabilities.</p>
 <p class="govuk-body">We could take a list of them and add them to a government API register to allow other 3rd parties and internal government services to find integrations we provide.</p>
-<h3 class="govuk-heading-m">Interrogate your data decisions</h3>
+<h3 id="interrogate-your-data-decisions" tabindex="-1" class="govuk-heading-m">Interrogate your data decisions</h3>
 <p class="govuk-body">N/A - there is no place for personal data to be stored within OpenAPI Specifications.</p>
-<h3 class="govuk-heading-m">Decision</h3>
+<h3 id="decision" tabindex="-1" class="govuk-heading-m">Decision</h3>
 <p class="govuk-body">We should use OpenAPI Specifications for all internal and external APIs.</p>
-<h3 class="govuk-heading-m">Consequences</h3>
+<h3 id="consequences" tabindex="-1" class="govuk-heading-m">Consequences</h3>
 <p class="govuk-body">We will be able to maintain an up to date, testable and descriptive resources of all our available integrations across multiple services.</p>
 
 

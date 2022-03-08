@@ -223,15 +223,16 @@
 <strong>Authors: </strong>
 John Nolan
 </p>
-<ul class="govuk-list">
-    <li>
-        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/verifiable-credentials-bbs.md">View history of this page on GitHub</a>
-    </li>
-    <li>
-        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/verifiable-credentials-bbs.md">Feedback or raise issue with this page on GitHub</a>
-    </li>
-</ul>
-<h2 class="govuk-heading-l">Introduction</h2>
+
+
+<nav aria-label="Contents" role="navigation">
+<h2 class="govuk-heading-s">Contents</h2>
+<span class="govuk-list govuk-list--bullet" >
+        <ul><li><a href="#introduction">Introduction</a></li><li><a href="#what-is-decentralised-identity-(did)%3F">What is Decentralised Identity (DID)?</a></li><li><a href="#what-is-json-ld-zkp-with-bbs%2B-signatures%3F">What is JSON-LD ZKP with BBS+ Signatures?</a><ul><li><a href="#selective-disclosure">Selective Disclosure</a></li><li><a href="#compound-proofs">Compound Proofs</a><ul><li><a href="#scenario">Scenario</a></li><li><a href="#example">Example</a></li></ul></li><li><a href="#correlating-signatures-and-zero-knowledge-proof-signatures">Correlating signatures and zero-knowledge proof signatures</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#acronyms">Acronyms</a></li><li><a href="#references">References</a></li></ul>
+      </span>
+</nav>
+
+<h2 id="introduction" tabindex="-1" class="govuk-heading-l">Introduction</h2>
 <p class="govuk-body">With the increased rise in requirements to move to a digital version of paper based credentials due to Covid, the idea of Verifiable Credentials as a solution has drastically increased.</p>
 <p class="govuk-body">Reduced ability to process paper documents due to health guidelines in offices and access postal services, has driven a move to more online services.</p>
 <p class="govuk-body">Previous services that were reliant on paper now face a challenge of how to move to a new way of working.</p>
@@ -248,11 +249,11 @@ John Nolan
 <p class="govuk-body">A digital wallet is a way of securely storing your VCs and using them. The use of these would mirror the way NFC works when storing your credit card details on your phone.</p>
 <p class="govuk-body">At a certain point these digital wallets will become a part of devices such as a phone’s operating system. There is a risk the wallets that store these credentials may face a fragmented market with a race to the most successful standard risking interoperability issues.</p>
 <p class="govuk-body">We should ensure that before we decide on the use of a particular standard or implementation, that it is the right thing to do and that we reduce any potential risk of damage to society and the citizens we serve.</p>
-<h2 class="govuk-heading-l">What is Decentralised Identity (DID)?</h2>
+<h2 id="what-is-decentralised-identity-(did)%3F" tabindex="-1" class="govuk-heading-l">What is Decentralised Identity (DID)?</h2>
 <p class="govuk-body">Decentralised identity, also sometimes referred to as self-sovereign identity, is a concept that aims to give back control of identity data to consumers through the use of an identity wallet or personal data store. In this way, data can be verified by a trusted source (such as the government) and then issued to an individual to store in a location of their choice.</p>
 <p class="govuk-body">By controlling what information is shared from the wallet to requesting 3rd parties (e.g., when registering for a new online service), the user is able to better manage their identity online and privacy – for example, only presenting proof that they’re over 18 without needing to reveal their date of birth.</p>
 <p class="govuk-body">Source: <a href="https://www.gsma.com/identity/decentralised-identity" class="govuk-link" target="_blank" rel="noreferrer noopener">https://www.gsma.com/identity/decentralised-identity (opens in new tab)</a></p>
-<h2 class="govuk-heading-l">What is JSON-LD ZKP with BBS+ Signatures?</h2>
+<h2 id="what-is-json-ld-zkp-with-bbs%2B-signatures%3F" tabindex="-1" class="govuk-heading-l">What is JSON-LD ZKP with BBS+ Signatures?</h2>
 <p class="govuk-body">BBS+ is a pairing-based cryptographic signature used for signing one or more messages.</p>
 <p class="govuk-body">Pairing-based cryptography has been used to construct identity-based encryption (IBE), which allows a sender to encrypt a message without needing a receiver’s public key to have been certified and distributed in advance.</p>
 <p class="govuk-body">JSON-LD is a linked data proof that consists of information about the proof, parameters required to verify it, and the proof of value itself.</p>
@@ -266,7 +267,7 @@ John Nolan
 </ol>
 <p class="govuk-body">These areas are briefly explained below. For a deeper dive into the technical side of BBS+, JSON-LD and all other technology mentioned, references are given at the bottom of this document for further reading.</p>
 <p class="govuk-body">All information in this document has been referenced from these sources.</p>
-<h3 class="govuk-heading-m">Selective Disclosure</h3>
+<h3 id="selective-disclosure" tabindex="-1" class="govuk-heading-m">Selective Disclosure</h3>
 <p class="govuk-body">Within VCs you are able to take selective attributes and only reveal those instead of all the attributes.</p>
 <p class="govuk-body">For example, presenting a driving licence to prove your age should not require you to disclose all other information on this credential to prove it. All you should need is a boolean response to the query you are asking.</p>
 <p class="govuk-body">When you present your VC, you could be prompted to answer, “Are you over 21?”</p>
@@ -275,10 +276,10 @@ John Nolan
 <p class="govuk-body">Imagine going to a bar, but instead of showing your ID, which reveals everything, you only prove that you are old enough to get in - without even needing to reveal your birth date!</p>
 </blockquote>
 <p class="govuk-body">This is a key advantage of physical documents where you have to hand over your entire ID, to confirm a specific personal attribute.</p>
-<h3 class="govuk-heading-m">Compound Proofs</h3>
+<h3 id="compound-proofs" tabindex="-1" class="govuk-heading-m">Compound Proofs</h3>
 <p class="govuk-body">Compound proofs is a way of combining multiple VCs into one queryable VC without generating a new VC.</p>
 <p class="govuk-body">This allows you to combine multiple attributes from different identities all without disclosing any other data about yourself, only sharing the minimum data.</p>
-<h4 class="govuk-heading-s">Scenario</h4>
+<h4 id="scenario" tabindex="-1" class="govuk-heading-s">Scenario</h4>
 <p class="govuk-body">You are going on holiday and you are required to present at various checkpoints before boarding a plane, the following documents:</p>
 <ol class="govuk-list govuk-list--number">
 <li>A valid passport</li>
@@ -286,7 +287,7 @@ John Nolan
 <li>Boarding pass</li>
 </ol>
 <p class="govuk-body">Compound proofs allow you to combine all these passes into one queryable VC and use selective disclosure to verify only the required attributes at different stages.</p>
-<h4 class="govuk-heading-s">Example</h4>
+<h4 id="example" tabindex="-1" class="govuk-heading-s">Example</h4>
 <p class="govuk-body">You are buying a couple of bottles of wine from Duty Free. Currently, you need to present your boarding pass and passport to confirm you are eligible to purchase that item and the amount.</p>
 <p class="govuk-body">Instead of handing over both of these documents, the checkout operator can scan your VC querying with a question.</p>
 <p class="govuk-body">&quot;Are you able to purchase these items?&quot;</p>
@@ -299,7 +300,7 @@ John Nolan
 <li>Is this a valid passport?</li>
 </ol>
 <p class="govuk-body">All these are then confirmed as being true or false, rather than the system pulling this information, storing it and doing the query internally.</p>
-<h3 class="govuk-heading-m">Correlating signatures and zero-knowledge proof signatures</h3>
+<h3 id="correlating-signatures-and-zero-knowledge-proof-signatures" tabindex="-1" class="govuk-heading-m">Correlating signatures and zero-knowledge proof signatures</h3>
 <p class="govuk-body">On previous versions of VCs, when you are issued one by an issuer, it will uniquely sign your credential so that it can be verified.</p>
 <p class="govuk-body">The downside of this means, everywhere you use your credential, you can be tracked and monitored using this unique identifier through the verification systems in place.</p>
 <p class="govuk-body">A VC ends up being the equivalent of a global super cookie across your digital and physical life. You should not be in a position to be tracked while using a VC.</p>
@@ -312,7 +313,7 @@ John Nolan
 </ol>
 <p class="govuk-body">Using zero-knowledge proofs, you only show exactly what the verifier needs without exposing any other information.</p>
 <p class="govuk-body">This is important for the privacy of the user. Using cookies in browsers to track a user's habits then selling and sharing this data is a current issue we face. Without zero-knowledge proofs in place, we enable this same level of tracking in the physical world too.</p>
-<h2 class="govuk-heading-l">Conclusion</h2>
+<h2 id="conclusion" tabindex="-1" class="govuk-heading-l">Conclusion</h2>
 <p class="govuk-body">Verifiable credentials have a key place in the future. Many governments and organizations around the world are already implementing their own versions and schemas of verifiable credentials. A list of a few examples are below</p>
 <ol class="govuk-list govuk-list--number">
 <li>Scottish Government via Okta UK (<a href="https://blogs.gov.scot/digital/2020/05/13/digital-identity-scotland-prototype-draws-to-a-close/" class="govuk-link" target="_blank" rel="noreferrer noopener">https://blogs.gov.scot/digital/2020/05/13/digital-identity-scotland-prototype-draws-to-a-close/ (opens in new tab)</a>)</li>
@@ -326,7 +327,7 @@ John Nolan
 <p class="govuk-body">A mindset change from modern ways of handling data in services across the internet will be required for this technology to be adopted. We are so used to collecting more information than we need and storing it, forgetting that we only require little to give citizens the services they require.</p>
 <p class="govuk-body">There will be legitimate concerns around fraud protection, auditing and national security threats, but with the right thinking, these issues can be overcome and should not be used as excuses.</p>
 <p class="govuk-body">We should move forward with verifiable credentials in the future and prepare whatever solution we come up with, with the intent of being able to use them.</p>
-<h2 class="govuk-heading-l">Acronyms</h2>
+<h2 id="acronyms" tabindex="-1" class="govuk-heading-l">Acronyms</h2>
 <ol class="govuk-list govuk-list--number">
 <li>Verifiable Credentials - VC</li>
 <li>Decentralised Identity - DID</li>
@@ -335,7 +336,7 @@ John Nolan
 <li>LD - Linked Data</li>
 <li>JSON-LD - JSON formatted version of Linked Data</li>
 </ol>
-<h2 class="govuk-heading-l">References</h2>
+<h2 id="references" tabindex="-1" class="govuk-heading-l">References</h2>
 <ul class="govuk-list govuk-list--bullet">
 <li><a href="https://www.youtube.com/watch?v=dXlRIrrb9f4" class="govuk-link" target="_blank" rel="noreferrer noopener">What BBS+ Means For Verifiable Credentials - (YouTube) (opens in new tab)</a></li>
 <li><a href="https://www.evernym.com/blog/bbs-verifiable-credentials/" class="govuk-link" target="_blank" rel="noreferrer noopener">Why the Verifiable Credentials Community Should Converge on BBS+ - Brent Zundel (opens in new tab)</a></li>
@@ -346,7 +347,14 @@ John Nolan
 <li><a href="https://json-ld.org/" class="govuk-link" target="_blank" rel="noreferrer noopener">JSON for Linked Data (opens in new tab)</a></li>
 <li><a href="https://doubleoctopus.com/security-wiki/encryption-and-cryptography/pairing-based-cryptography/" class="govuk-link" target="_blank" rel="noreferrer noopener">Pairing Based Cryptography (PBC) (opens in new tab)</a></li>
 </ul>
-
+<ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/verifiable-credentials-bbs.md">View history of this page on GitHub</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/verifiable-credentials-bbs.md">Feedback or raise issue with this page on GitHub</a>
+    </li>
+</ul>
 
     </div>
 </div>

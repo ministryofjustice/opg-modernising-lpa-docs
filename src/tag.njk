@@ -1,0 +1,12 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+layout: layouts/fullwidth.njk
+backLink: "/"
+---
+<h1 class="govuk-heading-xl">Documents labelled "{{ tag.replace('_', ' ') }}"</h1>
+{%- from "./_includes/macros/indexlist.njk" import indexList %}
+{{ indexList(title, '', collections[ tag ]) }}

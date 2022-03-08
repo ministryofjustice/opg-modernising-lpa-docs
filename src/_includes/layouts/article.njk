@@ -5,10 +5,8 @@ backLink: "/research-development/"
 
 <h1 class="govuk-heading-xl">{{title}}</h1>
 
-{%- from "../../_includes/macros/contentMetaData.njk" import contentMetaData %}
-{%- from "../../_includes/macros/assessmentTags.njk" import assessmentTags %}
-{{ contentMetaData(date, contributors) }}
-{{ assessmentTags(tags) }}
+{%- from "../../_includes/macros/pageContentMetaData.njk" import pageContentMetaData %}
+{{ pageContentMetaData(date, contributors, undefined, tags) }}
 
 <nav aria-label="Contents" role="navigation">
     <h2 class="govuk-heading-s">Contents</h2>

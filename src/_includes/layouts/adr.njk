@@ -3,27 +3,12 @@ layout: layouts/fullwidth.njk
 backLink: "/adr/"
 ---
 
-{%- from "../../_includes/macros/contentMetaData.njk" import contentMetaData %}
-{%- from "../../_includes/macros/statusBadge.njk" import statusBadge -%}
-{%- from "../../_includes/macros/assessmentTags.njk" import assessmentTags %}
+{%- from "../../_includes/macros/pageContentMetaData.njk" import pageContentMetaData %}
+{%- from "../../../node_modules/govuk-frontend/govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 <h1 class="govuk-heading-xl">{{adr_number}} - {{title}}</h1>
 
-<h2 class="govuk-heading-m">Overview</h2>
-
-{{ contentMetaData(date, contributors) }}
-{{ assessmentTags(tags) }}
-
-<h3 class="govuk-heading-s">Status</h3>
-<p class="govuk-body">{{statusBadge({status: status})}}</p>
-
-
-<h3 class="govuk-heading-s">Areas of coverage</h3>
-<ul class="govuk-list">
-    {%- for item in areas_of_coverage -%}
-        <li>{{ item }}</li>
-    {%- endfor -%}
-</ul>
+{{ pageContentMetaData(date, contributors, status, tags) }}
 
 {{ content | safe }}
 

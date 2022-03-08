@@ -2,7 +2,7 @@
  
 {%- from "../../../node_modules/govuk-frontend/govuk/components/tag/macro.njk" import govukTag -%}
 <ul class="govuk-list govuk-list--inline">
-    {% for tag in params %}
+    {% for tag in params | sort %}
         {% if tag !== 'research_development' %}
             {% if tag !== 'adr' %}
                 <li>

@@ -4,6 +4,11 @@ title: "Using Technology to reduce mass LPA attempts"
 date: 2022-02-21
 tags: 
   - research_development
+  - data_privacy
+  - security_threats
+  - fraud_vectors
+  - techniques
+  - third_parties
 areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan", "Andrew Pearce"]
 ---

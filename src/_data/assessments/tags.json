@@ -12,7 +12,7 @@
         "third_parties"
       ],
       "opensource": ["open_source"],
-      "contribute": ["patterns", "open_standards", "open_data", "common_platforms", "apis"],
+      "contribute": ["open_standards", "open_data", "common_platforms", "apis"],
       "reliability": ["observability", "stability", "testing"]
     }
   }

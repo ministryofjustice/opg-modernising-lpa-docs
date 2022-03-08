@@ -4,6 +4,16 @@ title: "OPG as a Service"
 date: 2022-02-14
 tags: 
   - research_development
+  - apis
+  - third_parties
+  - integration
+  - deployment
+  - techniques
+  - common_platforms
+  - open_standards
+  - observability
+  - fraud_vectors
+  - security_threats
 areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan"]
 ---

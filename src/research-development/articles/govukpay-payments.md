@@ -4,6 +4,10 @@ title: "GOV.UK Pay for Solicitors and Organisations"
 date: 2022-03-08
 tags: 
   - research_development
+  - third_parties
+  - common_platforms
+  - integration
+  - fraud_vectors
 areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan"]
 ---

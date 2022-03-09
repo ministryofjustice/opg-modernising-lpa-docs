@@ -1,0 +1,19 @@
+{
+  "assessments": {
+    "alpha": {
+      "secureservice": ["data_privacy", "security_threats", "fraud_vectors"],
+      "toolstechnology": [
+        "tools",
+        "techniques",
+        "language",
+        "framework",
+        "deployment",
+        "integration",
+        "third_parties"
+      ],
+      "opensource": ["open_source"],
+      "contribute": ["open_standards", "open_data", "common_platforms", "apis"],
+      "reliability": ["observability", "stability", "testing"]
+    }
+  }
+}

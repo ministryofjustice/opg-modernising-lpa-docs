@@ -4,3 +4,19 @@ img {
   display: inline-block;
   max-width: 100%;
 }
+
+.govuk-list {
+  &--inline {
+    li {
+      display: inline-flex;
+    }
+  }
+}
+
+.govuk-link {
+  .govuk-tag {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

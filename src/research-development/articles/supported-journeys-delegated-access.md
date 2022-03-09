@@ -2,7 +2,8 @@
 layout: layouts/article.njk
 title: "Supported Journeys and Delegated Access Blog"
 date: 2022-02-28
-tags: research_development
+tags: 
+  - research_development
 areas_of_coverage: ["Digital Service"]
 contributors: ["Lisa Talia Moretti"]
 ---

@@ -5,13 +5,21 @@ backLink: "/research-development/"
 
 <h1 class="govuk-heading-xl">{{title}}</h1>
 
-{%- from "../../_includes/partials/contentMetaData.njk" import contentMetaData %}
-{{ contentMetaData(date, contributors) }}
+{%- from "../../_includes/macros/pageContentMetaData.njk" import pageContentMetaData %}
+{{ pageContentMetaData(date, contributors, undefined, tags) }}
 
-<nav aria-label="Contents" role="navigation">
-<h2 class="govuk-heading-s">Contents</h2>
-{{ content | toc | safe }}
-</nav>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Table of Contents
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <nav aria-label="Contents" role="navigation">
+        {{ content | toc | safe }}
+    </nav>
+  </div>
+</details>
 
 {{ content | safe }}
 

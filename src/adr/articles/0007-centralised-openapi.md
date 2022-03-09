@@ -4,7 +4,12 @@ title: "Centralised OpenAPI Specification"
 weight: 1
 date: 2022-02-08
 review_in: 12 months
-tags: adr
+tags:  
+    - adr
+    - open_standards
+    - apis
+    - language
+    - integration
 areas_of_coverage: ["Digital Service"]
 status: "proposed"
 contributors: ["John Nolan"]

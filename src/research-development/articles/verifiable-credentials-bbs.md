@@ -2,7 +2,11 @@
 layout: layouts/article.njk
 title: "Verifiable Credentials - JSON-LD ZKP with BBS+ Signatures"
 date: 2021-08-12
-tags: research_development
+tags: 
+  - research_development
+  - open_standards
+  - integration
+  - data_privacy
 areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan"]
 ---

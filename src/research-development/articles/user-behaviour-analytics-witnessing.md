@@ -2,7 +2,14 @@
 layout: layouts/article.njk
 title: "Using User Behaviour Analytics in place of Witnessing"
 date: 2022-01-31
-tags: research_development
+tags: 
+  - research_development
+  - data_privacy
+  - security_threats
+  - fraud_vectors
+  - techniques
+  - third_parties
+  - observability
 areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan"]
 ---

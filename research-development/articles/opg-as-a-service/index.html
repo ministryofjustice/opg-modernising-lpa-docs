@@ -218,19 +218,209 @@
         
 <h1 class="govuk-heading-xl">OPG as a Service</h1>
 
-<p class="govuk-body"><strong>Date</strong>: <time datetime="2022-02-14">14 February 2022</time>
-<br />
-<strong>Authors: </strong>
-John Nolan
-</p>
 
 
-<nav aria-label="Contents" role="navigation">
-<h2 class="govuk-heading-s">Contents</h2>
-<div class="govuk-list govuk-list--bullet" >
+
+
+
+  
+
+  
+
+  
+<dl class="govuk-summary-list">
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+<time datetime="2022-02-14">14 February 2022</time>
+
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Authors
+        </dt>
+        <dd class="govuk-summary-list__value">
+          John Nolan
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Areas
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list govuk-list--inline">
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/apis/" title="View all documents labelled apis">
+                                <strong class="govuk-tag govuk-tag--blue">
+          apis
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/common_platforms/" title="View all documents labelled common platforms">
+                                <strong class="govuk-tag govuk-tag--blue">
+          common platforms
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/deployment/" title="View all documents labelled deployment">
+                                <strong class="govuk-tag govuk-tag--blue">
+          deployment
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/fraud_vectors/" title="View all documents labelled fraud vectors">
+                                <strong class="govuk-tag govuk-tag--blue">
+          fraud vectors
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/integration/" title="View all documents labelled integration">
+                                <strong class="govuk-tag govuk-tag--blue">
+          integration
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/observability/" title="View all documents labelled observability">
+                                <strong class="govuk-tag govuk-tag--blue">
+          observability
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/open_standards/" title="View all documents labelled open standards">
+                                <strong class="govuk-tag govuk-tag--blue">
+          open standards
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/security_threats/" title="View all documents labelled security threats">
+                                <strong class="govuk-tag govuk-tag--blue">
+          security threats
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/techniques/" title="View all documents labelled techniques">
+                                <strong class="govuk-tag govuk-tag--blue">
+          techniques
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/third_parties/" title="View all documents labelled third parties">
+                                <strong class="govuk-tag govuk-tag--blue">
+          third parties
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+        </ul>
+        </dd>
+        
+      </div>
+    
+  
+</dl>
+
+
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Table of Contents
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <nav aria-label="Contents" role="navigation">
+        <div class="govuk-list govuk-list--bullet" >
         <ul><li><a href="#introduction">Introduction</a><ul><li><a href="#legal-software-suppliers-association-(lssa)">Legal Software Suppliers Association (LSSA)</a></li></ul></li><li><a href="#opg-as-a-service">OPG as a Service</a><ul><li><a href="#documentation">Documentation</a></li><li><a href="#account-management">Account Management</a></li><li><a href="#support">Support</a></li><li><a href="#api">API</a></li><li><a href="#internal-government-services">Internal Government Services</a></li></ul></li><li><a href="#example-api-endpoints">Example API Endpoints</a><ul><li><a href="#example-api-flow-1">Example API Flow 1</a></li><li><a href="#example-api-flow-2">Example API Flow 2</a><ul><li><a href="#actor">Actor</a></li><li><a href="#documents">Documents</a></li><li><a href="#lpa-create">LPA Create</a></li><li><a href="#lpa-complete">LPA Complete</a></li></ul></li><li><a href="#using-the-api-flow">Using the API Flow</a><ul><li><a href="#create-lpa">Create LPA</a></li><li><a href="#create-actors">Create Actors</a></li><li><a href="#actors-log-in">Actors Log In</a></li><li><a href="#webhook-or-poll">Webhook or Poll</a></li><li><a href="#submit-lpa">Submit LPA</a></li></ul></li><li><a href="#view-an-lpa">View an LPA</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
       </div>
-</nav>
+    </nav>
+  </div>
+</details>
 
 <h2 id="introduction" tabindex="-1" class="govuk-heading-l">Introduction</h2>
 <p class="govuk-body">70% of LPAs made are done by solicitors, charities or other third parties on behalf of the Donor.</p>

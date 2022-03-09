@@ -14,6 +14,31 @@ contributors: ["John Nolan"]
 
 ## Introduction
 
+With delayed registration, a user would have a undefined period of time between payment and registration of an LPA.
+
+We need to investigate other services and patterns that also use this method and identify how they work.
+
+``` test
+What do we mean by payment up front? 
+- Document checking model - pay up front and check validation throughout using this payment
+- Click execute at that point is legit as possible
+- They hold off on delaying registering it
+```
+
+## Services that have gaps in delays between payment and completion
+
+TODO: None of these meet the need, but the top ones should be broken down anyway
+
+* Kickstarter
+* Patreon
+* Gofundme
+
+* Drivers Licence
+* Passport
+
+* Energy Companies
+* Car Insurance
+
 ## Conclusion
 
 ## References

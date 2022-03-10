@@ -49,11 +49,11 @@ This requires a user to
 * Pay for a product up front that does not exist
 * Feed into the creation process over time
 * Waiting time can be months to years
-* They recieve their product from the creator
+* They receive their product from the creator
 
 ### Patreon
 
-Patreon allows users to sign up to content creators for a montly/per creation fee to get access to content they create. You pay up front and then are able to access their back catalog and as long as you keep paying, acces to new content.
+Patreon allows users to sign up to content creators for a monthly/per creation fee to get access to content they create. You pay up front and then are able to access their back catalog and as long as you keep paying, access to new content.
 
 * Sign up
 * Pay up front with a standing order for future content
@@ -62,7 +62,7 @@ Patreon allows users to sign up to content creators for a montly/per creation fe
 
 ### Gofundme
 
-Gofundme allows an individual to setup a fundraiser with a funding goal/target. You let people know what you are doing and what for, then indiduals can donate towards your target with an end date of some activity that will take place.
+Gofundme allows an individual to setup a fundraiser with a funding goal/target. You let people know what you are doing and what for, then individuals can donate towards your target with an end date of some activity that will take place.
 
 * Sign up
 * Pay up front with a donation
@@ -86,6 +86,6 @@ Gofundme allows an individual to setup a fundraiser with a funding goal/target. 
 
 At this point it is hard to find any other service that would work in the same way we do.
 
-There are many that have paths with journies that require payment up front, but these all follow the pattern of a service or product being given to you after a set amount of time controlled by the service, not the customer.
+There are many that have paths with journeys that require payment up front, but these all follow the pattern of a service or product being given to you after a set amount of time controlled by the service, not the customer.
 
 We should continue to look for other services or products and update this article accordingly if we do.

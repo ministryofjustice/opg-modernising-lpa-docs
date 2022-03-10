@@ -69,9 +69,28 @@ Gofundme allows an individual to setup a fundraiser with a funding goal/target. 
 * Wait until the end date
 * See the outcome of the event or change it has effected
 
-### Drivers Licence
+### Renewing a Drivers Licence
+
+When renewing a Drivers Licence, there is no need for you to remember a username and password. Your details are matched by the information you provide in one session online which asks the following followed by payment at the end.
+
+* Your details
+  * Title
+  * Name
+  * Gender
+  * Date of Birth
+  * Country of Birth
+* You 3 year address history
+* Your driving record
+* National Insurance Number
+* UK Passport Number
+
+If all the above match then you can go to your payment and await your licence in the post.
 
 ### Passport
+
+Getting a passport requires you to create an application with a passport photos, pay for it and then get someone else to confirm your identity.
+
+Immediately after identification checks you recieve your documents in the post.
 
 ### Insurance
 

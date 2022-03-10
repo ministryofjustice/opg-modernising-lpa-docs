@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Parallels in digital services that require access after a long delay"
-date: 2022-03-09
+date: 2022-03-10
 tags: 
   - research_development
   - common_platforms
@@ -94,10 +94,14 @@ Immediately after identification checks you recieve your documents in the post.
 
 ### Insurance
 
+Various types of insurance companies all follow the same basic user flow when applying. Unfortunately this finishes with a certificate of insurance, presented to you on a prescribed date.
+
+Even though the user is in control of the date, it is still a hard set date that if left for long enough will cause a change in the premium offered.
+
 * Sign up
 * Get a quote
 * Set a date in the future for cover to start
-* Pay amount up front
+* Pay for the insurance
 * Get a certificate confirming your start date and cover details
 
 ## Conclusion

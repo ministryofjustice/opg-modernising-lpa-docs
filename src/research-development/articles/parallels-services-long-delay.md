@@ -5,7 +5,6 @@ date: 2022-03-09
 tags: 
   - research_development
   - common_platforms
-  - fraud_vectors
   - techniques
   - data_privacy
 areas_of_coverage: ["Digital Service"]

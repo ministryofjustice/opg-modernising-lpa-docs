@@ -38,6 +38,8 @@ Should this change, this section should be updated with the new information.
 
 ## Services that are similar but do not match this process
 
+Some services have similar user flows to what we are wanting to do. I believe it is worth noting a few examples of these and how they manage payments for content, even if we cannot use them ourselves.
+
 ### Kickstarter
 
 On Kickstarter, users are able to purchase a product that is in a ideation stage with the promise of it being fulfilled at a future point.
@@ -90,7 +92,7 @@ If all the above match then you can go to your payment and await your licence in
 
 Getting a passport requires you to create an application with a passport photos, pay for it and then get someone else to confirm your identity.
 
-Immediately after identification checks you recieve your documents in the post.
+Immediately after identification checks you receive your documents in the post.
 
 ### Insurance
 

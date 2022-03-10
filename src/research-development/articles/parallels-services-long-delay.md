@@ -33,6 +33,10 @@ We need to investigate other services and patterns that also use this method of 
 
 ## Services that have gaps in delays between payment and completion
 
+During my initial research I am unable to find any other service that requires payment up front and then allows you to delay claiming a product over a period of time.
+
+Should this change, this section should be updated with the new information.
+
 ## Services that are similar but do not match this process
 
 ### Kickstarter

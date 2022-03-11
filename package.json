@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "jshint": "jshint src/",
-    "lint:check": "eslint --ignore-path .gitignore .",
-    "lint:fix": "eslint --fix --ignore-path .gitignore .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
     "lint:spell": "cspell '**/*.*'",
     "lint:markdown": "markdownlint '**/*.md' --ignore node_modules",
     "lint:all": "yarn run lint:check && yarn run lint:spell && yarn run lint:markdown",
@@ -36,5 +36,6 @@
     "markdownlint-cli": "^0.31.1",
     "prettier": "^2.5.1",
     "sass": "^1.49.9"
-  }
+  },
+  "eslintIgnore": ["_site/", "/extensions/**/*.js"]
 }

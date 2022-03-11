@@ -2,7 +2,8 @@ const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const markdownItGds = require("./markdown-it-gds");
 const dateFilter = require('./src/filters/date-filter.js');
 const date24HourFilter = require('./src/filters/date24Hours-filter.js');
-const pluginTOC = require('eleventy-plugin-toc');
+//const pluginTOC = require('eleventy-plugin-toc');
+const pluginTOC = require('./extensions/eleventy-plugin-toc/.eleventy.js');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
@@ -16,7 +17,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginTOC, {
         wrapper: 'div',
         wrapperClass: 'govuk-list govuk-list--bullet',
-        ul: true
+        ul: true,
+        anchorClass: 'govuk-link',
     });
 
     eleventyConfig.addFilter('log', value => {

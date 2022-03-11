@@ -4,7 +4,7 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-03-09T09:48:33Z</updated>
+  <updated>2022-03-11T11:29:56Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
@@ -351,6 +351,100 @@ Developers are aware of ADRs, but their experience of doing them brings this sco
 &lt;p class=&quot;govuk-body&quot;&gt;See Michael Nygard&#39;s article, linked above.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;ADRs will be public for visibility and collaboration.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Pull requests and Github issues can be used to drive conversations.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Parallels in digital services that require access after a long delay</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/parallels-services-long-delay/"/>
+    <updated>2022-03-10T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/parallels-services-long-delay/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;With delayed registration, a user would have a undefined period of time between payment and registration of an LPA.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Steps in delayed registration&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Create an account&lt;/li&gt;
+&lt;li&gt;Pay to create an LPA&lt;/li&gt;
+&lt;li&gt;Fill in LPA Details&lt;/li&gt;
+&lt;li&gt;Choose Certificate Provider&lt;/li&gt;
+&lt;li&gt;Execute and Sign the LPA&lt;/li&gt;
+&lt;li&gt;Certificate Provider certifies the LPA&lt;/li&gt;
+&lt;li&gt;Submits to OPG&lt;/li&gt;
+&lt;li&gt;Time passes where the LPA is valid but not registered
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;This could be a few days to 30 years time before being registered&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Registration of LPA with OPG by the Donor or another Actor on the LPA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to investigate other services and patterns that also use this method of paying up front to create a &#39;thing&#39; but not use that &#39;thing&#39; until a later date.&lt;/p&gt;
+&lt;h2 id=&quot;services-that-have-gaps-in-delays-between-payment-and-completion&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Services that have gaps in delays between payment and completion&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;During my initial research I am unable to find any other service that requires payment up front and then allows you to delay claiming a product over a period of time.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Should this change, this section should be updated with the new information.&lt;/p&gt;
+&lt;h2 id=&quot;services-that-are-similar-but-do-not-match-this-process&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Services that are similar but do not match this process&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Some services have similar user flows to what we are wanting to do. I believe it is worth noting a few examples of these and how they manage payments for content, even if we cannot use them ourselves.&lt;/p&gt;
+&lt;h3 id=&quot;kickstarter&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Kickstarter&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;On Kickstarter, users are able to purchase a product that is in a ideation stage with the promise of it being fulfilled at a future point.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This requires a user to&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Sign up&lt;/li&gt;
+&lt;li&gt;Pay for a product up front that does not exist&lt;/li&gt;
+&lt;li&gt;Feed into the creation process over time&lt;/li&gt;
+&lt;li&gt;Waiting time can be months to years&lt;/li&gt;
+&lt;li&gt;They receive their product from the creator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;patreon&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Patreon&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Patreon allows users to sign up to content creators for a monthly/per creation fee to get access to content they create. You pay up front and then are able to access their back catalog and as long as you keep paying, access to new content.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Sign up&lt;/li&gt;
+&lt;li&gt;Pay up front with a standing order for future content&lt;/li&gt;
+&lt;li&gt;Feed into the creation process over time&lt;/li&gt;
+&lt;li&gt;Each release is then accessable to you&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;gofundme&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Gofundme&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Gofundme allows an individual to setup a fundraiser with a funding goal/target. You let people know what you are doing and what for, then individuals can donate towards your target with an end date of some activity that will take place.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Sign up&lt;/li&gt;
+&lt;li&gt;Pay up front with a donation&lt;/li&gt;
+&lt;li&gt;Offer support through messaging boards&lt;/li&gt;
+&lt;li&gt;Wait until the end date&lt;/li&gt;
+&lt;li&gt;See the outcome of the event or change it has effected&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;renewing-a-drivers-licence&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Renewing a Drivers Licence&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;When renewing a Drivers Licence, there is no need for you to remember a username and password. Your details are matched by the information you provide in one session online which asks the following followed by payment at the end.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Your details
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Title&lt;/li&gt;
+&lt;li&gt;Name&lt;/li&gt;
+&lt;li&gt;Gender&lt;/li&gt;
+&lt;li&gt;Date of Birth&lt;/li&gt;
+&lt;li&gt;Country of Birth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;You 3 year address history&lt;/li&gt;
+&lt;li&gt;Your driving record&lt;/li&gt;
+&lt;li&gt;National Insurance Number&lt;/li&gt;
+&lt;li&gt;UK Passport Number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If all the above match then you can go to your payment and await your licence in the post.&lt;/p&gt;
+&lt;h3 id=&quot;passport&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Passport&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Getting a passport requires you to create an application with a passport photos, pay for it and then get someone else to confirm your identity.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Immediately after identification checks you receive your documents in the post.&lt;/p&gt;
+&lt;h3 id=&quot;insurance&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Insurance&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Various types of insurance companies all follow the same basic user flow when applying. Unfortunately this finishes with a certificate of insurance, presented to you on a prescribed date.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Even though the user is in control of the date, it is still a hard set date that if left for long enough will cause a change in the premium offered.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Sign up&lt;/li&gt;
+&lt;li&gt;Get a quote&lt;/li&gt;
+&lt;li&gt;Set a date in the future for cover to start&lt;/li&gt;
+&lt;li&gt;Pay for the insurance&lt;/li&gt;
+&lt;li&gt;Get a certificate confirming your start date and cover details&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;conclusion&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;At this point it is hard to find any other service that would work in the same way we do.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There are many that have paths with journeys that require payment up front, but these all follow the pattern of a service or product being given to you after a set amount of time controlled by the service, not the customer.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should continue to look for other services or products and update this article accordingly if we do.&lt;/p&gt;
 </content>
   </entry>
   

@@ -23,7 +23,7 @@ We need to ensure we can integrate to Sirius (Case Management System) as it is t
 
 ## Technical
 
-All our services in some way integrate with the Sirius database, whether this is directly or via a service inbetween.
+All our services in some way integrate with the Sirius database, whether this is directly or via a service in between.
 
 Sirius and its database contain all our LPA information from creation on Make a LPA, scanning of the documents, case workers working on the case, through to the Use an LPA service.
 

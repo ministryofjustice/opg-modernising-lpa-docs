@@ -19,7 +19,14 @@ adr_number: "0008"
 
 ## Context
 
-We need to ensure we can integrate to Sirius (Case Management System) as it is the core of our LPA services.
+We need to ensure we can integrate to Sirius (Case Management System) as it holds all the data for our LPAs.
+
+It is used by many parts of OPG. A few of these are
+
+- Case Managers
+- External scanning service
+- Public facing services (Make a LPA, Use a LPA, View a LPA)
+- Internal Services and APIs
 
 ## Technical
 

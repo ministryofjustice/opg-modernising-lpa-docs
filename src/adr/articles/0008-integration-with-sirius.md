@@ -2,7 +2,7 @@
 layout: layouts/adr.njk
 title: "Integration with Sirius"
 weight: 1
-date: 2022-03-11
+date: 2022-03-15
 review_in: 12 months
 tags:  
     - adr

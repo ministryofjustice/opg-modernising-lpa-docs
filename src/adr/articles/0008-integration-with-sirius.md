@@ -29,6 +29,18 @@ Sirius and its database contain all our LPA information from creation on Make a 
 
 Modernising will be no different, but we must decide on the best way to do this as we enter our Beta phase.
 
+### Availability
+
+As the LPA data is stored within the Sirius database, we need to be aware that it can be taken offline at any point for planned or unscheduled reasons.
+
+If there is down time of the database, then we need to plan for how we handle this.
+
+Should we defensively code and provide a degraded service?
+
+Should we build the integration points to handle downtime, allowing the service to run to an extent and retroactively complete any operations pending.
+
+Whatever the decision is within the architecture, it should be decided ahead of any build and is outside the scope of this ADR.
+
 ### Interoperability - How does this enable the exchange of information
 
 It is essential to be able to communicate with our Case Management System and the database which contains existing LPA data.

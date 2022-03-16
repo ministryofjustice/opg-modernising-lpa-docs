@@ -11,7 +11,7 @@ tags:
     - language
     - integration
 areas_of_coverage: ["Digital Service"]
-status: "proposed"
+status: "accepted"
 contributors: ["John Nolan"]
 adr_number: "0009"
 ---

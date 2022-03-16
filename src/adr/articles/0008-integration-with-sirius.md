@@ -94,7 +94,7 @@ If the part of the service is responsible for adding data and validating that da
 
 ### Decision
 
-We should integrate with the Sirius database and not directly with the case management system.
+We should integrate with the Sirius database via an internal API and not directly with the case management system or the database itself.
 
 ### Consequences
 

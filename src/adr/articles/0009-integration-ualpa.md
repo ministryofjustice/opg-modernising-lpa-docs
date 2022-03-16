@@ -65,18 +65,18 @@ N/A - the use of this technology does not have an effect on marginalised groups 
 
 ### Think big and imagine what the impact of your work can be
 
-Having the seperation of the Modernising creation domain and the Use a LPA domain will mean a clean split of data and functionality that is easier to manage over time.
+Having the separation of the Modernising creation domain and the Use a LPA domain will mean a clean split of data and functionality that is easier to manage over time.
 
 ### Interrogate your data decisions
 
-Use a LPA curently follows the rule of only storing the information it absolutely needs to serve the users. It should maintain this rule and if required to share this information with other services, ensure that the use case is ethically correct and only gives the information that is needed.
+Use a LPA currently follows the rule of only storing the information it absolutely needs to serve the users. It should maintain this rule and if required to share this information with other services, ensure that the use case is ethically correct and only gives the information that is needed.
 
 ### Decision
 
-We should continue to keep the domains seperate where appropriate.
+We should continue to keep the domains separate where appropriate.
 
 Should a part of the Modernising service require access to the data stored within Use a LPA, then we should build an appropriate layer for this to be accessed and continue to ensure we only supply the data that is needed for the use case.
 
 ### Consequences
 
- Seperate domains with only required data interactions between services reduces our potential for creating technical debt like having to update code in multiple places due to changes in one domain.
+ Separate domains with only required data interactions between services reduces our potential for creating technical debt like having to update code in multiple places due to changes in one domain.

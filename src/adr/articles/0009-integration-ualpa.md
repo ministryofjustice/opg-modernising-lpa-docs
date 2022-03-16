@@ -26,9 +26,9 @@ Modernising needs to be interopable with this service moving forward.
 
 ### Interoperability - How does this enable the exchange of information
 
-The Use a LPA site currently has no API for internal consumers to interact with as there isn't currently a need.
+The Use a LPA site currently has no API for internal consumers to interact with as there isn't a need.
 
-It's purpose is to pull information as it needs it from the Sirius database via an API.
+It's purpose is to pull data as it needs from the Sirius database via an API.
 
 It only stores within its own database, what it needs to run the service.
 

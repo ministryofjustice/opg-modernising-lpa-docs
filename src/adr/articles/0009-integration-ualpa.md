@@ -18,7 +18,7 @@ adr_number: "0009"
 
 ## Context
 
-Our Use a LPA service is the latest service built by the OPG. We want to build any new features around this service moving forward, taking advantage of the work done on it.
+Our [Use a LPA service](https://use-lasting-power-of-attorney.service.gov.uk/home) is the latest service built by the OPG. We want to build any new features around this service moving forward, taking advantage of the work done on it.
 
 Modernising needs to be interopable with this service moving forward.
 
@@ -26,18 +26,20 @@ Modernising needs to be interopable with this service moving forward.
 
 ### Interoperability - How does this enable the exchange of information
 
-The Use a LPA site currently has no API for consumers to interact with.
+The Use a LPA site currently has no API for internal consumers to interact with as there isn't currently a need.
 
 It's purpose is to pull information as it needs it from the Sirius database via an API.
 
-It only stores within its own database, exactly what it needs to run the service.
+It only stores within its own database, what it needs to run the service.
 
 Anything to do with using or viewing a LPA sits within its domain/responsibility and therefore has no need for a internal API currently for other services to consume.
 
 ### Developer Knowledge - How well known is this in our current skill sets
 
 **Overall**: 10/10
-We have a dedicated team who are responsible for the upkeep of the service.
+We have a dedicated multidisciplinary team who are responsible for the upkeep of the service.
+
+It is also in its `Live` phase of the [GDS Assessment](https://www.gov.uk/service-manual/agile-delivery/how-the-live-phase-works)
 
 ### Support/Open Source - Is it well supported
 

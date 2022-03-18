@@ -4,12 +4,49 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-03-18T11:54:43Z</updated>
+  <updated>2022-03-18T13:09:13Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
     <email></email>
   </author>
+  
+  <entry>
+    <title>Continuous Delivery</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0011-continuous-delivery/"/>
+    <updated>2022-03-18T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0011-continuous-delivery/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The &lt;a href=&quot;https://www.gov.uk/service-manual/technology/deploying-software-regularly&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK technical guidance (opens in new tab)&lt;/a&gt; specifies that software should be deployed regularly.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Principles from the GOV.UK guidance are as follows and we will hold ourselves to them.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;deploy little and often&lt;/li&gt;
+&lt;li&gt;deploy quality software&lt;/li&gt;
+&lt;li&gt;use auditable deployments&lt;/li&gt;
+&lt;li&gt;use zero downtime deployments where possible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 9/10&lt;br /&gt;
+All our teams use Continuous Delivery in their services and it is a standard practice for all.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Build the service with Continuous Delivery in mind and as the default. This will require the following elements to be in place&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;build a single artifact rather than variations for different environments&lt;/li&gt;
+&lt;li&gt;have multiple deployment environments&lt;/li&gt;
+&lt;li&gt;manage variable configuration&lt;/li&gt;
+&lt;li&gt;secure passwords and keys&lt;/li&gt;
+&lt;li&gt;use smoke tests - software tests that check if the most important functions are working&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0011-continuous-delivery/0010-automated-testing&quot; class=&quot;govuk-link&quot;&gt;Automated testing&lt;/a&gt; will need to be of a high enough standard to give Product Owners confidence in the process&lt;/li&gt;
+&lt;li&gt;Builds and deployments are repeatable&lt;/li&gt;
+&lt;li&gt;Deployments are quicker&lt;/li&gt;
+&lt;li&gt;Fast feedback cycle&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Automated Testing</title>

@@ -4,13 +4,13 @@ var GA_ANALYTICS_ID = "G-70EPL8ZB7Y";
 
 function init() {
   var gaCookieValue = getCookie(COOKIE_NAME);
-  var isAnalyticsCookieSet = gaCookieValue !== null;
+  var isAnalyticsCookiesAccepted = gaCookieValue == "true";
 
-  setupClickEvent(isAnalyticsCookieSet);
+  setupClickEvent(isAnalyticsCookiesAccepted);
 
-  if (isAnalyticsCookieSet) {
+  if (gaCookieValue !== null) {
     toggleCookieBanner();
-    if (gaCookieValue == "true") {
+    if (isAnalyticsCookiesAccepted) {
       setupGoogleAnalytics(GA_ANALYTICS_ID);
     }
   }
@@ -22,7 +22,7 @@ function init() {
   }
 }
 
-function setupClickEvent(isAnalyticsCookieSet) {
+function setupClickEvent(isAnalyticsCookiesAccepted) {
   document.addEventListener("click", (e) => {
     if (e.target && e.target.name === "cookies") {
       if (e.target.value === "update") {
@@ -35,7 +35,7 @@ function setupClickEvent(isAnalyticsCookieSet) {
       toggleCookieBanner(e.target.value);
     }
 
-    if (e.target && isAnalyticsCookieSet) {
+    if (e.target && isAnalyticsCookiesAccepted) {
       trackExternalLink(e.target);
     }
   });

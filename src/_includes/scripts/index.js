@@ -10,7 +10,7 @@ function init() {
 
   if (gaCookieValue !== null) {
     toggleCookieBanner();
-    if (gaCookieValue == "true") {
+    if (isAnalyticsCookiesAccepted) {
       setupGoogleAnalytics(GA_ANALYTICS_ID);
     }
   }

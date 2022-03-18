@@ -4,12 +4,41 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-03-11T11:29:56Z</updated>
+  <updated>2022-03-18T11:54:43Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
     <email></email>
   </author>
+  
+  <entry>
+    <title>Automated Testing</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0010-automated-testing/"/>
+    <updated>2022-03-18T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0010-automated-testing/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The &lt;a href=&quot;https://www.gov.uk/service-manual/technology/quality-assurance-testing-your-service-regularly&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK technical guidance (opens in new tab)&lt;/a&gt; specifies that tests should be automated where possible.&lt;/p&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using automated tests allows us to run locally and in the pipeline. This enabled others to openly see and consume any data produced by the tests.&lt;/p&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 9/10&lt;br /&gt;
+All our teams use automated tests in their services.&lt;/p&gt;
+&lt;h3 id=&quot;support%2Fopen-source---is-it-well-supported&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support/Open Source - Is it well supported&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This is dependent on the framework used.&lt;/p&gt;
+&lt;h2 id=&quot;ethics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ethics&lt;/h2&gt;
+&lt;h3 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Having our automated tests run on the pipeline means we have confidence in our build and others who rely on the code can have confidence that it is doing what it should be.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Include and implement automated code coverage tests, accessibility tests, and security and penetration testing&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Increased overhead on initial development&lt;/li&gt;
+&lt;li&gt;Increased confidence in future changes not causing issues&lt;/li&gt;
+&lt;li&gt;Testing can be integrated into release processes without requiring manual intervention&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Centralised OpenAPI Specification</title>

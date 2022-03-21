@@ -2,7 +2,7 @@
 layout: layouts/adr.njk
 title: "AWS X-Ray"
 weight: 1
-date: 2022-03-18
+date: 2022-03-21
 review_in: 12 months
 tags:  
     - adr

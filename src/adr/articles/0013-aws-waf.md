@@ -2,7 +2,7 @@
 layout: layouts/adr.njk
 title: "AWS WAF"
 weight: 1
-date: 2022-03-21
+date: 2022-03-22
 review_in: 12 months
 tags:  
     - adr
@@ -18,30 +18,24 @@ adr_number: "0013"
 
 ## Context
 
-We want a way to trace, analyse and debug our distributed systems across our cloud architecture.
+We want to ensure our services are protected to a high standard via a Web Application Firewall.
 
-This will give us the ability to
-
-* Find bottle necks in our services
-* Discover hidden errors within our stack
-* Identify areas of improvement
-* Justify continuous improvement work
+Our services run on AWS and already implement [AWS WAF](https://aws.amazon.com/waf/) where needed.
 
 ## Technical
 
 ### Developer Knowledge - How well known is this in our current skill sets
 
-**Overall**: 5/10
+**Overall**: 9/10
 Our teams are starting to use this functionality in their services.
 
 ### Decision
 
-We should use [AWS X-Ray](https://aws.amazon.com/xray/) to monitor and maintain a healthy service.
+We should continue to use [AWS WAF](https://aws.amazon.com/waf/) in any new services and build upon on knowledge and experience of existing implementations.
 
 ### Consequences
 
-* Chosen languages may not support its features
-* Code should be written from the start to add the feature
-* Continuous improvement a part of the Product lifecycle
-* Ownership of monitoring
-* Benchmarks set for acceptable parameters
+* Visibility of near real time web traffic and alerts
+* Automated alerting against rules set
+* Managed rule sets for new and existing threats
+* Rules need to take into account our customer behaviours, e.g. multiple users from a corporate network on the same IP Address

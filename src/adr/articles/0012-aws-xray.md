@@ -40,7 +40,7 @@ A few areas where our maturity can be improved are.
 
 * Thinking about Observability in ticket creation as part of the Product Lifecycle
 * An understanding of what to track and what not to track
-* Teams able to continously improve bottlenecks found in their workflow
+* Teams able to continuously improve bottlenecks found in their workflow
 * Teams are able to see their service health and actively check
 * Understand and set their own benchmarks for what good looks like
 * Implement the right level of alerting to support observability

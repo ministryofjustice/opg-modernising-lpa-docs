@@ -4,12 +4,45 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-03-18T13:09:13Z</updated>
+  <updated>2022-03-29T15:13:30Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
     <email></email>
   </author>
+  
+  <entry>
+    <title>AWS WAF</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0013-aws-waf/"/>
+    <updated>2022-03-22T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0013-aws-waf/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We want to ensure our services are protected to a high standard via a Web Application Firewall.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Our services run on AWS and already implement &lt;a href=&quot;https://aws.amazon.com/waf/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;AWS WAF (opens in new tab)&lt;/a&gt; where needed.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We currently run the following default rules on our PHP applications as well as custom built rules specific for our tech stacks.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;CommonRulesSet&lt;/li&gt;
+&lt;li&gt;KnownBadInputs&lt;/li&gt;
+&lt;li&gt;PHPRulesSet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Depending on the technology used on the service, we ensure we have the correct rules in place, for example, SQL injection, XSS and many others specific to language and infrastructure choices.&lt;/p&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 9/10&lt;br /&gt;
+Our teams are starting to use this functionality in their services.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should continue to use &lt;a href=&quot;https://aws.amazon.com/waf/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;AWS WAF (opens in new tab)&lt;/a&gt; in any new services and build upon on knowledge and experience of existing implementations.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Visibility of near real time web traffic and alerts&lt;/li&gt;
+&lt;li&gt;Automated alerting against rules set&lt;/li&gt;
+&lt;li&gt;Managed rule sets for new and existing threats&lt;/li&gt;
+&lt;li&gt;Rules need to take into account our customer behaviours, e.g. multiple users from a corporate network on the same IP Address&lt;/li&gt;
+&lt;li&gt;There is a risk to false positives happening on front ends. As a result, developers will need to take this into account when debugging issues on a service&lt;/li&gt;
+&lt;li&gt;There is a minor cost to enabling AWS WAF on services&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Continuous Delivery</title>

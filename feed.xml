@@ -4,7 +4,7 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-03-29T15:13:30Z</updated>
+  <updated>2022-03-29T15:25:28Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
@@ -40,6 +40,50 @@ Our teams are starting to use this functionality in their services.&lt;/p&gt;
 &lt;li&gt;Rules need to take into account our customer behaviours, e.g. multiple users from a corporate network on the same IP Address&lt;/li&gt;
 &lt;li&gt;There is a risk to false positives happening on front ends. As a result, developers will need to take this into account when debugging issues on a service&lt;/li&gt;
 &lt;li&gt;There is a minor cost to enabling AWS WAF on services&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>AWS X-Ray</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0012-aws-xray/"/>
+    <updated>2022-03-21T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0012-aws-xray/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We want a way to trace, analyse and debug our distributed systems across our cloud architecture.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This will give us the ability to&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Find bottle necks in our services&lt;/li&gt;
+&lt;li&gt;Discover hidden errors within our stack&lt;/li&gt;
+&lt;li&gt;Identify areas of improvement&lt;/li&gt;
+&lt;li&gt;Justify continuous improvement work&lt;/li&gt;
+&lt;li&gt;Helps in diagnosis during incidents and tracking change from releases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 5/10&lt;br /&gt;
+Our teams are starting to use this functionality in their services.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Capturing data is the first part of this, however there are more things that need to be learned and implemented. We should help and encourage those wanting to learn to do so.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A few areas where our maturity can be improved are.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Thinking about Observability in ticket creation as part of the Product Lifecycle&lt;/li&gt;
+&lt;li&gt;An understanding of what to track and what not to track&lt;/li&gt;
+&lt;li&gt;Teams able to continuously improve bottlenecks found in their workflow&lt;/li&gt;
+&lt;li&gt;Teams are able to see their service health and actively check&lt;/li&gt;
+&lt;li&gt;Understand and set their own benchmarks for what good looks like&lt;/li&gt;
+&lt;li&gt;Implement the right level of alerting to support observability&lt;/li&gt;
+&lt;li&gt;Look at the possibility of a Observability Community of Practice to help share learnings across teams&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should use &lt;a href=&quot;https://aws.amazon.com/xray/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;AWS X-Ray (opens in new tab)&lt;/a&gt; to monitor and maintain a healthy service.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Chosen languages may not support its features&lt;/li&gt;
+&lt;li&gt;Observability should be part of ticket prep and refinement to facilitate.&lt;/li&gt;
+&lt;li&gt;Code should be written from the start to add the feature&lt;/li&gt;
+&lt;li&gt;Continuous improvement will become a part of the Product lifecycle&lt;/li&gt;
+&lt;li&gt;Ownership of monitoring&lt;/li&gt;
+&lt;li&gt;Benchmarks set for acceptable parameters&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>

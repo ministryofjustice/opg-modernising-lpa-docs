@@ -18,9 +18,11 @@ adr_number: "0009"
 
 ## Context
 
-Our [Use a LPA service](https://use-lasting-power-of-attorney.service.gov.uk/home) is the latest service built by the OPG. We want to build any new features around this service moving forward, taking advantage of the work done on it.
+Our [Use a LPA service](https://use-lasting-power-of-attorney.service.gov.uk/home) is the latest service built by the OPG.
 
-Modernising needs to be interopable with this service moving forward.
+It is responsible for all services online after Execution of an LPA. We envision that Modernising will not replace this service and instead any new features in this domain will be built upon this service.
+
+We need to ensure any new work done within Modernising pre execution and internal APIs or database work, is still compatible with Use a LPA or the service is brought in line with changes.
 
 ## Technical
 
@@ -65,7 +67,9 @@ N/A - the use of this technology does not have an effect on marginalised groups 
 
 ### Think big and imagine what the impact of your work can be
 
-Having the separation of the Modernising creation domain and the Use a LPA domain will mean a clean split of data and functionality that is easier to manage over time.
+Having the separation of the Modernising creation domain and the Use a LPA domain (post Execution) will mean a clean split of data and functionality that is easier to manage over time.
+
+If we build an internal API layer that Modernising and Use a LPA can integrate with, we can ensure a well defined data schema and rule set for LPA data.
 
 ### Interrogate your data decisions
 
@@ -76,6 +80,8 @@ Use a LPA currently follows the rule of only storing the information it absolute
 We should continue to keep the domains separate where appropriate.
 
 Should a part of the Modernising service require access to the data stored within Use a LPA, then we should build an appropriate layer for this to be accessed and continue to ensure we only supply the data that is needed for the use case.
+
+If we identify data that exists within Use a LPA that is required by other services, we should decide whether to move this data elsewhere or to create an interface for other services to access it.
 
 ### Consequences
 

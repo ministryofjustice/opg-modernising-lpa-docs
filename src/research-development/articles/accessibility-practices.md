@@ -42,10 +42,6 @@ We will do this by
 
 We are already doing all of the above on our existing services and we will be learning from these implementations and using this knowledge to apply it to any new services.
 
-## Semantic HTML
-
-a
-
 ## Automated testing in pipelines
 
 a
@@ -70,6 +66,10 @@ a
 ## Progressive enhancement
 
 [Progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)
+a
+
+## Semantic HTML
+
 a
 
 ## Conclusion

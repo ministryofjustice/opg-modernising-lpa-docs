@@ -149,5 +149,5 @@ Using the service manual as a guide, we should go beyond it where we can.
 * [GOV.UK Design System](https://design-system.service.gov.uk/)
 * [MoJ Pattern Library](https://design-patterns.service.justice.gov.uk/)
 * [Getting an accessibility audit](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit)
-* Building a resilient frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)
+* [Building a resilient frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)
 * [What does my site cost?](https://whatdoesmysitecost.com/)

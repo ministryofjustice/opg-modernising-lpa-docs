@@ -5,6 +5,8 @@
 [![eleventy](https://img.shields.io/badge/staticgen-eleventy-%23707070.svg?style=flat-square)](https://11ty.io)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
+[![repo standards badge](https://img.shields.io/badge/dynamic/json?color=blue&style=for-the-badge&logo=github&label=MoJ%20Compliant&query=%24.data%5B%3F%28%40.name%20%3D%3D%20%22opg-modernising-lpa-docs%22%29%5D.status&url=https%3A%2F%2Foperations-engineering-reports.cloud-platform.service.justice.gov.uk%2Fgithub_repositories)](https://operations-engineering-reports.cloud-platform.service.justice.gov.uk/github_repositories#opg-modernising-lpa-docs "Link to report")
+
 Site URL: [https://docs.modernising.opg.service.justice.gov.uk](https://docs.modernising.opg.service.justice.gov.uk)
 
 The Ministry of Justice and the Office of the Public Guardian (OPG) are working on a project to modernise lasting powers of attorney (MLPA).

@@ -33,6 +33,7 @@ We will also ensure as newer versions of the standard get released that we meet 
 
 We will do this by
 
+* Ensure all professions collaborate on early designs
 * Adding automation to our pipelines
 * Adding checks in our development environments
 * Working with internal dedicated accessibility groups
@@ -44,7 +45,17 @@ We are already doing all of the above on our existing services and we will be le
 
 ## Automated testing in pipelines
 
-a
+Reference: [Testing for accessibility](https://www.gov.uk/service-manual/helping-people-to-use-your-service/testing-for-accessibility)
+
+We should add automated testing into the pipeline for our services. We should not solely rely on this though. We need to also do manual testing, however this will give us knowledge that issues that can be automatically found are monitored.
+
+This will allow us to break the build if we introduce new content that doesn't meet the WCAG 2.1 standard.
+
+We should take this into account when choosing how we build our service. If we can produce static HTML files then testing becomes faster and cheaper to run rather than writing scripts to run over a etherial environment.
+
+Research has been undertaken by the GDS accessibility team's [audit of the most use accessibility tools](https://alphagov.github.io/accessibility-tool-audit/) and should be consulted.
+
+We used [aXe](https://www.deque.com/axe/) and [pa11y](https://pa11y.org/) on services currently which will aid in our knowledge of implementing this tooling in the pipeline.
 
 ## Browserstack in pipeline
 

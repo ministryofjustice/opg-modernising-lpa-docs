@@ -38,7 +38,7 @@ We will do this by
 * Adding checks in our development environments
 * Working with internal dedicated accessibility groups
 * Encourage and aid team members to learn about accessibility
-* Run regular accessibility audits to capture problems that cannot be caught by automated tooling
+* [Run regular accessibility audits to capture problems that cannot be caught by automated tooling](#accessibility-audits)
 * [Use our OPG accessibility tools to test our sites against popular accessibility tooling](#testing-with-assistive-technologies)
 
 We are already doing all of the above on our existing services and we will be learning from these implementations and using this knowledge to apply it to any new services.
@@ -59,6 +59,8 @@ We used [aXe](https://www.deque.com/axe/) and [pa11y](https://pa11y.org/) on ser
 
 ## Cross Device testing in pipeline
 
+Reference: [Designing for different browsers and devices](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices)
+
 We need to ensure that our service universally accessible with as many browsers and devices as possible.
 
 Testing across multiple devices and browsers manually can be time consuming and should be automated.
@@ -69,7 +71,7 @@ A list of browsers and devices we should support can be found at the GDS service
 
 ## Testing with assistive technologies
 
-Resource: [Testing with assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies)
+Reference: [Testing with assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies)
 
 > You must make sure your service works with assistive technologies. This is so everyone can use your service with the technology they rely on, such as a screen reader or speech recognition software.
 
@@ -77,34 +79,75 @@ The entire service should be tested using assistive technologies to ensure every
 
 This can be done on new patterns and components we create and once tested, those patterns and components should be repeated throughout the user journeys to ensure a reliable journey.
 
-We have access to our own OPG Accessibility Lab which should be utilized for our own research, but we should also seek out external services that provide expert analysis with real users.
+We have access to our own OPG Accessibility Lab which should be utilized for our own research, but we should also seek out external services that provide expert analysis with real users, which is usually included in [Accessibility audits](#accessibility-audits).
 
-## GDS and MoJ Design patterns/components
+## GOV.UK and MoJ Design patterns and components
 
-a
+When building services, we use the [GOV.UK Design System](https://design-system.service.gov.uk/) and the [MoJ Pattern Library](https://design-patterns.service.justice.gov.uk/).
 
-## Accessibility audits for service
+Any new patterns or components we build, we contribute back to the MoJ Pattern Library and Slack community to get our code and research peer reviewed from specialists in other departments.
+
+This gives us the benefits of a community of specialist roles who can check accessibility among other things before sharing with other departments.
+
+If we feel a pattern or component is worth sharing with GOV.UK, then we will also work with them to being adding it to the Design System.
+
+Working this way ensures we can move fast while gaining extra knowledge from others in areas of Government.
+
+## Accessibility audits
+
+Reference: [Getting an accessibility audit](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit)
 
 [Accessibility audits for service](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit)
-a
 
-## MoJ Community Accessibility audit for new components and patterns
+Every service the OPG build goes through yearly accessibility audits and ad-hoc audits when required, such as newly made user journeys.
 
-a
+We should look for an independent, external service that can provide us with an expert audit to prevent any sort of bias or gap in knowledge internally.
+
+When receiving an audit report back, if there are issues, the entire team should work through them and learn what needs to be fixed and why. Audits are a great learning tool as well as a check that standards are met.
 
 ## Progressive enhancement
 
-[Progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)
-a
+[Building a resilient frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)
 
-## Semantic HTML
+Making our service accessible to all devices and connections is extremely important, especially in the demographic LPAs are aimed at.
 
-a
+Using images, Javascript and CSS to give users a better experience can come with its own downfalls.
+
+Examples of this are
+
+* If you require javascript for your site to work, users without it enabled will not be able to use it
+* If you have large images, poor network connections or devices will cause long loading delays giving a poor and frustrating experience
+* If you are serving large assets over a mobile network, this has a cost to users [(What does my site cost?)](https://whatdoesmysitecost.com/)
+
+We should build the service to reach as many people as possible in the quickest and simplest way.
+
+If we do add assets to enhance the interface, we should do so in a way that does not stop those who have them disabled from using the site.
+
+We should look to also taking advantage of modern browser APIs to help serve the right content to users.
+
+For example
+
+* Using the `prefers-color-scheme` setting to serve dark mode styling
+* Using the `Network Information API` to detect network quality and serve smaller images
+* Using the `Service Workers API` to intelligently cache assets in the browser
 
 ## Conclusion
 
-a
+We should continue to build upon our existing practices for accessibility and ensure that it is thought of from the start.
+
+Using the service manual as a guide, we should go beyond it where we can.
 
 ## References
 
-* [Avast - What is browser fingerprinting?](https://www.avast.com/c-what-is-browser-fingerprinting)
+* [Understanding WCAG 2.1](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag#wcag-design-principles)
+* [Testing for accessibility](https://www.gov.uk/service-manual/helping-people-to-use-your-service/testing-for-accessibility)
+* [audit of the most use accessibility tools](https://alphagov.github.io/accessibility-tool-audit/)
+* [aXe](https://www.deque.com/axe/)
+* [pa11y](https://pa11y.org/)
+* [Designing for different browsers and devices](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices)
+* [Testing with assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies)
+* [GOV.UK Design System](https://design-system.service.gov.uk/)
+* [MoJ Pattern Library](https://design-patterns.service.justice.gov.uk/)
+* [Getting an accessibility audit](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit)
+* Building a resilient frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)
+* [What does my site cost?](https://whatdoesmysitecost.com/)

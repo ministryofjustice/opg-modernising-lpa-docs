@@ -34,7 +34,7 @@ We will also ensure as newer versions of the standard get released that we meet 
 We will do this by
 
 * Ensure all professions collaborate on early designs
-* [Adding automation to our pipelines](#automated-testing-in-pipelines)
+* [Adding automated testing to our pipelines](#automated-testing-in-pipelines)
 * Adding checks in our development environments
 * Working with internal dedicated accessibility groups
 * Encourage and aid team members to learn about accessibility

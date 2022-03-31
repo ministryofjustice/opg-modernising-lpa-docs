@@ -35,7 +35,6 @@ We will do this by
 
 * Ensure all professions collaborate on early designs
 * [Adding automated testing to our pipelines](#automated-testing-in-pipelines)
-* Adding checks in our development environments
 * Working with internal dedicated accessibility groups
 * Encourage and aid team members to learn about accessibility
 * [Run regular accessibility audits to capture problems that cannot be caught by automated tooling](#accessibility-audits)

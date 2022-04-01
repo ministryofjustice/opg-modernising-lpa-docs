@@ -18,7 +18,7 @@ adr_number: "0009"
 
 ## Context
 
-Our [Use a LPA service](https://use-lasting-power-of-attorney.service.gov.uk/home) is the latest service built by the OPG.
+Our [Use a LPA service](https://www.gov.uk/use-lasting-power-of-attorney) is the latest service built by the OPG.
 
 It is responsible for all services online after Execution of an LPA. We envision that Modernising will not replace this service and instead any new features in this domain will be built upon this service.
 

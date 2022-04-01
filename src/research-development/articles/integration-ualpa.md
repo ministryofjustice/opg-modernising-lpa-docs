@@ -16,7 +16,7 @@ contributors: ["John Nolan"]
 
 ## Introduction
 
-This article is to document the intent of keeping the [Use a LPA service](https://www.gov.uk/use-lasting-power-of-attorney)  as its own domain and being responsible for all features post execution of a LPA.
+This article is to document the intent of keeping the [Use a LPA service](https://www.gov.uk/use-lasting-power-of-attorney) as its own domain and being responsible for all features post execution of a LPA.
 
 Use a LPA is responsible for all services online after Execution of an LPA. We envision that Modernising will not replace this service and instead any new features in this domain will be built upon this service.
 
@@ -30,7 +30,7 @@ The Use a LPA site currently has no API for internal consumers to interact with 
 
 It only stores within its own database, what it needs to run the service and additional data needed is pulled on demand from the core LPA database.
 
-If other new services began to require data from the Use a LPA service, the team would be responsible for engaging with those services and working with them to provide the neccessary interface for the problem.
+If other new services began to require data from the Use a LPA service, the team would be responsible for engaging with those services and working with them to provide the necessary interface for the problem.
 
 ### How is the service currently run
 
@@ -40,7 +40,7 @@ It is also in its `Live` phase of the [GDS Assessment](https://www.gov.uk/servic
 
 Use a LPA is built and maintained as Infrastructure as Code via Terraform. It is also able to scale up on demand as required.
 
-### Keeping the domains seperate
+### Keeping the domains separate
 
 Having the separation of the Modernising creation domain and the Use a LPA domain (post Execution) will mean a clean split of data and functionality that is easier to manage over time.
 

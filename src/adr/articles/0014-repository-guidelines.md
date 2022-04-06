@@ -16,7 +16,7 @@ adr_number: "0014"
 
 ## Context
 
-We want our code repositories to be as user-friendly as possible. We have already created a document defining best practices as agreed by all teams on what a good `README.md` file is and have applied this to our existing repositories.
+We want our code repositories to be as user-friendly as possible. We have already created a document defining best practices as agreed by all teams on what a good `README.md` file and repository is and have applied this to our existing repositories.
 
 This guide can be found on our [OPG Technical Guidance - Repo Readme Principles](https://docs.opg.service.justice.gov.uk/documentation/guides/repo_principles.html#repo-readme-principles) page.
 
@@ -36,5 +36,5 @@ We should ensure any new practices are recorded in the [OPG Technical Guidance -
 
 #### Negative
 
-* Older repos may fall behind if not kept up to date
+* Older repositories may fall behind if not kept up to date
 * Teams must remember to update the source of truth with any new decisions

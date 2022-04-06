@@ -16,13 +16,25 @@ adr_number: "0014"
 
 ## Context
 
-## Technical
+We want our code repositories to be as user-friendly as possible. We have already created a document defining best practices as agreed by all teams on what a good `README.md` file is and have applied this to our existing repositories.
 
-### Developer Knowledge - How well known is this in our current skill sets
-
-**Overall**: 8/10
-Our teams are starting to use this functionality in their services.
+This guide can be found on our [OPG Technical Guidance - Repo Readme Principles](https://docs.opg.service.justice.gov.uk/documentation/guides/repo_principles.html#repo-readme-principles) page.
 
 ### Decision
 
+We should continue to follow our own guidance that was created as a community and update our code bases with new practices as required.
+
+We should ensure any new practices are recorded in the [OPG Technical Guidance - Repo Readme Principles](https://docs.opg.service.justice.gov.uk/documentation/guides/repo_principles.html#repo-readme-principles) page.
+
 ### Consequences
+
+#### Positive
+
+* Any team is able to know how to navigate each repository
+* Individuals are able to get setup in a project quickly
+* You are able to find technical decisions made and their reason
+
+#### Negative
+
+* Older repos may fall behind if not kept up to date
+* Teams must remember to update the source of truth with any new decisions

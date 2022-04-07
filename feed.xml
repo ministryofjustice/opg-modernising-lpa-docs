@@ -4,7 +4,7 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-04-07T07:15:20Z</updated>
+  <updated>2022-04-07T07:21:30Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
@@ -520,6 +520,35 @@ Developers are aware of ADRs, but their experience of doing them brings this sco
 &lt;p class=&quot;govuk-body&quot;&gt;See Michael Nygard&#39;s article, linked above.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;ADRs will be public for visibility and collaboration.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Pull requests and Github issues can be used to drive conversations.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Integration and building upon Use a LPA</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/integration-ualpa/"/>
+    <updated>2022-04-01T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/integration-ualpa/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This article is to document the intent of keeping the &lt;a href=&quot;https://www.gov.uk/use-lasting-power-of-attorney&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Use a LPA service (opens in new tab)&lt;/a&gt; as its own domain and being responsible for all features post execution of a LPA.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Use a LPA is responsible for all services online after Execution of an LPA. We envision that Modernising will not replace this service and instead any new features in this domain will be built upon this service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to ensure any new work done within Modernising pre execution and internal APIs or database work, is still compatible with Use a LPA or the service is brought in line with changes.&lt;/p&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The Use a LPA site currently has no API for internal consumers to interact with as there isn&#39;t currently a need.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It only stores within its own database, what it needs to run the service and additional data needed is pulled on demand from the core LPA database.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If other new services began to require data from the Use a LPA service, the team would be responsible for engaging with those services and working with them to provide the necessary interface for the problem.&lt;/p&gt;
+&lt;h3 id=&quot;how-is-the-service-currently-run&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;How is the service currently run&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We have a dedicated multidisciplinary team who are responsible for the upkeep of the service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It is also in its &lt;code&gt;Live&lt;/code&gt; phase of the &lt;a href=&quot;https://www.gov.uk/service-manual/agile-delivery/how-the-live-phase-works&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GDS Assessment (opens in new tab)&lt;/a&gt; and is &lt;a href=&quot;https://github.com/ministryofjustice/opg-use-an-lpa&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Open Source on github (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Use a LPA is built and maintained as Infrastructure as Code via Terraform. It is also able to scale up on demand as required.&lt;/p&gt;
+&lt;h3 id=&quot;keeping-the-domains-separate&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Keeping the domains separate&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Having the separation of the Modernising creation domain and the Use a LPA domain (post Execution) will mean a clean split of data and functionality that is easier to manage over time.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we build an internal API layer that Modernising and Use a LPA can integrate with, we can ensure a well defined data schema and rule set for LPA data.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This shared data schema is out of scope for this document and will be covered elsewhere. It will be important for all interactions across the services to be able to communicate efficiently and follow the same data standards.&lt;/p&gt;
+&lt;h3 id=&quot;final-thoughts&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Final thoughts&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should continue to keep the domains separate where appropriate.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Should a part of the Modernising service require access to the data stored within Use a LPA, then the teams should work together to analyse the problem and come to the best solution.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Decisions on implementation detail should be left to teams to work out and inspire collaboration across domains for the best outcome for the services.&lt;/p&gt;
 </content>
   </entry>
   

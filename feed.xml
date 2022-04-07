@@ -4,12 +4,38 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-04-01T09:27:26Z</updated>
+  <updated>2022-04-07T07:15:20Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
     <email></email>
   </author>
+  
+  <entry>
+    <title>Repository Guidelines</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0014-repository-guidelines/"/>
+    <updated>2022-04-06T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0014-repository-guidelines/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We want our code repositories to be as user-friendly as possible. We have already created a document defining best practices as agreed by all teams on what a good &lt;code&gt;README.md&lt;/code&gt; file and repository is and have applied this to our existing repositories.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This guide can be found on our &lt;a href=&quot;https://docs.opg.service.justice.gov.uk/documentation/guides/repo_principles.html#repo-readme-principles&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;OPG Technical Guidance - Repo Readme Principles (opens in new tab)&lt;/a&gt; page.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should continue to follow our own guidance that was created as a community and update our code bases with new practices as required.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should ensure any new practices are recorded in the &lt;a href=&quot;https://docs.opg.service.justice.gov.uk/documentation/guides/repo_principles.html#repo-readme-principles&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;OPG Technical Guidance - Repo Readme Principles (opens in new tab)&lt;/a&gt; page.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;h4 id=&quot;positive&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Positive&lt;/h4&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Any team is able to know how to navigate each repository&lt;/li&gt;
+&lt;li&gt;Individuals are able to get setup in a project quickly&lt;/li&gt;
+&lt;li&gt;You are able to find technical decisions made and their reason&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;negative&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Negative&lt;/h4&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Older repositories may fall behind if not kept up to date&lt;/li&gt;
+&lt;li&gt;Teams must remember to update the source of truth with any new decisions&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   
   <entry>
     <title>AWS WAF</title>

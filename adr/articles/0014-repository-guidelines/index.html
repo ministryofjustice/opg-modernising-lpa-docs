@@ -21,7 +21,7 @@
 
     <link href="/assets/styles.css" rel="stylesheet">
     <script src="/assets/index.js" defer></script>
-    <title>Open source articles - Modernising Lasting Power of Attorney Documentation</title>
+    <title>Repository Guidelines - Modernising Lasting Power of Attorney Documentation</title>
   </head>
   <body class="govuk-template__body">
     <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
@@ -205,7 +205,7 @@
           
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
-                <a href="/" class="govuk-back-link">Back</a>
+                <a href="/adr/" class="govuk-back-link">Back</a>
 
               </div>
             </div>
@@ -217,104 +217,138 @@
     <div class="govuk-grid-column-full">
         
 
-    <h1 class="govuk-heading-xl">Open source articles</h1>
+<h1 class="govuk-heading-xl">0014 - Repository Guidelines</h1>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+<dl class="govuk-summary-list">
+  
     
-            <article>
-                <h2 class="govuk-heading-m">
-                    <a href="/adr/articles/0014-repository-guidelines/" class="govuk-link">
-                        Repository Guidelines
-                    </a>
-                </h2>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+<time datetime="2022-04-06">6 April 2022</time>
+
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Authors
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Matt Machell, John Nolan
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green">
+          accepted
+        </strong>
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Areas
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list govuk-list--inline">
+            
                 
-<p class="govuk-body"><strong>Date</strong>: <time datetime="2022-04-06">6 April 2022</time>
-<br />
-<strong>Authors: </strong>
-Matt Machell, John Nolan
-</p>
-
-                <ul class="govuk-list govuk-list--inline">
-    
-        
-            
-        
-    
-        
-            
-                <li>
-                    <a class="govuk-link" href="/tags/open_source/" title="View all documents labelled open source">
-                        <strong class="govuk-tag govuk-tag--blue">
-  open source
-</strong>
-
-                    </a>
-                </li>
-            
-        
-    
-        
-            
-                <li>
-                    <a class="govuk-link" href="/tags/open_standards/" title="View all documents labelled open standards">
-                        <strong class="govuk-tag govuk-tag--blue">
-  open standards
-</strong>
-
-                    </a>
-                </li>
-            
-        
-    
-</ul>
-
-            </article>
-            <article>
-                <h2 class="govuk-heading-m">
-                    <a href="/adr/articles/0001-record-architecture-decisions/" class="govuk-link">
-                        Record architecture decisions
-                    </a>
-                </h2>
+                    
                 
-<p class="govuk-body"><strong>Date</strong>: <time datetime="2021-06-27">27 June 2021</time>
-<br />
-<strong>Authors: </strong>
-John Nolan
-</p>
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/open_source/" title="View all documents labelled open source">
+                                <strong class="govuk-tag govuk-tag--blue">
+          open source
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/open_standards/" title="View all documents labelled open standards">
+                                <strong class="govuk-tag govuk-tag--blue">
+          open standards
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+        </ul>
+        </dd>
+        
+      </div>
+    
+  
+</dl>
 
-                <ul class="govuk-list govuk-list--inline">
-    
-        
-            
-        
-    
-        
-            
-                <li>
-                    <a class="govuk-link" href="/tags/open_data/" title="View all documents labelled open data">
-                        <strong class="govuk-tag govuk-tag--blue">
-  open data
-</strong>
 
-                    </a>
-                </li>
-            
-        
-    
-        
-            
-                <li>
-                    <a class="govuk-link" href="/tags/open_source/" title="View all documents labelled open source">
-                        <strong class="govuk-tag govuk-tag--blue">
-  open source
-</strong>
 
-                    </a>
-                </li>
-            
-        
-    
+
+<h2 id="context" tabindex="-1" class="govuk-heading-l">Context</h2>
+<p class="govuk-body">We want our code repositories to be as user-friendly as possible. We have already created a document defining best practices as agreed by all teams on what a good <code>README.md</code> file and repository is and have applied this to our existing repositories.</p>
+<p class="govuk-body">This guide can be found on our <a href="https://docs.opg.service.justice.gov.uk/documentation/guides/repo_principles.html#repo-readme-principles" class="govuk-link" target="_blank" rel="noreferrer noopener">OPG Technical Guidance - Repo Readme Principles (opens in new tab)</a> page.</p>
+<h3 id="decision" tabindex="-1" class="govuk-heading-m">Decision</h3>
+<p class="govuk-body">We should continue to follow our own guidance that was created as a community and update our code bases with new practices as required.</p>
+<p class="govuk-body">We should ensure any new practices are recorded in the <a href="https://docs.opg.service.justice.gov.uk/documentation/guides/repo_principles.html#repo-readme-principles" class="govuk-link" target="_blank" rel="noreferrer noopener">OPG Technical Guidance - Repo Readme Principles (opens in new tab)</a> page.</p>
+<h3 id="consequences" tabindex="-1" class="govuk-heading-m">Consequences</h3>
+<h4 id="positive" tabindex="-1" class="govuk-heading-s">Positive</h4>
+<ul class="govuk-list govuk-list--bullet">
+<li>Any team is able to know how to navigate each repository</li>
+<li>Individuals are able to get setup in a project quickly</li>
+<li>You are able to find technical decisions made and their reason</li>
 </ul>
-
-            </article>
+<h4 id="negative" tabindex="-1" class="govuk-heading-s">Negative</h4>
+<ul class="govuk-list govuk-list--bullet">
+<li>Older repositories may fall behind if not kept up to date</li>
+<li>Teams must remember to update the source of truth with any new decisions</li>
+</ul>
+<ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/adr/articles/0014-repository-guidelines.md">View history of this page on GitHub</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/adr/articles/0014-repository-guidelines.md">Feedback or raise issue with this page on GitHub</a>
+    </li>
+</ul>
 
     </div>
 </div>

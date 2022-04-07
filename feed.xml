@@ -4,7 +4,7 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-04-07T07:26:36Z</updated>
+  <updated>2022-04-07T07:30:38Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
@@ -177,6 +177,58 @@ All our teams use automated tests in their services.&lt;/p&gt;
 &lt;li&gt;Increased confidence in future changes not causing issues&lt;/li&gt;
 &lt;li&gt;Testing can be integrated into release processes without requiring manual intervention&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Integration with the OPG database</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0008-integration-with-opg-database/"/>
+    <updated>2022-03-15T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0008-integration-with-opg-database/</id>
+    <content type="html">&lt;h2 id=&quot;context&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Context&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to ensure we can integrate to our OPG database as it holds all the data for our LPAs.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It is used by many parts of OPG. A few of these are&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Case Managers&lt;/li&gt;
+&lt;li&gt;External scanning service&lt;/li&gt;
+&lt;li&gt;Public facing services (Make a LPA, Use a LPA, View a LPA)&lt;/li&gt;
+&lt;li&gt;Internal Services and APIs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;technical&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Technical&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;All our services in some way integrate with the OPG database, whether this is directly or via an API or service in between.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The database contains all our LPA information from creation on Make a LPA, scanning of the documents, case workers working on the case, through to the Use a LPA service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Modernising will be no different, but we must decide on the best way to do this as we enter our Beta phase.&lt;/p&gt;
+&lt;h3 id=&quot;availability&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Availability&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As the LPA data is stored within the OPG database, we need to be aware that it can be taken offline at any point for planned or unscheduled reasons.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If there is down time of the database, then we need to plan for how we handle this.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Should we defensively code and provide a degraded service?&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Should we build the integration points to handle downtime, allowing the service to run to an extent and retroactively complete any operations pending.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Whatever the decision is within the architecture, it should be decided ahead of any build and is outside the scope of this ADR.&lt;/p&gt;
+&lt;h3 id=&quot;interoperability---how-does-this-enable-the-exchange-of-information&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interoperability - How does this enable the exchange of information&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It is essential to be able to communicate with our Case Management System and the database which contains existing LPA data.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;In order for all other services to take advantage of the Modernising work, we need to ensure interopability between the services.&lt;/p&gt;
+&lt;h3 id=&quot;developer-knowledge---how-well-known-is-this-in-our-current-skill-sets&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Developer Knowledge - How well known is this in our current skill sets&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;strong&gt;Overall&lt;/strong&gt;: 8/10&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Developers already work against shared APIs and internal services to the OPG database.&lt;/p&gt;
+&lt;h3 id=&quot;support%2Fopen-source---is-it-well-supported&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Support/Open Source - Is it well supported&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A&lt;/p&gt;
+&lt;h3 id=&quot;scalability&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Scalability&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As long as the correct technology is chosen to sit between the database, Modernising and other services, we should be able to scale any points of interaction between the services.&lt;/p&gt;
+&lt;h2 id=&quot;ethics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Ethics&lt;/h2&gt;
+&lt;h3 id=&quot;mitigate-against-being-tech-deterministic&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Mitigate against being tech deterministic&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A&lt;/p&gt;
+&lt;h3 id=&quot;ensure-you-conduct-inclusive-research&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Ensure you conduct inclusive research&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;N/A&lt;/p&gt;
+&lt;h3 id=&quot;think-big-and-imagine-what-the-impact-of-your-work-can-be&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Think big and imagine what the impact of your work can be&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Integrating with Sirius and the database during the Modernising user flows will allow us to progressively approve LPAs as they are created. If there is a safeguarding issue early on in the process, then we can catch it sooner.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;It also allows us to capture earlier those who are eligible for discounts to LPAs and therefore reducing the need for refunds post registration.&lt;/p&gt;
+&lt;h3 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interrogate your data decisions&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;When we integrate with the database, it is important to ensure we only have access to the data we need and nothing more.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If the part of the service is responsible for adding data and validating that data, then the integration point should for example only allow adding of data and getting a confirmation of valid or not from the integration. We should not be returning data and comparing it on the Modernising side.&lt;/p&gt;
+&lt;h3 id=&quot;decision&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Decision&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should integrate with the OPG database via an internal API and not directly with the case management system or the database itself.&lt;/p&gt;
+&lt;h3 id=&quot;consequences&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Consequences&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to explore the best way to integrate and define any processes and data models that will ensure that case management work and Modernising flows match for data consistency.&lt;/p&gt;
 </content>
   </entry>
   

@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0c0c">
+    
+    <link rel="preload" href="/assets/fonts/light-94a07e06a1-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/bold-b542beb274-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/styles.css" rel="stylesheet" as="style">
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-167x167.png" sizes="167x167">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon.png">
+
+    <meta name="description" content="Modernising Lasting Power of Attorney Documentation site for transparency and collaboration">
+    <meta property="og:image" content="/assets/images/moj-opengraph-image.png">
+
+    <link href="/assets/styles.css" rel="stylesheet">
+    <script src="/assets/index.js" defer></script>
+    <title>Integration with the OPG database - Modernising Lasting Power of Attorney Documentation</title>
+  </head>
+  <body class="govuk-template__body">
+    <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    
+      <div>
+        
+
+        
+
+        
+
+        
+
+        <div class="govuk-cookie-banner js-cookie-banner-confirm" data-nosnippet role="region" aria-label="Cookies on Modernising Lasting Power of Attorney Documentation" hidden>
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve accepted additional cookies. You can <a class="govuk-link" href="/view-cookies">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button value="hide" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+              Hide this message
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+        <div class="govuk-cookie-banner js-cookie-banner-reject" data-nosnippet role="region" aria-label="Cookies on Modernising Lasting Power of Attorney Documentation" hidden>
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/view-cookies">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button value="hide" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+              Hide this message
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+        <div class="govuk-cookie-banner js-cookie-banner" data-nosnippet role="region" aria-label="Cookies on Modernising Lasting Power of Attorney Documentation">
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on Modernising Lasting Power of Attorney Documentation</h2>
+        
+
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+        </div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button value="accept" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+              Accept analytics cookies
+            </button>
+          
+        
+          
+            <button value="reject" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+              Reject analytics cookies
+            </button>
+          
+        
+          
+            
+              
+              
+              <a class="govuk-link" href="/view-cookies">View cookies</a>
+            
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+        
+    <header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+        
+        <div class="govuk-header__content">
+        
+        <a href="/" class="govuk-header__link govuk-header__link--service-name">
+        Modernising Lasting Power of Attorney Documentation
+        </a>
+        
+        
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+        <ul id="navigation" class="govuk-header__navigation " aria-label="Navigation menu">
+            
+            
+                <li class="govuk-header__navigation-item">
+                
+                    <a class="govuk-header__link" href="/research-development">
+                
+                    Research &amp; Development
+                
+                    </a>
+                
+                </li>
+            
+            
+            
+                <li class="govuk-header__navigation-item">
+                
+                    <a class="govuk-header__link" href="/adr">
+                
+                    Architectural Decision Records
+                
+                    </a>
+                
+                </li>
+            
+            
+        </ul>
+        </nav>
+        
+        </div>
+        
+    </div>
+    </header>
+
+
+        
+        <div id="content" class="govuk-width-container">
+
+          
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <a href="/adr/" class="govuk-back-link">Back</a>
+
+              </div>
+            </div>
+          
+
+          <main class="govuk-main-wrapper" role="main">
+
+            <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+
+<h1 class="govuk-heading-xl">0008 - Integration with the OPG database</h1>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+<dl class="govuk-summary-list">
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+<time datetime="2022-03-15">15 March 2022</time>
+
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Authors
+        </dt>
+        <dd class="govuk-summary-list__value">
+          John Nolan
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green">
+          accepted
+        </strong>
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Areas
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list govuk-list--inline">
+            
+                
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/apis/" title="View all documents labelled apis">
+                                <strong class="govuk-tag govuk-tag--blue">
+          apis
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/common_platforms/" title="View all documents labelled common platforms">
+                                <strong class="govuk-tag govuk-tag--blue">
+          common platforms
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/integration/" title="View all documents labelled integration">
+                                <strong class="govuk-tag govuk-tag--blue">
+          integration
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/open_data/" title="View all documents labelled open data">
+                                <strong class="govuk-tag govuk-tag--blue">
+          open data
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/open_standards/" title="View all documents labelled open standards">
+                                <strong class="govuk-tag govuk-tag--blue">
+          open standards
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+        </ul>
+        </dd>
+        
+      </div>
+    
+  
+</dl>
+
+
+
+
+<h2 id="context" tabindex="-1" class="govuk-heading-l">Context</h2>
+<p class="govuk-body">We need to ensure we can integrate to our OPG database as it holds all the data for our LPAs.</p>
+<p class="govuk-body">It is used by many parts of OPG. A few of these are</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Case Managers</li>
+<li>External scanning service</li>
+<li>Public facing services (Make a LPA, Use a LPA, View a LPA)</li>
+<li>Internal Services and APIs</li>
+</ul>
+<h2 id="technical" tabindex="-1" class="govuk-heading-l">Technical</h2>
+<p class="govuk-body">All our services in some way integrate with the OPG database, whether this is directly or via an API or service in between.</p>
+<p class="govuk-body">The database contains all our LPA information from creation on Make a LPA, scanning of the documents, case workers working on the case, through to the Use a LPA service.</p>
+<p class="govuk-body">Modernising will be no different, but we must decide on the best way to do this as we enter our Beta phase.</p>
+<h3 id="availability" tabindex="-1" class="govuk-heading-m">Availability</h3>
+<p class="govuk-body">As the LPA data is stored within the OPG database, we need to be aware that it can be taken offline at any point for planned or unscheduled reasons.</p>
+<p class="govuk-body">If there is down time of the database, then we need to plan for how we handle this.</p>
+<p class="govuk-body">Should we defensively code and provide a degraded service?</p>
+<p class="govuk-body">Should we build the integration points to handle downtime, allowing the service to run to an extent and retroactively complete any operations pending.</p>
+<p class="govuk-body">Whatever the decision is within the architecture, it should be decided ahead of any build and is outside the scope of this ADR.</p>
+<h3 id="interoperability---how-does-this-enable-the-exchange-of-information" tabindex="-1" class="govuk-heading-m">Interoperability - How does this enable the exchange of information</h3>
+<p class="govuk-body">It is essential to be able to communicate with our Case Management System and the database which contains existing LPA data.</p>
+<p class="govuk-body">In order for all other services to take advantage of the Modernising work, we need to ensure interopability between the services.</p>
+<h3 id="developer-knowledge---how-well-known-is-this-in-our-current-skill-sets" tabindex="-1" class="govuk-heading-m">Developer Knowledge - How well known is this in our current skill sets</h3>
+<p class="govuk-body"><strong>Overall</strong>: 8/10</p>
+<p class="govuk-body">Developers already work against shared APIs and internal services to the OPG database.</p>
+<h3 id="support%2Fopen-source---is-it-well-supported" tabindex="-1" class="govuk-heading-m">Support/Open Source - Is it well supported</h3>
+<p class="govuk-body">N/A</p>
+<h3 id="scalability" tabindex="-1" class="govuk-heading-m">Scalability</h3>
+<p class="govuk-body">As long as the correct technology is chosen to sit between the database, Modernising and other services, we should be able to scale any points of interaction between the services.</p>
+<h2 id="ethics" tabindex="-1" class="govuk-heading-l">Ethics</h2>
+<h3 id="mitigate-against-being-tech-deterministic" tabindex="-1" class="govuk-heading-m">Mitigate against being tech deterministic</h3>
+<p class="govuk-body">N/A</p>
+<h3 id="ensure-you-conduct-inclusive-research" tabindex="-1" class="govuk-heading-m">Ensure you conduct inclusive research</h3>
+<p class="govuk-body">N/A</p>
+<h3 id="think-big-and-imagine-what-the-impact-of-your-work-can-be" tabindex="-1" class="govuk-heading-m">Think big and imagine what the impact of your work can be</h3>
+<p class="govuk-body">Integrating with Sirius and the database during the Modernising user flows will allow us to progressively approve LPAs as they are created. If there is a safeguarding issue early on in the process, then we can catch it sooner.</p>
+<p class="govuk-body">It also allows us to capture earlier those who are eligible for discounts to LPAs and therefore reducing the need for refunds post registration.</p>
+<h3 id="interrogate-your-data-decisions" tabindex="-1" class="govuk-heading-m">Interrogate your data decisions</h3>
+<p class="govuk-body">When we integrate with the database, it is important to ensure we only have access to the data we need and nothing more.</p>
+<p class="govuk-body">If the part of the service is responsible for adding data and validating that data, then the integration point should for example only allow adding of data and getting a confirmation of valid or not from the integration. We should not be returning data and comparing it on the Modernising side.</p>
+<h3 id="decision" tabindex="-1" class="govuk-heading-m">Decision</h3>
+<p class="govuk-body">We should integrate with the OPG database via an internal API and not directly with the case management system or the database itself.</p>
+<h3 id="consequences" tabindex="-1" class="govuk-heading-m">Consequences</h3>
+<p class="govuk-body">We need to explore the best way to integrate and define any processes and data models that will ensure that case management work and Modernising flows match for data consistency.</p>
+<ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/adr/articles/0008-integration-with-opg-database.md">View history of this page on GitHub</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/adr/articles/0008-integration-with-opg-database.md">Feedback or raise issue with this page on GitHub</a>
+    </li>
+</ul>
+
+    </div>
+</div>
+
+            
+          </main>
+        </div>
+        
+
+        
+    <footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+        
+        <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+            
+            <h2 class="govuk-visually-hidden">Support links</h2>
+            
+                <ul class="govuk-footer__inline-list">
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/research-development/articles/tech-ethic-decisions/">
+                        Tech Ethics in our decision making reference
+                    </a>
+                    </li>
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="https://sites.google.com/digital.justice.gov.uk/opgmlpa">
+                        Modernising lasting powers of attorney blog
+                    </a>
+                    </li>
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/view-cookies/">
+                        Cookies
+                    </a>
+                    </li>
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/feed.xml">
+                        Atom
+                    </a>
+                    </li>
+                
+                </ul>
+            
+            
+            
+            
+        </div>
+        </div>
+    </div>
+    </footer>
+
+
+
+      </div>
+    
+  </body>
+</html>

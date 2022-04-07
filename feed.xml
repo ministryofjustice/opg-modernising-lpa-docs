@@ -4,7 +4,7 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-04-07T07:21:30Z</updated>
+  <updated>2022-04-07T07:26:36Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
@@ -549,6 +549,105 @@ Developers are aware of ADRs, but their experience of doing them brings this sco
 &lt;p class=&quot;govuk-body&quot;&gt;We should continue to keep the domains separate where appropriate.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Should a part of the Modernising service require access to the data stored within Use a LPA, then the teams should work together to analyse the problem and come to the best solution.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Decisions on implementation detail should be left to teams to work out and inspire collaboration across domains for the best outcome for the services.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Accessibility Practices</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/accessibility-practices/"/>
+    <updated>2022-03-30T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/accessibility-practices/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Accessibility is one of the most important factors to be considered while building a service in Government. We build services for everyone.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This article will cover the areas within the service manual and parts that aren&#39;t.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We want to set out our intent while in our Alpha phase that we should hold ourselves too in the Beta phase of the service.&lt;/p&gt;
+&lt;h2 id=&quot;web-content-accessibility-guidelines-(wcag-2.1)&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Web Content Accessibility Guidelines (WCAG 2.1)&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Reference: &lt;a href=&quot;https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag#wcag-design-principles&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Understanding WCAG 2.1 (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The Web Content Accessibility Guidelines are an internationally recognised set of recommendations for improving web accessibility.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Any services created will be built to the WCAG 2.1 standard.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We will also ensure as newer versions of the standard get released that we meet these as part of our ongoing commitment to continuous improvement.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We will do this by&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Ensure all professions collaborate on early designs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/accessibility-practices/#automated-testing-in-pipelines&quot; class=&quot;govuk-link&quot;&gt;Adding automated testing to our pipelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Working with internal dedicated accessibility groups&lt;/li&gt;
+&lt;li&gt;Encourage and aid team members to learn about accessibility&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/accessibility-practices/#accessibility-audits&quot; class=&quot;govuk-link&quot;&gt;Run regular accessibility audits to capture problems that cannot be caught by automated tooling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/accessibility-practices/#testing-with-assistive-technologies&quot; class=&quot;govuk-link&quot;&gt;Use our OPG accessibility tools to test our sites against popular accessibility tooling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We are already doing all of the above on our existing services and we will be learning from these implementations and using this knowledge to apply it to any new services.&lt;/p&gt;
+&lt;h2 id=&quot;automated-testing-in-pipelines&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Automated testing in pipelines&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Reference: &lt;a href=&quot;https://www.gov.uk/service-manual/helping-people-to-use-your-service/testing-for-accessibility&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Testing for accessibility (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should add automated testing into the pipeline for our services. We should not solely rely on this though. We need to also do manual testing, however this will give us knowledge that issues that can be automatically found are monitored.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This will allow us to break the build if we introduce new content that doesn&#39;t meet the WCAG 2.1 standard.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should take this into account when choosing how we build our service. If we can produce static HTML files then testing becomes faster and cheaper to run rather than writing scripts to run over a ethereal environment.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Research has been undertaken by the GDS accessibility team&#39;s &lt;a href=&quot;https://alphagov.github.io/accessibility-tool-audit/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;audit of the most use accessibility tools (opens in new tab)&lt;/a&gt; and should be consulted.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We used &lt;a href=&quot;https://www.deque.com/axe/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;aXe (opens in new tab)&lt;/a&gt; and &lt;a href=&quot;https://pa11y.org/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;pa11y (opens in new tab)&lt;/a&gt; on services currently which will aid in our knowledge of implementing this tooling in the pipeline.&lt;/p&gt;
+&lt;h2 id=&quot;cross-device-testing-in-pipeline&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Cross Device testing in pipeline&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Reference: &lt;a href=&quot;https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Designing for different browsers and devices (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to ensure that our service universally accessible with as many browsers and devices as possible.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Testing across multiple devices and browsers manually can be time consuming and should be automated.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using a tool that can load the service and take screenshots, report on Javascript errors and CSS issues across the most popular devices is key to reduce cost.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A list of browsers and devices we should support can be found at the GDS service manual page &lt;a href=&quot;https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Designing for different browsers and devices (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;testing-with-assistive-technologies&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Testing with assistive technologies&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Reference: &lt;a href=&quot;https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Testing with assistive technologies (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;govuk-inset-text&quot;&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;You must make sure your service works with assistive technologies. This is so everyone can use your service with the technology they rely on, such as a screen reader or speech recognition software.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The entire service should be tested using assistive technologies to ensure everyone is able to use it.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This can be done on new patterns and components we create and once tested, those patterns and components should be repeated throughout the user journeys to ensure a reliable journey.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We have access to our own OPG Accessibility Lab which should be utilized for our own research, but we should also seek out external services that provide expert analysis with real users, which is usually included in &lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/accessibility-practices/#accessibility-audits&quot; class=&quot;govuk-link&quot;&gt;Accessibility audits&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;gov.uk-and-moj-design-patterns-and-components&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;GOV.UK and MoJ Design patterns and components&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;When building services, we use the &lt;a href=&quot;https://design-system.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Design System (opens in new tab)&lt;/a&gt; and the &lt;a href=&quot;https://design-patterns.service.justice.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;MoJ Pattern Library (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Any new patterns or components we build, we contribute back to the MoJ Pattern Library and Slack community to get our code and research peer reviewed from specialists in other departments.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This gives us the benefits of a community of specialist roles who can check accessibility among other things before sharing with other departments.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we feel a pattern or component is worth sharing with GOV.UK, then we will also work with them to being adding it to the Design System.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Working this way ensures we can move fast while gaining extra knowledge from others in areas of Government.&lt;/p&gt;
+&lt;h2 id=&quot;accessibility-audits&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Accessibility audits&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Reference: &lt;a href=&quot;https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Getting an accessibility audit (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Accessibility audits for service (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Every service the OPG build goes through yearly accessibility audits and ad-hoc audits when required, such as newly made user journeys.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should look for an independent, external service that can provide us with an expert audit to prevent any sort of bias or gap in knowledge internally.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;When receiving an audit report back, if there are issues, the entire team should work through them and learn what needs to be fixed and why. Audits are a great learning tool as well as a check that standards are met.&lt;/p&gt;
+&lt;h2 id=&quot;progressive-enhancement&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Progressive enhancement&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/technology/using-progressive-enhancement&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Building a resilient frontend using progressive enhancement (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Making our service accessible to all devices and connections is extremely important, especially in the demographic LPAs are aimed at.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using images, Javascript and CSS to give users a better experience can come with its own downfalls.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Examples of this are&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;If you require javascript for your site to work, users without it enabled will not be able to use it&lt;/li&gt;
+&lt;li&gt;If you have large images, poor network connections or devices will cause long loading delays giving a poor and frustrating experience&lt;/li&gt;
+&lt;li&gt;If you are serving large assets over a mobile network, this has a cost to users &lt;a href=&quot;https://whatdoesmysitecost.com/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;(What does my site cost?) (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should build the service to reach as many people as possible in the quickest and simplest way.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;If we do add assets to enhance the interface, we should do so in a way that does not stop those who have them disabled from using the site.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should look to also taking advantage of modern browser APIs to help serve the right content to users.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;For example&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Using the &lt;code&gt;prefers-color-scheme&lt;/code&gt; setting to serve dark mode styling&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;Network Information API&lt;/code&gt; to detect network quality and serve smaller images&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;Service Workers API&lt;/code&gt; to intelligently cache assets in the browser&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;conclusion&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We should continue to build upon our existing practices for accessibility and ensure that it is thought of from the start.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using the service manual as a guide, we should go beyond it where we can.&lt;/p&gt;
+&lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag#wcag-design-principles&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Understanding WCAG 2.1 (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/helping-people-to-use-your-service/testing-for-accessibility&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Testing for accessibility (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://alphagov.github.io/accessibility-tool-audit/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;audit of the most use accessibility tools (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.deque.com/axe/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;aXe (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pa11y.org/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;pa11y (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Designing for different browsers and devices (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Testing with assistive technologies (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://design-system.service.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GOV.UK Design System (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://design-patterns.service.justice.gov.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;MoJ Pattern Library (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Getting an accessibility audit (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/technology/using-progressive-enhancement&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Building a resilient frontend using progressive enhancement (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://whatdoesmysitecost.com/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;What does my site cost? (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
   

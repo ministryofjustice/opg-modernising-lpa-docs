@@ -80,6 +80,10 @@ For example, downtime to Sirius has an impact on connected digital services and 
 
 ## Disaster Recovery
 
+Once we know the decisions made from above, we can then decide on what is the Disaster Recovery option to take.
+
+The options are listed below and should be considered nearer the time of the build.
+
 ### High-level options
 
 #### Backup and restore

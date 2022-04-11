@@ -25,7 +25,7 @@ Region failure is rare but does happen. Common situations for region failure are
 
 * Natural disaster
 * DDOS attacks
-* Data Center bugs
+* Data Center outages
 
 ### Decision
 

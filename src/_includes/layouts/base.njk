@@ -150,6 +150,27 @@
             </div>
           </div>
         {% endif %}
+
+        {% if whatsNewa %}
+          {%- for post in [].concat(collections.research_development, collections.adr) | reverse | limit(1) %}
+          {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+            <div class="app-whats-new">
+              <div class="govuk-width-container">
+                <div class="govuk-main-wrapper govuk-main-wrapper--l">
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <h2 id="whats-new" class="govuk-heading-l">What’s new</h2>
+                    <p class="govuk-body"><time datetime="{{ post.date | date24HourFilter }}">{{ post.date | dateFilter }}</time>: {{ post.data.title }}.</p>
+                    <p class="govuk-body"><a href="{{ absolutePostUrl }}" class="govuk-link">Read more</a>.</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          {%- endfor %}
+          
+        {% endif %}
+
         <div id="content" class="govuk-width-container">
 
           {% if backLink %}

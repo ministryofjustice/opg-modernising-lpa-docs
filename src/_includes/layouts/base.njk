@@ -143,7 +143,7 @@
           </div>
         {% endif %}
 
-        {% if whatsNewDisabled %}
+        {% if whatsNew %}
           {%- for post in [].concat(collections.research_development, collections.adr) | reverse | limit(1) %}
           {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
             <div class="app-whats-new">

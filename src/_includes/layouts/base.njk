@@ -118,21 +118,13 @@
         {{ govukHeader({
             homepageUrl: "/",
             serviceName: "Modernising Lasting Power of Attorney Documentation",
-            serviceUrl: "/",
-            navigation: [
-              {
-                href: "/research-development",
-                text: "Research & Development"
-              },
-              {
-                href: "/adr",
-                text: "Architectural Decision Records"
-              }
-            ]
+            serviceUrl: "/"
           })
         }}
 
         {% block content %}
+
+        {%- include "../partials/navigation.njk" -%}
 
         {% if mastheadTitle %}
           <div class="app-masthead">

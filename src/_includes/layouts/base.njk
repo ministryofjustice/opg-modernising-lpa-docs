@@ -133,6 +133,23 @@
         }}
 
         {% block content %}
+
+        {% if mastheadTitle %}
+          <div class="app-masthead">
+            <div class="govuk-width-container">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full-from-desktop">
+                  <h1 class="govuk-heading-xl app-masthead__title">{{ mastheadTitle }}</h1>
+                  <p class="app-masthead__description">{{ mastheadDescription }}</p>
+                </div>
+
+                <div class="govuk-grid-column-one-third-from-desktop">
+                  <img class="app-masthead__image" src="/images/homepage-illustration.svg" alt="" role="presentation">
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
         <div id="content" class="govuk-width-container">
 
           {% if backLink %}

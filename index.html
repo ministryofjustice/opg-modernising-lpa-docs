@@ -162,44 +162,48 @@
         </a>
         
         
-        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
-        <nav>
-        <ul id="navigation" class="govuk-header__navigation " aria-label="Navigation menu">
-            
-            
-                <li class="govuk-header__navigation-item">
-                
-                    <a class="govuk-header__link" href="/research-development">
-                
-                    Research &amp; Development
-                
-                    </a>
-                
-                </li>
-            
-            
-            
-                <li class="govuk-header__navigation-item">
-                
-                    <a class="govuk-header__link" href="/adr">
-                
-                    Architectural Decision Records
-                
-                    </a>
-                
-                </li>
-            
-            
-        </ul>
-        </nav>
-        
         </div>
         
     </div>
     </header>
 
 
+        <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+  <div class="govuk-width-container">
+    <ul class="app-navigation__list">
+        <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/research-development">
+            Research & Development
+            </a>
+        </li>
         
+        <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/adr">
+            Architectural Decision Records
+            </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+          <div class="app-masthead">
+            <div class="govuk-width-container">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full-from-desktop">
+                  <h1 class="govuk-heading-xl app-masthead__title">Modernising Lasting Power of Attorney Documentation</h1>
+                  <p class="app-masthead__description">Documentation site for all technical research and decision records for the Modernising Lasting Power of Attorney service.</p>
+                </div>
+
+                <div class="govuk-grid-column-one-third-from-desktop">
+                  <img class="app-masthead__image" src="/images/homepage-illustration.svg" alt="" role="presentation">
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+        
+
         <div id="content" class="govuk-width-container">
 
           
@@ -208,21 +212,18 @@
 
             <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl">Modernising Lasting Power of Attorney Documentation</h1>
-<p class="govuk-body">
-    <ul class="govuk-list">
-        <li>
-            <a class="govuk-link" href="/research-development/">
-                Research &amp; Development
-            </a>
-        </li>
-        <li>
-            <a class="govuk-link" href="/adr/">
-                Architectural Decision Records
-            </a>
-        </li>
-    </ul>
-</p>
+        <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-l govuk-!-font-weight-bold">Research &amp; Development</h2>
+        <p class="govuk-body">Details of all our research while researching and building the Modernising Lasting Power of Attorney service.</p>
+        <p class="govuk-body govuk-!-margin-bottom-0"><a href="/research-development" class="govuk-link govuk-!-font-weight-bold">Browse Research &amp; Development</a></p>
+    </div>
+    <div class="govuk-grid-column-one-half govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-l">Architectural Decision Records</h2>
+        <p class="govuk-body">A record of all Architectural Decision Records made for building the service to guide development within teams.</p>
+        <p class="govuk-body govuk-!-margin-bottom-0"><a href="/adr" class="govuk-link govuk-!-font-weight-bold">Browse Architectural Decision Records</a></p>
+    </div>
+</div>
 
     </div>
 </div>

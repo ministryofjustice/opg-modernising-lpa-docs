@@ -1,4 +1,10 @@
 @import "../../node_modules/govuk-frontend/govuk/all.scss";
+@import "./masthead";
+@import "./navigation";
+
+.app-width-container {
+  @include govuk-width-container(1100px);
+}
 
 img {
   display: inline-block;
@@ -19,4 +25,13 @@ img {
       text-decoration: underline;
     }
   }
+}
+
+.app-whats-new {
+  border-bottom: 1px solid $govuk-border-colour;
+  background-color: govuk-colour("light-grey");
+}
+
+.govuk-header {
+  border-bottom: 10px solid govuk-colour("blue");
 }

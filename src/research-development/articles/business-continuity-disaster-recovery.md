@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Business Continuity and Disaster Recovery"
-date: 2022-04-11
+date: 2022-04-20
 tags: 
   - research_development
   - data_privacy

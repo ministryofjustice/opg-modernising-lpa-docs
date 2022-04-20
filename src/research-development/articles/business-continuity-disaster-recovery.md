@@ -15,6 +15,10 @@ contributors: ["John Nolan", "Matt Machell"]
 
 ## Business Continuity
 
+OPG has previously worked on defining our [Business Continuity and your Service](https://docs.opg.service.justice.gov.uk/documentation/guides/business_continuity.html) and has published it to our OPG Technical Guidance documentation site.
+
+This document takes this existing research and applies it to the Modernising service.
+
 Business continuity planning makes our service prepared for worst case scenarios. That might be accidental data loss, intentional data destruction or system failure from suppliers like cloud providers.
 
 Essentially asking the question: what happens when things go catastrophically wrong? This relates to service standard point 14, [Operate a Reliable Service](https://www.gov.uk/service-manual/service-standard/point-14-operate-a-reliable-service)
@@ -113,3 +117,4 @@ This should define the amount of acceptable data loss in time. For example, shou
 ## References
 
 * [Operate a Reliable Service](https://www.gov.uk/service-manual/service-standard/point-14-operate-a-reliable-service)
+* [Business Continuity and your Service](https://docs.opg.service.justice.gov.uk/documentation/guides/business_continuity.html)

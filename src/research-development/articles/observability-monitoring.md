@@ -48,7 +48,22 @@ OPG
 
 ## Performance Benchmarks
 
-OPG
+When defining our infrastructure and setting up [tracing](#tracing),  [logging alerts](logging) and our pipelines, we should add in benchmarks that can monitor the health of new code and existing code.
+
+This will allow us to maintain a set standard we expect from our code and help identify technical debt in the future.
+
+Examples of what benchmarks we could set are as follows.
+
+* All APIs should respond within 300ms
+* All JS should be fully loaded on a low end mobile device over 3G in 2 seconds
+* The size of our CSS should not exceed 10kb using Brotli compression
+* Tests should run within 1 minute
+* Test coverage should be 80% or higher
+* Build times should not exceed 5 minutes
+* Accessibility checks should always meet WCAG 2.1 AAA
+* There should be a maximum of three 500 errors in one minute
+
+Using these benchmarks, we set ourselves up to succeed and encourage good coding practices and maintainability in our code.
 
 ## Tracing
 
@@ -58,7 +73,7 @@ Being able to trace, analyse and debug our cloud infrastructure will be key to r
 
 Synthetic vs Real User Metrics
 
-## Service KPIs
+## Service KPIs and Metrics
 
 Performance Platform
 

@@ -28,7 +28,7 @@ This includes the visibility of
 
 There are many ways we can monitor our service to ensure we know what is happening. This document outlines a few we will be implementing from the start in the Modernising Service.
 
-## Logging
+## Logging
 
 Logging is key to identifying how your application is running. Reporting application, network, firewall, KPI and service metric events to a single place helps raise the visibility of expected and unexpected behaviour.
 
@@ -36,7 +36,7 @@ There are three key elements to storing logs that we will ensure we meet.
 
 * All data is anonymised
 * Stored in one place
-* In a common, parsable, format
+* In a structure and parsable format
 
 As we build up logs in the service, we can build in alerting for abnormal behaviour in our service to alert us as issues arrive. This allows us to be proactive and know about issues at the same time a user is experiencing them.
 
@@ -44,11 +44,21 @@ We already use logging within our existing services to a high standard, we will 
 
 ## Monitoring
 
-OPG
+Being able to collect the data in a structured format allows us to use monitoring tools to consume that data visualise it over time.
+
+As well as visualising the data, modern tooling also allows you to setup
+
+* Alerting around key log data
+* Dashboards to visualise common data
+* Overlay multiple log groups to find patterns of behaviour
+* Identify changes in performance over periods of time
+* Visualise your KPIs and other metrics
+
+A good monitoring setup should better enable our teams to include observability in their decision making and make the data consumable to all professions by making it the universal language of the services health.
 
 ## Performance Benchmarks
 
-When defining our infrastructure and setting up [tracing](#tracing),  [logging alerts](logging) and our pipelines, we should add in benchmarks that can monitor the health of new code and existing code.
+When defining our infrastructure and setting up [tracing](#tracing),  [logging alerts](#logging) and our pipelines, we should add in benchmarks that can monitor the health of new code and existing code.
 
 This will allow us to maintain a set standard we expect from our code and help identify technical debt in the future.
 

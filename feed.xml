@@ -4,7 +4,7 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-04-19T13:48:10Z</updated>
+  <updated>2022-04-20T07:24:05Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
@@ -603,6 +603,95 @@ Developers are aware of ADRs, but their experience of doing them brings this sco
 &lt;p class=&quot;govuk-body&quot;&gt;See Michael Nygard&#39;s article, linked above.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;ADRs will be public for visibility and collaboration.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Pull requests and Github issues can be used to drive conversations.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Business Continuity and Disaster Recovery</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/business-continuity-disaster-recovery/"/>
+    <updated>2022-04-20T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/business-continuity-disaster-recovery/</id>
+    <content type="html">&lt;h2 id=&quot;business-continuity&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Business Continuity&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;OPG has previously worked on defining our &lt;a href=&quot;https://docs.opg.service.justice.gov.uk/documentation/guides/business_continuity.html&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Business Continuity and your Service (opens in new tab)&lt;/a&gt; and has published it to our OPG Technical Guidance documentation site.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This document takes this existing research and applies it to the Modernising service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Business continuity planning makes our service prepared for worst case scenarios. That might be accidental data loss, intentional data destruction or system failure from suppliers like cloud providers.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Essentially asking the question: what happens when things go catastrophically wrong? This relates to service standard point 14, &lt;a href=&quot;https://www.gov.uk/service-manual/service-standard/point-14-operate-a-reliable-service&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Operate a Reliable Service (opens in new tab)&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Our business continuity strategy should be:&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Appropriate and proportionate to the needs of the service and its users&lt;/li&gt;
+&lt;li&gt;Supportable by the delivery team&lt;/li&gt;
+&lt;li&gt;Agreed with the business&lt;/li&gt;
+&lt;li&gt;Documented as part of your service’s GitHub repo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Conversations around business continuity should include the Business, Product, Delivery, Developers, WebOps and Technical Architecture.&lt;/p&gt;
+&lt;h3 id=&quot;what-to-look-at-during-the-discovery-%2F-alpha-stage&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;What to look at during the Discovery / Alpha Stage&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;During alpha and discovery phases we should be experimenting and testing our hypothesis. Business continuity work has been light touch at this stage as we need to identify and understand what is proportional and appropriate for our services business continuity. We also need to understand what the service is.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Questions we need to ask include:&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;What is the impact of this proposed service failing on users and the business?&lt;/li&gt;
+&lt;li&gt;What risks exist that you need to find mitigations for?&lt;/li&gt;
+&lt;li&gt;Which data will be key to your service functioning?&lt;/li&gt;
+&lt;li&gt;Which data only exists in your service?&lt;/li&gt;
+&lt;li&gt;What are the business and user expectations around response and recovery?&lt;/li&gt;
+&lt;li&gt;What non-digital fallbacks are in place already?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Starting to collect answers to these will help identify areas to build on as we move into Beta.&lt;/p&gt;
+&lt;h3 id=&quot;what-to-look-at-during-beta-stage&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;What to look at during Beta Stage&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;During private and public beta stages we should focus on how our business continuity needs will impact the MVP build and how we can avoid issues in the future.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;In this phase, decisions should be recorded and agreed upon from all parties.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;During beta we should:&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Identify how our service is likely to fail and which components are the greatest risk&lt;/li&gt;
+&lt;li&gt;Identify how any disaster recovery will impact how we build our infrastructure&lt;/li&gt;
+&lt;li&gt;Define recovery point objective and recovery time objective for our service&lt;/li&gt;
+&lt;li&gt;Identify who owns any business continuity processes inside and outside the delivery team&lt;/li&gt;
+&lt;li&gt;Document any disaster recovery in &lt;code&gt;/docs/DISASTER_RECOVERY.md&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Ensure we have a backup and restore process for key data assets&lt;/li&gt;
+&lt;li&gt;Build familiarity with the incident management tools&lt;/li&gt;
+&lt;li&gt;Identify if our service is dependent on other systems and how much it can operate without them&lt;/li&gt;
+&lt;li&gt;Identify defensive coding and architectural practices to avoid or reduce dependencies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;disaster-recovery&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Disaster Recovery&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Once we know the decisions made from above, we can decide on what is the Disaster Recovery option to take.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The options are listed below and should be considered at the start of the Beta phase.&lt;/p&gt;
+&lt;h3 id=&quot;overview-of-disaster-recovery-options&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Overview of Disaster Recovery options&lt;/h3&gt;
+&lt;h4 id=&quot;option-1%3A-backup-and-restore&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Option 1: Backup and restore&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Take automated backups/snapshots of data. Restoration time could be hours as we’d need to replicate the backups/snapshots into another account or region within AWS.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Data loss&lt;/strong&gt;: Up to 24 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time to Recover&lt;/strong&gt;: 6+ hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost&lt;/strong&gt;: Low (Only inactive storage costs)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;option-2%3A-pilot-light&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Option 2: Pilot Light&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We keep core services running in another region. For example, we could move into a global Aurora cluster which would replicate the data into a cluster located in another region. Typically there is a 1 second lag between replication.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Data loss&lt;/strong&gt;: Low (Minutes)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time to Recover&lt;/strong&gt;: 2-3 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost&lt;/strong&gt;: Medium (Core Data Services would be scaled down but active in a second region)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;option-3%3A-hot-standby&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Option 3: Hot standby&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Full replica of our service running in another region, in the event of a disaster we would be able to point users at this in seconds.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Data loss&lt;/strong&gt;: Low (Minutes/Seconds)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time to Recover&lt;/strong&gt;: Minutes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost&lt;/strong&gt;: High (Full-stack active in a secondary region)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;building-the-dr-plan&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Building the DR plan&lt;/h3&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;To have an effective disaster recovery plan in place, we should define an&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;RTO (&lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/business-continuity-disaster-recovery/#recovery-time-objective&quot; class=&quot;govuk-link&quot;&gt;Recovery Time Objective&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;RPO (&lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/business-continuity-disaster-recovery/#recovery-point-objective&quot; class=&quot;govuk-link&quot;&gt;Recovery Point Objective&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As a team, this will enable us to create a disaster recovery plan that is effective for Modernising, and it’s something we can simulate periodically to ensure it’s still effective.&lt;/p&gt;
+&lt;h4 id=&quot;recovery-time-objective&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Recovery Time Objective&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;The allowed time it would take to restore the services after a disaster occurs. For example, if the service was to fail at 1030 and our RTO was 1 hour, everything should be back up and running at 1130.&lt;/p&gt;
+&lt;h4 id=&quot;recovery-point-objective&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-s&quot;&gt;Recovery Point Objective&lt;/h4&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This should define the amount of acceptable data loss in time. For example, should the service go down at 1030, and we have an RPO of 2 hours, we should be able to recover all the data up to 0830.&lt;/p&gt;
+&lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/service-standard/point-14-operate-a-reliable-service&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Operate a Reliable Service (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.opg.service.justice.gov.uk/documentation/guides/business_continuity.html&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Business Continuity and your Service (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
   

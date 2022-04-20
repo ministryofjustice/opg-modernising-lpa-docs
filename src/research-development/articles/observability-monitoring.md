@@ -84,7 +84,22 @@ Being able to trace, analyse and debug our cloud infrastructure will be key to r
 
 ## Real User Metrics
 
-Synthetic vs Real User Metrics
+Obtaining data from real users provides an additional set of data compared to synthetic or back end data that we cover in this article.
+
+Being able to capture real users experience while using the service allows us to refine our front end code to better facilitate our users.
+
+Data we can capture anonymously from the browser and act upon include but not limited to
+
+* [WebVitals](https://web.dev/vitals/)
+* Device type (Mobile, Tablet, Desktop)
+* Connection type (3G, 4G, 5G, landline)
+* Screen size/orientation
+* API Response times
+* Navigation Timing
+* Resource Timing (static assets)
+* Bounce pages
+
+When we set up [server side tracing](#tracing) we will also be able to link this data from our front end, through to our back end stack giving us an overview of the entire lifecycle of a page/click.
 
 ## Service KPIs and Metrics
 

@@ -10,7 +10,7 @@ tags:
   - deployment
   - stability
 areas_of_coverage: ["Digital Service"]
-contributors: ["John Nolan"]
+contributors: ["John Nolan", "Matt Machell"]
 ---
 
 ## Business Continuity

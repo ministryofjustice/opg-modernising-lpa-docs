@@ -67,28 +67,31 @@ Once we know the decisions made from above, we can decide on what is the Disaste
 
 The options are listed below and should be considered at the start of the Beta phase.
 
-### High-level options
+### Overview of Disaster Recovery options
 
 #### Option 1: Backup and restore
 
-* Take automated backups/snapshots of data. Restoration time could be hours as we’d need to replicate the backups/snapshots into another account or region within AWS.
-* Data loss: Up to 24 hours
-* Time to Recover: 6+ hours
-* Cost: Low (Only inactive storage costs)
+Take automated backups/snapshots of data. Restoration time could be hours as we’d need to replicate the backups/snapshots into another account or region within AWS.
+
+* **Data loss**: Up to 24 hours
+* **Time to Recover**: 6+ hours
+* **Cost**: Low (Only inactive storage costs)
 
 #### Option 2: Pilot Light
 
-* We keep core services running in another region. For example, we could move into a global Aurora cluster which would replicate the data into a cluster located in another region. Typically there is a 1 second lag between replication.
-* Data loss: Low (Minutes)
-* Time to Recover: 2-3 hours
-* Cost: Medium (Core Data Services would be scaled down but active in a second region)
+We keep core services running in another region. For example, we could move into a global Aurora cluster which would replicate the data into a cluster located in another region. Typically there is a 1 second lag between replication.
+
+* **Data loss**: Low (Minutes)
+* **Time to Recover**: 2-3 hours
+* **Cost**: Medium (Core Data Services would be scaled down but active in a second region)
 
 #### Option 3: Hot standby
 
-* Full replica of our service running in another region, in the event of a disaster we would be able to point users at this in seconds.
-* Data loss: Low (Minutes/Seconds)
-* Time to Recover: Minutes
-* Cost: High (Full-stack active in a secondary region)
+Full replica of our service running in another region, in the event of a disaster we would be able to point users at this in seconds.
+
+* **Data loss**: Low (Minutes/Seconds)
+* **Time to Recover**: Minutes
+* **Cost**: High (Full-stack active in a secondary region)
 
 ### Building the DR plan
 

@@ -92,7 +92,7 @@ The options are listed below and should be considered at the start of the Beta p
 
 ### Building the DR plan
 
-To have an effective disaster recovery plan in place, we should define an 
+To have an effective disaster recovery plan in place, we should define an
 
 * RTO ([Recovery Time Objective](#recovery-time-objective))
 * RPO ([Recovery Point Objective](#recovery-point-objective))

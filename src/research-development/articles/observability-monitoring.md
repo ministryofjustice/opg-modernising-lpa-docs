@@ -4,11 +4,14 @@ title: "Observability and Monitoring"
 date: 2022-04-20
 tags: 
   - research_development
-  - data_privacy
   - security_threats
   - techniques
+  - tools
   - deployment
+  - open_standards
+  - observability
   - stability
+  - testing
 areas_of_coverage: ["Digital Service"]
 contributors: ["John Nolan"]
 ---
@@ -85,8 +88,20 @@ Synthetic vs Real User Metrics
 
 ## Service KPIs and Metrics
 
-Performance Platform
+On our Use a LPA service, we have begun adding manual and anonymised logging events to our application code when key user journey events occur. An example of this is firing an event when a user clicks the `Download PDF` button on our View part of the service.
+
+This has allowed us to
+
+* Identify points in time where a release could have affected negatively or positively a user journey
+* When releasing a new feature, are we meeting the goal of that feature (e.g. does this new feature increase the success rate of users logging in)
+* Identify drop out points in the service and research better ways to help the user
+
+We have also used this same process to automate the collection of our services performance data. [This is required of all services to provide for the public to ensure we are meeting the aims it was built for](https://www.gov.uk/service-manual/service-assessments/pre-july-2019-digital-service-standard#collect-performance-data-1).
+
+This means we no longer need multiple professions to analyse raw data each month and report on it.
+
+Integrating KPIS and performance data into the code we write allows us to make data driven decisions and reduce manual work for more accurate reporting and decision making.
 
 ## References
 
-* [Operate a Reliable Service](https://www.gov.uk/service-manual/service-standard/point-14-operate-a-reliable-service)
+* [Service Standard: Collect performance data](https://www.gov.uk/service-manual/service-assessments/pre-july-2019-digital-service-standard#collect-performance-data-1)

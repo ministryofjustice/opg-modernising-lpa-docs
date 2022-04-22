@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Observability and Monitoring"
-date: 2022-04-20
+date: 2022-04-22
 tags: 
   - research_development
   - security_threats
@@ -18,7 +18,7 @@ contributors: ["John Nolan"]
 
 ## Introduction
 
-Observability is the practice of ensuring we know what is going on in our service at any time, in a consumable way.
+Observability is the practice of ensuring we know what is going on in our service at any time, in a accessible and consumable way.
 
 This includes the visibility of
 
@@ -33,21 +33,21 @@ There are many ways we can monitor our service to ensure we know what is happeni
 
 ## Logging
 
-Logging is key to identifying how your application is running. Reporting application, network, firewall, KPI and service metric events to a single place helps raise the visibility of expected and unexpected behaviour.
+Logging is key to identifying how your application is running. Reporting application, network, firewall, KPI and service metric events helps raise the visibility of expected and unexpected behaviour.
 
 There are three key elements to storing logs that we will ensure we meet.
 
 * All data is anonymised
-* Stored in one place
-* In a structure and parsable format
+* Stored in as fewer places as possible
+* In a structured and parsable format
 
 As we build up logs in the service, we can build in alerting for abnormal behaviour in our service to alert us as issues arrive. This allows us to be proactive and know about issues at the same time a user is experiencing them.
 
-We already use logging within our existing services to a high standard, we will build upon this knowledge in the Modernising service.
+We already use logging within our existing services to a good standard, we will build upon this knowledge in the Modernising service.
 
 ## Monitoring
 
-Being able to collect the data in a structured format allows us to use monitoring tools to consume that data visualise it over time.
+Being able to collect the data in a structured format allows us to use monitoring tools to consume that data and visualise it over time across multiple services.
 
 As well as visualising the data, modern tooling also allows you to setup
 
@@ -91,6 +91,7 @@ Being able to capture real users experience while using the service allows us to
 Data we can capture anonymously from the browser and act upon include but not limited to
 
 * [WebVitals](https://web.dev/vitals/)
+* Javascript errors and bottlenecks
 * Device type (Mobile, Tablet, Desktop)
 * Connection type (3G, 4G, 5G, landline)
 * Screen size/orientation
@@ -115,7 +116,7 @@ We have also used this same process to automate the collection of our services p
 
 This means we no longer need multiple professions to analyse raw data each month and report on it.
 
-Integrating KPIS and performance data into the code we write allows us to make data driven decisions and reduce manual work for more accurate reporting and decision making.
+Integrating KPIs and performance data into the code we write allows us to make data driven decisions and reduce manual work for more accurate reporting and decision making.
 
 ## References
 

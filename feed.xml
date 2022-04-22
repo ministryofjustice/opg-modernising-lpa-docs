@@ -4,7 +4,7 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-04-20T07:24:05Z</updated>
+  <updated>2022-04-22T08:43:17Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
@@ -603,6 +603,95 @@ Developers are aware of ADRs, but their experience of doing them brings this sco
 &lt;p class=&quot;govuk-body&quot;&gt;See Michael Nygard&#39;s article, linked above.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;ADRs will be public for visibility and collaboration.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Pull requests and Github issues can be used to drive conversations.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Observability and Monitoring</title>
+    <link href="https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/observability-monitoring/"/>
+    <updated>2022-04-22T00:00:00Z</updated>
+    <id>https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/observability-monitoring/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Observability is the practice of ensuring we know what is going on in our service at any time, in a accessible and consumable way.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This includes the visibility of&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Is the service or any part of it down&lt;/li&gt;
+&lt;li&gt;Is there a slow down in the service with one of its components&lt;/li&gt;
+&lt;li&gt;Has their been an increase in costs to run the service&lt;/li&gt;
+&lt;li&gt;Has the User Experience degraded&lt;/li&gt;
+&lt;li&gt;Are our service KPIs still being met&lt;/li&gt;
+&lt;li&gt;And lots more&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There are many ways we can monitor our service to ensure we know what is happening. This document outlines a few we will be implementing from the start in the Modernising Service.&lt;/p&gt;
+&lt;h2 id=&quot;logging&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Logging&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Logging is key to identifying how your application is running. Reporting application, network, firewall, KPI and service metric events helps raise the visibility of expected and unexpected behaviour.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;There are three key elements to storing logs that we will ensure we meet.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;All data is anonymised&lt;/li&gt;
+&lt;li&gt;Stored in as fewer places as possible&lt;/li&gt;
+&lt;li&gt;In a structured and parsable format&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As we build up logs in the service, we can build in alerting for abnormal behaviour in our service to alert us as issues arrive. This allows us to be proactive and know about issues at the same time a user is experiencing them.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We already use logging within our existing services to a good standard, we will build upon this knowledge in the Modernising service.&lt;/p&gt;
+&lt;h2 id=&quot;monitoring&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Monitoring&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Being able to collect the data in a structured format allows us to use monitoring tools to consume that data and visualise it over time across multiple services.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;As well as visualising the data, modern tooling also allows you to setup&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Alerting around key log data&lt;/li&gt;
+&lt;li&gt;Dashboards to visualise common data&lt;/li&gt;
+&lt;li&gt;Overlay multiple log groups to find patterns of behaviour&lt;/li&gt;
+&lt;li&gt;Identify changes in performance over periods of time&lt;/li&gt;
+&lt;li&gt;Visualise your KPIs and other metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;A good monitoring setup should better enable our teams to include observability in their decision making and make the data consumable to all professions by making it the universal language of the services health.&lt;/p&gt;
+&lt;h2 id=&quot;performance-benchmarks&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Performance Benchmarks&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;When defining our infrastructure and setting up &lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/observability-monitoring/#tracing&quot; class=&quot;govuk-link&quot;&gt;tracing&lt;/a&gt;,  &lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/observability-monitoring/#logging&quot; class=&quot;govuk-link&quot;&gt;logging alerts&lt;/a&gt; and our pipelines, we should add in benchmarks that can monitor the health of new code and existing code.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This will allow us to maintain a set standard we expect from our code and help identify technical debt in the future.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Examples of what benchmarks we could set are as follows.&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;All APIs should respond within 300ms&lt;/li&gt;
+&lt;li&gt;All JS should be fully loaded on a low end mobile device over 3G in 2 seconds&lt;/li&gt;
+&lt;li&gt;The size of our CSS should not exceed 10kb using Brotli compression&lt;/li&gt;
+&lt;li&gt;Tests should run within 1 minute&lt;/li&gt;
+&lt;li&gt;Test coverage should be 80% or higher&lt;/li&gt;
+&lt;li&gt;Build times should not exceed 5 minutes&lt;/li&gt;
+&lt;li&gt;Accessibility checks should always meet WCAG 2.1 AAA&lt;/li&gt;
+&lt;li&gt;There should be a maximum of three 500 errors in one minute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Using these benchmarks, we set ourselves up to succeed and encourage good coding practices and maintainability in our code.&lt;/p&gt;
+&lt;h2 id=&quot;tracing&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Tracing&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Being able to trace, analyse and debug our cloud infrastructure will be key to running a healthy service. We cover this aspect of Observability in our &lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/adr/articles/0012-aws-xray&quot; class=&quot;govuk-link&quot;&gt;ADR AWS X-Ray&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;real-user-metrics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Real User Metrics&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Obtaining data from real users provides an additional set of data compared to synthetic or back end data that we cover in this article.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Being able to capture real users experience while using the service allows us to refine our front end code to better facilitate our users.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Data we can capture anonymously from the browser and act upon include but not limited to&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://web.dev/vitals/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;WebVitals (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Javascript errors and bottlenecks&lt;/li&gt;
+&lt;li&gt;Device type (Mobile, Tablet, Desktop)&lt;/li&gt;
+&lt;li&gt;Connection type (3G, 4G, 5G, landline)&lt;/li&gt;
+&lt;li&gt;Screen size/orientation&lt;/li&gt;
+&lt;li&gt;API Response times&lt;/li&gt;
+&lt;li&gt;Navigation Timing&lt;/li&gt;
+&lt;li&gt;Resource Timing (static assets)&lt;/li&gt;
+&lt;li&gt;Bounce pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;When we set up &lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/research-development/articles/observability-monitoring/#tracing&quot; class=&quot;govuk-link&quot;&gt;server side tracing&lt;/a&gt; we will also be able to link this data from our front end, through to our back end stack giving us an overview of the entire lifecycle of a page/click.&lt;/p&gt;
+&lt;h2 id=&quot;service-kpis-and-metrics&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Service KPIs and Metrics&lt;/h2&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;On our Use a LPA service, we have begun adding manual and anonymised logging events to our application code when key user journey events occur. An example of this is firing an event when a user clicks the &lt;code&gt;Download PDF&lt;/code&gt; button on our View part of the service.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This has allowed us to&lt;/p&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;Identify points in time where a release could have affected negatively or positively a user journey&lt;/li&gt;
+&lt;li&gt;When releasing a new feature, are we meeting the goal of that feature (e.g. does this new feature increase the success rate of users logging in)&lt;/li&gt;
+&lt;li&gt;Identify drop out points in the service and research better ways to help the user&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We have also used this same process to automate the collection of our services performance data. &lt;a href=&quot;https://www.gov.uk/service-manual/service-assessments/pre-july-2019-digital-service-standard#collect-performance-data-1&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;This is required of all services to provide for the public to ensure we are meeting the aims it was built for (opens in new tab)&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;This means we no longer need multiple professions to analyse raw data each month and report on it.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Integrating KPIs and performance data into the code we write allows us to make data driven decisions and reduce manual work for more accurate reporting and decision making.&lt;/p&gt;
+&lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
+&lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/service-manual/service-assessments/pre-july-2019-digital-service-standard#collect-performance-data-1&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Service Standard: Collect performance data (opens in new tab)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
   

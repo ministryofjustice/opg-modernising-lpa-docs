@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0c0c">
+    
+    <link rel="preload" href="/assets/fonts/light-94a07e06a1-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/bold-b542beb274-v2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/styles.css" rel="stylesheet" as="style">
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-167x167.png" sizes="167x167">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/assets/images/moj-apple-touch-icon.png">
+
+    <meta name="description" content="Modernising Lasting Power of Attorney Documentation site for transparency and collaboration">
+    <meta property="og:image" content="/assets/images/moj-opengraph-image.png">
+
+    <link href="/assets/styles.css" rel="stylesheet">
+    <script src="/assets/index.js" defer></script>
+    <title>Observability and Monitoring - Modernising Lasting Power of Attorney Documentation</title>
+  </head>
+  <body class="govuk-template__body">
+    <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    
+      <div>
+        
+
+        
+
+        
+
+        
+
+        <div class="govuk-cookie-banner js-cookie-banner-confirm" data-nosnippet role="region" aria-label="Cookies on Modernising Lasting Power of Attorney Documentation" hidden>
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve accepted additional cookies. You can <a class="govuk-link" href="/view-cookies">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button value="hide" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+              Hide this message
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+        <div class="govuk-cookie-banner js-cookie-banner-reject" data-nosnippet role="region" aria-label="Cookies on Modernising Lasting Power of Attorney Documentation" hidden>
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">You’ve rejected analytics cookies. You can <a class="govuk-link" href="/view-cookies">change your cookie settings</a> at any time.</p>
+        </div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button value="hide" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+              Hide this message
+            </button>
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+        <div class="govuk-cookie-banner js-cookie-banner" data-nosnippet role="region" aria-label="Cookies on Modernising Lasting Power of Attorney Documentation">
+    
+    
+
+    <div class="govuk-cookie-banner__message govuk-width-container"
+    >
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on Modernising Lasting Power of Attorney Documentation</h2>
+        
+
+        <div class="govuk-cookie-banner__content">
+          <p class="govuk-body">We’d like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+        </div>
+      </div>
+    </div>
+
+      
+      <div class="govuk-button-group">
+        
+          
+            <button value="accept" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+              Accept analytics cookies
+            </button>
+          
+        
+          
+            <button value="reject" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+              Reject analytics cookies
+            </button>
+          
+        
+          
+            
+              
+              
+              <a class="govuk-link" href="/view-cookies">View cookies</a>
+            
+          
+        
+      </div>
+      
+    </div>
+  
+</div>
+
+
+        
+    <header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+        
+        <div class="govuk-header__content">
+        
+        <a href="/" class="govuk-header__link govuk-header__link--service-name">
+        Modernising Lasting Power of Attorney Documentation
+        </a>
+        
+        
+        </div>
+        
+    </div>
+    </header>
+
+
+        <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+  <div class="govuk-width-container">
+    <ul class="app-navigation__list">
+        <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/research-development">
+            Research & Development
+            </a>
+        </li>
+        
+        <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/adr">
+            Architectural Decision Records
+            </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+
+        
+
+        <div id="content" class="govuk-width-container">
+
+          
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <a href="/research-development/" class="govuk-back-link">Back</a>
+
+              </div>
+            </div>
+          
+
+          <main class="govuk-main-wrapper" role="main">
+
+            <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+<h1 class="govuk-heading-xl">Observability and Monitoring</h1>
+
+
+
+
+
+
+  
+
+  
+
+  
+<dl class="govuk-summary-list">
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+<time datetime="2022-04-22">22 April 2022</time>
+
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Authors
+        </dt>
+        <dd class="govuk-summary-list__value">
+          John Nolan
+        </dd>
+        
+      </div>
+    
+  
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Areas
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list govuk-list--inline">
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/deployment/" title="View all documents labelled deployment">
+                                <strong class="govuk-tag govuk-tag--blue">
+          deployment
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/observability/" title="View all documents labelled observability">
+                                <strong class="govuk-tag govuk-tag--blue">
+          observability
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/open_standards/" title="View all documents labelled open standards">
+                                <strong class="govuk-tag govuk-tag--blue">
+          open standards
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/security_threats/" title="View all documents labelled security threats">
+                                <strong class="govuk-tag govuk-tag--blue">
+          security threats
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/stability/" title="View all documents labelled stability">
+                                <strong class="govuk-tag govuk-tag--blue">
+          stability
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/techniques/" title="View all documents labelled techniques">
+                                <strong class="govuk-tag govuk-tag--blue">
+          techniques
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/testing/" title="View all documents labelled testing">
+                                <strong class="govuk-tag govuk-tag--blue">
+          testing
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+                
+                    
+                        <li>
+                            <a class="govuk-link" href="/tags/tools/" title="View all documents labelled tools">
+                                <strong class="govuk-tag govuk-tag--blue">
+          tools
+        </strong>
+        
+                            </a>
+                        </li>
+                    
+                
+            
+        </ul>
+        </dd>
+        
+      </div>
+    
+  
+</dl>
+
+
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Table of Contents
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <nav aria-label="Contents" role="navigation">
+        <div class="govuk-list govuk-list--bullet" >
+        <ul><li><a href="#introduction" class="govuk-link">Introduction</a></li><li><a href="#logging" class="govuk-link">Logging</a></li><li><a href="#monitoring" class="govuk-link">Monitoring</a></li><li><a href="#performance-benchmarks" class="govuk-link">Performance Benchmarks</a></li><li><a href="#tracing" class="govuk-link">Tracing</a></li><li><a href="#real-user-metrics" class="govuk-link">Real User Metrics</a></li><li><a href="#service-kpis-and-metrics" class="govuk-link">Service KPIs and Metrics</a></li><li><a href="#references" class="govuk-link">References</a></li></ul>
+      </div>
+    </nav>
+  </div>
+</details>
+
+<h2 id="introduction" tabindex="-1" class="govuk-heading-l">Introduction</h2>
+<p class="govuk-body">Observability is the practice of ensuring we know what is going on in our service at any time, in a accessible and consumable way.</p>
+<p class="govuk-body">This includes the visibility of</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Is the service or any part of it down</li>
+<li>Is there a slow down in the service with one of its components</li>
+<li>Has their been an increase in costs to run the service</li>
+<li>Has the User Experience degraded</li>
+<li>Are our service KPIs still being met</li>
+<li>And lots more</li>
+</ul>
+<p class="govuk-body">There are many ways we can monitor our service to ensure we know what is happening. This document outlines a few we will be implementing from the start in the Modernising Service.</p>
+<h2 id="logging" tabindex="-1" class="govuk-heading-l">Logging</h2>
+<p class="govuk-body">Logging is key to identifying how your application is running. Reporting application, network, firewall, KPI and service metric events helps raise the visibility of expected and unexpected behaviour.</p>
+<p class="govuk-body">There are three key elements to storing logs that we will ensure we meet.</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>All data is anonymised</li>
+<li>Stored in as fewer places as possible</li>
+<li>In a structured and parsable format</li>
+</ul>
+<p class="govuk-body">As we build up logs in the service, we can build in alerting for abnormal behaviour in our service to alert us as issues arrive. This allows us to be proactive and know about issues at the same time a user is experiencing them.</p>
+<p class="govuk-body">We already use logging within our existing services to a good standard, we will build upon this knowledge in the Modernising service.</p>
+<h2 id="monitoring" tabindex="-1" class="govuk-heading-l">Monitoring</h2>
+<p class="govuk-body">Being able to collect the data in a structured format allows us to use monitoring tools to consume that data and visualise it over time across multiple services.</p>
+<p class="govuk-body">As well as visualising the data, modern tooling also allows you to setup</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Alerting around key log data</li>
+<li>Dashboards to visualise common data</li>
+<li>Overlay multiple log groups to find patterns of behaviour</li>
+<li>Identify changes in performance over periods of time</li>
+<li>Visualise your KPIs and other metrics</li>
+</ul>
+<p class="govuk-body">A good monitoring setup should better enable our teams to include observability in their decision making and make the data consumable to all professions by making it the universal language of the services health.</p>
+<h2 id="performance-benchmarks" tabindex="-1" class="govuk-heading-l">Performance Benchmarks</h2>
+<p class="govuk-body">When defining our infrastructure and setting up <a href="#tracing" class="govuk-link">tracing</a>,  <a href="#logging" class="govuk-link">logging alerts</a> and our pipelines, we should add in benchmarks that can monitor the health of new code and existing code.</p>
+<p class="govuk-body">This will allow us to maintain a set standard we expect from our code and help identify technical debt in the future.</p>
+<p class="govuk-body">Examples of what benchmarks we could set are as follows.</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>All APIs should respond within 300ms</li>
+<li>All JS should be fully loaded on a low end mobile device over 3G in 2 seconds</li>
+<li>The size of our CSS should not exceed 10kb using Brotli compression</li>
+<li>Tests should run within 1 minute</li>
+<li>Test coverage should be 80% or higher</li>
+<li>Build times should not exceed 5 minutes</li>
+<li>Accessibility checks should always meet WCAG 2.1 AAA</li>
+<li>There should be a maximum of three 500 errors in one minute</li>
+</ul>
+<p class="govuk-body">Using these benchmarks, we set ourselves up to succeed and encourage good coding practices and maintainability in our code.</p>
+<h2 id="tracing" tabindex="-1" class="govuk-heading-l">Tracing</h2>
+<p class="govuk-body">Being able to trace, analyse and debug our cloud infrastructure will be key to running a healthy service. We cover this aspect of Observability in our <a href="/adr/articles/0012-aws-xray" class="govuk-link">ADR AWS X-Ray</a>.</p>
+<h2 id="real-user-metrics" tabindex="-1" class="govuk-heading-l">Real User Metrics</h2>
+<p class="govuk-body">Obtaining data from real users provides an additional set of data compared to synthetic or back end data that we cover in this article.</p>
+<p class="govuk-body">Being able to capture real users experience while using the service allows us to refine our front end code to better facilitate our users.</p>
+<p class="govuk-body">Data we can capture anonymously from the browser and act upon include but not limited to</p>
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://web.dev/vitals/" class="govuk-link" target="_blank" rel="noreferrer noopener">WebVitals (opens in new tab)</a></li>
+<li>Javascript errors and bottlenecks</li>
+<li>Device type (Mobile, Tablet, Desktop)</li>
+<li>Connection type (3G, 4G, 5G, landline)</li>
+<li>Screen size/orientation</li>
+<li>API Response times</li>
+<li>Navigation Timing</li>
+<li>Resource Timing (static assets)</li>
+<li>Bounce pages</li>
+</ul>
+<p class="govuk-body">When we set up <a href="#tracing" class="govuk-link">server side tracing</a> we will also be able to link this data from our front end, through to our back end stack giving us an overview of the entire lifecycle of a page/click.</p>
+<h2 id="service-kpis-and-metrics" tabindex="-1" class="govuk-heading-l">Service KPIs and Metrics</h2>
+<p class="govuk-body">On our Use a LPA service, we have begun adding manual and anonymised logging events to our application code when key user journey events occur. An example of this is firing an event when a user clicks the <code>Download PDF</code> button on our View part of the service.</p>
+<p class="govuk-body">This has allowed us to</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Identify points in time where a release could have affected negatively or positively a user journey</li>
+<li>When releasing a new feature, are we meeting the goal of that feature (e.g. does this new feature increase the success rate of users logging in)</li>
+<li>Identify drop out points in the service and research better ways to help the user</li>
+</ul>
+<p class="govuk-body">We have also used this same process to automate the collection of our services performance data. <a href="https://www.gov.uk/service-manual/service-assessments/pre-july-2019-digital-service-standard#collect-performance-data-1" class="govuk-link" target="_blank" rel="noreferrer noopener">This is required of all services to provide for the public to ensure we are meeting the aims it was built for (opens in new tab)</a>.</p>
+<p class="govuk-body">This means we no longer need multiple professions to analyse raw data each month and report on it.</p>
+<p class="govuk-body">Integrating KPIs and performance data into the code we write allows us to make data driven decisions and reduce manual work for more accurate reporting and decision making.</p>
+<h2 id="references" tabindex="-1" class="govuk-heading-l">References</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li><a href="https://www.gov.uk/service-manual/service-assessments/pre-july-2019-digital-service-standard#collect-performance-data-1" class="govuk-link" target="_blank" rel="noreferrer noopener">Service Standard: Collect performance data (opens in new tab)</a></li>
+</ul>
+<ul class="govuk-list">
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/observability-monitoring.md">View history of this page on GitHub</a>
+    </li>
+    <li>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/observability-monitoring.md">Feedback or raise issue with this page on GitHub</a>
+    </li>
+</ul>
+
+    </div>
+</div>
+
+            
+          </main>
+        </div>
+        
+
+        
+    <footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+        
+        <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+            
+            <h2 class="govuk-visually-hidden">Support links</h2>
+            
+                <ul class="govuk-footer__inline-list">
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/research-development/articles/tech-ethic-decisions/">
+                        Tech Ethics in our decision making reference
+                    </a>
+                    </li>
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="https://sites.google.com/digital.justice.gov.uk/opgmlpa">
+                        Modernising lasting powers of attorney blog
+                    </a>
+                    </li>
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/view-cookies/">
+                        Cookies
+                    </a>
+                    </li>
+                
+                    <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/feed.xml">
+                        Atom
+                    </a>
+                    </li>
+                
+                </ul>
+            
+            
+            
+            
+        </div>
+        </div>
+    </div>
+    </footer>
+
+
+
+      </div>
+    
+  </body>
+</html>

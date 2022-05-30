@@ -46,6 +46,10 @@
     "Gofundme",
     "WCAG",
     "KPIs",
-    "Brotli"
+    "Brotli",
+    "WebAuthn",
+    "CTAP",
+    "FIDO",
+    "RIDC"
   ]
 }

@@ -46,7 +46,7 @@ To ensure you are using the correct version of Node, run the following commands 
 
 `nvm use` - will read the `.nvmrc` file and set your node version to it.
 
-If you get an error saying it is not installed, run the following command to install ther required version and enable it.
+If you get an error saying it is not installed, run the following command to install the required version and enable it.
 
 `nvm install` - will read the `.nvmrc` file, download that version and set your node version to it.
 

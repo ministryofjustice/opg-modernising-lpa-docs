@@ -4,7 +4,7 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-05-31T11:26:32Z</updated>
+  <updated>2022-05-31T12:52:53Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
@@ -657,12 +657,12 @@ Developers are aware of ADRs, but their experience of doing them brings this sco
 &lt;p class=&quot;govuk-body&quot;&gt;We have already done research with the &lt;a href=&quot;https://www.ridc.org.uk/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Research Institute for Disabled Consumers(RIDC)&lt;span class=&quot;govuk-visually-hidden&quot;&gt;(opens in new tab)&lt;/span&gt;&lt;/a&gt; which showed a preference to using biometrics on a users device for those with disabilities.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Even so we should look to do more of our own testing across a full spectrum of users around the use of Biometrics to judge trust, user experience and accessibility before making a choice.&lt;/p&gt;
 &lt;h3 id=&quot;interrogate-your-data-decisions&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-m&quot;&gt;Interrogate your data decisions&lt;/h3&gt;
-&lt;p class=&quot;govuk-body&quot;&gt;Using webauthn we do not store peoples biometrics, we trust the device they are using to tell us they are. We only need to store the public key and a randomly generate credential ID and match against this device each time.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;In using webauthn we do not store peoples&#39; biometrics. We trust the device they are using to tell us who they are. We only need to store the public key and a randomly generate credential ID and match against this device each time.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;This ensures the power sits with the user while we have a high degree of trust.&lt;/p&gt;
 &lt;h2 id=&quot;summary&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Summary&lt;/h2&gt;
-&lt;p class=&quot;govuk-body&quot;&gt;Before deciding on whether we should use it, we need to do User Research and gather feedback from our users to aid in the decision.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Before deciding on whether we should use it, we need to do user research and gather feedback from our users to aid in the decision.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;As we don&#39;t require a high level of assurance, this should be a completely optional feature and not be a barrier in any way to the user.&lt;/p&gt;
-&lt;p class=&quot;govuk-body&quot;&gt;Next steps should be capturing user research findings and feed that decision into a &lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/adr&quot; class=&quot;govuk-link&quot;&gt;Architectural Decision Record&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;Our next steps should be capturing user research findings and feed that decision into a &lt;a href=&quot;https://docs.modernising.opg.service.justice.gov.uk/adr&quot; class=&quot;govuk-link&quot;&gt;Architectural Decision Record&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;references&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;References&lt;/h2&gt;
 &lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://fidoalliance.org/fido2/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;FIDO Alliance&lt;span class=&quot;govuk-visually-hidden&quot;&gt;(opens in new tab)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;

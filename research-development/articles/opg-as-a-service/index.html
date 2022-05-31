@@ -413,10 +413,10 @@
 
 <h2 id="introduction" tabindex="-1" class="govuk-heading-l">Introduction</h2>
 <p class="govuk-body">70% of LPAs made are done by solicitors, charities or other third parties on behalf of the Donor.</p>
-<p class="govuk-body">Citation: <a href="https://www.lastingpowerofattorney.service.gov.uk/stats" class="govuk-link" target="_blank" rel="noreferrer noopener">Lasting Power of Attorney Statistics (opens in new tab)</a></p>
+<p class="govuk-body">Citation: <a href="https://www.lastingpowerofattorney.service.gov.uk/stats" class="govuk-link" target="_blank" rel="noreferrer noopener">Lasting Power of Attorney Statistics<span class="govuk-visually-hidden">(opens in new tab)</span></a></p>
 <p class="govuk-body">If we are to encourage the uptake of our digital pathway, we need to explore a way of enabling this group of users to interact with their systems more efficiently.</p>
 <p class="govuk-body">Supplying our users with an option to integrate via an API will help move a significant amount of users over to our digital LPA service.</p>
-<p class="govuk-body">We know that most solicitors firms use a small range of software providers and work with a group called the <a href="https://www.lssa.co.uk" class="govuk-link" target="_blank" rel="noreferrer noopener">Legal Software Suppliers Association (opens in new tab)</a> (LSSA).</p>
+<p class="govuk-body">We know that most solicitors firms use a small range of software providers and work with a group called the <a href="https://www.lssa.co.uk" class="govuk-link" target="_blank" rel="noreferrer noopener">Legal Software Suppliers Association<span class="govuk-visually-hidden">(opens in new tab)</span></a> (LSSA).</p>
 <p class="govuk-body">The companies behind this software have a keen interest in integrating with our service through code so that they can streamline their processes and automate work.</p>
 <p class="govuk-body">They already integrate with other government services like the Land Registry.</p>
 <h3 id="legal-software-suppliers-association-(lssa)" tabindex="-1" class="govuk-heading-m">Legal Software Suppliers Association (LSSA)</h3>
@@ -439,7 +439,7 @@
 <li>Allows the consumer to integrate into their existing software platforms</li>
 <li>Communicate data flows and business logic for an LPA lifecycle</li>
 </ul>
-<p class="govuk-body">We should take the learnings from the existing <a href="https://www.notifications.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Notify (opens in new tab)</a> and <a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Pay (opens in new tab)</a> services which provide a centralised API for any government service to integrate with.</p>
+<p class="govuk-body">We should take the learnings from the existing <a href="https://www.notifications.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Notify<span class="govuk-visually-hidden">(opens in new tab)</span></a> and <a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Pay<span class="govuk-visually-hidden">(opens in new tab)</span></a> services which provide a centralised API for any government service to integrate with.</p>
 <p class="govuk-body">We should follow the patterns they use, including their url structure, design and features.</p>
 <p class="govuk-body">Below is an example of how this may be structured</p>
 <p class="govuk-body"><img src="/assets/images/research-development/opg-as-a-service/opg-as-a-service.jpg" alt="Diagram showing an overview of all components of a potential future self service API."></p>
@@ -518,13 +518,13 @@
 </li>
 </ul>
 <h3 id="internal-government-services" tabindex="-1" class="govuk-heading-m">Internal Government Services</h3>
-<p class="govuk-body"><a href="https://www.notifications.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">Sending of emails, texts and letters via GOV.UK Notify (opens in new tab)</a></p>
-<p class="govuk-body"><a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">For the handling of payments through the process via GOV.UK Pay (opens in new tab)</a></p>
+<p class="govuk-body"><a href="https://www.notifications.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">Sending of emails, texts and letters via GOV.UK Notify<span class="govuk-visually-hidden">(opens in new tab)</span></a></p>
+<p class="govuk-body"><a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">For the handling of payments through the process via GOV.UK Pay<span class="govuk-visually-hidden">(opens in new tab)</span></a></p>
 <h2 id="example-api-endpoints" tabindex="-1" class="govuk-heading-l">Example API Endpoints</h2>
 <p class="govuk-body">Below are a list of potential endpoints and flows we could implement within OPG as a Service.</p>
 <h3 id="example-api-flow-1" tabindex="-1" class="govuk-heading-m">Example API Flow 1</h3>
 <p class="govuk-body"><img src="/assets/images/research-development/opg-as-a-service/simple-api-example.jpg" alt="A simplified version of submitting an LPA"></p>
-<p class="govuk-body">We are able to replicate the entire <a href="https://www.lastingpowerofattorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">Make a LPA (opens in new tab)</a> journey via this endpoint.</p>
+<p class="govuk-body">We are able to replicate the entire <a href="https://www.lastingpowerofattorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">Make a LPA<span class="govuk-visually-hidden">(opens in new tab)</span></a> journey via this endpoint.</p>
 <p class="govuk-body">Providing a Data Model for integrations, we can specify the structure of the data required and provide an endpoint that can be a one off transaction.</p>
 <p class="govuk-body">This would allow third parties to create LPAs and actors in a simplified way, but would end the journey there.</p>
 <p class="govuk-body">Negatives are that we will find ourselves in a position where we will have duplicate actors and no sure proof way of matching them against existing OPG actors.</p>
@@ -605,7 +605,7 @@
 <p class="govuk-body">Once you have a <code>LPAID</code>, a LPA returning a status indicating all data is complete and all actors are verified, you can submit the LPA to OPG and lock it for processing.</p>
 <h3 id="view-an-lpa" tabindex="-1" class="govuk-heading-m">View an LPA</h3>
 <p class="govuk-body"><img src="/assets/images/research-development/opg-as-a-service/view-an-lpa-api.jpg" alt="Diagram showing the View an LPA website as an API"></p>
-<p class="govuk-body">This example shows how we could offer the <a href="https://view-lasting-power-of-attorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">View a LPA (opens in new tab)</a> service as a API Endpoint.</p>
+<p class="govuk-body">This example shows how we could offer the <a href="https://view-lasting-power-of-attorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">View a LPA<span class="govuk-visually-hidden">(opens in new tab)</span></a> service as a API Endpoint.</p>
 <p class="govuk-body">With the ability to monitor third parties by their credentials, we can ensure high levels of trust and prevent bad actors from attacking.</p>
 <p class="govuk-body">This will aid those in need of adding the service to their back end systems for better automation rather than the current manual process of using a web form.</p>
 <h2 id="conclusion" tabindex="-1" class="govuk-heading-l">Conclusion</h2>
@@ -615,11 +615,11 @@
 <p class="govuk-body">This will require the business to look at Modernising not only in the form of a website feeding into a database, but as a more accessible service with multiple routes to interact with LPAs in the wider ecosystem.</p>
 <h2 id="references" tabindex="-1" class="govuk-heading-l">References</h2>
 <ul class="govuk-list govuk-list--bullet">
-<li><a href="https://www.lastingpowerofattorney.service.gov.uk/stats" class="govuk-link" target="_blank" rel="noreferrer noopener">Lasting Power of Attorney Statistics (opens in new tab)</a></li>
-<li><a href="https://www.lastingpowerofattorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">Make a LPA (opens in new tab)</a></li>
-<li><a href="https://view-lasting-power-of-attorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">View a LPA (opens in new tab)</a></li>
-<li><a href="https://www.notifications.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Notify (opens in new tab)</a></li>
-<li><a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Pay (opens in new tab)</a></li>
+<li><a href="https://www.lastingpowerofattorney.service.gov.uk/stats" class="govuk-link" target="_blank" rel="noreferrer noopener">Lasting Power of Attorney Statistics<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
+<li><a href="https://www.lastingpowerofattorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">Make a LPA<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
+<li><a href="https://view-lasting-power-of-attorney.service.gov.uk/home" class="govuk-link" target="_blank" rel="noreferrer noopener">View a LPA<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
+<li><a href="https://www.notifications.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Notify<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
+<li><a href="https://www.payments.service.gov.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">GOV.UK Pay<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
 </ul>
 <ul class="govuk-list">
     <li>

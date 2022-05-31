@@ -21,7 +21,7 @@
 
     <link href="/assets/styles.css" rel="stylesheet">
     <script src="/assets/index.js" defer></script>
-    <title>Using User Behaviour Analytics in place of Witnessing - Modernising Lasting Power of Attorney Documentation</title>
+    <title>Biometrics and WebAuthn for identity - Modernising Lasting Power of Attorney Documentation</title>
   </head>
   <body class="govuk-template__body">
     <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
@@ -205,7 +205,7 @@
             <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
         
-<h1 class="govuk-heading-xl">Using User Behaviour Analytics in place of Witnessing</h1>
+<h1 class="govuk-heading-xl">Biometrics and WebAuthn for identity</h1>
 
 
 
@@ -226,7 +226,7 @@
         </dt>
         <dd class="govuk-summary-list__value">
           
-<time datetime="2022-01-31">31 January 2022</time>
+<time datetime="2022-05-30">30 May 2022</time>
 
         </dd>
         
@@ -282,9 +282,9 @@
                 
                     
                         <li>
-                            <a class="govuk-link" href="/tags/observability/" title="View all documents labelled observability">
+                            <a class="govuk-link" href="/tags/open_standards/" title="View all documents labelled open standards">
                                 <strong class="govuk-tag govuk-tag--blue">
-          observability
+          open standards
         </strong>
         
                             </a>
@@ -320,19 +320,6 @@
                     
                 
             
-                
-                    
-                        <li>
-                            <a class="govuk-link" href="/tags/third_parties/" title="View all documents labelled third parties">
-                                <strong class="govuk-tag govuk-tag--blue">
-          third parties
-        </strong>
-        
-                            </a>
-                        </li>
-                    
-                
-            
         </ul>
         </dd>
         
@@ -353,59 +340,78 @@
   <div class="govuk-details__text">
     <nav aria-label="Contents" role="navigation">
         <div class="govuk-list govuk-list--bullet" >
-        <ul><li><a href="#introduction" class="govuk-link">Introduction</a></li><li><a href="#user-behaviour-analytics-and-aws-fraud-detector" class="govuk-link">User Behaviour Analytics and AWS Fraud Detector</a></li><li><a href="#digital-signature" class="govuk-link">Digital Signature</a></li><li><a href="#conclusion" class="govuk-link">Conclusion</a></li><li><a href="#references" class="govuk-link">References</a></li></ul>
+        <ul><li><a href="#introduction" class="govuk-link">Introduction</a><ul><li><a href="#passwordless-authentication">Passwordless Authentication</a></li><li><a href="#two-factor-authentication">Two-factor Authentication</a></li><li><a href="#multi-factor-authentication">Multi-factor Authentication</a></li><li><a href="#self-manage-devices">Self manage devices</a></li></ul></li><li><a href="#where-it-is-already-used" class="govuk-link">Where it is already used</a></li><li><a href="#compatibility" class="govuk-link">Compatibility</a></li><li><a href="#what-does-this-mean-for-us%3F" class="govuk-link">What does this mean for us?</a></li><li><a href="#ethical-concerns" class="govuk-link">Ethical Concerns</a><ul><li><a href="#mitigate-against-being-tech-deterministic">Mitigate against being tech deterministic</a></li><li><a href="#ensure-you-conduct-inclusive-research">Ensure you conduct inclusive research</a></li><li><a href="#interrogate-your-data-decisions">Interrogate your data decisions</a></li></ul></li><li><a href="#summary" class="govuk-link">Summary</a></li><li><a href="#references" class="govuk-link">References</a></li></ul>
       </div>
     </nav>
   </div>
 </details>
 
 <h2 id="introduction" tabindex="-1" class="govuk-heading-l">Introduction</h2>
-<blockquote class="govuk-inset-text">
-<p class="govuk-body">&quot;A signature is only useful as evidence if it provides a reliable link between the authorised signatory and the agreed terms. The stronger the evidence of that link, the more robust the signature. If the authenticity of a signature later comes to be contested (for example, in legal proceedings) it may be necessary to prove that the document in question was signed by the parties to it (or, where appropriate, their authorised signatory).&quot;</p>
-</blockquote>
-<p class="govuk-body">We require an option to investigate replacing physical witnessing with a technology approach. There are many demographic factors that will affect our approach such as age, complexity and cost.</p>
-<p class="govuk-body">This document outlines the most unobtrusive option that also gives us confidence and potential to grow in that confidence over time.</p>
-<p class="govuk-body">Throughout the process we must ensure that any data collected is anonymous, secure and discarded as soon as it has exceeded its use.</p>
-<p class="govuk-body">In a safeguarding issue during the LPA Process, we know the investigations team would use the Certificate Provider as the main contact to pursue. They use data from the LPA and elements from our case management system to track changes and find patterns of behaviour for safeguarding issues.</p>
-<h2 id="user-behaviour-analytics-and-aws-fraud-detector" tabindex="-1" class="govuk-heading-l">User Behaviour Analytics and AWS Fraud Detector</h2>
-<p class="govuk-body">AWS Fraud Detector (FD) allows us to feed our data into a Machine Learning (ML) service to look for common patterns in fraudulent behaviour and assess our confidence that the person who is interacting with our service is who they say they are.</p>
-<p class="govuk-body">We can put anonymised data from our existing Case Management service into it, such as our timeline events, but also data from users using the Modernising service.</p>
-<p class="govuk-body">We can capture all behavioural data from all parties making an LPA and assess key data points.</p>
-<p class="govuk-body">A few examples of this could be:</p>
-<ol class="govuk-list govuk-list--number">
-<li>Are all logins from a user coming from the same IP Address</li>
-<li>Is the IP Address within the country they have provided on sign up</li>
-<li>Does the user change their address or other fields more than once</li>
-<li>Is there an appropriate time gap between each stage of form filling</li>
-<li>Are there any negative patterns to users logging back in e.g. x number of failed attempts</li>
-</ol>
-<p class="govuk-body">Each rule can be weighted accordingly and adjusted over time. As we discover new patterns of fraud and misuse, while working closely with the Investigations team, we can amend the rules to be more accurate using real life examples.</p>
-<p class="govuk-body">As we discover more areas and patterns within our flow we can also add or remove some. We can also take this information and build on it over time through interactions with our call centers to find patterns in how people act after completing a LPA.</p>
-<p class="govuk-body">If we use the confidence score after a user journey, we can potentially use this in place of the Witness and also raise awareness with case workers which could potentially pre-empt any future fraud.</p>
-<p class="govuk-body">This process could potentially solve 3 specific areas of concern.</p>
-<ol class="govuk-list govuk-list--number">
-<li>Replace witnessing</li>
-<li>Detect Fraud pre and post LPA creation</li>
-<li>Reduce mass attempts for making LPAs</li>
-</ol>
-<p class="govuk-body">User Behaviour Analytics is a great tool, but it should be used with other human processes and technology, not be solely relied upon. This process is only as good as the data you provide it and your understanding of your users.</p>
-<h2 id="digital-signature" tabindex="-1" class="govuk-heading-l">Digital Signature</h2>
-<p class="govuk-body">Given the definition of a signature, we should ensure that not only have we collected the data of the person filling in the form at that time, but also indicate using technology that they are who they say they are.</p>
-<p class="govuk-body">We can create a digital signature that contains entered information and validation processes that have taken place. But as a final step, we should ensure, based on a confidence score of all parties involved in the process that we are confident they are authentic.</p>
-<p class="govuk-body">We should therefore ensure before creating the signature that we run the data through a model to assign a confidence score and either create the signature then or hold off for investigation.</p>
-<p class="govuk-body">If we do this, it will be an asynchronous process and will have to be dealt with appropriately within the user flow.</p>
-<h2 id="conclusion" tabindex="-1" class="govuk-heading-l">Conclusion</h2>
-<p class="govuk-body">To conclude, I believe that we should investigate using User Behaviour Analytics scores alongside strong authentication techniques to see whether we can replace a physical witness with a technology based solution.</p>
+<p class="govuk-body"><a href="https://www.w3.org/TR/webauthn/" class="govuk-link" target="_blank" rel="noreferrer noopener">WebAuthn<span class="govuk-visually-hidden">(opens in new tab)</span></a> is a <a href="https://www.w3.org/" class="govuk-link" target="_blank" rel="noreferrer noopener">W3C standard<span class="govuk-visually-hidden">(opens in new tab)</span></a> that lets users authenticate to web applications using the <a href="https://fidoalliance.org/specs/fido-v2.0-ps-20190130/fido-client-to-authenticator-protocol-v2.0-ps-20190130.html" class="govuk-link" target="_blank" rel="noreferrer noopener">Client-To-Authenticator-Protocol (CTAP)<span class="govuk-visually-hidden">(opens in new tab)</span></a>.</p>
+<p class="govuk-body">It allows the browser to use the device's (Mobile phone or computer) biometric capability to securely and privately authenticate a user with a login.</p>
+<p class="govuk-body">WebAuthn can use</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Fingerprints</li>
+<li>Facial recognition</li>
+<li>Compatible company security key</li>
+<li><a href="https://fidoalliance.org/fido2/" class="govuk-link" target="_blank" rel="noreferrer noopener">FIDO2<span class="govuk-visually-hidden">(opens in new tab)</span></a> key</li>
+</ul>
+<p class="govuk-body">When registering or logging in, a user can optionally register their device with their account. They then get prompted by their browser to allow permissions for that site and then register a specific biometric or FIDO2 key.</p>
+<p class="govuk-body">From that point on they gain the following benefits</p>
+<h3 id="passwordless-authentication" tabindex="-1" class="govuk-heading-m">Passwordless Authentication</h3>
+<p class="govuk-body">Log in without a password (like native Online Banking mobile applications).</p>
+<h3 id="two-factor-authentication" tabindex="-1" class="govuk-heading-m">Two-factor Authentication</h3>
+<p class="govuk-body">Use your Biometric as well as a password when authenticating.</p>
+<h3 id="multi-factor-authentication" tabindex="-1" class="govuk-heading-m">Multi-factor Authentication</h3>
+<p class="govuk-body">Allows your biometric as an addition to other required authentication types such as an SMS, email or authenticator application.</p>
+<h3 id="self-manage-devices" tabindex="-1" class="govuk-heading-m">Self manage devices</h3>
+<p class="govuk-body">See a list of registered devices on their account. The user is able to add or remove any devices and track the last use of them.</p>
+<h2 id="where-it-is-already-used" tabindex="-1" class="govuk-heading-l">Where it is already used</h2>
+<p class="govuk-body">We currently use this technology in a wide range of every day applications. Below is a list of examples where this is already common practice.</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Macbook built in fingerprint scanner for permission dialogues</li>
+<li>Windows Hello to auto log onto your desktop with a webcam</li>
+<li>Fingerprint scan checkout for school children in canteens</li>
+<li>Fingerprint and Facial recognition to unlock mobile phones</li>
+<li>Log in to online banking applications on phones</li>
+<li>Workplace hardware keys to auto log into laptops and online services</li>
+<li>Fingerprint to open modern electric cars</li>
+</ul>
+<h2 id="compatibility" tabindex="-1" class="govuk-heading-l">Compatibility</h2>
+<p class="govuk-body">WebAuthn is supported in Chrome, Firefox, Safari and Edge browsers as well as various built in mobile browsers. Total coverage in the browser market today gives 88.69% of users.</p>
+<p class="govuk-body">You can see full support for WebAuthn at <a href="https://caniuse.com/?search=webauthn" class="govuk-link" target="_blank" rel="noreferrer noopener">Can I Use<span class="govuk-visually-hidden">(opens in new tab)</span></a>.</p>
+<h2 id="what-does-this-mean-for-us%3F" tabindex="-1" class="govuk-heading-l">What does this mean for us?</h2>
+<p class="govuk-body">Though we are using a <a href="https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual" class="govuk-link" target="_blank" rel="noreferrer noopener">Good Practice Guide (GPG) 45<span class="govuk-visually-hidden">(opens in new tab)</span></a> score of low in our service, this gives us and the user an increased score of High. This has benefits to both parties.</p>
+<p class="govuk-body">We have confidence that the authenticated user is who they say they are over many sessions. Most importantly, at the final point of signing the LPA, we have confidence that the same device(s) that have been used throughout, including during verification, match the final submission.</p>
+<h2 id="ethical-concerns" tabindex="-1" class="govuk-heading-l">Ethical Concerns</h2>
+<h3 id="mitigate-against-being-tech-deterministic" tabindex="-1" class="govuk-heading-m">Mitigate against being tech deterministic</h3>
+<p class="govuk-body">We are trying to solve the problem of ways in which we can increase the confidence score when completing a LPA for the end user and ourselves.</p>
+<p class="govuk-body">We will accept a low confidence score, however giving the user the ability to optionally increase their score, in turn making them feel more trusting of the service, is a bonus.</p>
+<p class="govuk-body">Other ways of reaching a high level are complicated and expensive with risks of data privacy (such as uploading photos and videos).</p>
+<h3 id="ensure-you-conduct-inclusive-research" tabindex="-1" class="govuk-heading-m">Ensure you conduct inclusive research</h3>
+<p class="govuk-body">We have already done research with the <a href="https://www.ridc.org.uk/" class="govuk-link" target="_blank" rel="noreferrer noopener">Research Institute for Disabled Consumers(RIDC)<span class="govuk-visually-hidden">(opens in new tab)</span></a> which showed a preference to using biometrics on a users device for those with disabilities.</p>
+<p class="govuk-body">Even so we should look to do more of our own testing across a full spectrum of users around the use of Biometrics to judge trust, user experience and accessibility before making a choice.</p>
+<h3 id="interrogate-your-data-decisions" tabindex="-1" class="govuk-heading-m">Interrogate your data decisions</h3>
+<p class="govuk-body">Using webauthn we do not store peoples biometrics, we trust the device they are using to tell us they are. We only need to store the public key and a randomly generate credential ID and match against this device each time.</p>
+<p class="govuk-body">This ensures the power sits with the user while we have a high degree of trust.</p>
+<h2 id="summary" tabindex="-1" class="govuk-heading-l">Summary</h2>
+<p class="govuk-body">Before deciding on whether we should use it, we need to do User Research and gather feedback from our users to aid in the decision.</p>
+<p class="govuk-body">As we don't require a high level of assurance, this should be a completely optional feature and not be a barrier in any way to the user.</p>
+<p class="govuk-body">Next steps should be capturing user research findings and feed that decision into a <a href="/adr" class="govuk-link">Architectural Decision Record</a>.</p>
 <h2 id="references" tabindex="-1" class="govuk-heading-l">References</h2>
 <ul class="govuk-list govuk-list--bullet">
-<li>AWS Fraud Detector (<a href="https://aws.amazon.com/fraud-detector/" class="govuk-link" target="_blank" rel="noreferrer noopener">https://aws.amazon.com/fraud-detector/<span class="govuk-visually-hidden">(opens in new tab)</span></a>)</li>
+<li><a href="https://fidoalliance.org/fido2/" class="govuk-link" target="_blank" rel="noreferrer noopener">FIDO Alliance<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
+<li><a href="https://www.w3.org/TR/webauthn/" class="govuk-link" target="_blank" rel="noreferrer noopener">WebAuthn W3C<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
+<li><a href="https://webauthn.guide/" class="govuk-link" target="_blank" rel="noreferrer noopener">WebAuthn<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
+<li><a href="https://caniuse.com/?search=webauthn" class="govuk-link" target="_blank" rel="noreferrer noopener">Can I Use WebAuthn<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
+<li><a href="https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual" class="govuk-link" target="_blank" rel="noreferrer noopener">Good Practice Guide (GPG) 45<span class="govuk-visually-hidden">(opens in new tab)</span></a></li>
 </ul>
 <ul class="govuk-list">
     <li>
-        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/user-behaviour-analytics-witnessing.md">View history of this page on GitHub</a>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/commits/main/./src/research-development/articles/biometrics-webauthn.md">View history of this page on GitHub</a>
     </li>
     <li>
-        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/user-behaviour-analytics-witnessing.md">Feedback or raise issue with this page on GitHub</a>
+        <a class="govuk-link" href="https://github.com/ministryofjustice/opg-modernising-lpa-docs/issues/new?assignees=johnnolan&labels=question&template=issue_template.md&title=FEEDBACK for page: ./src/research-development/articles/biometrics-webauthn.md">Feedback or raise issue with this page on GitHub</a>
     </li>
 </ul>
 

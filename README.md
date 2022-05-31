@@ -36,6 +36,22 @@ To run the site locally follow these instructions
 3. Run `yarn run start` to launch a local version with hot reloading
 4. Run `yarn run build` to build a local copy of the site into the folder `_site`
 
+## Node Versions
+
+We recommend using [Node Version Manager](https://github.com/nvm-sh/nvm#installing-and-updating) while working on this project.
+
+The version of node to use while working on this project is set in the [.nvmrc](./.nvmrc) file. This file is used for the CI and local development.
+
+To ensure you are using the correct version of Node, run the following commands using `nvm`.
+
+`nvm use` - will read the `.nvmrc` file and set your node version to it.
+
+If you get an error saying it is not installed, run the following command to install ther required version and enable it.
+
+`nvm install` - will read the `.nvmrc` file, download that version and set your node version to it.
+
+If you need to install a newer version of node, you should set the version in this file and run the above steps. The CI will automatically read this file and install the appropriate version.
+
 ## Tools and language
 
 When writing articles consider using strong prose in your writing. This keeps things clear and concise. Consider the following plugins to help with your writing.

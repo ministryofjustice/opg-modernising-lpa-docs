@@ -19,15 +19,44 @@ contributors: ["John Nolan"]
 
 It allows the browser to use the device's (Mobile phone or computer) biometric capability to securely and privately authenticate a user with a login.
 
-WebAuthn can use the fingerprint, facial recognition or [FIDO2](https://fidoalliance.org/fido2/) keys on a users device.
+WebAuthn can use
+
+* Fingerprints
+* Facial recognition
+* Compatible company security key
+* [FIDO2](https://fidoalliance.org/fido2/) key
 
 When registering or logging in, a user can optionally register their device with their account. They then get prompted by their browser to allow permissions for that site and then register a specific biometric or FIDO2 key.
 
 From that point on they gain the following benefits
 
-* Optionally log in without a password (like native Online Banking mobile applications)
-* Optionally replace text message or authenticator device MFA on log in
-* See a list of registered devices on their account and self manage their authentication
+### Passwordless Authentication
+
+Log in without a password (like native Online Banking mobile applications).
+
+### Two-factor Authentication
+
+Use your Biometric as well as a password when authenticating.
+
+### Multi-factor Authentication
+
+Allows your biometric as an addition to other required authentication types such as an SMS, email or authenticator application.
+
+### Self manage devices
+
+See a list of registered devices on their account. The user is able to add or remove any devices and track the last use of them.
+
+## Where it is already used
+
+We currently use this technology in a wide range of every day applications. Below is a list of examples where this is already common practice.
+
+* Macbook built in fingerprint scanner for permission dialogues
+* Windows Hello to auto log onto your desktop with a webcam
+* Fingerprint scan checkout for school children in canteens
+* Fingerprint and Facial recognition to unlock mobile phones
+* Log in to online banking applications on phones
+* Workplace hardware keys to auto log into laptops and online services
+* Fingerprint to open modern electric cars
 
 ## Compatibility
 

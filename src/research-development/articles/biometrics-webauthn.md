@@ -88,17 +88,17 @@ Even so we should look to do more of our own testing across a full spectrum of u
 
 ### Interrogate your data decisions
 
-Using webauthn we do not store peoples biometrics, we trust the device they are using to tell us they are. We only need to store the public key and a randomly generate credential ID and match against this device each time.
+In using webauthn we do not store peoples' biometrics. We trust the device they are using to tell us who they are. We only need to store the public key and a randomly generate credential ID and match against this device each time.
 
 This ensures the power sits with the user while we have a high degree of trust.
 
 ## Summary
 
-Before deciding on whether we should use it, we need to do User Research and gather feedback from our users to aid in the decision.
+Before deciding on whether we should use it, we need to do user research and gather feedback from our users to aid in the decision.
 
 As we don't require a high level of assurance, this should be a completely optional feature and not be a barrier in any way to the user.
 
-Next steps should be capturing user research findings and feed that decision into a [Architectural Decision Record](/adr).
+Our next steps should be capturing user research findings and feed that decision into a [Architectural Decision Record](/adr).
 
 ## References
 

@@ -68,7 +68,7 @@ module.exports = function () {
   md.renderer.rules.link_close = function (tokens, idx, options, env, self) {
     const externalLink = linkExternalStack.pop();
     if (externalLink) {
-      return " (opens in new tab)</a>";
+      return `<span class="govuk-visually-hidden">(opens in new tab)</span></a>`;
     }
     return defaultRender(tokens, idx, options, env, self);
   };

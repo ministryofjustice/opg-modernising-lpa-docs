@@ -60,7 +60,7 @@ We used [aXe](https://www.deque.com/axe/) and [pa11y](https://pa11y.org/) on ser
 
 Reference: [Designing for different browsers and devices](https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices)
 
-We need to ensure that our service universally accessible with as many browsers and devices as possible.
+We need to ensure that our service is accessible with as many browsers and devices as possible.
 
 Testing across multiple devices and browsers manually can be time consuming and should be automated.
 

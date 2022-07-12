@@ -1,0 +1,162 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/LPA",
+    "definitions": {
+        "LPA": {
+            "type": "object",
+            "description": "The main data schema for the Lasting Power of Attorney.",
+            "additionalProperties": false,
+            "properties": {
+                "donor": {
+                    "$ref": "#/definitions/Donor"
+                },
+                "attorney": {
+                    "$ref": "#/definitions/Attorney"
+                },
+                "personToNotify": {
+                    "$ref": "#/definitions/PersonToNotify"
+                }
+            },
+            "required": [
+                "employees"
+            ],
+            "title": "Lasting Power of Attorney"
+        },
+        "Donor": {
+            "type": "object",
+            "description": "The Donor data schema.",
+            "additionalProperties": false,
+            "properties": {
+                "actor": {
+                    "$ref": "#/definitions/Actor"
+                }
+            },
+            "required": [
+                "actor"
+            ],
+            "title": "Donor"
+        },
+        "Attorney": {
+            "type": "object",
+            "description": "The Attorney data schema.",
+            "additionalProperties": false,
+            "properties": {
+                "actor": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Actor"
+                    }
+                }
+            },
+            "required": [
+                "actor"
+            ],
+            "title": "Attorney"
+        },
+        "PersonToNotify": {
+            "type": "object",
+            "description": "The Person to Notify data schema.",
+            "additionalProperties": false,
+            "properties": {
+                "actor": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Actor"
+                    }
+                }
+            },
+            "required": [
+                "actor"
+            ],
+            "title": "Person To Notify"
+        },
+        "Actor": {
+            "type": "object",
+            "description": "Generic Actor schema that can be inherited across definitions.",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "firstNames": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "otherNames": {
+                    "type": "string"
+                },
+                "dateOfBirth": {
+                    "type": "string"
+                },
+                "address": {
+                    "$ref": "#/definitions/Address"
+                },
+                "emailAddress": {
+                    "type": "string"
+                },
+                "signature": {
+                    "$ref": "#/definitions/Signature"
+                }
+            },
+            "required": [
+                "firstName",
+                "id",
+                "lastName",
+                "dateOfBirth"
+            ],
+            "title": "Actor"
+        },
+        "Address": {
+            "type": "object",
+            "description": "Generic address schema to be used across other definitions.",
+            "additionalProperties": false,
+            "properties": {
+                "line1": {
+                    "type": "string"
+                },
+                "line2": {
+                    "type": "string"
+                },
+                "line3": {
+                    "type": "string"
+                },
+                "line4": {
+                    "type": "string"
+                },
+                "postCode": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "line1",
+                "postCode",
+                "country"
+            ],
+            "title": "Address"
+        },
+        "Signature": {
+            "type": "object",
+            "description": "The Signature data schema that defines the data points for recording a signature.",
+            "additionalProperties": false,
+            "properties": {
+                "signature": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "signature",
+                "date"
+            ],
+            "title": "Signature"
+        }
+    }
+}

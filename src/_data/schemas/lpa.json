@@ -105,6 +105,7 @@
                 "firstName",
                 "id",
                 "lastName",
+                "address",
                 "dateOfBirth"
             ],
             "title": "Actor"

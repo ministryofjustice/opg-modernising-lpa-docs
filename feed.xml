@@ -4,7 +4,7 @@
   <subtitle>This site is to record all decisions, research and planning towards our GDS Assessment.</subtitle>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/feed.xml" rel="self"/>
   <link href="https://docs.modernising.opg.service.justice.gov.uk/"/>
-  <updated>2022-05-31T13:30:34Z</updated>
+  <updated>2022-07-12T08:39:17Z</updated>
   <id>https://docs.modernising.opg.service.justice.gov.uk/</id>
   <author>
     <name></name>
@@ -916,7 +916,7 @@ Developers are aware of ADRs, but their experience of doing them brings this sco
 &lt;p class=&quot;govuk-body&quot;&gt;We used &lt;a href=&quot;https://www.deque.com/axe/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;aXe&lt;span class=&quot;govuk-visually-hidden&quot;&gt;(opens in new tab)&lt;/span&gt;&lt;/a&gt; and &lt;a href=&quot;https://pa11y.org/&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;pa11y&lt;span class=&quot;govuk-visually-hidden&quot;&gt;(opens in new tab)&lt;/span&gt;&lt;/a&gt; on services currently which will aid in our knowledge of implementing this tooling in the pipeline.&lt;/p&gt;
 &lt;h2 id=&quot;cross-device-testing-in-pipeline&quot; tabindex=&quot;-1&quot; class=&quot;govuk-heading-l&quot;&gt;Cross Device testing in pipeline&lt;/h2&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Reference: &lt;a href=&quot;https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Designing for different browsers and devices&lt;span class=&quot;govuk-visually-hidden&quot;&gt;(opens in new tab)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class=&quot;govuk-body&quot;&gt;We need to ensure that our service universally accessible with as many browsers and devices as possible.&lt;/p&gt;
+&lt;p class=&quot;govuk-body&quot;&gt;We need to ensure that our service is accessible with as many browsers and devices as possible.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Testing across multiple devices and browsers manually can be time consuming and should be automated.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;Using a tool that can load the service and take screenshots, report on Javascript errors and CSS issues across the most popular devices is key to reduce cost.&lt;/p&gt;
 &lt;p class=&quot;govuk-body&quot;&gt;A list of browsers and devices we should support can be found at the GDS service manual page &lt;a href=&quot;https://www.gov.uk/service-manual/technology/designing-for-different-browsers-and-devices&quot; class=&quot;govuk-link&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Designing for different browsers and devices&lt;span class=&quot;govuk-visually-hidden&quot;&gt;(opens in new tab)&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;

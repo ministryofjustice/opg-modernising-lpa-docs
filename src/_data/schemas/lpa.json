@@ -4,27 +4,39 @@
     "definitions": {
         "LPA": {
             "type": "object",
-            "description": "The main data schema for the Lasting Power of Attorney.",
+            "description": "The main schema for the Lasting Power of Attorney.",
             "additionalProperties": false,
             "properties": {
+                "lpaid": {
+                    "type": "string",
+                    "format": "integer"
+                },
                 "donor": {
                     "$ref": "#/definitions/Donor"
                 },
                 "attorney": {
-                    "$ref": "#/definitions/Attorney"
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Attorney"
+                    }
                 },
                 "personToNotify": {
-                    "$ref": "#/definitions/PersonToNotify"
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PersonToNotify"
+                    }
                 }
             },
             "required": [
-                "employees"
+                "donor",
+                "lpaid",
+                "attorney"
             ],
             "title": "Lasting Power of Attorney"
         },
         "Donor": {
             "type": "object",
-            "description": "The Donor data schema.",
+            "description": "The Donor.",
             "additionalProperties": false,
             "properties": {
                 "actor": {
@@ -38,14 +50,11 @@
         },
         "Attorney": {
             "type": "object",
-            "description": "The Attorney data schema.",
+            "description": "The Attorney.",
             "additionalProperties": false,
             "properties": {
                 "actor": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Actor"
-                    }
+                    "$ref": "#/definitions/Actor"
                 }
             },
             "required": [
@@ -55,7 +64,7 @@
         },
         "PersonToNotify": {
             "type": "object",
-            "description": "The Person to Notify data schema.",
+            "description": "The Person to Notify.",
             "additionalProperties": false,
             "properties": {
                 "actor": {
@@ -72,12 +81,12 @@
         },
         "Actor": {
             "type": "object",
-            "description": "Generic Actor schema that can be inherited across definitions.",
+            "description": "Generic Actor that can be inherited across definitions.",
             "additionalProperties": false,
             "properties": {
                 "id": {
-                    "type": "string",
-                    "format": "integer"
+                    "type": "integer",
+                    "format": "^[0-9]+$"
                 },
                 "firstNames": {
                     "type": "string"
@@ -89,7 +98,11 @@
                     "type": "string"
                 },
                 "dateOfBirth": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Date of Birth",
+                    "maxLength": 13,
+                    "pattern": "^[0-9]{13}$",
+                    "description": "A 13 digit timestamp. Must be over the age of 18."
                 },
                 "address": {
                     "$ref": "#/definitions/Address"
@@ -112,7 +125,7 @@
         },
         "Address": {
             "type": "object",
-            "description": "Generic address schema to be used across other definitions.",
+            "description": "Generic address to be used across other definitions.",
             "additionalProperties": false,
             "properties": {
                 "line1": {
@@ -143,7 +156,7 @@
         },
         "Signature": {
             "type": "object",
-            "description": "The Signature data schema that defines the data points for recording a signature.",
+            "description": "The Signature that defines the data points for recording a signature.",
             "additionalProperties": false,
             "properties": {
                 "signature": {

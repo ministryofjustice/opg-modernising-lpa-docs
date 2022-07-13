@@ -3,92 +3,66 @@ layout: layouts/fullwidth.njk
 backLink: "/"
 ---
 {%- from "../../node_modules/govuk-frontend/govuk/components/tag/macro.njk" import govukTag -%}
-  {% from "../../node_modules/govuk-frontend/govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "../../node_modules/govuk-frontend/govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 <h1 class="govuk-heading-xl">LPA JSON Schema</h1>
 
-<ul class="govuk-list govuk-list--bullet">
-    <li>
-        Schema: {{schemas.lpa.$schema}}
-    </li>
-    <li>
-        Ref: {{schemas.lpa.$ref}}
-    </li>
-</ul>
-
-<h2 class="govuk-heading-l">Definitions</h2>
-
 {% for definitionName, definitionItem in schemas.lpa.definitions %}
 
-  <h3 id="/definitions/{{ definitionName }}" class="govuk-heading-m">{{ definitionItem.title }}</h3>
-  {{ govukInsetText({
-    text: definitionItem.description
-  }) }}
+  <span class="govuk-caption-l govuk-!-margin-top-9">{{definitionItem.description}}</span>
+  <h2 id="/definitions/{{ definitionName }}" class="govuk-heading-l">{{ definitionItem.title }}</h2>
 
   {% for name, item in definitionItem %}
 
       <p class="govuk-body">
           {% if name === "properties" %}
             
-            <h4 class="govuk-heading-s">{{ name }}</h4>
-            <ul class="govuk-list govuk-list--bullet">
-              {% for propertyName, propertyItem in item %}
+            {% for propertyName, propertyItem in item %}
 
-                <li>
-                    {{propertyName}}
-                    {% if propertyName in definitionItem.required %}
-                      {{ govukTag({
-                        text: "required",
-                        classes: 'govuk-tag--red'
-                        })
-                      }}
-                    {% endif %}
+            <h3 class="govuk-heading-m">{{propertyName}}</h3>
 
-                    <ul class="govuk-list govuk-list--bullet">
-                      {% for propertyDetailName, propertyDetailItem in propertyItem %}
-                        <li>
-                          {% if propertyDetailName === "type" %}
-                            Type: {{ govukTag({
-                                text: propertyDetailItem,
-                                classes: 'govuk-tag--green'
-                                })
-                              }}
-                          {% endif %}
-                          {% if propertyDetailName !== "type" %}
+        <dl class="govuk-summary-list govuk-!-margin-bottom-4">
+            <hr class="govuk-section-break govuk-section-break--visible govuk-grid-column-two-thirds">
+            <div class="govuk-summary-list__row govuk-grid-column-two-thirds">
+                <dt class="govuk-summary-list__key">Required</dt>
+                <dd class="govuk-summary-list__value">
+                  {{ "True" if propertyName in definitionItem.required else "False" }}
+                </dd>
+            </div>
+          {% for propertyDetailName, propertyDetailItem in propertyItem %}
 
-                            {% if propertyDetailName === "$ref" %}
-                              {{propertyDetailName}}: <a class="govuk-link" href="{{propertyDetailItem}}">{{propertyDetailItem}}</a>
-                            {% endif %}
-                            {% if propertyDetailName !== "$ref" %}
+            <div class="govuk-summary-list__row govuk-grid-column-two-thirds">
+              {% if propertyDetailName === "$ref" %}
+                <dt class="govuk-summary-list__key">{{propertyDetailName}}</dt>
+                <dd class="govuk-summary-list__value"><a class="govuk-link" href="{{propertyDetailItem}}">{{propertyDetailItem}}</a></dd>
+              {% endif %}
+              {% if propertyDetailName !== "$ref" %}
 
-                              {% if propertyDetailName === "items" %}
-                                {{propertyDetailName}}
-                                <ul class="govuk-list govuk-list--bullet">
-                                  {% for itemArrayName, itemArrayNameItem in propertyDetailItem %}
-                                    {% if itemArrayName === "$ref" %}
-                                      <li>{{itemArrayName}}: <a class="govuk-link" href="{{itemArrayNameItem}}">{{itemArrayNameItem}}</a></li>
-                                    {% endif %}
-                                  {% endfor %}
-                                </ul>
-
-                              {% endif %}
-                              {% if propertyDetailName !== "items" %}
-                                {{propertyDetailName}}: {{propertyDetailItem}}
-                              {% endif %}
-
-                            {% endif %}
-
-                          {% endif %}
-
-                        </li>
-
+                {% if propertyDetailName === "items" %}
+                  <dt class="govuk-summary-list__key">{{propertyDetailName}}</dt>
+                  <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list">
+                      {% for itemArrayName, itemArrayNameItem in propertyDetailItem %}
+                        {% if itemArrayName === "$ref" %}
+                          <li>{{itemArrayName}}: <a class="govuk-link" href="{{itemArrayNameItem}}">{{itemArrayNameItem}}</a></li>
+                        {% endif %}
                       {% endfor %}
                     </ul>
+                  </dd>
 
-                </li>
+                {% endif %}
+                {% if propertyDetailName !== "items" %}
+                  <dt class="govuk-summary-list__key">{{propertyDetailName}}</dt>
+                  <dd class="govuk-summary-list__value">{{propertyDetailItem}}</dd>
+                {% endif %}
 
-              {% endfor %}
-            </ul>
+              {% endif %}
+
+            </div>
+          {% endfor %}
+        </dl>
+
+            {% endfor %}
 
           {% endif %}
 
@@ -112,5 +86,4 @@ backLink: "/"
 
   {% endfor %}
 
-  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 {% endfor %}

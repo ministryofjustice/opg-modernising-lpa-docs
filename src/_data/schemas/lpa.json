@@ -223,7 +223,7 @@
                 },
                 "emailAddress": {
                     "title": "Email Address",
-                    "description": "The email adress of the actor.",
+                    "description": "The email address of the actor.",
                     "type": "string"
                 }
             },

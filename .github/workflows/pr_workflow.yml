@@ -37,6 +37,12 @@ jobs:
       - name: Install packages
         run: yarn install
 
+      - name: Run Spell Checking
+        run: yarn run lint:spell
+
+      - name: Run lint markdown
+        run: yarn run lint:markdown
+
       - name: Run Linting
         run: yarn run lint:check
 

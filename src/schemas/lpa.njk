@@ -15,13 +15,14 @@ backLink: "/"
   {% for name, item in definitionItem %}
 
       <p class="govuk-body">
-          {% if name === "properties" %}
+        {% if name === "properties" %}
             
-            {% for propertyName, propertyItem in item %}
+          {% for propertyName, propertyItem in item %}
 
+            <span class="govuk-caption-m govuk-!-margin-top-9">{{propertyItem.title}}</span>
             <h3 class="govuk-heading-m">{{propertyName}}</h3>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-4">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-4">
             <hr class="govuk-section-break govuk-section-break--visible govuk-grid-column-two-thirds">
             <div class="govuk-summary-list__row govuk-grid-column-two-thirds">
                 <dt class="govuk-summary-list__key">Required</dt>
@@ -29,59 +30,60 @@ backLink: "/"
                   {{ "True" if propertyName in definitionItem.required else "False" }}
                 </dd>
             </div>
-          {% for propertyDetailName, propertyDetailItem in propertyItem %}
+            {% for propertyDetailName, propertyDetailItem in propertyItem %}
+              {% if propertyDetailName !== "title" %}
+                <div class="govuk-summary-list__row govuk-grid-column-two-thirds">
+                  {% if propertyDetailName === "$ref" %}
+                    <dt class="govuk-summary-list__key">{{propertyDetailName}}</dt>
+                    <dd class="govuk-summary-list__value"><a class="govuk-link" href="{{propertyDetailItem}}">{{propertyDetailItem}}</a></dd>
+                  {% endif %}
+                  {% if propertyDetailName !== "$ref" %}
 
-            <div class="govuk-summary-list__row govuk-grid-column-two-thirds">
-              {% if propertyDetailName === "$ref" %}
-                <dt class="govuk-summary-list__key">{{propertyDetailName}}</dt>
-                <dd class="govuk-summary-list__value"><a class="govuk-link" href="{{propertyDetailItem}}">{{propertyDetailItem}}</a></dd>
+                    {% if propertyDetailName === "items" %}
+                      <dt class="govuk-summary-list__key">{{propertyDetailName}}</dt>
+                      <dd class="govuk-summary-list__value">
+                        <ul class="govuk-list">
+                          {% for itemArrayName, itemArrayNameItem in propertyDetailItem %}
+                            {% if itemArrayName === "$ref" %}
+                              <li>{{itemArrayName}}: <a class="govuk-link" href="{{itemArrayNameItem}}">{{itemArrayNameItem}}</a></li>
+                            {% endif %}
+                          {% endfor %}
+                        </ul>
+                      </dd>
+
+                    {% endif %}
+                    {% if propertyDetailName !== "items" %}
+                      <dt class="govuk-summary-list__key">{{propertyDetailName}}</dt>
+                      <dd class="govuk-summary-list__value">{{propertyDetailItem}}</dd>
+                    {% endif %}
+
+                  {% endif %}
+
+                </div>
               {% endif %}
-              {% if propertyDetailName !== "$ref" %}
-
-                {% if propertyDetailName === "items" %}
-                  <dt class="govuk-summary-list__key">{{propertyDetailName}}</dt>
-                  <dd class="govuk-summary-list__value">
-                    <ul class="govuk-list">
-                      {% for itemArrayName, itemArrayNameItem in propertyDetailItem %}
-                        {% if itemArrayName === "$ref" %}
-                          <li>{{itemArrayName}}: <a class="govuk-link" href="{{itemArrayNameItem}}">{{itemArrayNameItem}}</a></li>
-                        {% endif %}
-                      {% endfor %}
-                    </ul>
-                  </dd>
-
-                {% endif %}
-                {% if propertyDetailName !== "items" %}
-                  <dt class="govuk-summary-list__key">{{propertyDetailName}}</dt>
-                  <dd class="govuk-summary-list__value">{{propertyDetailItem}}</dd>
-                {% endif %}
-
-              {% endif %}
-
-            </div>
-          {% endfor %}
-        </dl>
-
             {% endfor %}
+            </dl>
 
-          {% endif %}
+          {% endfor %}
 
-          {% if name === "type" %}
-            Type: {{ govukTag({
-                text: item,
-                classes: 'govuk-tag--green'
-                })
-              }}
-          {% endif %}
+        {% endif %}
 
-          {% if name === "additionalProperties" %}
-            {% if item === true %}
-              Schema accepts additional properties
-            {% endif %}
-            {% if item === false %}
-              Schema <strong>does not accept</strong> additional properties
-            {% endif %}
+        {% if name === "type" %}
+          Type: {{ govukTag({
+              text: item,
+              classes: 'govuk-tag--green'
+              })
+            }}
+        {% endif %}
+
+        {% if name === "additionalProperties" %}
+          {% if item === true %}
+            Schema accepts additional properties
           {% endif %}
+          {% if item === false %}
+            Schema <strong>does not accept</strong> additional properties
+          {% endif %}
+        {% endif %}
       </p>
 
   {% endfor %}

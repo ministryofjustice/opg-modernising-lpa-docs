@@ -4,24 +4,60 @@
     "definitions": {
         "LPA": {
             "type": "object",
-            "description": "The main schema for the Lasting Power of Attorney.",
+            "description": "The main schema for the Lasting Power of Attorney Document.",
             "additionalProperties": false,
             "properties": {
-                "lpaid": {
+                "id": {
                     "type": "string",
-                    "format": "integer"
+                    "format": "integer",
+                    "description": "The LPA Documents unique identifier.",
+                    "title": "The unique LPA identifier"
+                },
+                "type": {
+                    "type": "string",
+                    "format": "{health_welfare|property_finance}",
+                    "description": "Is this a Health & Welfare or Property & Finance LPA.",
+                    "title": "LPA Type (Health & Welfare or Property & Finance LPA)"
+                },
+                "preferences": {
+                    "type": "string",
+                    "maxLength": 900,
+                    "description": "Any preferences on the LPA.",
+                    "title": "Preferences on the LPA"
+                },
+                "instructions": {
+                    "type": "string",
+                    "maxLength": 900,
+                    "description": "Any instructions on the LPA.",
+                    "title": "Instructions on the LPA"
                 },
                 "donor": {
-                    "$ref": "#/definitions/Donor"
+                    "$ref": "#/definitions/Donor",
+                    "description": "The Donor on the LPA.",
+                    "title": "Donor details for the LPA"
+                },
+                "witness": {
+                    "$ref": "#/definitions/Witness",
+                    "description": "The Witness for the LPA.",
+                    "title": "Witness on the LPA"
+                },
+                "certificateProvider": {
+                    "$ref": "#/definitions/CertificateProvider",
+                    "description": "The Certificate Provider on the LPA.",
+                    "title": "Certificate Provider on the LPA"
                 },
                 "attorney": {
                     "type": "array",
+                    "title": "All attorney(s) on the LPA",
+                    "description": "The Attorney(s) on the LPA.",
                     "items": {
                         "$ref": "#/definitions/Attorney"
                     }
                 },
                 "personToNotify": {
                     "type": "array",
+                    "title": "Person(s) to Notify",
+                    "description": "The Person(s) to Notify on the LPA.",
                     "items": {
                         "$ref": "#/definitions/PersonToNotify"
                     }
@@ -41,6 +77,9 @@
             "properties": {
                 "actor": {
                     "$ref": "#/definitions/Actor"
+                },
+                "signature": {
+                    "$ref": "#/definitions/Signature"
                 }
             },
             "required": [
@@ -55,12 +94,55 @@
             "properties": {
                 "actor": {
                     "$ref": "#/definitions/Actor"
+                },
+                "signature": {
+                    "$ref": "#/definitions/Signature"
                 }
             },
             "required": [
                 "actor"
             ],
             "title": "Attorney"
+        },
+        "Witness": {
+            "type": "object",
+            "description": "The Witness to the signing of the LPA.",
+            "additionalProperties": false,
+            "properties": {
+                "actor": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Actor"
+                    }
+                },
+                "signature": {
+                    "$ref": "#/definitions/Signature"
+                }
+            },
+            "required": [
+                "actor"
+            ],
+            "title": "Witness"
+        },
+        "CertificateProvider": {
+            "type": "object",
+            "description": "The Certificate Provider on the LPA.",
+            "additionalProperties": false,
+            "properties": {
+                "actor": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Actor"
+                    }
+                },
+                "signature": {
+                    "$ref": "#/definitions/Signature"
+                }
+            },
+            "required": [
+                "actor"
+            ],
+            "title": "Certificate Provider"
         },
         "PersonToNotify": {
             "type": "object",
@@ -79,6 +161,23 @@
             ],
             "title": "Person To Notify"
         },
+        "ReplacementAttorney": {
+            "type": "object",
+            "description": "The Replacement Attorney.",
+            "additionalProperties": false,
+            "properties": {
+                "actor": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Actor"
+                    }
+                }
+            },
+            "required": [
+                "actor"
+            ],
+            "title": "Replacement Attorney"
+        },
         "Actor": {
             "type": "object",
             "description": "Generic Actor that can be inherited across definitions.",
@@ -87,6 +186,9 @@
                 "id": {
                     "type": "integer",
                     "format": "^[0-9]+$"
+                },
+                "title": {
+                    "type": "string"
                 },
                 "firstNames": {
                     "type": "string"
@@ -98,7 +200,7 @@
                     "type": "string"
                 },
                 "dateOfBirth": {
-                    "type": "string",
+                    "type": "integer",
                     "title": "Date of Birth",
                     "maxLength": 13,
                     "pattern": "^[0-9]{13}$",
@@ -109,9 +211,6 @@
                 },
                 "emailAddress": {
                     "type": "string"
-                },
-                "signature": {
-                    "$ref": "#/definitions/Signature"
                 }
             },
             "required": [

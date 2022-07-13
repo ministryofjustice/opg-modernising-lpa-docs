@@ -184,19 +184,29 @@
             "additionalProperties": false,
             "properties": {
                 "id": {
+                    "title": "Actor unique identifier",
+                    "description": "Identifies the Actor with a unique identifier.",
                     "type": "integer",
                     "format": "^[0-9]+$"
                 },
                 "title": {
+                    "title": "Title",
+                    "description": "The title given to an actor.",
                     "type": "string"
                 },
                 "firstNames": {
+                    "title": "First Name",
+                    "description": "The actors first name.",
                     "type": "string"
                 },
                 "lastName": {
+                    "title": "Last Name",
+                    "description": "The actors last name.",
                     "type": "string"
                 },
                 "otherNames": {
+                    "title": "Other Names",
+                    "description": "Any other names for the actor.",
                     "type": "string"
                 },
                 "dateOfBirth": {
@@ -207,9 +217,13 @@
                     "description": "A 13 digit timestamp. Must be over the age of 18."
                 },
                 "address": {
+                    "title": "Address",
+                    "description": "The full address of the Actor.",
                     "$ref": "#/definitions/Address"
                 },
                 "emailAddress": {
+                    "title": "Email Address",
+                    "description": "The email adress of the actor.",
                     "type": "string"
                 }
             },

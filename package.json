@@ -30,7 +30,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "govuk-frontend": "^4.1.0",
-    "jshint": "^2.13.4",
+    "jshint": "^2.13.5",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
     "markdownlint-cli": "^0.31.1",

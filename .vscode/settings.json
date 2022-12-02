@@ -2,7 +2,11 @@
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 74,
-        "editor.quickSuggestions": false
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
     },
     "cSpell.language": "en-GB",
     "cSpell.enableFiletypes": [

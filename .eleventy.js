@@ -10,7 +10,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'src/_includes/css': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'src/_includes/assets': 'assets' })
-    eleventyConfig.addPassthroughCopy({ 'src/_includes/scripts': 'assets' });
+    eleventyConfig.addPassthroughCopy({ 'src/_includes/scripts': 'assets' })
+    eleventyConfig.addPassthroughCopy({ 'src/_includes/budget.json': 'budget.json' })
 
     eleventyConfig.addPlugin(inclusiveLangPlugin);
     eleventyConfig.addPlugin(pluginRss);
@@ -25,9 +26,9 @@ module.exports = function (eleventyConfig) {
         console.log(value)
     })
 
-    eleventyConfig.addFilter("limit", function(array, limit) {
+    eleventyConfig.addFilter("limit", function (array, limit) {
         return array.slice(0, limit);
-    });      
+    });
 
     eleventyConfig.addFilter('dateFilter', dateFilter);
     eleventyConfig.addFilter('date24HourFilter', date24HourFilter);

@@ -54,3 +54,6 @@ jobs:
           budgetPath: ./src/_includes/budget.json
           uploadArtifacts: true
           temporaryPublicStorage: true
+
+      - name: Run pa11y
+        run: yarn run pa11y

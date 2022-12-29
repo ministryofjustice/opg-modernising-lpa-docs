@@ -3,6 +3,7 @@ const { promises: fs } = require('fs');
 module.exports = async ({ github, context, core }) => {
     // Find this PR & do nothing if this isn't a PR
     console.log("Running");
+    console.log("Context", context);
     const { data } =
         await github.rest.repos.listPullRequestsAssociatedWithCommit({
             owner: context.repo.owner,

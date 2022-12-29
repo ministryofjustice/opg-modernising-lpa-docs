@@ -15,7 +15,8 @@
     "**/node_modules/**",
     "**/*.lock",
     "**/*.css",
-    "package.json"
+    "package.json",
+    "**/budget.json"
   ],
   "allowCompoundWords": true,
   "words": [

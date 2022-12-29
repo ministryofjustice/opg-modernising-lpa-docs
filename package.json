@@ -12,10 +12,10 @@
     "lint:markdown": "markdownlint '**/*.md' --ignore node_modules --ignore extensions",
     "lint:all": "yarn run lint:check && yarn run lint:spell && yarn run lint:markdown",
     "sass": "sass --style=compressed src/scss/styles.scss src/_includes/css/styles.css",
-    "build": "npm run sass && eleventy",
-    "start": "npm run sass && eleventy --serve",
+    "build": "yarn run sass && eleventy",
+    "start": "yarn run sass && eleventy --serve",
     "eleventy": "eleventy",
-    "pa11y": "node ./pa11y/index.mjs"
+    "pa11y-ci": "pa11y-ci '_site/**/*.html'"
   },
   "devDependencies": {
     "@11ty/eleventy": "1.0.2",
@@ -36,7 +36,7 @@
     "markdown-it": "13.0.1",
     "markdown-it-anchor": "8.6.6",
     "markdownlint-cli": "0.32.2",
-    "pa11y": "^6.2.3",
+    "pa11y-ci": "^3.0.1",
     "prettier": "2.8.1",
     "sass": "1.57.1"
   },

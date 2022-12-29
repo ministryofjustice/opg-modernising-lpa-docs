@@ -56,4 +56,4 @@ jobs:
           temporaryPublicStorage: true
 
       - name: Run pa11y
-        run: yarn run pa11y
+        run: yarn run pa11y-ci

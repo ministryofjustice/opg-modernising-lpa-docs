@@ -57,6 +57,7 @@ jobs:
 
       - name: Run pa11y
         run: yarn run pa11y-ci
+        continue-on-error: true
 
       - name: Send pa11y results to PR Comment
         uses: actions/github-script@v6

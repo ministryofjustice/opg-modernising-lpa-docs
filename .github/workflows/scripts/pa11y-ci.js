@@ -2,11 +2,8 @@ const { promises: fs } = require('fs');
 
 module.exports = async ({ github, context, core }) => {
     // Find this PR & do nothing if this isn't a PR
-    console.log("Running");
-    console.log("Context", context);
     const prNumber = context.payload.number
     if (!prNumber) {
-        console.log("No PR Number");
         return;
     }
 

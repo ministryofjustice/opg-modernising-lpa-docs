@@ -58,11 +58,12 @@ jobs:
       - name: Run pa11y
         run: yarn run pa11y-ci
 
-      - uses: actions/github-script@v6
+      - name: Send pa11y results to PR Comment
+        uses: actions/github-script@v6
         env:
           BODY_PREFIX: '<!-- pa11y-ci results -->'
         with:
           script: |
             const script = require('./.github/workflows/scripts/pa11y-ci.js')
-            await script({ context, core, github })
+            await script({ github, context, core })
 

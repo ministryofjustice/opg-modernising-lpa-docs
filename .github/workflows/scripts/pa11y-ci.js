@@ -1,6 +1,6 @@
 const { promises: fs } = require('fs');
 
-module.exports = async ({ context, core, github }) => {
+module.exports = async ({ github, context, core }) => {
     // Find this PR & do nothing if this isn't a PR
     const { data } =
         await github.rest.repos.listPullRequestsAssociatedWithCommit({

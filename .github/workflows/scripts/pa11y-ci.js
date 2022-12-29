@@ -4,13 +4,7 @@ module.exports = async ({ github, context, core }) => {
     // Find this PR & do nothing if this isn't a PR
     console.log("Running");
     console.log("Context", context);
-    const { data } =
-        await github.rest.repos.listPullRequestsAssociatedWithCommit({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            commit_sha: context.sha,
-        });
-    const prNumber = data[0] && data[0].number;
+    const prNumber = context.payload.number
     if (!prNumber) {
         console.log("No PR Number");
         return;
@@ -53,8 +47,8 @@ module.exports = async ({ github, context, core }) => {
 
     // Get the comments on this PR
     const { data: comments } = await github.rest.issues.listComments({
-        owner: context.repo.owner,
-        repo: context.repo.repo,
+        owner: process.env.OWNER,
+        repo: process.env.REPO,
         issue_number: prNumber,
     });
 
@@ -65,16 +59,16 @@ module.exports = async ({ github, context, core }) => {
     if (previousComment) {
         // Update the previous comment
         await github.rest.issues.updateComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
+            owner: process.env.OWNER,
+            repo: process.env.REPO,
             comment_id: previousComment.id,
             body: commentBody,
         });
     } else {
         // Create a new comment
         await github.rest.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
+            owner: process.env.OWNER,
+            repo: process.env.REPO,
             issue_number: prNumber,
             body: commentBody,
         });

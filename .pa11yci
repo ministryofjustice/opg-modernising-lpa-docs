@@ -8,7 +8,19 @@
     ],
     "reporters": [
       "cli",
-      ["json", { "fileName": "./pa11y-output.json" }]
-    ]
+      [
+        "json",
+        {
+          "fileName": "./pa11y-output.json"
+        }
+      ]
+    ],
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-dev-shm-usage"
+      ]
+    }
   }
 }

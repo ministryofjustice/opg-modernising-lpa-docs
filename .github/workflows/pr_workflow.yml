@@ -58,7 +58,7 @@ jobs:
       - name: Run pa11y
         run: yarn run pa11y-ci
 
-      - uses: actions/github-script@v5
+      - uses: actions/github-script@v6
         env:
           BODY_PREFIX: '<!-- pa11y-ci results -->'
         with:

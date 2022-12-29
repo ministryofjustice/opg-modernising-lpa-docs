@@ -58,20 +58,11 @@ jobs:
       - name: Run pa11y
         run: yarn run pa11y-ci 2>&1 | tee pa11y_output.txt
 
-      - name: Read pa11y_output file.
-        id: pa11y_output
-        uses: juliangruber/read-file-action@v1
+      - uses: actions/github-script@v5
+        env:
+          BODY_PREFIX: '<!-- pa11y-ci results -->'
         with:
-          path: ./pa11y_output.txt
-        
-      - name: Comment on pull request.
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          message: '<details><summary>Pa11y testing results</summary>```${{ steps.pa11y_output.outputs.content }}```</details>'
+          script: |
+            const script = require('./.github/workflows/scripts/pa11y-ci.js')
+            await script({ context, core, github })
 
-      - name: Check for pa11y failures.
-        if: contains(steps.pa11y_output.outputs.content, 'errno 2')
-        run: |
-          echo "::error::The site is failing accessibility tests. Please review the comment in the pull request or the pa11y-ci step in the workflow for details."
-          exit 1

@@ -1097,9 +1097,9 @@
   integrity sha512-q3l7OH39qzeN2Y64jpY39SEAqki5BUzPTypnhzM40yT+LOGSWqSh9Ix5UecejtXPDVrD8vML+m7Bp5070h52HQ==
 
 "@cspell/dict-docker@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-docker/-/dict-docker-1.1.4.tgz#e8de3d6cf37d454536f18ea4c9836458ddb29f44"
-  integrity sha512-DnsDzv3e5aPZ/ciu7weoD85SYErl6ChKtphhyULcsSBFexucAAO54ZWx4fRCEwNv/T29KlZ7P5sh4BnSYokCRQ==
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-docker/-/dict-docker-1.1.5.tgz#925a0c5c3c888038acfc0785e363d32aee05d524"
+  integrity sha512-SNEohOScQ+0+y9dp/jKTx60OOJQrf5es5BJ32gh5Ck3jKXNo4wd9KLgPOmQMUpencb5SGjrBsC4rr1fyfCwytg==
 
 "@cspell/dict-dotnet@^4.0.1":
   version "4.0.1"
@@ -1117,9 +1117,9 @@
   integrity sha512-tKSSUf9BJEV+GJQAYGw5e+ouhEe2ZXE620S7BLKe3ZmpnjlNG9JqlnaBhkIMxKnNFkLY2BP/EARzw31AZnOv4g==
 
 "@cspell/dict-en_us@^4.1.1":
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-en_us/-/dict-en_us-4.1.2.tgz#6cd5fb916c91285b9a97a776bcf553a591bb4df3"
-  integrity sha512-G9taI0NimmIao3slR4o3mfxbIlMzqQk0Z5WQX5q/RKNbHZnCK+4fnYglAENj7rqWSndVNGZob15lKfMR5AOapA==
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-en_us/-/dict-en_us-4.1.4.tgz#779e1d2101f487694cf798a1355126bf9072f747"
+  integrity sha512-smRT8Rx38+z1kiNl3kBvadoPdYgxCovxw2rsuO4/XtLRlSEcGPQgYJ0CCdcXMd9bhMY5roXPCcvYkBsyUVvg4A==
 
 "@cspell/dict-filetypes@^3.0.0":
   version "3.0.0"
@@ -1132,9 +1132,9 @@
   integrity sha512-zTZni0AbwBVG1MKA0WpwPyIJPVF+gp6neXDQzHcu4RUnuQ4uDu0PVEuZjGHCJWwwFoR5JmkqZxVSg1y3ufJODA==
 
 "@cspell/dict-fullstack@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-fullstack/-/dict-fullstack-3.0.0.tgz#e03e0bf627f6d8946c156b824aa99d7ae8344800"
-  integrity sha512-BMQRTaeReLufjMwgWqqwPdrXQ7jkVGTv7/YvOLsHFZvcAP3eM7WqX+rvdXckLhJmuuzbceFRDKs5F/9Ig2x/tQ==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-fullstack/-/dict-fullstack-3.0.1.tgz#c34e1d0ad2fa46edb4ab385327b642578d47d0aa"
+  integrity sha512-r077HcbxGQ0gSjs4eqryvb9cu8/Noe7pzl9QksxFIEaMgyP180DEaCLAOnat4KHl7X0wntipY+naY5PVRQUI9A==
 
 "@cspell/dict-gaming-terms@^1.0.2":
   version "1.0.3"
@@ -1197,9 +1197,9 @@
   integrity sha512-FEQJ4TnMcXEFslqBQkXa5HposMoCGsiBv2ux4IZuIXgadXeHKHUHk60iarWpjhzNzQLyN2GD7NoRMd12bK3Llw==
 
 "@cspell/dict-npm@^5.0.1":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-npm/-/dict-npm-5.0.2.tgz#c5e920905d718f126455392e450fdb4692cd458b"
-  integrity sha512-A5D4Yw1cRgGplqGd82jZ6hnHPr/r9lOD+TdyiZ5WHqfiE6s4lLLhj2rSBl/X9xgn9GYXiHHF9DtLkVNUQ/icjg==
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-npm/-/dict-npm-5.0.3.tgz#f1118168fb20bf1a3a2e02187dfffb90cd15def5"
+  integrity sha512-fEX67zIJISbS3gXVk/y/ZUvDIVtjc/CYJK7Mz0iTVrmlCKnLiD41lApe8v4g/12eE7hLfx/sfCXDrUWyzXVq1A==
 
 "@cspell/dict-php@^3.0.4":
   version "3.0.4"
@@ -1242,9 +1242,9 @@
   integrity sha512-sIiCQDIMMnNns/fzD61z5npbh5pypaKq07Orqe0+eRfdQpika8iRSGUGFHVbtdd1JzB1DyTCV2e8OwdaQiXqJQ==
 
 "@cspell/dict-software-terms@^3.0.6":
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-software-terms/-/dict-software-terms-3.0.7.tgz#a7fdb2228ba3b34fe3b18aa6b632045c9e64e316"
-  integrity sha512-Pm/w8LX3jvoToXQlQMTWC3/GCDE8JpNgSsqGzniLK8bnhy+fKVqerrorMiLhd0TVBX70003xzCnitnSN+pbHkw==
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-software-terms/-/dict-software-terms-3.0.8.tgz#4de57d833e3c90264375a78e0cb3792089de2ad6"
+  integrity sha512-otq0yIcG19rNXkmE/EGWgUK7ClLrn/BE4n5Di3HKLw6XEp0sNBp1DKf88bg0LvbWh15uCAJ5xKAzF1sVPy2Y3w==
 
 "@cspell/dict-sql@^2.0.1":
   version "2.0.1"
@@ -1277,9 +1277,9 @@
   integrity sha512-sHTUWzc1rL3v38HFKyD4vUdK7NotNsbnHaR6nWXvPgDOF1LxgNf4M4YcX9taiMghln/5GR1MnrjXjm3ZsRwfbg==
 
 "@eslint/eslintrc@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.4.0.tgz#8ec64e0df3e7a1971ee1ff5158da87389f167a63"
-  integrity sha512-7yfvXy6MWLgWSFsLhz5yH3iQ52St8cdUY6FoGieKkRDVxuxmrNuUetIuu6cmjNWwniUHiWXjxCr5tTXDrbYS5A==
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.4.1.tgz#af58772019a2d271b7e2d4c23ff4ddcba3ccfb3e"
+  integrity sha512-XXrH9Uarn0stsyldqDYq8r++mROmWRI1xKMXa640Bb//SY1+ECYX6VzT6Lcx5frD0V30XieqJ0oX9I2Xj5aoMA==
   dependencies:
     ajv "^6.12.4"
     debug "^4.3.2"
@@ -2094,9 +2094,9 @@ cookie@~0.4.1:
   integrity sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==
 
 core-js-compat@^3.25.1:
-  version "3.27.0"
-  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.27.0.tgz#e2c58a89df6432a5f36f3fa34097e9e83e709fb6"
-  integrity sha512-spN2H4E/wocMML7XtbKuqttHHM+zbF3bAdl9mT4/iyFaF33bowQGjxiWNWyvUJGH9F+hTgnhWziiLtwu3oC/Qg==
+  version "3.27.1"
+  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.27.1.tgz#b5695eb25c602d72b1d30cbfba3cb7e5e4cf0a67"
+  integrity sha512-Dg91JFeCDA17FKnneN7oCMz4BkQ4TcffkgHP4OWwp9yx3pi7ubqMDXXSacfNak1PQqjc95skyt+YBLHQJnkJwA==
   dependencies:
     browserslist "^4.21.4"
 
@@ -2801,9 +2801,9 @@ fast-levenshtein@^2.0.6:
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
 
 fastq@^1.6.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.14.0.tgz#107f69d7295b11e0fccc264e1fc6389f623731ce"
-  integrity sha512-eR2D+V9/ExcbF9ls441yIuN6TI2ED1Y2ZcA5BmMtJsOkWOFRJQ0Jt0g1UwqXJJVAb+V+umH5Dfr8oh4EVP7VVg==
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.15.0.tgz#d04d07c6a2a68fe4599fea8d2e103a937fae6b3a"
+  integrity sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==
   dependencies:
     reusify "^1.0.4"
 
@@ -3494,9 +3494,9 @@ json-stable-stringify-without-jsonify@^1.0.1:
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
 json5@^2.2.1:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.2.tgz#64471c5bdcc564c18f7c1d4df2e2297f2457c5ab"
-  integrity sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ==
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
 jsonc-parser@~3.1.0:
   version "3.1.0"

@@ -7,6 +7,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check out code
+        uses: actions/checkout@v3.3.0
+
+      - name: Set up prerequisites - node and yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Cache yarn dependencies
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
+
       - name: Download generated site
         id: download_site
         uses: actions/download-artifact@v3
@@ -21,9 +40,9 @@ jobs:
       - name: Send pa11y results to PR Comment
         uses: actions/github-script@v6
         env:
-          BODY_PREFIX: '<!-- pa11y-ci results -->'
-          OWNER: 'ministryofjustice'
-          REPO: 'opg-modernising-lpa-docs'
+          BODY_PREFIX: "<!-- pa11y-ci results -->"
+          OWNER: "ministryofjustice"
+          REPO: "opg-modernising-lpa-docs"
         with:
           script: |
             const script = require('./.github/workflows/scripts/pa11y-ci.js')

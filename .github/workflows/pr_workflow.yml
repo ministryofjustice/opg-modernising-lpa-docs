@@ -26,10 +26,18 @@ jobs:
           path: ./node_modules
           key: modules-${{ hashFiles('yarn.lock') }}
 
+      - name: Cache yarn extension dependencies
+        id: cache_extentions
+        uses: actions/cache@v3
+        with:
+          path: ./extensions/eleventy-plugin-toc/node_modules
+          key: modules-${{ hashFiles('./extensions/eleventy-plugin-toc/yarn.lock') }}
+
       - name: Build extension packages
+        if: steps.cache_extentions.outputs.cache-hit != 'true'
         run: |
           cd extensions/eleventy-plugin-toc
-          npm install
+          yarn install
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'

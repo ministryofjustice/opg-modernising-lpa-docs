@@ -1,0 +1,30 @@
+on:
+  workflow_call:
+
+jobs:
+  pa11y:
+    name: Audit pages using pa11y
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download generated site
+        id: download_site
+        uses: actions/download-artifact@v3
+        with:
+          name: site
+          path: _site
+
+      - name: Run pa11y
+        run: yarn run pa11y-ci
+        continue-on-error: true
+
+      - name: Send pa11y results to PR Comment
+        uses: actions/github-script@v6
+        env:
+          BODY_PREFIX: '<!-- pa11y-ci results -->'
+          OWNER: 'ministryofjustice'
+          REPO: 'opg-modernising-lpa-docs'
+        with:
+          script: |
+            const script = require('./.github/workflows/scripts/pa11y-ci.js')
+            await script({ github, context, core })

@@ -13,12 +13,12 @@
     "lint:all": "yarn run lint:check && yarn run lint:spell && yarn run lint:markdown",
     "sass": "sass --style=compressed src/scss/styles.scss src/_includes/css/styles.css",
     "build": "yarn run sass && eleventy",
-    "start": "yarn run sass && eleventy --serve",
+    "start": "yarn run sass && eleventy --serve --incremental",
     "eleventy": "eleventy",
     "pa11y-ci": "pa11y-ci '_site/**/*.html'"
   },
   "devDependencies": {
-    "@11ty/eleventy": "1.0.2",
+    "@11ty/eleventy": "2.0.0",
     "@11ty/eleventy-plugin-inclusive-language": "1.0.3",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@babel/core": "7.20.12",

@@ -24,10 +24,10 @@
     "@babel/core": "7.21.0",
     "@babel/eslint-parser": "7.19.1",
     "@babel/preset-env": "7.20.2",
-    "cspell": "6.28.0",
+    "cspell": "6.29.0",
     "dayjs": "1.11.7",
     "eleventy-plugin-toc": "1.1.5",
-    "eslint": "8.35.0",
+    "eslint": "8.36.0",
     "eslint-config-prettier": "8.7.0",
     "eslint-plugin-prettier": "4.2.1",
     "govuk-frontend": "4.5.0",
@@ -37,7 +37,7 @@
     "markdownlint-cli": "0.33.0",
     "pa11y-ci": "3.0.1",
     "prettier": "2.8.4",
-    "sass": "1.58.3"
+    "sass": "1.59.2"
   },
   "eslintIgnore": [
     "_site/",
